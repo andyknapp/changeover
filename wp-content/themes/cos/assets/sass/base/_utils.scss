@@ -1,0 +1,32 @@
+%visually-hidden {
+	// sass-lint:disable-block no-important
+	position: absolute !important;
+	clip: rect(1px, 1px, 1px, 1px);
+	padding: 0 !important;
+	border: 0 !important;
+	height: 1px !important;
+	width: 1px !important;
+	overflow: hidden;
+}
+
+%reset-button {
+	border: 0;
+	cursor: pointer;
+
+	&:focus {
+		outline: 0;
+	}
+}
+
+%reset-link {
+	text-decoration: none;
+
+	&:focus {
+		outline: 0;
+	}
+}
+
+%reset-list {
+	list-style: none;
+	padding-left: 0;
+}

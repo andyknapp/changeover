@@ -1,0 +1,21 @@
+# Grunt #
+#########
+.sass-cache
+node_modules
+
+
+# OS generated #
+################
+.DS_Store*
+ehthumbs.db
+Thumbs.db
+
+
+# WordPress #
+#############
+wp-content/upgrade/
+wp-content/uploads/
+wp-content/plugins/
+wp-content/debug.log
+wp-content/cache/
+wp-content/cmscommander/

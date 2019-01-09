@@ -1,0 +1,12 @@
+// base
+@import 'base/reset';
+@import 'base/vars';
+@import 'base/typography';
+@import 'base/utils';
+
+// global
+@import 'global';
+
+// components
+@import 'components/header';
+@import 'components/footer';
