@@ -1,8 +1,9 @@
 // base
 @import 'base/reset';
 @import 'base/vars';
-@import 'base/typography';
+@import 'base/mixins';
 @import 'base/utils';
+@import 'base/typography';
 
 // global
 @import 'global';

@@ -1,0 +1,149 @@
+
+// sass-lint:disable force-pseudo-nesting
+
+.site-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+  padding-left: 1em;
+  padding-right: 1em;
+	height: $header-height-1;
+	z-index: 1;
+}
+
+.logo {
+	display: block;
+	width: (178 / 16) * 1em;
+	height: (66 / 16) * 1em;
+  font-size: 80%;
+	background: url('../changeover-sales-logo.jpg') no-repeat center / cover;
+
+	span {
+		@extend %visually-hidden;
+	}
+}
+
+.skip-link {
+  @extend %visually-hidden;
+}
+
+.menu-toggle {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+	width: 100%;
+	padding: 0.5em 1em;
+	border: 1px solid $color-black;
+	line-height: 1;
+	color: $color-black;
+  font-size: 1em;
+  text-align: center;
+	touch-action: manipulation;
+	cursor: pointer;
+	outline: -webkit-focus-ring-color 0; //sass-lint:disable-line no-vendor-prefixes
+  transform: translateY(-50%);
+	transition: color 0.3s ease-out, border 0.3s ease-out;
+
+	&.toggled {
+		color: $color-red;
+		border-color: $color-gray;
+	}
+}
+
+
+.site-nav {
+	position: absolute;
+  top: $header-height-1;
+  left: 0;
+  width: 100%;
+  max-width: (800 / 16) * 1em;
+	height: 0;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 1;
+	background-color: $color-white;
+	transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
+
+	&.show {
+		height: auto;
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+.menu {
+	display: flex;
+  flex-flow: column nowrap;
+	padding: 2em 1em 0.5em;
+	text-align: center;
+}
+
+.menu-item {
+	margin-bottom: 1.5em;
+	list-style: none;
+
+	a {
+		padding: 0.5em 0;
+    color: $color-black;
+
+		&:hover {
+			color: $color-red;
+		}
+	}
+}
+
+.sub-menu {
+	display: none;
+}
+
+
+@media (min-width: $bp-nav) {
+	.site-header {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.logo {
+		font-size: 100%;
+	}
+
+	.menu-toggle {
+		display: none;
+	}
+
+	.site-nav,
+	.site-nav.show {
+    position: relative;
+    top: 0;
+		width: calc(100% - ((178 / 16) * 1em) - 3em);
+		//max-width: (756 / 16) * 1em;
+		height: auto;
+		opacity: 1;
+		margin: 0;
+		visibility: visible;
+		border-radius: 50px;
+	}
+
+	.menu {
+		flex-flow: row nowrap;
+		justify-content: space-between;
+		align-items: center;
+		height: 100%;
+		padding: 0 1.25em 0 3.75em;
+	}
+
+	.menu-item {
+		margin: 0;
+		padding: (11.5 / 16) * 1em 0;
+
+		a {
+			display: block;
+			padding: 0.75em 0;
+		}
+	}
+}

@@ -11,26 +11,31 @@
 
 ?>
 
-	</div><!-- #content -->
+</main><!-- #content -->
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'cos' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'cos' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'cos' ), 'cos', '<a href="http://andyknapp.com">Andy Knapp</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+<footer id="colophon" class="site-footer">
 
-<?php wp_footer(); ?>
+</footer><!-- #colophon -->
+
+<?php
+	include('assets/icons/svg-defs.svg');
+	wp_footer();
+?>
+
+<script>
+	// load webfonts async
+	WebFontConfig = {
+		google: { families: [ 'Open+Sans+Condensed:300,700', 'Open+Sans:400,600,700,800' ] }
+	};
+	(function() {
+		var wf = document.createElement('script');
+		wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+		wf.type = 'text/javascript';
+		wf.async = 'true';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(wf, s);
+	})();
+</script>
 
 </body>
 </html>

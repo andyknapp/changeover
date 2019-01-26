@@ -1,62 +1,153 @@
-html {
-	box-sizing: border-box;
+.site-content {
+	@extend %clear-header;
 }
 
-*,
-*::before,
-*::after {
-	box-sizing: inherit;
+[class*='container-'] {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
-%heading-1,
-.heading-1 {
-
+.container-site {
+	max-width: (1400 / 16) * 1em
 }
 
-%heading-2,
-.heading-2 {
-
+.container-mid {
+	max-width: (1084 / 16) * 1em;
 }
 
-%heading-3,
-.heading-3 {
-
+.container-small {
+	max-width: (768 / 16) * 1em;
 }
 
-%heading-4,
-.heading-4 {
 
+// intro
+.intro {
+	@extend %flex-parent-row;
+	flex-wrap: wrap;
+	padding: 2.5em 1em;
+
+	header {
+		padding-right: 4em;
+	}
+
+	.intro-content {
+		flex: 1 24em;
+		max-width: (524 / 16) * 1em;
+	}
+
+	p {
+		@extend %copy-1;
+	}
+
+
+	@media (min-width: $bp-nav) {
+		padding: 5em 0;
+	}
 }
 
-%heading-5,
-.heading-5 {
 
+// Upcoming/next sale
+.sale {
+	padding: 2.5em 1em;
+
+	header {
+		padding-bottom: 2em;
+	}
+
+	.address,
+	.date-time {
+		padding-bottom: 1em;
+
+		li {
+			display: block;
+			font-weight: 600;
+			line-height: 1.5;
+		}
+	}
+
+	@media (min-width: $bp-small) {
+		header {
+			text-align: center;
+		}
+
+		.address,
+		.date-time {
+			li {
+				display: inline-block;
+
+			}
+		}
+
+		.address {
+			li {
+				&:first-of-type {
+					margin-right: 0.5em;
+				}
+			}
+		}
+
+		.date-time {
+			li {
+				margin: 0 0.5em;
+			}
+		}
+	}
+
+	@media (min-width: $bp-nav) {
+		padding: 5em 0;
+	}
 }
 
-%copy-1,
-.copy-1 {
+.sale-meta {
+	padding: 1em 1em 3em;
+	text-align: center;
 
+	a {
+		display: inline-block;
+		margin: 0 0.5em;
+	}
 }
 
-%copy-2,
-.copy-2 {
-
+.sale-lists {
+	@extend %flex-parent-row;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
 
-%copy-3,
-.copy-3 {
+.sale-list {
+	width: calc(50% - 1em);
+	margin-bottom: 2em;
+	background-color: $color-gray;
+	.heading-4 {
+		margin-bottom: 0.5em;
+	}
 
+	@media (min-width: $bp-small) {
+		width: calc(25% - 1.5em);
+	}
 }
 
-%copy-4,
-.copy-4 {
 
-}
+// media
+img {
+	max-width: 100%;
+	height: auto;
+	border-width: 0;
+	border-color: transparent;
 
-::placeholder {
+	&.alignleft {
+		float: left;
+		margin: 0 2em 2em 0;
+	}
 
-}
+	&.alignright {
+		float: right;
+		margin: 0 0 2em 2em;
+	}
 
-%button {
-
+	&.aligncenter {
+		float: none;
+		margin: 2em auto;
+	}
 }
