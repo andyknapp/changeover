@@ -14,7 +14,12 @@
 </main><!-- #content -->
 
 <footer id="colophon" class="site-footer">
-
+	<ul>
+		<li>Changeover Sales</li>
+		<li>Est. 1977</li>
+	</ul>
+	<a href="mailto:changeoversales@aol.com" target="_blank">changeoversales@aol.com</a>
+	<a href="tel:1-302-562-5385">302-562-5385</a>
 </footer><!-- #colophon -->
 
 <?php

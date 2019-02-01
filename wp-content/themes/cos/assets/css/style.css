@@ -155,7 +155,7 @@ q:before {
 
 /* line 36, ../sass/base/_utils.scss */
 .site-content {
-  padding-top: 8em;
+  padding-top: 5em;
 }
 
 @media (min-width: 60em) {
@@ -178,7 +178,7 @@ q:before {
 }
 
 /* line 53, ../sass/base/_utils.scss */
-.intro, .sale-lists {
+.intro, .sale-lists, .site-header {
   display: flex;
   flex-direction: row;
 }
@@ -254,6 +254,23 @@ body {
 }
 
 /* line 4, ../sass/base/_mixins.scss */
+.heading-3, .how-it-works span {
+  font-size: 1.125em;
+}
+@media screen and (min-width: 20em) {
+  /* line 4, ../sass/base/_mixins.scss */
+  .heading-3, .how-it-works span {
+    font-size: calc(1.125em + 0.375 * (100vw - 20em) / 60);
+  }
+}
+@media screen and (min-width: 80em) {
+  /* line 4, ../sass/base/_mixins.scss */
+  .heading-3, .how-it-works span {
+    font-size: 1.5em;
+  }
+}
+
+/* line 4, ../sass/base/_mixins.scss */
 .intro p,
 .copy-1 {
   font-size: 1em;
@@ -262,35 +279,38 @@ body {
   /* line 4, ../sass/base/_mixins.scss */
   .intro p,
   .copy-1 {
-    font-size: calc(1em + 0.25 * (100vw - 20em) / 60);
+    font-size: calc(1em + 0.375 * (100vw - 20em) / 60);
   }
 }
 @media screen and (min-width: 80em) {
   /* line 4, ../sass/base/_mixins.scss */
   .intro p,
   .copy-1 {
-    font-size: 1.25em;
+    font-size: 1.375em;
   }
 }
 
 /* line 4, ../sass/base/_mixins.scss */
-.heading-4 {
+.heading-4, .how-it-works p, .about p,
+.copy-2 {
   font-size: 0.875em;
 }
 @media screen and (min-width: 20em) {
   /* line 4, ../sass/base/_mixins.scss */
-  .heading-4 {
+  .heading-4, .how-it-works p, .about p,
+  .copy-2 {
     font-size: calc(0.875em + 0.25 * (100vw - 20em) / 60);
   }
 }
 @media screen and (min-width: 80em) {
   /* line 4, ../sass/base/_mixins.scss */
-  .heading-4 {
+  .heading-4, .how-it-works p, .about p,
+  .copy-2 {
     font-size: 1.125em;
   }
 }
 
-/* line 37, ../sass/base/_typography.scss */
+/* line 41, ../sass/base/_typography.scss */
 body {
   font-size: 16px;
   font-weight: 400;
@@ -298,47 +318,59 @@ body {
   color: #212121;
 }
 
-/* line 47, ../sass/base/_typography.scss */
+/* line 51, ../sass/base/_typography.scss */
 a {
   color: #bf2a1e;
   text-decoration: none;
   transition: color 0.2s ease-out;
 }
-/* line 52, ../sass/base/_typography.scss */
+/* line 56, ../sass/base/_typography.scss */
 a:hover, a:visited, a:active, a:focus {
   outline: 0;
 }
-/* line 59, ../sass/base/_typography.scss */
+/* line 63, ../sass/base/_typography.scss */
 a:hover {
   color: #bf2a1e;
 }
 
-/* line 65, ../sass/base/_typography.scss */
+/* line 69, ../sass/base/_typography.scss */
 [class*='heading-'] {
   font-weight: 700;
   line-height: 1;
   color: #4a4a4a;
 }
 
-/* line 72, ../sass/base/_typography.scss */
+/* line 76, ../sass/base/_typography.scss */
 .heading-1 {
   margin-bottom: 0.5em;
 }
 
-/* line 77, ../sass/base/_typography.scss */
+/* line 81, ../sass/base/_typography.scss */
 .heading-2 {
   margin-bottom: 0.5em;
   font-weight: 300;
 }
 
-/* line 83, ../sass/base/_typography.scss */
+/* line 87, ../sass/base/_typography.scss */
+.heading-3 {
+  font-weight: 600;
+}
+
+/* line 92, ../sass/base/_typography.scss */
 .heading-4 {
   text-transform: uppercase;
 }
 
-/* line 89, ../sass/base/_typography.scss */
+/* line 98, ../sass/base/_typography.scss */
 .intro p,
 .copy-1 {
+  margin-bottom: 1em;
+  line-height: 1.5;
+}
+
+/* line 105, ../sass/base/_typography.scss */
+.how-it-works p, .about p,
+.copy-2 {
   margin-bottom: 1em;
   line-height: 1.5;
 }
@@ -365,41 +397,48 @@ a:hover {
   max-width: 48em;
 }
 
-/* line 25, ../sass/_global.scss */
+/* line 23, ../sass/_global.scss */
+.sale, .how-it-works, .about, .contact {
+  padding: 2.5em 1em;
+}
+@media (min-width: 54em) {
+  /* line 23, ../sass/_global.scss */
+  .sale, .how-it-works, .about, .contact {
+    padding: 5em 1em;
+  }
+}
+
+/* line 34, ../sass/_global.scss */
 .intro {
   flex-wrap: wrap;
   padding: 2.5em 1em;
 }
-/* line 30, ../sass/_global.scss */
+/* line 39, ../sass/_global.scss */
 .intro header {
   padding-right: 4em;
 }
-/* line 34, ../sass/_global.scss */
+/* line 43, ../sass/_global.scss */
 .intro .intro-content {
   flex: 1 24em;
   max-width: 32.75em;
 }
 @media (min-width: 54em) {
-  /* line 25, ../sass/_global.scss */
+  /* line 34, ../sass/_global.scss */
   .intro {
-    padding: 5em 0;
+    padding: 5em 1em;
   }
 }
 
-/* line 51, ../sass/_global.scss */
-.sale {
-  padding: 2.5em 1em;
-}
-/* line 54, ../sass/_global.scss */
+/* line 63, ../sass/_global.scss */
 .sale header {
   padding-bottom: 2em;
 }
-/* line 58, ../sass/_global.scss */
+/* line 67, ../sass/_global.scss */
 .sale .address,
 .sale .date-time {
   padding-bottom: 1em;
 }
-/* line 62, ../sass/_global.scss */
+/* line 71, ../sass/_global.scss */
 .sale .address li,
 .sale .date-time li {
   display: block;
@@ -407,83 +446,171 @@ a:hover {
   line-height: 1.5;
 }
 @media (min-width: 40em) {
-  /* line 70, ../sass/_global.scss */
+  /* line 79, ../sass/_global.scss */
   .sale header {
     text-align: center;
   }
-  /* line 76, ../sass/_global.scss */
+  /* line 85, ../sass/_global.scss */
   .sale .address li,
   .sale .date-time li {
     display: inline-block;
   }
-  /* line 84, ../sass/_global.scss */
+  /* line 93, ../sass/_global.scss */
   .sale .address li:first-of-type {
     margin-right: 0.5em;
   }
-  /* line 91, ../sass/_global.scss */
+  /* line 100, ../sass/_global.scss */
   .sale .date-time li {
     margin: 0 0.5em;
   }
 }
-@media (min-width: 54em) {
-  /* line 51, ../sass/_global.scss */
-  .sale {
-    padding: 5em 0;
-  }
-}
 
-/* line 102, ../sass/_global.scss */
+/* line 107, ../sass/_global.scss */
 .sale-meta {
   padding: 1em 1em 3em;
   text-align: center;
 }
-/* line 106, ../sass/_global.scss */
+/* line 111, ../sass/_global.scss */
 .sale-meta a {
   display: inline-block;
   margin: 0 0.5em;
 }
 
-/* line 112, ../sass/_global.scss */
+/* line 117, ../sass/_global.scss */
 .sale-lists {
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-/* line 118, ../sass/_global.scss */
+/* line 123, ../sass/_global.scss */
 .sale-list {
   width: calc(50% - 1em);
   margin-bottom: 2em;
   background-color: #eee;
 }
-/* line 122, ../sass/_global.scss */
+/* line 127, ../sass/_global.scss */
 .sale-list .heading-4 {
   margin-bottom: 0.5em;
 }
 @media (min-width: 40em) {
-  /* line 118, ../sass/_global.scss */
+  /* line 123, ../sass/_global.scss */
   .sale-list {
     width: calc(25% - 1.5em);
   }
 }
 
-/* line 133, ../sass/_global.scss */
+/* line 136, ../sass/_global.scss */
+.upcoming {
+  max-width: 36em;
+  padding: 2em 0;
+}
+/* line 140, ../sass/_global.scss */
+.upcoming .heading-3 {
+  margin-bottom: 1em;
+}
+/* line 144, ../sass/_global.scss */
+.upcoming .address {
+  margin-bottom: 1.5em;
+}
+/* line 147, ../sass/_global.scss */
+.upcoming .address li {
+  display: block;
+}
+@media (min-width: 40em) {
+  /* line 153, ../sass/_global.scss */
+  .upcoming .flex {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  /* line 158, ../sass/_global.scss */
+  .upcoming .heading-3 {
+    margin: 0 2em 0 0;
+  }
+  /* line 162, ../sass/_global.scss */
+  .upcoming .address {
+    width: calc(50% - 1em);
+  }
+}
+
+/* line 171, ../sass/_global.scss */
+.how-it-works {
+  columns: 18em 2;
+  column-gap: 4em;
+}
+/* line 176, ../sass/_global.scss */
+.how-it-works .heading-1 {
+  column-span: all;
+  margin-bottom: 0.5em;
+}
+/* line 181, ../sass/_global.scss */
+.how-it-works span {
+  display: block;
+  margin-bottom: 0.25em;
+  font-style: italic;
+}
+/* line 188, ../sass/_global.scss */
+.how-it-works p {
+  break-inside: avoid;
+}
+
+/* line 196, ../sass/_global.scss */
+.about {
+  clear: both;
+  overflow: auto;
+}
+/* line 201, ../sass/_global.scss */
+.about.container-mid {
+  max-width: 57.75em;
+}
+/* line 205, ../sass/_global.scss */
+.about img {
+  float: left;
+  width: 40%;
+  max-width: 17.75em;
+  margin: 0 1.5em 1.5em 0;
+}
+@media (min-width: 54em) {
+  /* line 217, ../sass/_global.scss */
+  .about img {
+    margin-right: 3.5em;
+  }
+}
+
+/* line 230, ../sass/_global.scss */
+.contact-info span,
+.contact-info a {
+  display: block;
+  color: #212121;
+}
+
+/* line 239, ../sass/_global.scss */
+.site-footer {
+  padding: 4em 1em 1em;
+  text-align: center;
+}
+/* line 243, ../sass/_global.scss */
+.site-footer a {
+  display: block;
+}
+
+/* line 249, ../sass/_global.scss */
 img {
   max-width: 100%;
   height: auto;
   border-width: 0;
   border-color: transparent;
 }
-/* line 139, ../sass/_global.scss */
+/* line 255, ../sass/_global.scss */
 img.alignleft {
   float: left;
   margin: 0 2em 2em 0;
 }
-/* line 144, ../sass/_global.scss */
+/* line 260, ../sass/_global.scss */
 img.alignright {
   float: right;
   margin: 0 0 2em 2em;
 }
-/* line 149, ../sass/_global.scss */
+/* line 265, ../sass/_global.scss */
 img.aligncenter {
   float: none;
   margin: 2em auto;
@@ -491,18 +618,20 @@ img.aligncenter {
 
 /* line 4, ../sass/components/_header.scss */
 .site-header {
+  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   width: 100%;
+  height: 5em;
   padding-left: 1em;
   padding-right: 1em;
-  height: 8em;
   z-index: 1;
+  background-color: #ffffff;
 }
 
-/* line 16, ../sass/components/_header.scss */
+/* line 19, ../sass/components/_header.scss */
 .logo {
   display: block;
   width: 11.125em;
@@ -511,13 +640,11 @@ img.aligncenter {
   background: url("../changeover-sales-logo.jpg") no-repeat center/cover;
 }
 
-/* line 32, ../sass/components/_header.scss */
+/* line 35, ../sass/components/_header.scss */
 .menu-toggle {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
+  top: 50%;
+  right: 1em;
   padding: 0.5em 1em;
   border: 1px solid #212121;
   line-height: 1;
@@ -530,16 +657,16 @@ img.aligncenter {
   transform: translateY(-50%);
   transition: color 0.3s ease-out, border 0.3s ease-out;
 }
-/* line 50, ../sass/components/_header.scss */
+/* line 51, ../sass/components/_header.scss */
 .menu-toggle.toggled {
   color: #bf2a1e;
   border-color: #eee;
 }
 
-/* line 57, ../sass/components/_header.scss */
+/* line 58, ../sass/components/_header.scss */
 .site-nav {
   position: absolute;
-  top: 8em;
+  top: 5em;
   left: 0;
   width: 100%;
   max-width: 50em;
@@ -547,7 +674,6 @@ img.aligncenter {
   opacity: 0;
   visibility: hidden;
   z-index: 1;
-  background-color: #ffffff;
   transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
 }
 /* line 70, ../sass/components/_header.scss */
@@ -580,13 +706,8 @@ img.aligncenter {
   color: #bf2a1e;
 }
 
-/* line 98, ../sass/components/_header.scss */
-.sub-menu {
-  display: none;
-}
-
 @media (min-width: 54em) {
-  /* line 104, ../sass/components/_header.scss */
+  /* line 100, ../sass/components/_header.scss */
   .site-header {
     display: flex;
     flex-flow: row nowrap;
@@ -594,17 +715,17 @@ img.aligncenter {
     align-items: center;
   }
 
-  /* line 111, ../sass/components/_header.scss */
+  /* line 107, ../sass/components/_header.scss */
   .logo {
     font-size: 100%;
   }
 
-  /* line 115, ../sass/components/_header.scss */
+  /* line 111, ../sass/components/_header.scss */
   .menu-toggle {
     display: none;
   }
 
-  /* line 119, ../sass/components/_header.scss */
+  /* line 115, ../sass/components/_header.scss */
   .site-nav,
   .site-nav.show {
     position: relative;
@@ -617,7 +738,7 @@ img.aligncenter {
     border-radius: 50px;
   }
 
-  /* line 132, ../sass/components/_header.scss */
+  /* line 128, ../sass/components/_header.scss */
   .menu {
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -626,12 +747,12 @@ img.aligncenter {
     padding: 0 1.25em 0 3.75em;
   }
 
-  /* line 140, ../sass/components/_header.scss */
+  /* line 136, ../sass/components/_header.scss */
   .menu-item {
     margin: 0;
     padding: 0.71875em 0;
   }
-  /* line 144, ../sass/components/_header.scss */
+  /* line 140, ../sass/components/_header.scss */
   .menu-item a {
     display: block;
     padding: 0.75em 0;

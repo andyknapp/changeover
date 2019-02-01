@@ -24,8 +24,12 @@
 	@include fluid-scale(font-size, 20em, 80em, 1.6875em, 2em);
 }
 
-%fs-20 {
-	@include fluid-scale(font-size, 20em, 80em, 1em, 1.25em);
+%fs-24 {
+	@include fluid-scale(font-size, 20em, 80em, 1.125em, 1.5em);
+}
+
+%fs-22 {
+	@include fluid-scale(font-size, 20em, 80em, 1em, 1.375em);
 }
 
 %fs-18 {
@@ -80,6 +84,11 @@ a {
   font-weight: 300;
 }
 
+.heading-3 {
+  @extend %fs-24;
+  font-weight: 600;
+}
+
 .heading-4 {
   @extend %fs-18;
   text-transform: uppercase;
@@ -88,7 +97,14 @@ a {
 
 %copy-1,
 .copy-1 {
-  @extend %fs-20;
+  @extend %fs-22;
+  margin-bottom: 1em;
+  line-height: 1.5;
+}
+
+%copy-2,
+.copy-2 {
+  @extend %fs-18;
   margin-bottom: 1em;
   line-height: 1.5;
 }

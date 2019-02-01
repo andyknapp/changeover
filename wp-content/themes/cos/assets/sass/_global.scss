@@ -20,6 +20,15 @@
 	max-width: (768 / 16) * 1em;
 }
 
+%pad {
+	padding: 2.5em 1em;
+
+	@media (min-width: $bp-nav) {
+		padding: 5em 1em;
+	}
+
+}
+
 
 // intro
 .intro {
@@ -42,14 +51,14 @@
 
 
 	@media (min-width: $bp-nav) {
-		padding: 5em 0;
+		padding: 5em 1em;
 	}
 }
 
 
 // Upcoming/next sale
 .sale {
-	padding: 2.5em 1em;
+	@extend %pad;
 
 	header {
 		padding-bottom: 2em;
@@ -93,10 +102,6 @@
 			}
 		}
 	}
-
-	@media (min-width: $bp-nav) {
-		padding: 5em 0;
-	}
 }
 
 .sale-meta {
@@ -128,6 +133,117 @@
 	}
 }
 
+.upcoming {
+	max-width: 36em;
+	padding: 2em 0;
+
+	.heading-3 {
+		margin-bottom: 1em;
+	}
+
+	.address {
+		margin-bottom: 1.5em;
+
+		li {
+			display: block;
+		}
+	}
+
+	@media (min-width: $bp-small) {
+		.flex {
+			display: flex;
+			flex-flow: row wrap;
+		}
+
+		.heading-3 {
+			margin: 0 2em 0 0;
+		}
+
+		.address {
+			width: calc(50% - 1em);
+		}
+	}
+}
+
+
+
+// how it works
+.how-it-works {
+	@extend %pad;
+	columns: 18em 2;
+	column-gap: 4em;
+
+	.heading-1 {
+		column-span: all;
+		margin-bottom: 0.5em;
+	}
+
+	span {
+		@extend %fs-24;
+		display: block;
+		margin-bottom: 0.25em;
+		font-style: italic;
+	}
+
+	p {
+		@extend %copy-2;
+		break-inside: avoid;
+	}
+}
+
+
+// about us
+.about {
+	@extend %pad;
+	clear: both;
+	overflow: auto;
+
+	&.container-mid {
+		max-width: (924 / 16) * 1em;
+	}
+
+	img {
+		float: left;
+		width: 40%;
+		max-width: (284 / 16) * 1em;
+		margin: 0 1.5em 1.5em 0;
+	}
+
+	p {
+		@extend %copy-2;
+	}
+
+	@media (min-width: $bp-nav) {
+		img {
+			margin-right: 3.5em;
+		}
+	}
+}
+
+
+// contact
+.contact {
+	@extend %pad;
+}
+
+.contact-info {
+	span,
+	a {
+		display: block;
+		color: $color-black;
+	}
+}
+
+
+// footer
+.site-footer {
+	padding: 4em 1em 1em;
+	text-align: center;
+
+	a {
+		display: block;
+	}
+}
 
 // media
 img {

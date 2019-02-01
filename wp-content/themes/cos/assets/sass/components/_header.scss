@@ -2,15 +2,18 @@
 // sass-lint:disable force-pseudo-nesting
 
 .site-header {
+  @extend %flex-parent-row;
+  align-items: center;
 	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
 	width: 100%;
+  height: $header-height-1;
   padding-left: 1em;
   padding-right: 1em;
-	height: $header-height-1;
 	z-index: 1;
+  background-color: $color-white;
 }
 
 .logo {
@@ -31,10 +34,8 @@
 
 .menu-toggle {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-	width: 100%;
+  top: 50%;
+  right: 1em;
 	padding: 0.5em 1em;
 	border: 1px solid $color-black;
 	line-height: 1;
@@ -64,7 +65,6 @@
 	opacity: 0;
 	visibility: hidden;
 	z-index: 1;
-	background-color: $color-white;
 	transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
 
 	&.show {
@@ -93,10 +93,6 @@
 			color: $color-red;
 		}
 	}
-}
-
-.sub-menu {
-	display: none;
 }
 
 

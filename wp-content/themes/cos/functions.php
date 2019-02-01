@@ -116,7 +116,7 @@ function cos_scripts() {
 	// de-register jquery
 	wp_deregister_script('jquery');
 	// and load in the footer
-	//wp_register_script('jquery', includes_url('/js/jquery/jquery.js'), false, NULL, true);
+	wp_register_script('jquery', includes_url('/js/jquery/jquery.js'), false, NULL, true);
 
 	// wp-embeds.min.js no longer needed
 	wp_deregister_script('wp-embed');
@@ -127,6 +127,10 @@ function cos_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'cos_scripts' );
 
+
+remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('wp_print_styles', 'print_emoji_styles');
+remove_action('wp_head', 'wp_generator');
 
 /**
  * Custom template tags for this theme.
@@ -212,6 +216,7 @@ function kd_remove_customizer() {
     }
 }
 add_action( 'admin_menu', 'kd_remove_customizer', 999 );
+
 
 
 // critical css setup
