@@ -25,8 +25,8 @@ get_header();
 		</div>
 	</section>
 
-	<section id="sale" class="sale">
-		<header>
+	<section id="next-sale" class="sale major-section">
+		<header class="sale-header">
 			<?php // if there is an active sale ?>
 				<h2 class="heading-1">Next Sale</h2>
 
@@ -35,6 +35,15 @@ get_header();
 				<ul class="address">
 					<li>123 Main St.</li>
 					<li>Wilmington, DE 19803</li>
+					<li class="cta">
+						<a href="#" class="external-link">Directions
+							<span>
+								<svg>
+									<use xlink:href="#icon-external-link"></use>
+								</svg>
+							</span>
+						</a>
+					</li>
 				</ul>
 
 				<ul class="date-time">
@@ -44,20 +53,42 @@ get_header();
 				</ul>
 		</header>
 
+		<div class="sale-meta">
+			<a href="#" class="external-link">View Pictures
+				<span>
+					<svg>
+						<use xlink:href="#icon-external-link"></use>
+					</svg>
+				</span>
+			</a>
+
+			<a href="#" class="external-link">Facebook
+				<span>
+					<svg>
+						<use xlink:href="#icon-external-link"></use>
+					</svg>
+				</span>
+			</a>
+		</div>
+
 		<div class="sale-description container-small">
 			<p class="copy-1">Blurb about next sale. Lorem ipsum dolor sit amet consectetur, adipiscing elit fermentum bibendum sociosqu senectus, lacus nibh tellus lobortis. Phasellus primis imperdiet in massa neque potenti sodales nostra eros feugiat, vitae magna odio netus.</p>
 		</div>
 
-		<div class="sale-meta">
-			<a href="#">View Pictures</a>
-			<a href="#">Directions</a>
-			<a href="#">Facebook</a>
-		</div>
-
 		<div class="sale-lists container-site">
+
 			<div class="sale-list">
-				<h3 class="heading-4">Furniture</h3>
-				<ul>
+				<header class="list-header">
+					<h3 class="heading-4">Furniture</h3>
+					<span>&#9660;</span>
+				</header>
+				<ul class="list">
+					<li>Chair</li>
+					<li>Chair</li>
+					<li>Chair</li>
+					<li>Chair</li>
+					<li>Chair</li>
+					<li>Chair</li>
 					<li>Chair</li>
 					<li>Chair</li>
 					<li>Chair</li>
@@ -68,38 +99,65 @@ get_header();
 			</div>
 
 			<div class="sale-list">
-				<h3 class="heading-4">Clothing</h3>
-				<ul>
-					<li>Shirt</li>
-					<li>Shirt</li>
-					<li>Shirt</li>
-					<li>Shirt</li>
-					<li>Shirt</li>
-					<li>Shirt</li>
+				<header class="list-header">
+					<h3 class="heading-4">Stuff</h3>
+					<span>&#9660;</span>
+				</header>
+				<ul class="list">
+					<li>Chair</li>
+					<li>Chair</li>
+					<li>Chair</li>
+					<li>Chair</li>
+					<li>Chair</li>
+					<li>Chair</li>
+					<li>Chair</li>
+					<li>Chair</li>
+					<li>Chair</li>
+					<li>Chair</li>
+					<li>Chair</li>
+					<li>Chair</li>
 				</ul>
 			</div>
 
 			<div class="sale-list">
-				<h3 class="heading-4">Clothing</h3>
-				<ul>
-					<li>Shirt Shirt Shirt</li>
-					<li>Shirt</li>
-					<li>Shirt</li>
-					<li>Shirt</li>
-					<li>Shirt</li>
-					<li>Shirt</li>
+				<header class="list-header">
+					<h3 class="heading-4">Furniture</h3>
+					<span>&#9660;</span>
+				</header>
+				<ul class="list">
+					<li>Chair</li>
+					<li>Chair</li>
+					<li>Chair</li>
+					<li>Chair</li>
+					<li>Chair</li>
+					<li>Chair</li>
+					<li>Chair</li>
+					<li>Chair</li>
+					<li>Chair</li>
+					<li>Chair</li>
+					<li>Chair</li>
+					<li>Chair</li>
 				</ul>
 			</div>
 
 			<div class="sale-list">
-				<h3 class="heading-4">Clothing</h3>
-				<ul>
-					<li>Shirt Shirt Shirt</li>
-					<li>Shirt Shirt Shirt</li>
-					<li>Shirt Shirt Shirt</li>
-					<li>Shirt Shirt Shirt</li>
-					<li>Shirt Shirt Shirt</li>
-					<li>Shirt Shirt Shirt</li>
+				<header class="list-header">
+					<h3 class="heading-4">Stuff</h3>
+					<span>&#9660;</span>
+				</header>
+				<ul class="list">
+					<li>Chair</li>
+					<li>Chair</li>
+					<li>Chair</li>
+					<li>Chair</li>
+					<li>Chair</li>
+					<li>Chair</li>
+					<li>Chair</li>
+					<li>Chair</li>
+					<li>Chair</li>
+					<li>Chair</li>
+					<li>Chair</li>
+					<li>Chair</li>
 				</ul>
 			</div>
 
@@ -130,7 +188,7 @@ get_header();
 		</aside>
 	</section>
 
-	<section id="how-it-works" class="how-it-works container-mid">
+	<section id="how-it-works" class="how-it-works container-mid major-section">
 		<h5 class="heading-1">How it Works</h5>
 		<span>We take care of everything</span>
 		<p>All our client needs to do is take what they want and leave the rest to us. We will sort saleable from non-saleable, arrange, price, tag, advertise and sell everything in 2 or 3 days leaving your home “broom clean” ready for the cleaning crew (we can arrange for that, too!).</p>
@@ -140,26 +198,30 @@ get_header();
 		<p>We also offer a full & partial estate purchases. If a Tag Sale isn't possible, we can offer a buyout of complete or partial contents of a home. After a purchase price has been agreed to, we will arrange for the packing & removal of all items and pay you immediately.</p>
 	</section>
 
-	<section id="testimonials" class="testimonials">
+	<section id="testimonials" class="testimonials major-section">
 
 	</section>
 
-	<section id="about" class="about container-mid">
+	<section id="about-us" class="about container-mid major-section">
 		<h5 class="heading-1">About Us</h5>
 		<img src="https://www.fillmurray.com/400/500" alt=""  />
 		<p>Founded by Kay Reilly in 1977, we continue to be family owned and operated with a combined 70+ years of tag sales and appraisal experience. Word of mouth and customer referrals are the backbone of our thriving business and sterling reputation.</p>
 		<p>We are very proud of our friendly, knowledgeable, professional staff, many who have been with us from the start! We also maintain a vast number of experts who contribute valuable information and opinions on art, antiques, jewelry, etc.</p>
 	</section>
 
-	<section id="contact" class="contact container-mid">
+	<section id="contact" class="contact container-mid major-section">
 		<h5 class="heading-1">Contact</h5>
-		<aside class="contact-info">
-			<span>Kay Reilly</span>
-			<span>Patty Souffie</span>
-			<a href="mailto:changeoversales@aol.com" target="_blank">changeoversales@aol.com</a>
-			<a href="tel:1-302-562-5385">302-562-5385</a>
-		</aside>
-		<?php gravity_form( 1, false, false, false, '', false ); ?>
+		<div class="contact-container">
+			<aside class="contact-info">
+				<span>Kay Reilly</span>
+				<span>Patty Souffie</span>
+				<a href="mailto:changeoversales@aol.com" target="_blank">changeoversales@aol.com</a>
+				<a href="tel:1-302-562-5385">302-562-5385</a>
+			</aside>
+
+			<?php gravity_form( 1, false, false, false, '', false ); ?>
+		</div>
+
 	</section>
 
 <?php

@@ -1,0 +1,49 @@
+%button {
+	display: inline-block;
+	position: relative;
+	width: auto;
+	padding: 1em (38 / 14) * 1em;
+	background-color: $color-red;
+	border: 0;
+	border-radius: 2px;
+	font-size: 0.875em;
+	line-height: 1;
+	text-align: center;
+	color: $color-white;
+	cursor: pointer;
+	text-decoration: none;
+	transition: background-color 0.2s ease-out, color 0.2s ease-out;
+
+	&:hover {
+		background-color: $color-white;
+		color: $color-black;
+	}
+
+	&:focus {
+		outline: 0;
+	}
+
+	// &:active {
+	// 	//background-color: $color-orange-pressed;
+	// }
+
+	// &[disabled],
+	// &.disabled {
+	// 	//background-color: $color-orange-disabled;
+	// }
+}
+
+.button,
+button:not(.no-button-style) { //sass-lint:disable-line force-pseudo-nesting
+	@extend %button;
+}
+
+.no-button-style {
+	border-width: 0;
+	padding: 0;
+	background-color: transparent;
+
+	&:focus {
+		outline: 0;
+	}
+}

@@ -9,18 +9,18 @@
 	left: 0;
 	right: 0;
 	width: 100%;
-  height: $header-height-1;
-  padding-left: 1em;
-  padding-right: 1em;
-	z-index: 1;
-  background-color: $color-white;
+    height: $header-height-1;
+    padding-left: 1em;
+    padding-right: 1em;
+    z-index: 1;
+    background-color: $color-white;
 }
 
 .logo {
 	display: block;
 	width: (178 / 16) * 1em;
 	height: (66 / 16) * 1em;
-  font-size: 80%;
+    font-size: 80%;
 	background: url('../changeover-sales-logo.jpg') no-repeat center / cover;
 
 	span {
@@ -33,20 +33,20 @@
 }
 
 .menu-toggle {
-  position: absolute;
-  top: 50%;
-  right: 1em;
-	padding: 0.5em 1em;
-	border: 1px solid $color-black;
-	line-height: 1;
-	color: $color-black;
-  font-size: 1em;
-  text-align: center;
-	touch-action: manipulation;
-	cursor: pointer;
-	outline: -webkit-focus-ring-color 0; //sass-lint:disable-line no-vendor-prefixes
-  transform: translateY(-50%);
-	transition: color 0.3s ease-out, border 0.3s ease-out;
+    position: absolute;
+    top: 50%;
+    right: 1em;
+    padding: 0.5em 1em;
+    border: 1px solid $color-black;
+    line-height: 1;
+    color: $color-black;
+    font-size: 1em;
+    text-align: center;
+    touch-action: manipulation;
+    cursor: pointer;
+    outline: -webkit-focus-ring-color 0; //sass-lint:disable-line no-vendor-prefixes
+    transform: translateY(-50%);
+    transition: color 0.3s ease-out, border 0.3s ease-out;
 
 	&.toggled {
 		color: $color-red;
@@ -57,15 +57,15 @@
 
 .site-nav {
 	position: absolute;
-  top: $header-height-1;
-  left: 0;
-  width: 100%;
-  max-width: (800 / 16) * 1em;
-	height: 0;
-	opacity: 0;
-	visibility: hidden;
-	z-index: 1;
-	transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
+    top: $header-height-1;
+    left: 0;
+    width: 100%;
+    max-width: (800 / 16) * 1em;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+    transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
 
 	&.show {
 		height: auto;

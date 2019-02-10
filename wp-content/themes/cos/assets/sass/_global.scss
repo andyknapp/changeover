@@ -21,12 +21,19 @@
 }
 
 %pad {
-	padding: 2.5em 1em;
+	padding-top: 2.5em;
+	padding-bottom: 2.5em;
 
 	@media (min-width: $bp-nav) {
-		padding: 5em 1em;
+		padding-top: 5em;
+		padding-bottom: 5em;
 	}
 
+}
+
+%pad-h {
+	padding-left: 1em;
+	padding-right: 1em;
 }
 
 
@@ -54,117 +61,6 @@
 		padding: 5em 1em;
 	}
 }
-
-
-// Upcoming/next sale
-.sale {
-	@extend %pad;
-
-	header {
-		padding-bottom: 2em;
-	}
-
-	.address,
-	.date-time {
-		padding-bottom: 1em;
-
-		li {
-			display: block;
-			font-weight: 600;
-			line-height: 1.5;
-		}
-	}
-
-	@media (min-width: $bp-small) {
-		header {
-			text-align: center;
-		}
-
-		.address,
-		.date-time {
-			li {
-				display: inline-block;
-
-			}
-		}
-
-		.address {
-			li {
-				&:first-of-type {
-					margin-right: 0.5em;
-				}
-			}
-		}
-
-		.date-time {
-			li {
-				margin: 0 0.5em;
-			}
-		}
-	}
-}
-
-.sale-meta {
-	padding: 1em 1em 3em;
-	text-align: center;
-
-	a {
-		display: inline-block;
-		margin: 0 0.5em;
-	}
-}
-
-.sale-lists {
-	@extend %flex-parent-row;
-	flex-wrap: wrap;
-	justify-content: space-between;
-}
-
-.sale-list {
-	width: calc(50% - 1em);
-	margin-bottom: 2em;
-	background-color: $color-gray;
-	.heading-4 {
-		margin-bottom: 0.5em;
-	}
-
-	@media (min-width: $bp-small) {
-		width: calc(25% - 1.5em);
-	}
-}
-
-.upcoming {
-	max-width: 36em;
-	padding: 2em 0;
-
-	.heading-3 {
-		margin-bottom: 1em;
-	}
-
-	.address {
-		margin-bottom: 1.5em;
-
-		li {
-			display: block;
-		}
-	}
-
-	@media (min-width: $bp-small) {
-		.flex {
-			display: flex;
-			flex-flow: row wrap;
-		}
-
-		.heading-3 {
-			margin: 0 2em 0 0;
-		}
-
-		.address {
-			width: calc(50% - 1em);
-		}
-	}
-}
-
 
 
 // how it works
@@ -230,6 +126,78 @@
 	span,
 	a {
 		display: block;
+		margin-bottom: 1em;
+	}
+}
+
+.contact-container {
+	@media (min-width: $bp-small) {
+		display: flex;
+		flex-flow: row wrap;
+
+		.gform_wrapper {
+			order: 0;
+			width: calc(100% - 16em);
+			max-width: (700 / 16) * 1em;
+		}
+
+		.contact-info {
+			order: 1;
+			padding-left: 3em;
+
+			@media (min-width: 68em) {
+				padding-left: 6em;
+			}
+		}
+	}
+}
+
+
+.gform_fields {
+	@extend %flex-parent-row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.gfield:not(.flex-field) {
+	width: 100%;
+}
+
+.flex-field {
+	width: calc(50% - 1em);
+}
+
+.gfield_description,
+.validation_message {
+	padding: 0.25em 0 0.75em;
+	font-size: 70%;
+	color: $color-red;
+	line-height: 1;
+}
+
+.validation_error {
+	padding: 0.75em 0;
+	color: $color-red;
+}
+
+.gform_confirmation_message {
+	@extend %copy-1;
+	color: $color-red;
+}
+
+.gform_confirmation_message {
+	padding-top: 3em;
+}
+
+.gfield {
+	margin-bottom: 1em;
+}
+
+.contact-info {
+	margin-bottom: 2em;
+	span,
+	a {
+		display: block;
 		color: $color-black;
 	}
 }
@@ -265,5 +233,30 @@ img {
 	&.aligncenter {
 		float: none;
 		margin: 2em auto;
+	}
+}
+
+
+// external links
+.external-link {
+	display: inline-block;
+
+	&:hover {
+		color: $color-black-2;
+
+		svg {
+			fill: $color-black-2;
+		}
+	}
+
+	span {
+		margin-left: 0.25em;
+		vertical-align: text-top;
+	}
+
+	svg {
+		width: 1em;
+		height: 1em;
+		fill: $color-red;
 	}
 }

@@ -24,8 +24,8 @@
 <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'cos' ); ?></a>
 
 <header id="masthead" class="site-header">
-	<a href="/" class="logo"><h1 class="skip-link"><?php bloginfo( 'name' ); ?></h1></a>
-	<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'cos' ); ?></button>
+	<a href="#content" class="logo"><h1 class="skip-link"><?php bloginfo( 'name' ); ?></h1></a>
+	<button class="menu-toggle no-button-style" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'cos' ); ?></button>
 
 	<nav id="site-navigation" class="site-nav">
 		<?php

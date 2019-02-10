@@ -1,0 +1,195 @@
+//sass-lint:disable force-pseudo-nesting, force-element-nesting, nesting-depth
+
+%input {
+	width: 100%;
+	padding: 0.5em 1em;
+	border: 1px solid $color-gray-2;
+	background-color: $color-white;
+	border-radius: 2px;
+	font-size: 1em;
+	font-weight: 400;
+	line-height: 1;
+	color: $color-black;
+	outline: none;
+	-webkit-appearance: none;//sass-lint:disable-line no-vendor-prefixes
+	transition: border-color 0.2s ease-out;
+
+	&:focus {
+		border-color: $color-black-2;
+	}
+}
+
+input {
+	@extend %input;
+
+	@include placeholder {
+		font-size: 1em;
+		color: $color-black-2;
+	}
+}
+
+// select {
+// 	@extend %input;
+// 	color: $color-gray-less-dark;
+// 	background: $color-white url('../icons/down-select.svg') no-repeat calc(100% - 1.2em) center / 10px 5px;
+// 	-moz-appearance: none; //sass-lint:disable-line no-vendor-prefixes
+//
+// 	&::-ms-expand { // hide ua menu icon in IE
+// 		display: none;
+// 	}
+// }
+
+textarea {
+	@extend %input;
+
+	@include placeholder {
+		font-size: 1em;
+		color: $color-black-2;
+	}
+}
+
+
+.gfield:not(.file-upload) {
+	label {
+		@extend %visually-hidden;
+	}
+}
+
+.gform_hidden {
+	@extend %visually-hidden;
+}
+
+
+
+// floating labels
+.field-wrapper-floating {
+	position: relative;
+
+	.floating-label {
+		position: absolute;
+		bottom: 0.5em;
+		left: 0;
+		cursor: text;
+		overflow: hidden;
+		font-size: 12px;
+		transform-origin: left top;
+		will-change: transform;
+		transition: transform 0.15s ease-out;
+	}
+
+	input:focus + .floating-label,
+	input.filled + .floating-label,
+	select:focus + .floating-label,
+	select.filled + .floating-label {
+		transform: translateY(-3em) scale(0.75);
+	}
+
+	select + .floating-label {
+		width: 100%;
+		background-color: $color-white;
+		padding-top: 10px;
+		pointer-events: none;
+	}
+}
+
+// checkbox & radio buttons
+[type='checkbox']:not(:checked),
+[type='checkbox']:checked,
+[type='radio']:not(:checked),
+[type='radio']:checked {
+	position: absolute;
+	left: -9999px;
+
+	+ label {
+		padding: 0.25em 0.25em 0.25em 2.5em;
+
+		// create the checkbox
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+		}
+
+		&::before {
+			left: 0;
+			top: 0.25em;
+			width: 16px;
+			height: 16px;
+			border: 1px solid $color-black;
+			box-shadow: 0 1px 0 0 rgba(22, 29, 37, 0.05); //sass-lint:disable-line no-color-literals
+			transition: border-color 0.2s ease-out;
+		}
+
+		&::after {
+			transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+		}
+	}
+}
+
+// checkbox only
+[type='checkbox']:not(:checked),
+[type='checkbox']:checked {
+	+ label {
+		&::before {
+			border-radius: 3px;
+		}
+
+		&::after {
+			left: 0;
+			top: 0.25em;
+			width: 1.5em;
+			height: 1.5em;
+			background: transparent url('../icons/check.svg') no-repeat center / cover;
+			background-size: 10px;
+			background-position: 3px 4px;
+		}
+	}
+}
+
+// radio only
+[type='radio']:not(:checked),
+[type='radio']:checked {
+	+ label {
+		&::before {
+			border-radius: 50%;
+		}
+
+		&::after {
+			top: 0.35em;
+			left: 0.25em;
+			width: 1em;
+			height: 1em;
+			background-color: $color-black;
+			border-radius: 50%;
+		}
+	}
+}
+
+[type='checkbox']:not(:checked),
+[type='radio']:not(:checked) {
+	&:focus {
+		+ label {
+			&::before {
+				border-width: 1px;
+				border-color: $color-black;
+			}
+		}
+	}
+}
+
+[type='checkbox']:not(:checked) + label::after,
+[type='radio']:not(:checked) + label::after {
+	transform: scale(0);
+	opacity: 0;
+}
+
+[type='checkbox']:checked + label::after,
+[type='radio']:checked + label::after {
+	opacity: 1;
+	transform: scale(1);
+}
+
+[type='checkbox']:checked + label::before,
+[type='radio']:checked + label::before {
+	border-color: $color-black;
+}
