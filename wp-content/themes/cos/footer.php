@@ -30,7 +30,7 @@
 <script>
 	// load webfonts async
 	WebFontConfig = {
-		google: { families: [ 'Open+Sans+Condensed:300,700', 'Open+Sans:400,600,700,800' ] }
+		google: { families: [ 'Open+Sans+Condensed:300,700', 'Open+Sans:300italic,400,600,700,800' ] }
 	};
 	(function() {
 		var wf = document.createElement('script');

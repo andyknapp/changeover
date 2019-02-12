@@ -4,7 +4,7 @@
 
 	.address,
 	.date-time {
-		padding-bottom: 1.5em;
+		padding-bottom: 0.5em;
 
 		li {
 			display: block;
@@ -53,14 +53,28 @@
 
 		.date-time {
 			li {
-				margin: 0 0.5em;
+				margin: 0;
+
+                &::after {
+                    content: '|';
+                    display: inline-block;
+                    margin: 0 2em;
+                    opacity: 0.5;
+                }
+
+                &:last-of-type {
+                    &::after {
+                        display: none;
+                    }
+                }
 			}
+
 		}
 	}
 }
 
 .sale-meta {
-	padding: 1em;
+	padding: 0.5em 1em 3em;
 
     a {
         margin: 0 2em 0 0;
@@ -74,7 +88,7 @@
         text-align: center;
 
         a {
-            margin: 0 1em;
+            margin: 0 3em;
         }
     }
 }
@@ -101,13 +115,14 @@
     border-radius: 4px;
 
 	@media (min-width: $bp-small) {
-        width: calc(50% - 1em);
-        margin-right: 1em;
+        width: calc(50% - 2em);
+        margin-right: 2em;
+        border-width: 0;
 	}
 
-    @media (min-width: $bp-nav) {
-		width: calc(25% - 1.5em);
-	}
+    // @media (min-width: $bp-nav) {
+	// 	width: calc(33.333% - 1.5em);
+	// }
 }
 
 .list-header {
@@ -151,15 +166,36 @@
             transform: rotateX(180deg);
         }
     }
+
+
+    @media (min-width: $bp-small) {
+        margin-bottom: 1em;
+        padding: 1em 1em 0.5em;
+        border-bottom: 1px solid $color-gray;
+
+        span {
+            display: none;
+        }
+
+        &:after {
+            display: none;
+        }
+	}
 }
 
 .list {
+    width: 100%;
     height: 0;
     padding-left: 1em;
     padding-right: 1em;
     opacity: 0;
-    overflow: auto;
+    overflow: hidden;
     transition: opacity 0.2s ease-out, padding 0.2s ease-out;
+
+    li {
+        margin-bottom: 0.875em;
+        line-height: 1.25;
+    }
 
     &.open {
         height: auto;
@@ -167,6 +203,12 @@
         padding-bottom: 1em;
         opacity: 1;
     }
+
+
+    @media (min-width: $bp-small) {
+        height: 10em;
+        opacity: 1;
+	}
 }
 
 

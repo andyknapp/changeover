@@ -79,43 +79,28 @@ get_header();
 
 			<div class="sale-list">
 				<header class="list-header">
-					<h3 class="heading-4">Furniture</h3>
+					<h3 class="heading-4">Accessories & Collectibles</h3>
 					<span>&#9660;</span>
 				</header>
 				<ul class="list">
-					<li>Chair</li>
-					<li>Chair</li>
-					<li>Chair</li>
-					<li>Chair</li>
-					<li>Chair</li>
-					<li>Chair</li>
-					<li>Chair</li>
-					<li>Chair</li>
-					<li>Chair</li>
-					<li>Chair</li>
-					<li>Chair</li>
-					<li>Chair</li>
-				</ul>
-			</div>
-
-			<div class="sale-list">
-				<header class="list-header">
-					<h3 class="heading-4">Stuff</h3>
-					<span>&#9660;</span>
-				</header>
-				<ul class="list">
-					<li>Chair</li>
-					<li>Chair</li>
-					<li>Chair</li>
-					<li>Chair</li>
-					<li>Chair</li>
-					<li>Chair</li>
-					<li>Chair</li>
-					<li>Chair</li>
-					<li>Chair</li>
-					<li>Chair</li>
-					<li>Chair</li>
-					<li>Chair</li>
+					<li>Vintage Mac Classic, computer, printer, keyboard & mouse</li>
+					<li>Howard Miller mantel clock, LARGE</li>
+					<li>Waterbury mantle clock</li>
+					<li>Russian lacquered box</li>
+					<li>Cast iron doorstops</li>
+					<li>Local & Delaware books</li>
+					<li>Vintage LP's and 45's</li>
+					<li>Antique Kodak cameras</li>
+					<li>Violins, 2 (Otto E Fischer & Franz Hoffmann)</li>
+					<li>BEAUTIFUL Lamps, many</li>
+					<li>Matching cloisonné vases</li>
+					<li>Giant floor pillows made from Oriental rugs</li>
+					<li>Brass music stands</li>
+					<li>BEAUTIFUL mirrors</li>
+					<li>Mosaic garden seat</li>
+					<li>Vintage Corona typewriters</li>
+					<li>Carved horn Buddha</li>
+					<li>Vintage Japanese folding screen</li>
 				</ul>
 			</div>
 
@@ -125,39 +110,92 @@ get_header();
 					<span>&#9660;</span>
 				</header>
 				<ul class="list">
-					<li>Chair</li>
-					<li>Chair</li>
-					<li>Chair</li>
-					<li>Chair</li>
-					<li>Chair</li>
-					<li>Chair</li>
-					<li>Chair</li>
-					<li>Chair</li>
-					<li>Chair</li>
-					<li>Chair</li>
-					<li>Chair</li>
-					<li>Chair</li>
+					<li>Kittinger Williamsburg Sofa</li>
+					<li>Kittinger Williamsburg Lolling Chairs, Pair</li>
+					<li>Henkel Harris tea table</li>
+					<li>Biggs, inlaid Pembroke tables, pair</li>
+					<li>Kittinger Asian style coffee table, antiqued mirror top</li>
+					<li>Kittinger end tables</li>
+					<li>Knabe baby grand piano</li>
+					<li>Wing chairs, needlepoint side chairs, needlepoint foot stools</li>
+					<li>Henredon dining table (extends from 40" round to 90" oval)</li>
+					<li>Henredon china cabinet</li>
+					<li>Henredon mahogany serving cabinet on wheels</li>
+					<li>Set of 6 dining chairs</li>
+					<li>Mid-Century Modern cane back chair</li>
+					<li>1960's Drexel sofa</li>
+					<li>Woodmark upholstered chairs, pair</li>
+					<li>Vintage wrought iron glass top table & chairs set</li>
+					<li>Mahogany flip top card/game table</li>
+					<li>Mahogany pair "chair back" twin beds</li>
+					<li>Mahogany dresser & mirror, nightstands</li>
+					<li>Factory painted 1960's bedroom furniture, like new!</li>
+					<li>Cherry desk w/chair</li>
+					<li>Oak bookcase</li>
+					<li>Vanity benches</li>
+					<li>Faux leather loveseat</li>
+					<li>Painted wrought iron twin beds</li>
 				</ul>
 			</div>
 
 			<div class="sale-list">
 				<header class="list-header">
-					<h3 class="heading-4">Stuff</h3>
+					<h3 class="heading-4">Furniture</h3>
 					<span>&#9660;</span>
 				</header>
 				<ul class="list">
-					<li>Chair</li>
-					<li>Chair</li>
-					<li>Chair</li>
-					<li>Chair</li>
-					<li>Chair</li>
-					<li>Chair</li>
-					<li>Chair</li>
-					<li>Chair</li>
-					<li>Chair</li>
-					<li>Chair</li>
-					<li>Chair</li>
-					<li>Chair</li>
+					<li>Kittinger Williamsburg Sofa</li>
+					<li>Kittinger Williamsburg Lolling Chairs, Pair</li>
+					<li>Henkel Harris tea table</li>
+					<li>Biggs, inlaid Pembroke tables, pair</li>
+					<li>Kittinger Asian style coffee table, antiqued mirror top</li>
+					<li>Kittinger end tables</li>
+					<li>Knabe baby grand piano</li>
+					<li>Wing chairs, needlepoint side chairs, needlepoint foot stools</li>
+					<li>Henredon dining table (extends from 40" round to 90" oval)</li>
+					<li>Henredon china cabinet</li>
+					<li>Henredon mahogany serving cabinet on wheels</li>
+					<li>Set of 6 dining chairs</li>
+					<li>Mid-Century Modern cane back chair</li>
+					<li>1960's Drexel sofa</li>
+					<li>Woodmark upholstered chairs, pair</li>
+					<li>Vintage wrought iron glass top table & chairs set</li>
+					<li>Mahogany flip top card/game table</li>
+					<li>Mahogany pair "chair back" twin beds</li>
+					<li>Mahogany dresser & mirror, nightstands</li>
+					<li>Factory painted 1960's bedroom furniture, like new!</li>
+					<li>Cherry desk w/chair</li>
+					<li>Oak bookcase</li>
+					<li>Vanity benches</li>
+					<li>Faux leather loveseat</li>
+					<li>Painted wrought iron twin beds</li>
+				</ul>
+			</div>
+
+			<div class="sale-list">
+				<header class="list-header">
+					<h3 class="heading-4">Accessories & Collectibles</h3>
+					<span>&#9660;</span>
+				</header>
+				<ul class="list">
+					<li>Vintage Mac Classic, computer, printer, keyboard & mouse</li>
+					<li>Howard Miller mantel clock, LARGE</li>
+					<li>Waterbury mantle clock</li>
+					<li>Russian lacquered box</li>
+					<li>Cast iron doorstops</li>
+					<li>Local & Delaware books</li>
+					<li>Vintage LP's and 45's</li>
+					<li>Antique Kodak cameras</li>
+					<li>Violins, 2 (Otto E Fischer & Franz Hoffmann)</li>
+					<li>BEAUTIFUL Lamps, many</li>
+					<li>Matching cloisonné vases</li>
+					<li>Giant floor pillows made from Oriental rugs Giant floor pillows made from Oriental rugs</li>
+					<li>Brass music stands</li>
+					<li>BEAUTIFUL mirrors</li>
+					<li>Mosaic garden seat</li>
+					<li>Vintage Corona typewriters</li>
+					<li>Carved horn Buddha</li>
+					<li>Vintage Japanese folding screen</li>
 				</ul>
 			</div>
 
