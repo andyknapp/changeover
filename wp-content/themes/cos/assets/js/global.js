@@ -4,7 +4,7 @@ var url = window.location;
 var toggle = document.querySelector('.menu-toggle');
 var menu = document.querySelector('#site-navigation');
 var sections = document.querySelectorAll('.major-section');
-var listHeaders = document.querySelectorAll('.list-header');
+var lists = document.querySelectorAll('.sale-list');
 
 // navigation
 toggle.addEventListener('click', function (event) {
@@ -16,15 +16,9 @@ toggle.addEventListener('click', function (event) {
 
 
 //toggle sale listHeader
-listHeaders.forEach(function(listHeader) {
-	listHeader.addEventListener('click', function() {
-		var listContent = this.nextElementSibling;
-		var siblings = this.parentNode.parentNode.children;
-
-		console.log(siblings);
-
+lists.forEach(function(list) {
+	list.addEventListener('click', function() {
 		this.classList.toggle('active');
-		listContent.classList.toggle('open');
 	});
 });
 

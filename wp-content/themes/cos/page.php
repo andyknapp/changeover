@@ -80,7 +80,11 @@ get_header();
 			<div class="sale-list">
 				<header class="list-header">
 					<h3 class="heading-4">Accessories & Collectibles</h3>
-					<span>&#9660;</span>
+					<span>
+						<svg>
+							<use xlink:href="#icon-add"></use>
+						</svg>
+					</span>
 				</header>
 				<ul class="list">
 					<li>Vintage Mac Classic, computer, printer, keyboard & mouse</li>
@@ -102,12 +106,19 @@ get_header();
 					<li>Carved horn Buddha</li>
 					<li>Vintage Japanese folding screen</li>
 				</ul>
+				<footer class="list-footer">
+					<p class="cta">See more</p>
+				</footer>
 			</div>
 
 			<div class="sale-list">
 				<header class="list-header">
 					<h3 class="heading-4">Furniture</h3>
-					<span>&#9660;</span>
+					<span>
+						<svg>
+							<use xlink:href="#icon-add"></use>
+						</svg>
+					</span>
 				</header>
 				<ul class="list">
 					<li>Kittinger Williamsburg Sofa</li>
@@ -136,12 +147,19 @@ get_header();
 					<li>Faux leather loveseat</li>
 					<li>Painted wrought iron twin beds</li>
 				</ul>
+				<footer class="list-footer">
+					<p class="cta">See more</p>
+				</footer>
 			</div>
 
 			<div class="sale-list">
 				<header class="list-header">
 					<h3 class="heading-4">Furniture</h3>
-					<span>&#9660;</span>
+					<span>
+						<svg>
+							<use xlink:href="#icon-add"></use>
+						</svg>
+					</span>
 				</header>
 				<ul class="list">
 					<li>Kittinger Williamsburg Sofa</li>
@@ -170,12 +188,19 @@ get_header();
 					<li>Faux leather loveseat</li>
 					<li>Painted wrought iron twin beds</li>
 				</ul>
+				<footer class="list-footer">
+					<p class="cta">See more</p>
+				</footer>
 			</div>
 
 			<div class="sale-list">
 				<header class="list-header">
 					<h3 class="heading-4">Accessories & Collectibles</h3>
-					<span>&#9660;</span>
+					<span>
+						<svg>
+							<use xlink:href="#icon-add"></use>
+						</svg>
+					</span>
 				</header>
 				<ul class="list">
 					<li>Vintage Mac Classic, computer, printer, keyboard & mouse</li>
@@ -197,6 +222,9 @@ get_header();
 					<li>Carved horn Buddha</li>
 					<li>Vintage Japanese folding screen</li>
 				</ul>
+				<footer class="list-footer">
+					<p class="cta">See more</p>
+				</footer>
 			</div>
 
 		</div>
