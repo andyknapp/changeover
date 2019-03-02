@@ -40,6 +40,10 @@
 	@include fluid-scale(font-size, 20em, 80em, 0.875em, 1.125em);
 }
 
+%fs-16 {
+	@include fluid-scale(font-size, 20em, 80em, 0.875em, 1em);
+}
+
 
 
 body {
@@ -90,7 +94,7 @@ a {
 }
 
 .heading-3 {
-  @extend %fs-24;
+  @extend %fs-32;
   font-weight: 600;
 }
 

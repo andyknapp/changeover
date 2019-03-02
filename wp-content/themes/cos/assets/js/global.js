@@ -1,10 +1,12 @@
 var body = document.body;
 var html = document.documentElement;
+var vw = window.innerWidth;
 var url = window.location;
 var toggle = document.querySelector('.menu-toggle');
 var menu = document.querySelector('#site-navigation');
 var sections = document.querySelectorAll('.major-section');
 var lists = document.querySelectorAll('.sale-list');
+var more = document.querySelector('.view-more');
 
 // navigation
 toggle.addEventListener('click', function (event) {
@@ -15,12 +17,27 @@ toggle.addEventListener('click', function (event) {
 });
 
 
-//toggle sale listHeader
-lists.forEach(function(list) {
-	list.addEventListener('click', function() {
-		this.classList.toggle('active');
+//toggle sale list
+function singleListToggle() {
+	lists.forEach(function(list) {
+		var footer = list.children[2];
+		var cta = footer.children[0];
+
+		list.addEventListener('click', function() {
+			this.classList.toggle('active');
+
+			if (cta.getAttribute("data-less") == cta.innerHTML) {
+		      cta.innerHTML = cta.getAttribute("data-more");
+		    } else {
+		      cta.setAttribute("data-more", cta.innerHTML);
+		      cta.innerHTML = cta.getAttribute("data-less");
+		    }
+		});
 	});
-});
+}
+
+singleListToggle();
+
 
 
 

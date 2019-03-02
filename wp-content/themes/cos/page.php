@@ -53,6 +53,10 @@ get_header();
 				</ul>
 		</header>
 
+		<div class="sale-description container-small">
+			<p class="copy-1">A Decorator's Home. Big (6000 sq ft), beautiful house FULL! Fine Furniture & Accessories many new & unused, all in excellent condition! Maitland Smith, John Richard, Robert Allen, Knoll, Highland House, Old Biscayne, Castilian, French Heritage, Sligh, Hooker, Ethan Allen, Thomasville, Hermes, Waterford, Chelsea House, NDI, more! Antiques, Oriental Rugs, Original Art, Fine Jewelry, Sterling Silver, Horse Drawn Sleigh, Horse Riding Items etc. So much more!</p>
+		</div>
+
 		<div class="sale-meta">
 			<a href="#" class="external-link">View Pictures
 				<span>
@@ -71,20 +75,11 @@ get_header();
 			</a>
 		</div>
 
-		<div class="sale-description container-small">
-			<p class="copy-1">Blurb about next sale. Lorem ipsum dolor sit amet consectetur, adipiscing elit fermentum bibendum sociosqu senectus, lacus nibh tellus lobortis. Phasellus primis imperdiet in massa neque potenti sodales nostra eros feugiat, vitae magna odio netus.</p>
-		</div>
-
 		<div class="sale-lists container-site">
 
 			<div class="sale-list">
 				<header class="list-header">
 					<h3 class="heading-4">Accessories & Collectibles</h3>
-					<span>
-						<svg>
-							<use xlink:href="#icon-add"></use>
-						</svg>
-					</span>
 				</header>
 				<ul class="list">
 					<li>Vintage Mac Classic, computer, printer, keyboard & mouse</li>
@@ -107,18 +102,13 @@ get_header();
 					<li>Vintage Japanese folding screen</li>
 				</ul>
 				<footer class="list-footer">
-					<p class="cta">See more</p>
+					<p class="cta" data-more="See More" data-less="See Less">See more</p>
 				</footer>
 			</div>
 
 			<div class="sale-list">
 				<header class="list-header">
 					<h3 class="heading-4">Furniture</h3>
-					<span>
-						<svg>
-							<use xlink:href="#icon-add"></use>
-						</svg>
-					</span>
 				</header>
 				<ul class="list">
 					<li>Kittinger Williamsburg Sofa</li>
@@ -148,18 +138,13 @@ get_header();
 					<li>Painted wrought iron twin beds</li>
 				</ul>
 				<footer class="list-footer">
-					<p class="cta">See more</p>
+					<p class="cta" data-more="See More" data-less="See Less">See more</p>
 				</footer>
 			</div>
 
 			<div class="sale-list">
 				<header class="list-header">
 					<h3 class="heading-4">Furniture</h3>
-					<span>
-						<svg>
-							<use xlink:href="#icon-add"></use>
-						</svg>
-					</span>
 				</header>
 				<ul class="list">
 					<li>Kittinger Williamsburg Sofa</li>
@@ -189,18 +174,13 @@ get_header();
 					<li>Painted wrought iron twin beds</li>
 				</ul>
 				<footer class="list-footer">
-					<p class="cta">See more</p>
+					<p class="cta" data-more="See More" data-less="See Less">See more</p>
 				</footer>
 			</div>
 
 			<div class="sale-list">
 				<header class="list-header">
 					<h3 class="heading-4">Accessories & Collectibles</h3>
-					<span>
-						<svg>
-							<use xlink:href="#icon-add"></use>
-						</svg>
-					</span>
 				</header>
 				<ul class="list">
 					<li>Vintage Mac Classic, computer, printer, keyboard & mouse</li>
@@ -223,11 +203,13 @@ get_header();
 					<li>Vintage Japanese folding screen</li>
 				</ul>
 				<footer class="list-footer">
-					<p class="cta">See more</p>
+					<p class="cta" data-more="See More" data-less="See Less">See more</p>
 				</footer>
 			</div>
 
 		</div>
+
+		<button id="view-more" class="button view-more" type="button" name="button">View More</button>
 
 		<aside class="upcoming container-upcoming">
 			<header class="upcoming-header flex">

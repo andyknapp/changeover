@@ -13,7 +13,7 @@
     padding-left: 1em;
     padding-right: 1em;
     z-index: 1;
-    background-color: $color-white;
+    background-color: rgba($color-white, 0.9);
 }
 
 .logo {
@@ -76,7 +76,7 @@
 
 .menu {
 	display: flex;
-  flex-flow: column nowrap;
+    flex-flow: column nowrap;
 	padding: 2em 1em 0.5em;
 	text-align: center;
 }
@@ -87,10 +87,12 @@
 
 	a {
 		padding: 0.5em 0;
-    color: $color-black;
+        color: $color-black;
+        border-bottom: 2px solid transparent;
+        transition: border-color 0.3s ease;
 
 		&:hover {
-			color: $color-red;
+            border-color: $color-red;
 		}
 	}
 }

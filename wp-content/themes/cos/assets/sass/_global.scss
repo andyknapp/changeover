@@ -17,7 +17,7 @@
 }
 
 .container-small {
-	max-width: (768 / 16) * 1em;
+	max-width: 62em;
 }
 
 %pad {
@@ -58,7 +58,7 @@
 
 
 	@media (min-width: $bp-nav) {
-		padding: 5em 1em;
+		padding: 12em 1em;
 	}
 }
 
@@ -251,11 +251,12 @@ img {
 
 	span {
 		margin-left: 0.125em;
+		vertical-align: super;
 	}
 
 	svg {
-		width: 0.75em;
-		height: 0.75em;
+		width: 0.65em;
+		height: 0.65em;
 		fill: $color-red;
 	}
 }
