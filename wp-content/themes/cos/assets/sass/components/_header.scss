@@ -2,26 +2,32 @@
 // sass-lint:disable force-pseudo-nesting
 
 .site-header {
-  @extend %flex-parent-row;
-  align-items: center;
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
     height: $header-height-1;
     padding-left: 1em;
     padding-right: 1em;
     z-index: 1;
-    background-color: rgba($color-white, 0.9);
+    background-color: rgba($color-white, 0.95);
+    border-bottom: 1px solid rgba($color-gray, 0.9);
+
+    .container-site {
+        @extend %flex-parent-row;
+        align-items: center;
+        height: 100%;
+    }
 }
 
 .logo {
 	display: block;
-	width: (178 / 16) * 1em;
-	height: (66 / 16) * 1em;
-    font-size: 80%;
-	background: url('../changeover-sales-logo.jpg') no-repeat center / cover;
+    width: (500 / 16) * 1em;
+	height: (185 / 16) * 1em;
+    width: (200 / 16) * 1em;
+	height: (74 / 16) * 1em;
+	background: url('../Changeover-Sales-logo.png') no-repeat center / cover;
 
 	span {
 		@extend %visually-hidden;
@@ -100,14 +106,16 @@
 
 @media (min-width: $bp-nav) {
 	.site-header {
-		display: flex;
-		flex-flow: row nowrap;
-		justify-content: space-between;
-		align-items: center;
+        height: $header-height-2;
+
+        .container-site {
+    		flex-flow: row nowrap;
+    		justify-content: space-between;
+        }
 	}
 
 	.logo {
-		font-size: 100%;
+		// /font-size: 80%;
 	}
 
 	.menu-toggle {

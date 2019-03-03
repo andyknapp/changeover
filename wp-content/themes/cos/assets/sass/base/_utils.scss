@@ -36,10 +36,9 @@
 %clear-header {
 	padding-top: $header-height-1;
 
-	// @media (min-width: 58em) {
-	// 	//padding-top: $header-height-2;
-	// 	padding-top: 0;
-	// }
+	@media (min-width: $bp-nav) {
+		padding-top: $header-height-2;
+	}
 }
 
 .offset-left {

@@ -24,18 +24,20 @@
 <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'cos' ); ?></a>
 
 <header id="masthead" class="site-header">
-	<a href="#content" class="logo"><h1 class="skip-link"><?php bloginfo( 'name' ); ?></h1></a>
-	<button class="menu-toggle no-button-style" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'cos' ); ?></button>
+	<div class="container-site">
+		<a href="#content" class="logo"><h1 class="skip-link"><?php bloginfo( 'name' ); ?></h1></a>
+		<button class="menu-toggle no-button-style" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'cos' ); ?></button>
 
-	<nav id="site-navigation" class="site-nav">
-		<?php
-		wp_nav_menu( array(
-			'theme_location' => 'menu-1',
-			'menu_id'        => 'primary-menu',
-			'container'	=> '',
-		) );
-		?>
-	</nav><!-- #site-navigation -->
+		<nav id="site-navigation" class="site-nav">
+			<?php
+			wp_nav_menu( array(
+				'theme_location' => 'menu-1',
+				'menu_id'        => 'primary-menu',
+				'container'	=> '',
+			) );
+			?>
+		</nav><!-- #site-navigation -->
+	</div>
 </header><!-- #masthead -->
 
 <main id="content" class="site-content container">
