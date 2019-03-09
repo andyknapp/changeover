@@ -203,6 +203,12 @@
 }
 
 
+// testimonials
+.testimonials {
+	@extend %pad;
+}
+
+
 // footer
 .site-footer {
 	padding: 4em 1em 1em;

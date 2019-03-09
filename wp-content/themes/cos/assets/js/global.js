@@ -10,6 +10,7 @@ var lists = document.querySelectorAll('.sale-list');
 var more = document.querySelector('.view-more');
 var links = document.querySelectorAll('.menu-item a');
 
+
 // navigation
 toggle.addEventListener('click', function (event) {
 	toggle.classList.toggle('toggled');
@@ -37,8 +38,6 @@ function singleListToggle() {
 		});
 	});
 }
-
-singleListToggle();
 
 
 // smooth scroll, update url with current section
@@ -75,9 +74,6 @@ window.onscroll = function() {
 			var hash = link.getAttribute('href');
 			var active = hash.replace('#', '');
 
-			console.log('active ' + active);
-			console.log('current ' + currentSection);
-
 			if(active == currentSection) {
 				link.classList.add('active');
 			} else {
@@ -109,3 +105,18 @@ window.onscroll = function() {
 //     }
 //   });
 // });
+
+
+
+
+jQuery(document).ready(function($){
+	$('.slider').bxSlider({
+		mode: 'fade',
+		auto: true,
+		autoHover: true,
+	});
+});
+
+
+
+singleListToggle();

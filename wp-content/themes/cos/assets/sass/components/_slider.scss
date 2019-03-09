@@ -1,0 +1,100 @@
+/** VARIABLES
+===================================*/
+/** RESET AND LAYOUT
+===================================*/
+.bx-wrapper {
+  position: relative;
+  padding: 2em 0 4em;
+  *zoom: 1;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  text-align: center;
+
+  img {
+    max-width: 100%;
+    display: block;
+  }
+}
+
+.bxslider {
+  margin: 0;
+  padding: 0;
+}
+
+ul.bxslider {
+  list-style: none;
+}
+.bx-viewport {
+  /*fix other elements on the page moving (on Chrome)*/
+  -webkit-transform: translatez(0);
+}
+/** THEME
+===================================*/
+
+.bx-wrapper .bx-pager,
+.bx-wrapper .bx-controls-auto {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+
+/* PAGER */
+.bx-pager {
+  text-align: center;
+
+  a {
+      display: block;
+      width: 0.875em;
+      height: 0.875em;
+      margin: 0 0.5em;
+      outline: 0;
+      border-radius: 50%;
+      background-color: $color-gray;
+      text-indent: -9999em;
+
+      &:hover,
+      &:focus,
+      &.active {
+        background-color: $color-gray-2;
+      }
+  }
+}
+
+
+.bx-wrapper .bx-pager-item,
+.bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+  display: inline-block;
+  vertical-align: bottom;
+  *zoom: 1;
+  *display: inline;
+}
+
+
+/* DIRECTION CONTROLS (NEXT / PREV) */
+.bx-controls-direction {
+    a {
+        position: absolute;
+        top: 50%;
+        width: 2.5em;
+        height: 2.5em;
+        text-indent: -9999px;
+        opacity: 0.6;
+        transition: opacity 0.2s ease-out;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    .bx-prev {
+        left: 0;
+        background: url('../icons/prev.svg') no-repeat center / cover;
+    }
+
+    .bx-next {
+        right: 0;
+        background: url('../icons/next.svg') no-repeat center / cover;
+    }
+}

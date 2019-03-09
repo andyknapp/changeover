@@ -123,7 +123,11 @@ function cos_scripts() {
 
 	wp_register_script('global-js', get_stylesheet_directory_uri() . '/assets/js/global.js', array(), THEME_VERSION, true);
 
+	wp_register_script('bxslider-js', get_stylesheet_directory_uri() . '/assets/js/jquery.bxslider.min.js', array('jquery'), THEME_VERSION, true);
+
+	wp_enqueue_script('bxslider-js');
 	wp_enqueue_script('global-js');
+
 }
 add_action( 'wp_enqueue_scripts', 'cos_scripts' );
 

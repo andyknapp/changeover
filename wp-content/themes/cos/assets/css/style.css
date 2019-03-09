@@ -467,13 +467,13 @@ a:hover {
 }
 
 /* line 23, ../sass/_global.scss */
-.how-it-works, .about, .contact, .sale {
+.how-it-works, .about, .contact, .testimonials, .sale {
   padding-top: 2.5em;
   padding-bottom: 2.5em;
 }
 @media (min-width: 54em) {
   /* line 23, ../sass/_global.scss */
-  .how-it-works, .about, .contact, .sale {
+  .how-it-works, .about, .contact, .testimonials, .sale {
     padding-top: 5em;
     padding-bottom: 5em;
   }
@@ -639,57 +639,57 @@ a:hover {
   color: #212121;
 }
 
-/* line 207, ../sass/_global.scss */
+/* line 213, ../sass/_global.scss */
 .site-footer {
   padding: 4em 1em 1em;
   text-align: center;
 }
-/* line 211, ../sass/_global.scss */
+/* line 217, ../sass/_global.scss */
 .site-footer a {
   display: block;
 }
 
-/* line 217, ../sass/_global.scss */
+/* line 223, ../sass/_global.scss */
 img {
   max-width: 100%;
   height: auto;
   border-width: 0;
   border-color: transparent;
 }
-/* line 223, ../sass/_global.scss */
+/* line 229, ../sass/_global.scss */
 img.alignleft {
   float: left;
   margin: 0 2em 2em 0;
 }
-/* line 228, ../sass/_global.scss */
+/* line 234, ../sass/_global.scss */
 img.alignright {
   float: right;
   margin: 0 0 2em 2em;
 }
-/* line 233, ../sass/_global.scss */
+/* line 239, ../sass/_global.scss */
 img.aligncenter {
   float: none;
   margin: 2em auto;
 }
 
-/* line 241, ../sass/_global.scss */
+/* line 247, ../sass/_global.scss */
 .external-link {
   display: inline-block;
 }
-/* line 244, ../sass/_global.scss */
+/* line 250, ../sass/_global.scss */
 .external-link:hover {
   color: #4a4a4a;
 }
-/* line 247, ../sass/_global.scss */
+/* line 253, ../sass/_global.scss */
 .external-link:hover svg {
   fill: #4a4a4a;
 }
-/* line 252, ../sass/_global.scss */
+/* line 258, ../sass/_global.scss */
 .external-link span {
   margin-left: 0.125em;
   vertical-align: super;
 }
-/* line 257, ../sass/_global.scss */
+/* line 263, ../sass/_global.scss */
 .external-link svg {
   width: 0.65em;
   height: 0.65em;
@@ -1364,4 +1364,107 @@ button:focus:not(.no-button-style) {
   .upcoming .address {
     width: calc(50% - 1em);
   }
+}
+
+/** VARIABLES
+===================================*/
+/** RESET AND LAYOUT
+===================================*/
+/* line 5, ../sass/components/_slider.scss */
+.bx-wrapper {
+  position: relative;
+  padding: 2em 0 4em;
+  *zoom: 1;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  text-align: center;
+}
+/* line 13, ../sass/components/_slider.scss */
+.bx-wrapper img {
+  max-width: 100%;
+  display: block;
+}
+
+/* line 19, ../sass/components/_slider.scss */
+.bxslider {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 24, ../sass/components/_slider.scss */
+ul.bxslider {
+  list-style: none;
+}
+
+/* line 27, ../sass/components/_slider.scss */
+.bx-viewport {
+  /*fix other elements on the page moving (on Chrome)*/
+  -webkit-transform: translatez(0);
+}
+
+/** THEME
+===================================*/
+/* line 34, ../sass/components/_slider.scss */
+.bx-wrapper .bx-pager,
+.bx-wrapper .bx-controls-auto {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* PAGER */
+/* line 44, ../sass/components/_slider.scss */
+.bx-pager {
+  text-align: center;
+}
+/* line 47, ../sass/components/_slider.scss */
+.bx-pager a {
+  display: block;
+  width: 0.875em;
+  height: 0.875em;
+  margin: 0 0.5em;
+  outline: 0;
+  border-radius: 50%;
+  background-color: #eee;
+  text-indent: -9999em;
+}
+/* line 57, ../sass/components/_slider.scss */
+.bx-pager a:hover, .bx-pager a:focus, .bx-pager a.active {
+  background-color: #aaa;
+}
+
+/* line 66, ../sass/components/_slider.scss */
+.bx-wrapper .bx-pager-item,
+.bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+  display: inline-block;
+  vertical-align: bottom;
+  *zoom: 1;
+  *display: inline;
+}
+
+/* DIRECTION CONTROLS (NEXT / PREV) */
+/* line 77, ../sass/components/_slider.scss */
+.bx-controls-direction a {
+  position: absolute;
+  top: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  text-indent: -9999px;
+  opacity: 0.6;
+  transition: opacity 0.2s ease-out;
+}
+/* line 86, ../sass/components/_slider.scss */
+.bx-controls-direction a:hover {
+  opacity: 1;
+}
+/* line 91, ../sass/components/_slider.scss */
+.bx-controls-direction .bx-prev {
+  left: 0;
+  background: url("../icons/prev.svg") no-repeat center/cover;
+}
+/* line 96, ../sass/components/_slider.scss */
+.bx-controls-direction .bx-next {
+  right: 0;
+  background: url("../icons/next.svg") no-repeat center/cover;
 }

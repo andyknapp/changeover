@@ -246,8 +246,13 @@ get_header();
 		<p>We also offer a full & partial estate purchases. If a Tag Sale isn't possible, we can offer a buyout of complete or partial contents of a home. After a purchase price has been agreed to, we will arrange for the packing & removal of all items and pay you immediately.</p>
 	</section>
 
-	<section id="testimonials" class="testimonials major-section">
-
+	<section id="testimonials" class="testimonials major-section container-mid">
+		<ul class="slider">
+			<li>Testimonial 1</li>
+			<li>Testimonial 2</li>
+			<li>Testimonial 3</li>
+			<li>Testimonial 4</li>
+		</ul>
 	</section>
 
 	<section id="about-us" class="about container-mid major-section">
