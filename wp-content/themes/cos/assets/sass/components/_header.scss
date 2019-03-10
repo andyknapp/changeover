@@ -1,5 +1,7 @@
-
 // sass-lint:disable force-pseudo-nesting
+
+$scale: 0.7;
+$counter-scale: 1 / $scale;
 
 .site-header {
     position: fixed;
@@ -28,6 +30,9 @@
     width: (200 / 16) * 1em;
 	height: (74 / 16) * 1em;
 	background: url('../Changeover-Sales-logo.png') no-repeat center / cover;
+    transform: scaleY(1);
+    transform-origin: left center;
+    transition: transform 0.3s ease-out;
 
 	span {
 		@extend %visually-hidden;
@@ -71,7 +76,8 @@
     opacity: 0;
     visibility: hidden;
     z-index: 1;
-    transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
+    transform-origin: right center;
+    transition: opacity 0.3s ease-out, visibility 0.3s ease-out, transform, 0.3s ease-out;
 
 	&.show {
 		height: auto;
@@ -108,15 +114,26 @@
 @media (min-width: $bp-nav) {
 	.site-header {
         height: $header-height-2;
+        transform: scaleY(1);
+        transform-origin: left top;
+        transition: transform 0.3s ease-out;
 
         .container-site {
     		flex-flow: row nowrap;
     		justify-content: space-between;
         }
-	}
 
-	.logo {
-		// /font-size: 80%;
+        &.scrolled {
+            transform: scaleY($scale);
+
+            .site-nav {
+                transform: scaleY($counter-scale);
+            }
+
+            .logo {
+                transform: scaleX($scale);
+            }
+        }
 	}
 
 	.menu-toggle {
@@ -125,15 +142,15 @@
 
 	.site-nav,
 	.site-nav.show {
-    position: relative;
-    top: 0;
-		width: calc(100% - ((178 / 16) * 1em) - 3em);
-		//max-width: (756 / 16) * 1em;
-		height: auto;
-		opacity: 1;
-		margin: 0;
-		visibility: visible;
-		border-radius: 50px;
+        position: relative;
+        top: 0;
+    	width: calc(100% - ((178 / 16) * 1em) - 3em);
+    	//max-width: (756 / 16) * 1em;
+    	height: auto;
+    	opacity: 1;
+    	margin: 0;
+    	visibility: visible;
+    	border-radius: 50px;
 	}
 
 	.menu {

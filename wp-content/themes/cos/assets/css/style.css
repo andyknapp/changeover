@@ -696,7 +696,7 @@ img.aligncenter {
   fill: #bf2a1e;
 }
 
-/* line 4, ../sass/components/_header.scss */
+/* line 6, ../sass/components/_header.scss */
 .site-header {
   position: fixed;
   top: 0;
@@ -710,13 +710,13 @@ img.aligncenter {
   background-color: rgba(255, 255, 255, 0.95);
   border-bottom: 1px solid rgba(238, 238, 238, 0.9);
 }
-/* line 17, ../sass/components/_header.scss */
+/* line 19, ../sass/components/_header.scss */
 .site-header .container-site {
   align-items: center;
   height: 100%;
 }
 
-/* line 24, ../sass/components/_header.scss */
+/* line 26, ../sass/components/_header.scss */
 .logo {
   display: block;
   width: 31.25em;
@@ -724,9 +724,12 @@ img.aligncenter {
   width: 12.5em;
   height: 4.625em;
   background: url("../Changeover-Sales-logo.png") no-repeat center/cover;
+  transform: scaleY(1);
+  transform-origin: left center;
+  transition: transform 0.3s ease-out;
 }
 
-/* line 41, ../sass/components/_header.scss */
+/* line 46, ../sass/components/_header.scss */
 .menu-toggle {
   position: absolute;
   top: 50%;
@@ -743,13 +746,13 @@ img.aligncenter {
   transform: translateY(-50%);
   transition: color 0.3s ease-out, border 0.3s ease-out;
 }
-/* line 57, ../sass/components/_header.scss */
+/* line 62, ../sass/components/_header.scss */
 .menu-toggle.toggled {
   color: #bf2a1e;
   border-color: #eee;
 }
 
-/* line 64, ../sass/components/_header.scss */
+/* line 69, ../sass/components/_header.scss */
 .site-nav {
   position: absolute;
   top: 5em;
@@ -760,16 +763,17 @@ img.aligncenter {
   opacity: 0;
   visibility: hidden;
   z-index: 1;
-  transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
+  transform-origin: right center;
+  transition: opacity 0.3s ease-out, visibility 0.3s ease-out, transform, 0.3s ease-out;
 }
-/* line 76, ../sass/components/_header.scss */
+/* line 82, ../sass/components/_header.scss */
 .site-nav.show {
   height: auto;
   opacity: 1;
   visibility: visible;
 }
 
-/* line 83, ../sass/components/_header.scss */
+/* line 89, ../sass/components/_header.scss */
 .menu {
   display: flex;
   flex-flow: column nowrap;
@@ -777,40 +781,55 @@ img.aligncenter {
   text-align: center;
 }
 
-/* line 90, ../sass/components/_header.scss */
+/* line 96, ../sass/components/_header.scss */
 .menu-item {
   margin-bottom: 1.5em;
   list-style: none;
 }
-/* line 94, ../sass/components/_header.scss */
+/* line 100, ../sass/components/_header.scss */
 .menu-item a {
   padding: 0.5em 0;
   color: #212121;
   border-bottom: 2px solid transparent;
   transition: border-color 0.3s ease;
 }
-/* line 100, ../sass/components/_header.scss */
+/* line 106, ../sass/components/_header.scss */
 .menu-item a:hover, .menu-item a.active {
   color: #bf2a1e;
 }
 
 @media (min-width: 54em) {
-  /* line 109, ../sass/components/_header.scss */
+  /* line 115, ../sass/components/_header.scss */
   .site-header {
     height: 6.5em;
+    transform: scaleY(1);
+    transform-origin: left top;
+    transition: transform 0.3s ease-out;
   }
-  /* line 112, ../sass/components/_header.scss */
+  /* line 121, ../sass/components/_header.scss */
   .site-header .container-site {
     flex-flow: row nowrap;
     justify-content: space-between;
   }
+  /* line 126, ../sass/components/_header.scss */
+  .site-header.scrolled {
+    transform: scaleY(0.7);
+  }
+  /* line 129, ../sass/components/_header.scss */
+  .site-header.scrolled .site-nav {
+    transform: scaleY(1.42857);
+  }
+  /* line 133, ../sass/components/_header.scss */
+  .site-header.scrolled .logo {
+    transform: scaleX(0.7);
+  }
 
-  /* line 122, ../sass/components/_header.scss */
+  /* line 139, ../sass/components/_header.scss */
   .menu-toggle {
     display: none;
   }
 
-  /* line 126, ../sass/components/_header.scss */
+  /* line 143, ../sass/components/_header.scss */
   .site-nav,
   .site-nav.show {
     position: relative;
@@ -823,7 +842,7 @@ img.aligncenter {
     border-radius: 50px;
   }
 
-  /* line 139, ../sass/components/_header.scss */
+  /* line 156, ../sass/components/_header.scss */
   .menu {
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -832,12 +851,12 @@ img.aligncenter {
     padding: 0 1.25em 0 3.75em;
   }
 
-  /* line 147, ../sass/components/_header.scss */
+  /* line 164, ../sass/components/_header.scss */
   .menu-item {
     margin: 0;
     padding: 0.71875em 0;
   }
-  /* line 151, ../sass/components/_header.scss */
+  /* line 168, ../sass/components/_header.scss */
   .menu-item a {
     display: block;
     padding: 0.75em 0;

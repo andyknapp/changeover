@@ -9,6 +9,8 @@ var sections = document.querySelectorAll('.major-section');
 var lists = document.querySelectorAll('.sale-list');
 var more = document.querySelector('.view-more');
 var links = document.querySelectorAll('.menu-item a');
+var header = document.querySelector('#masthead');
+var headerHeight = header.getBoundingClientRect().height;
 
 
 // navigation
@@ -55,60 +57,47 @@ document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
 });
 
 
-// highlight nav item for current section
+// do stuff on scroll
 window.onscroll = function() {
 	var fromTop = window.scrollY;
 
-  for(var i = 0; i < sections.length; i++) {
+	// highlight nav item for current section
+	for(var i = 0; i < sections.length; i++) {
+		if (sections[i].getBoundingClientRect().top <= window.innerHeight / 3) {
 
-    if (sections[i].getBoundingClientRect().top <= window.innerHeight / 3) {
+			var currentSection = sections[i].getAttribute('id');
 
-		var currentSection = sections[i].getAttribute('id');
+			sections[i].classList.add('current');
 
-		sections[i].classList.add('current');
-		//curLink.classList.add('active');
+			links.forEach(function(link) {
+				var hash = link.getAttribute('href');
+				var active = hash.replace('#', '');
 
- // THROTTLE THIS SHIT
+				if(active == currentSection) {
+					link.classList.add('active');
+				} else {
+					link.classList.remove('active');
+				}
+			});
 
-		links.forEach(function(link) {
-			var hash = link.getAttribute('href');
-			var active = hash.replace('#', '');
+		} else {
+		    sections[i].classList.remove('current');
+		}
+	}
+	console.log(headerHeight);
+	console.log(fromTop);
 
-			if(active == currentSection) {
-				link.classList.add('active');
-			} else {
-				link.classList.remove('active');
-			}
-		});
-
-    } else {
-        sections[i].classList.remove('current');
-    }
-
-  }
-
+	// scale header
+	if(headerHeight < fromTop) {
+		header.classList.add('scrolled');
+	} else {
+		header.classList.remove('scrolled');
+	}
 };
 
-// window.addEventListener("scroll", event => {
-//   let fromTop = window.scrollY;
-//
-//   links.forEach(link => {
-//     let section = document.querySelector(link.hash);
-//
-//     if (
-//       section.offsetTop <= fromTop &&
-//       section.offsetTop + section.offsetHeight > fromTop
-//     ) {
-//       link.classList.add("current");
-//     } else {
-//       link.classList.remove("current");
-//     }
-//   });
-// });
 
 
-
-
+// initiate slider
 jQuery(document).ready(function($){
 	$('.slider').bxSlider({
 		mode: 'fade',
