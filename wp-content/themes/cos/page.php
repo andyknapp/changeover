@@ -209,7 +209,7 @@ get_header();
 
 		</div>
 
-		<button id="view-more" class="button view-more" type="button" name="button">View More</button>
+		<button id="view-more" class="button view-more" type="button" name="button" data-less="Close" data-more="View More">View More</button>
 
 		<aside class="upcoming container-upcoming">
 			<header class="upcoming-header flex">

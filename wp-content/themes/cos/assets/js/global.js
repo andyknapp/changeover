@@ -6,6 +6,7 @@ var path = url.pathname;
 var toggle = document.querySelector('.menu-toggle');
 var menu = document.querySelector('#site-navigation');
 var sections = document.querySelectorAll('.major-section');
+var listsContainer = document.querySelector('.sale-lists');
 var lists = document.querySelectorAll('.sale-list');
 var more = document.querySelector('.view-more');
 var links = document.querySelectorAll('.menu-item a');
@@ -42,12 +43,24 @@ function singleListToggle() {
 }
 
 
+function fullListToggle() {
+	more.addEventListener('click', function() {
+		listsContainer.classList.toggle('full-list');
+
+		if (more.getAttribute("data-less") == more.innerHTML) {
+		  more.innerHTML = more.getAttribute("data-more");
+		} else {
+		  more.setAttribute("data-more", more.innerHTML);
+		  more.innerHTML = more.getAttribute("data-less");
+		}
+	});
+}
+
+
 // smooth scroll, update url with current section
 document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
-    //var curAnchor = this.getAttribute('href').split('#')[1];
-	//history.pushState(null, '', '/' + curAnchor);
 
     document.querySelector(this.getAttribute('href')).scrollIntoView({
       behavior: 'smooth',
@@ -84,8 +97,7 @@ window.onscroll = function() {
 		    sections[i].classList.remove('current');
 		}
 	}
-	console.log(headerHeight);
-	console.log(fromTop);
+
 
 	// scale header
 	if(headerHeight < fromTop) {
@@ -106,6 +118,19 @@ jQuery(document).ready(function($){
 	});
 });
 
+function whichToggle() {
+	var bp = 640;
+
+	if(vw >= bp) {
+
+		console.log('big');
+	} else {
+
+		console.log('small');
+	}
+}
+
 
 
 singleListToggle();
+fullListToggle();

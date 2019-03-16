@@ -120,6 +120,24 @@
     @media (min-width: $bp-small) {
         justify-content: flex-start;
         padding-left: 0;
+
+		// full list on widescreens
+		&.full-list {
+			.list-header {
+				position: sticky;
+				top: 5.25em;
+			}
+
+			.list,
+			.list.active {
+				height: auto;
+				opacity: 1;
+
+				&::after {
+					display: none;
+				}
+			}
+		}
     }
 }
 
@@ -178,13 +196,11 @@
     @media (min-width: $bp-small) {
         margin-bottom: 1em;
         padding: 1em 1em 0.5em;
+		background-color: $color-white;
+		z-index: 1;
 
         &::after {
 			display: none;
-            // position: relative;
-            // right: auto;
-            // margin-left: 1em;
-			// color: $color-gray-3;
         }
 
 		.active & {
