@@ -447,76 +447,89 @@ a:hover {
 }
 
 /* line 23, ../sass/_global.scss */
-.how-it-works, .about, .contact, .testimonials, .sale {
+.sale {
   padding-top: 2.5em;
   padding-bottom: 2.5em;
 }
 @media (min-width: 54em) {
   /* line 23, ../sass/_global.scss */
-  .how-it-works, .about, .contact, .testimonials, .sale {
+  .sale {
     padding-top: 5em;
     padding-bottom: 5em;
   }
 }
 
 /* line 34, ../sass/_global.scss */
+.how-it-works, .about, .contact, .testimonials {
+  padding-top: 3.5em;
+  padding-bottom: 3.5em;
+}
+@media (min-width: 54em) {
+  /* line 34, ../sass/_global.scss */
+  .how-it-works, .about, .contact, .testimonials {
+    padding-top: 8em;
+    padding-bottom: 8em;
+  }
+}
+
+/* line 45, ../sass/_global.scss */
 .sale .sale-header, .sale-description {
   padding-left: 1em;
   padding-right: 1em;
 }
 
-/* line 41, ../sass/_global.scss */
+/* line 52, ../sass/_global.scss */
 .intro {
   flex-wrap: wrap;
   padding: 2.5em 1em;
 }
-/* line 46, ../sass/_global.scss */
+/* line 57, ../sass/_global.scss */
 .intro header {
   padding-right: 4em;
 }
-/* line 50, ../sass/_global.scss */
+/* line 61, ../sass/_global.scss */
 .intro .intro-content {
   flex: 1 24em;
   max-width: 32.75em;
 }
 @media (min-width: 54em) {
-  /* line 41, ../sass/_global.scss */
+  /* line 52, ../sass/_global.scss */
   .intro {
     padding: 12em 1em;
   }
 }
 
-/* line 67, ../sass/_global.scss */
+/* line 78, ../sass/_global.scss */
 .how-it-works {
   columns: 18em 2;
   column-gap: 4em;
 }
-/* line 72, ../sass/_global.scss */
+/* line 83, ../sass/_global.scss */
 .how-it-works .heading-1 {
   column-span: all;
   margin-bottom: 0.5em;
 }
-/* line 77, ../sass/_global.scss */
+/* line 88, ../sass/_global.scss */
 .how-it-works span {
   display: block;
   margin-bottom: 0.25em;
   font-style: italic;
 }
-/* line 84, ../sass/_global.scss */
+/* line 95, ../sass/_global.scss */
 .how-it-works p {
   break-inside: avoid;
 }
 
-/* line 92, ../sass/_global.scss */
+/* line 103, ../sass/_global.scss */
 .about {
   clear: both;
   overflow: auto;
 }
-/* line 97, ../sass/_global.scss */
+/* line 108, ../sass/_global.scss */
 .about.container-mid {
   max-width: 57.75em;
 }
-/* line 101, ../sass/_global.scss */
+/* line 112, ../sass/_global.scss */
 .about img {
   float: left;
   width: 40%;
@@ -524,13 +537,13 @@ a:hover {
   margin: 0 1.5em 1.5em 0;
 }
 @media (min-width: 54em) {
-  /* line 113, ../sass/_global.scss */
+  /* line 124, ../sass/_global.scss */
   .about img {
     margin-right: 3.5em;
   }
 }
 
-/* line 126, ../sass/_global.scss */
+/* line 137, ../sass/_global.scss */
 .contact-info span,
 .contact-info a {
   display: block;
@@ -538,47 +551,47 @@ a:hover {
 }
 
 @media (min-width: 40em) {
-  /* line 133, ../sass/_global.scss */
+  /* line 144, ../sass/_global.scss */
   .contact-container {
     display: flex;
     flex-flow: row wrap;
   }
-  /* line 138, ../sass/_global.scss */
+  /* line 149, ../sass/_global.scss */
   .contact-container .gform_wrapper {
     order: 0;
     width: calc(100% - 16em);
     max-width: 43.75em;
   }
-  /* line 144, ../sass/_global.scss */
+  /* line 155, ../sass/_global.scss */
   .contact-container .contact-info {
     order: 1;
     padding-left: 3em;
   }
 }
 @media (min-width: 40em) and (min-width: 68em) {
-  /* line 144, ../sass/_global.scss */
+  /* line 155, ../sass/_global.scss */
   .contact-container .contact-info {
     padding-left: 6em;
   }
 }
 
-/* line 156, ../sass/_global.scss */
+/* line 167, ../sass/_global.scss */
 .gform_fields {
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-/* line 162, ../sass/_global.scss */
+/* line 173, ../sass/_global.scss */
 .gfield:not(.flex-field) {
   width: 100%;
 }
 
-/* line 166, ../sass/_global.scss */
+/* line 177, ../sass/_global.scss */
 .flex-field {
   width: calc(50% - 1em);
 }
 
-/* line 170, ../sass/_global.scss */
+/* line 181, ../sass/_global.scss */
 .gfield_description,
 .validation_message {
   padding: 0.25em 0 0.75em;
@@ -587,89 +600,90 @@ a:hover {
   line-height: 1;
 }
 
-/* line 178, ../sass/_global.scss */
+/* line 189, ../sass/_global.scss */
 .validation_error {
   padding: 0.75em 0;
   color: #bf2a1e;
 }
 
-/* line 183, ../sass/_global.scss */
+/* line 194, ../sass/_global.scss */
 .gform_confirmation_message {
   color: #bf2a1e;
 }
 
-/* line 188, ../sass/_global.scss */
+/* line 199, ../sass/_global.scss */
 .gform_confirmation_message {
   padding-top: 3em;
 }
 
-/* line 192, ../sass/_global.scss */
+/* line 203, ../sass/_global.scss */
 .gfield {
   margin-bottom: 1em;
 }
 
-/* line 196, ../sass/_global.scss */
+/* line 207, ../sass/_global.scss */
 .contact-info {
   margin-bottom: 2em;
 }
-/* line 198, ../sass/_global.scss */
+/* line 209, ../sass/_global.scss */
 .contact-info span,
 .contact-info a {
   display: block;
   color: #212121;
 }
 
-/* line 213, ../sass/_global.scss */
+/* line 224, ../sass/_global.scss */
 .site-footer {
-  padding: 4em 1em 1em;
+  padding: 4em 1em 2.5em;
+  border-bottom: 0.25em solid #bf2a1e;
   text-align: center;
 }
-/* line 217, ../sass/_global.scss */
+/* line 229, ../sass/_global.scss */
 .site-footer a {
   display: block;
 }
 
-/* line 223, ../sass/_global.scss */
+/* line 235, ../sass/_global.scss */
 img {
   max-width: 100%;
   height: auto;
   border-width: 0;
   border-color: transparent;
 }
-/* line 229, ../sass/_global.scss */
+/* line 241, ../sass/_global.scss */
 img.alignleft {
   float: left;
   margin: 0 2em 2em 0;
 }
-/* line 234, ../sass/_global.scss */
+/* line 246, ../sass/_global.scss */
 img.alignright {
   float: right;
   margin: 0 0 2em 2em;
 }
-/* line 239, ../sass/_global.scss */
+/* line 251, ../sass/_global.scss */
 img.aligncenter {
   float: none;
   margin: 2em auto;
 }
 
-/* line 247, ../sass/_global.scss */
+/* line 259, ../sass/_global.scss */
 .external-link {
   display: inline-block;
 }
-/* line 250, ../sass/_global.scss */
+/* line 262, ../sass/_global.scss */
 .external-link:hover {
   color: #4a4a4a;
 }
-/* line 253, ../sass/_global.scss */
+/* line 265, ../sass/_global.scss */
 .external-link:hover svg {
   fill: #4a4a4a;
 }
-/* line 258, ../sass/_global.scss */
+/* line 270, ../sass/_global.scss */
 .external-link span {
   margin-left: 0.125em;
   vertical-align: super;
 }
-/* line 263, ../sass/_global.scss */
+/* line 275, ../sass/_global.scss */
 .external-link svg {
   width: 0.65em;
   height: 0.65em;

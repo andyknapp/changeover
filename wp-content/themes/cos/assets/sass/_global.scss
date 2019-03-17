@@ -31,6 +31,17 @@
 
 }
 
+%pad-big {
+	padding-top: 3.5em;
+	padding-bottom: 3.5em;
+
+	@media (min-width: $bp-nav) {
+		padding-top: 8em;
+		padding-bottom: 8em;
+	}
+
+}
+
 %pad-h {
 	padding-left: 1em;
 	padding-right: 1em;
@@ -65,7 +76,7 @@
 
 // how it works
 .how-it-works {
-	@extend %pad;
+	@extend %pad-big;
 	columns: 18em 2;
 	column-gap: 4em;
 
@@ -90,7 +101,7 @@
 
 // about us
 .about {
-	@extend %pad;
+	@extend %pad-big;
 	clear: both;
 	overflow: auto;
 
@@ -119,7 +130,7 @@
 
 // contact
 .contact {
-	@extend %pad;
+	@extend %pad-big;
 }
 
 .contact-info {
@@ -205,13 +216,14 @@
 
 // testimonials
 .testimonials {
-	@extend %pad;
+	@extend %pad-big;
 }
 
 
 // footer
 .site-footer {
-	padding: 4em 1em 1em;
+	padding: 4em 1em 2.5em;
+	border-bottom: 0.25em solid $color-red;
 	text-align: center;
 
 	a {
