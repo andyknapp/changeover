@@ -21,23 +21,19 @@
 }
 
 %pad {
-	padding-top: 2.5em;
-	padding-bottom: 2.5em;
+	padding: 2.5em 1em;
 
 	@media (min-width: $bp-nav) {
-		padding-top: 5em;
-		padding-bottom: 5em;
+		padding: 5em 1em;
 	}
 
 }
 
 %pad-big {
-	padding-top: 3.5em;
-	padding-bottom: 3.5em;
+	padding: 2.5em 1em;
 
 	@media (min-width: $bp-nav) {
-		padding-top: 8em;
-		padding-bottom: 8em;
+		padding: 7em 1em;
 	}
 
 }
@@ -217,6 +213,46 @@
 // testimonials
 .testimonials {
 	@extend %pad-big;
+
+	.slide {
+		width: calc(100% - 2em);
+		padding-top: 2em;
+	}
+
+	blockquote {
+		position: relative;
+		margin-bottom: 1.5em;
+	}
+
+	span {
+		font-family: "Georgia", serif;
+		color: $color-black-2;
+
+		&.open {
+			position: absolute;
+			top: 0;
+			left: -0.35em;
+			font-size: 5em;
+			line-height: 0.2;
+		}
+	}
+
+	p {
+		@extend %fs-20;
+	}
+
+	.bx-controls-direction {
+		display: none;
+
+		@media (min-width: $bp-nav) {
+			display: block;
+		}
+	}
+}
+
+.container-slide {
+	width: calc(100% - 2em);
+	max-width: 50em;
 }
 
 

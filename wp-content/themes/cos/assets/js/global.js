@@ -6,6 +6,7 @@ var path = url.pathname;
 var toggle = document.querySelector('.menu-toggle');
 var menu = document.querySelector('#site-navigation');
 var sections = document.querySelectorAll('.major-section');
+var saleMain = document.querySelector('#next-sale');
 var listsContainer = document.querySelector('.sale-lists');
 var lists = document.querySelectorAll('.sale-list');
 var more = document.querySelector('.view-more');
@@ -45,10 +46,20 @@ function singleListToggle() {
 
 function fullListToggle() {
 	more.addEventListener('click', function() {
+		var bodyRect = body.getBoundingClientRect();
+		var moreRect = this.getBoundingClientRect();
+		var morePos = moreRect.top - bodyRect.top;
 		listsContainer.classList.toggle('full-list');
+
+		console.log(bodyRect);
 
 		if (more.getAttribute("data-less") == more.innerHTML) {
 		  more.innerHTML = more.getAttribute("data-more");
+		  console.log('blah');
+		  saleMain.scrollIntoView({
+			  behavior: 'smooth',
+			  block: 'start'
+		  });
 		} else {
 		  more.setAttribute("data-more", more.innerHTML);
 		  more.innerHTML = more.getAttribute("data-less");
@@ -113,10 +124,13 @@ window.onscroll = function() {
 jQuery(document).ready(function($){
 	$('.slider').bxSlider({
 		mode: 'fade',
-		auto: true,
+		auto: false,
+		adaptiveHeight: true,
 		autoHover: true,
 	});
 });
+
+
 
 function whichToggle() {
 	var bp = 640;
@@ -134,3 +148,6 @@ function whichToggle() {
 
 singleListToggle();
 fullListToggle();
+
+
+stickybits('.sticky', {useStickyClasses: true, noStyles: true});

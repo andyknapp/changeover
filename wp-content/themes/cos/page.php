@@ -25,8 +25,8 @@ get_header();
 		</div>
 	</section>
 
-	<section id="next-sale" class="sale major-section">
-		<header class="sale-header">
+	<section id="next-sale" class="sale major-section sticky-parent">
+		<header class="sale-header sticky ">
 			<?php // if there is an active sale ?>
 				<h2 class="heading-1">Next Sale</h2>
 
@@ -77,8 +77,8 @@ get_header();
 
 		<div class="sale-lists container-site">
 
-			<div class="sale-list">
-				<header class="list-header">
+			<div class="sale-list sticky-parent">
+				<header class="list-header sticky">
 					<h3 class="heading-4">Accessories & Collectibles</h3>
 				</header>
 				<ul class="list">
@@ -211,12 +211,12 @@ get_header();
 
 		<button id="view-more" class="button view-more" type="button" name="button" data-less="Close" data-more="View More">View More</button>
 
-		<aside class="upcoming container-upcoming">
+		<aside class="upcoming container-small">
 			<header class="upcoming-header flex">
 				<h4 class="heading-3">Upcoming Sales</h4>
 				<p>Check back soon for more information!</p>
 			</header>
-			<div class="upcoming-sales flex">
+			<div class="upcoming-sales">
 				<ul class="address">
 					<li>March</li>
 					<li>Sharpley</li>
@@ -248,10 +248,24 @@ get_header();
 
 	<section id="testimonials" class="testimonials major-section container-mid">
 		<ul class="slider">
-			<li>Testimonial 1</li>
-			<li>Testimonial 2</li>
-			<li>Testimonial 3</li>
-			<li>Testimonial 4</li>
+			<li class="slide">
+				<div class="container-slide">
+					<blockquote>
+						<p><span class="open">&ldquo;</span>Thank you so much for organizing and running the Tag Sale at my Aunt’s house. I was not very comfortable doing a sale...but you two put me immediately at ease. Thank you for treating her things with such respect.<span class="close">&rdquo;</span></p>
+					</blockquote>
+					<cite>Susie Racobaldo </br>Kennett Square, PA</cite>
+				</div>
+
+			</li>
+
+			<li class="slide">
+				<div class="container-slide">
+					<blockquote>
+						<p><span class="open">&ldquo;</span>...Kay Reilly and the team at Changeover Sales made a very difficult time much easier and as painless as possible.... What could have been a very time consuming process...was handled professionally and with the utmost consideration and courtesy by the team at Changeover Sales. Their experience and expertise was greatly appreciated and an invaluable service.<span class="close">&rdquo;</span</p>
+					</blockquote>
+				</div>
+			</li>
+			<li class="slide">Testimonial 3</li>
 		</ul>
 	</section>
 

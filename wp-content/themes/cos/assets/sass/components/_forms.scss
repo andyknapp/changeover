@@ -24,7 +24,8 @@ input {
 
 	@include placeholder {
 		font-size: 1em;
-		color: $color-black-2;
+		font-style: italic;
+		color: rgba($color-black, 0.7);
 	}
 }
 
@@ -44,7 +45,8 @@ textarea {
 
 	@include placeholder {
 		font-size: 1em;
-		color: $color-black-2;
+		font-style: italic;
+		color: rgba($color-black, 0.7);
 	}
 }
 

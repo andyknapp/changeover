@@ -53,11 +53,12 @@ ul.bxslider {
       border-radius: 50%;
       background-color: $color-gray;
       text-indent: -9999em;
+      transition: background-color 0.2s ease-out;
 
       &:hover,
       &:focus,
       &.active {
-        background-color: $color-gray-2;
+        background-color: $color-red;
       }
   }
 }
@@ -80,11 +81,11 @@ ul.bxslider {
         width: 2.5em;
         height: 2.5em;
         text-indent: -9999px;
-        opacity: 0.6;
+        opacity: 0.3;
         transition: opacity 0.2s ease-out;
 
         &:hover {
-            opacity: 1;
+            opacity: 0.6;
         }
     }
 
