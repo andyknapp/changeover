@@ -150,4 +150,4 @@ singleListToggle();
 fullListToggle();
 
 
-stickybits('.sticky', {useStickyClasses: true, noStyles: true});
+//stickybits('.sticky', {useStickyClasses: true, noStyles: true});

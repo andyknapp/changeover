@@ -46,9 +46,14 @@
 
 // intro
 .intro {
-	@extend %flex-parent-row;
-	flex-wrap: wrap;
 	padding: 2.5em 1em;
+	//background-color: $color-gray-4;
+	border-bottom: 1px solid $color-gray-3;
+
+	> .container-mid {
+		@extend %flex-parent-row;
+		flex-wrap: wrap;
+	}
 
 	header {
 		padding-right: 4em;
@@ -65,7 +70,7 @@
 
 
 	@media (min-width: $bp-nav) {
-		padding: 12em 1em;
+		padding: 12em 1em 7em;
 	}
 }
 
@@ -73,8 +78,12 @@
 // how it works
 .how-it-works {
 	@extend %pad-big;
-	columns: 18em 2;
-	column-gap: 4em;
+	background-color: $color-gray-4;
+
+	> div {
+		columns: 18em 2;
+		column-gap: 4em;
+	}
 
 	.heading-1 {
 		column-span: all;

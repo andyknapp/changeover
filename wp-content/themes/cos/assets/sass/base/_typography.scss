@@ -24,6 +24,10 @@
 	@include fluid-scale(font-size, 20em, 80em, 1.6875em, 2em);
 }
 
+%fs-28 {
+	@include fluid-scale(font-size, 20em, 80em, 1.25em, 1.75em);
+}
+
 %fs-24 {
 	@include fluid-scale(font-size, 20em, 80em, 1.125em, 1.5em);
 }
@@ -78,13 +82,26 @@ a {
   @extend %font-heading;
   font-weight: 700;
   line-height: 1;
-  color: $color-black-2;
+  color: $color-black;
+
+  &.underline {
+      &::after {
+          content: '';
+          display: block;
+          width: 72px;
+          height: 3px;
+          margin-top: 8px;
+          border-radius: 2px;
+          background-color: $color-red;
+      }
+  }
 }
 
 .heading-1 {
   @extend %fs-86;
   margin-bottom: 0.5em;
   letter-spacing: -0.015em;
+  color: $color-black-2;
 }
 
 .heading-2 {
@@ -99,7 +116,7 @@ a {
 }
 
 .heading-4 {
-  @extend %fs-24;
+  @extend %fs-28;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   font-style: italic;

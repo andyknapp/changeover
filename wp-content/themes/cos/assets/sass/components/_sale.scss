@@ -1,6 +1,6 @@
 // Upcoming/next sale
 .sale {
-	@extend %pad;
+	@extend %pad-big;
 
 	.address,
 	.date-time {
@@ -30,9 +30,15 @@
     }
 
 
+
+
 	@media (min-width: $bp-small) {
 		header {
 			text-align: center;
+
+			&.list-header {
+				text-align: left;
+			}
 		}
 
 		.address,
@@ -77,25 +83,25 @@
 
 		}
 
-		.sale-header {
-			position: sticky;
-			top: (6.5 * 0.7) * 1em;
-
-			&.js-is-sticky {
-				background-color: $color-red;
-				text-align: left;
-
-				* {
-					display: inline-block;
-					margin-bottom: 0;
-				}
-
-				.heading-1 {
-					transform-origin: left top;
-					transform: scale(0.75);
-				}
-			}
-		}
+		// .sale-header {
+		// 	position: sticky;
+		// 	top: (6.5 * 0.7) * 1em;
+		//
+		// 	&.js-is-sticky {
+		// 		background-color: $color-red;
+		// 		text-align: left;
+		//
+		// 		* {
+		// 			display: inline-block;
+		// 			margin-bottom: 0;
+		// 		}
+		//
+		// 		.heading-1 {
+		// 			transform-origin: left top;
+		// 			transform: scale(0.75);
+		// 		}
+		// 	}
+		// }
 
         .view-more {
 			display: block;
@@ -172,6 +178,7 @@
         width: calc(50% - 4em);
         margin-right: 2em;
         margin: 0 2em 2em;
+		cursor: initial;
 	}
 
 
@@ -187,9 +194,21 @@
     position: relative;
     margin-bottom: 1em;
     padding: 1em 0.5em 0.5em;
-    border-bottom: 1px solid $color-gray;
+    //border-bottom: 1px solid $color-gray;
     cursor: pointer;
     overflow: hidden;
+
+	.heading-4 {
+		width: 100%;
+		padding-left: 4px;
+
+		&::after {
+			width: 100%;
+			//margin-left: -4px;
+			transform-origin: left center;
+			transform: scaleX(0.2) translateX(-18px);
+		}
+	}
 
     &::after {
         content: '\002b';
@@ -215,10 +234,11 @@
 
 
     @media (min-width: $bp-small) {
-        margin-bottom: 1em;
-        padding: 1em 1em 0.5em;
-		background-color: $color-white;
+        margin-bottom: 1.5em;
+        padding: 1em 1em 0;
+		background-color: rgba($color-white, 0.925);
 		z-index: 1;
+		cursor: initial;
 
         &::after {
 			display: none;
@@ -296,6 +316,18 @@
 }
 
 
+.sale-close {
+	@extend %pad;
+	border-bottom: 1px solid $color-gray-3;
+
+	@media (min-width: $bp-nav) {
+		padding-bottom: 2.5em;
+	}
+}
+
+
+
+
 .upcoming {
 	padding: 2em 0;
 
@@ -330,7 +362,7 @@
 	}
 
 	@media (min-width: $bp-small) {
-        padding-top: 8em;
+        padding-top: 4.5em;
 
 		.upcoming-header {
 			justify-content: center;

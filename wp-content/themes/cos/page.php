@@ -15,18 +15,20 @@
 get_header();
 ?>
 
-	<section class="intro container-mid">
-		<header>
-				<h1 class="heading-2">Estate & Tag Sales</h1>
-		</header>
-		<div class="intro-content">
-			<p>Since 1977, we have provided complete estate sale services and professionaly conducted in-home Tag Sales in Delaware, Pennsylvania and New Jersey.</p>
-			<p>Whether you are a private individual, executer, trust officer, real estate agent or attorney, Changeover Sales will be be happy to consult with you to best serve your needs in the disposition of one item or a houseful.</p>
+	<section class="intro">
+		<div class="container-mid">
+			<header>
+				<h1 class="heading-2 underline">Estate & Tag Sales</h1>
+			</header>
+			<div class="intro-content">
+				<p>Since 1977, we have provided complete estate sale services and professionaly conducted in-home Tag Sales in Delaware, Pennsylvania and New Jersey.</p>
+				<p>Whether you are a private individual, executer, trust officer, real estate agent or attorney, Changeover Sales will be be happy to consult with you to best serve your needs in the disposition of one item or a houseful.</p>
+			</div>
 		</div>
 	</section>
 
 	<section id="next-sale" class="sale major-section sticky-parent">
-		<header class="sale-header sticky ">
+		<header class="sale-header">
 			<?php // if there is an active sale ?>
 				<h2 class="heading-1">Next Sale</h2>
 
@@ -79,7 +81,7 @@ get_header();
 
 			<div class="sale-list sticky-parent">
 				<header class="list-header sticky">
-					<h3 class="heading-4">Accessories & Collectibles</h3>
+					<h3 class="heading-4 underline">Accessories & Collectibles</h3>
 				</header>
 				<ul class="list">
 					<li>Vintage Mac Classic, computer, printer, keyboard & mouse</li>
@@ -108,7 +110,7 @@ get_header();
 
 			<div class="sale-list">
 				<header class="list-header">
-					<h3 class="heading-4">Furniture</h3>
+					<h3 class="heading-4 underline">Furniture</h3>
 				</header>
 				<ul class="list">
 					<li>Kittinger Williamsburg Sofa</li>
@@ -144,7 +146,7 @@ get_header();
 
 			<div class="sale-list">
 				<header class="list-header">
-					<h3 class="heading-4">Furniture</h3>
+					<h3 class="heading-4 underline">Furniture</h3>
 				</header>
 				<ul class="list">
 					<li>Kittinger Williamsburg Sofa</li>
@@ -180,7 +182,7 @@ get_header();
 
 			<div class="sale-list">
 				<header class="list-header">
-					<h3 class="heading-4">Accessories & Collectibles</h3>
+					<h3 class="heading-4 underline">Accessories & Collectibles</h3>
 				</header>
 				<ul class="list">
 					<li>Vintage Mac Classic, computer, printer, keyboard & mouse</li>
@@ -211,6 +213,14 @@ get_header();
 
 		<button id="view-more" class="button view-more" type="button" name="button" data-less="Close" data-more="View More">View More</button>
 
+		<div class="sale-close container-small">
+			<p class="copy-1">So much more! Please, cash or check only, or credit card with fees (2.75%). Follow the <span class="pink">pink signs</span> & <i>please</i> obey signage. As always, <i>please</i> respect the home owner's and neighbors' properties and park thoughtfully. Thanks!</p>
+				<!-- <div class="list-close">
+      <p>So much more!</p>
+      <p></p>
+    </div> --></p>
+		</div>
+
 		<aside class="upcoming container-small">
 			<header class="upcoming-header flex">
 				<h4 class="heading-3">Upcoming Sales</h4>
@@ -236,14 +246,16 @@ get_header();
 		</aside>
 	</section>
 
-	<section id="how-it-works" class="how-it-works container-mid major-section">
-		<h5 class="heading-1">How it Works</h5>
-		<span>We take care of everything</span>
-		<p>All our client needs to do is take what they want and leave the rest to us. We will sort saleable from non-saleable, arrange, price, tag, advertise and sell everything in 2 or 3 days leaving your home “broom clean” ready for the cleaning crew (we can arrange for that, too!).</p>
-		<p>Within a week, we will furnish you with a check for the proceeds and a report with an itemized accounting of everything that sold.</p>
-		<p>Our Tag Sales are professionally conducted with the utmost respect for your home & possessions. Attention to even the smallest detail, strong security measures and our friendly professional staff guarantees excellent results.</p>
-		<p>Our 30+ years of experience with antiques, fine art, jewelry and household items and our constant exposure to the ever-changing market ensures that your possessions will be properly priced to produce maximum revenue for our client.</p>
-		<p>We also offer a full & partial estate purchases. If a Tag Sale isn't possible, we can offer a buyout of complete or partial contents of a home. After a purchase price has been agreed to, we will arrange for the packing & removal of all items and pay you immediately.</p>
+	<section id="how-it-works" class="how-it-works major-section">
+		<div class="container-mid">
+			<h5 class="heading-1">How it Works</h5>
+			<span>We take care of everything</span>
+			<p>All our client needs to do is take what they want and leave the rest to us. We will sort saleable from non-saleable, arrange, price, tag, advertise and sell everything in 2 or 3 days leaving your home “broom clean” ready for the cleaning crew (we can arrange for that, too!).</p>
+			<p>Within a week, we will furnish you with a check for the proceeds and a report with an itemized accounting of everything that sold.</p>
+			<p>Our Tag Sales are professionally conducted with the utmost respect for your home & possessions. Attention to even the smallest detail, strong security measures and our friendly professional staff guarantees excellent results.</p>
+			<p>Our 30+ years of experience with antiques, fine art, jewelry and household items and our constant exposure to the ever-changing market ensures that your possessions will be properly priced to produce maximum revenue for our client.</p>
+			<p>We also offer a full & partial estate purchases. If a Tag Sale isn't possible, we can offer a buyout of complete or partial contents of a home. After a purchase price has been agreed to, we will arrange for the packing & removal of all items and pay you immediately.</p>
+		</div>
 	</section>
 
 	<section id="testimonials" class="testimonials major-section container-mid">
