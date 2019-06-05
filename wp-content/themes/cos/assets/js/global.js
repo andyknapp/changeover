@@ -44,6 +44,22 @@ function singleListToggle() {
 }
 
 
+// close mobile nav
+function closeNav() {
+	links.forEach(function(link) {
+		link.addEventListener('click', function() {
+			toggle.classList.remove('toggled');
+			menu.classList.remove('show');
+			body.classList.remove('freeze');
+			html.classList.remove('freeze');
+		});
+	});
+
+}
+
+closeNav();
+
+
 function fullListToggle() {
 	more.addEventListener('click', function() {
 		var bodyRect = body.getBoundingClientRect();

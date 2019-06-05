@@ -29,6 +29,7 @@ $counter-scale: 1 / $scale;
 	height: (185 / 16) * 1em;
     width: (200 / 16) * 1em;
 	height: (74 / 16) * 1em;
+    font-size: 66%;
 	background: url('../Changeover-Sales-logo.png') no-repeat center / cover;
     transform: scaleY(1);
     transform-origin: left center;
@@ -76,6 +77,8 @@ $counter-scale: 1 / $scale;
     opacity: 0;
     visibility: hidden;
     z-index: 1;
+    background-color: rgba($color-white, 0.925);
+    border-bottom: 1px solid rgba(238, 238, 238, 0.9);
     transform-origin: right center;
     transition: opacity 0.3s ease-out, visibility 0.3s ease-out, transform, 0.3s ease-out;
 
@@ -136,6 +139,10 @@ $counter-scale: 1 / $scale;
         }
 	}
 
+    .logo {
+        font-size: 100%;
+    }
+
 	.menu-toggle {
 		display: none;
 	}
@@ -151,6 +158,8 @@ $counter-scale: 1 / $scale;
     	margin: 0;
     	visibility: visible;
     	border-radius: 50px;
+        background-color: transparent;
+        border-bottom-width: 0;
 	}
 
 	.menu {
