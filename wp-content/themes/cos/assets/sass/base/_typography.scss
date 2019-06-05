@@ -94,6 +94,21 @@ a {
           border-radius: 2px;
           background-color: $color-red;
       }
+
+      &.thin {
+          &::after {
+              width: 62px;
+              height: 1px;
+              transform: scaleX(1) translateX(0);
+          }
+      }
+
+      &.center {
+          &::after {
+              margin-left: auto;
+              margin-right: auto;
+          }
+      }
   }
 }
 

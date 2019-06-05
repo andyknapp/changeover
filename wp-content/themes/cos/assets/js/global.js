@@ -92,13 +92,15 @@ window.onscroll = function() {
 			var currentSection = sections[i].getAttribute('id');
 
 			sections[i].classList.add('current');
-
+			console.log(currentSection);
 			links.forEach(function(link) {
 				var hash = link.getAttribute('href');
 				var active = hash.replace('#', '');
 
-				if(active == currentSection) {
+				if (active == currentSection) {
 					link.classList.add('active');
+				} else if (currentSection == 'intro') {
+					link.classList.remove('active');
 				} else {
 					link.classList.remove('active');
 				}

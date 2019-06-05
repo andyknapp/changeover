@@ -15,7 +15,7 @@
 get_header();
 ?>
 
-	<section class="intro">
+	<section id="intro" class="intro major-section">
 		<div class="container-mid">
 			<header>
 				<h1 class="heading-2 underline">Estate & Tag Sales</h1>
@@ -30,7 +30,7 @@ get_header();
 	<section id="next-sale" class="sale major-section sticky-parent">
 		<header class="sale-header">
 			<?php // if there is an active sale ?>
-				<h2 class="heading-1">Next Sale</h2>
+				<h2 class="heading-1 underline center">Next Sale</h2>
 
 			<?php //else : ?>
 				<!-- <h2 class="heading-2">Upcoming Sale</h2> -->
@@ -81,7 +81,7 @@ get_header();
 
 			<div class="sale-list sticky-parent">
 				<header class="list-header sticky">
-					<h3 class="heading-4 underline">Accessories & Collectibles</h3>
+					<h3 class="heading-4 underline thin">Accessories & Collectibles</h3>
 				</header>
 				<ul class="list">
 					<li>Vintage Mac Classic, computer, printer, keyboard & mouse</li>
@@ -110,7 +110,7 @@ get_header();
 
 			<div class="sale-list">
 				<header class="list-header">
-					<h3 class="heading-4 underline">Furniture</h3>
+					<h3 class="heading-4 underline thin">Furniture</h3>
 				</header>
 				<ul class="list">
 					<li>Kittinger Williamsburg Sofa</li>
@@ -146,7 +146,7 @@ get_header();
 
 			<div class="sale-list">
 				<header class="list-header">
-					<h3 class="heading-4 underline">Furniture</h3>
+					<h3 class="heading-4 underline thin">Furniture</h3>
 				</header>
 				<ul class="list">
 					<li>Kittinger Williamsburg Sofa</li>
@@ -182,7 +182,7 @@ get_header();
 
 			<div class="sale-list">
 				<header class="list-header">
-					<h3 class="heading-4 underline">Accessories & Collectibles</h3>
+					<h3 class="heading-4 underline thin">Accessories & Collectibles</h3>
 				</header>
 				<ul class="list">
 					<li>Vintage Mac Classic, computer, printer, keyboard & mouse</li>

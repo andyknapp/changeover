@@ -345,8 +345,14 @@
 	.address {
 		width: calc(50% - 1em);
 		max-width: (500 / 16) * 1em;
-		margin-bottom: 1.5em;
-		padding: 0 1em 0 0 ;
+		margin: 0 0 1em 0;
+		padding: 1.5em 0.5em;
+		background-color: $color-gray-4;
+		text-align: center;
+
+		&:nth-of-type(odd) {
+			margin-right: 1em;
+		}
 
 		li {
 			display: block;
@@ -358,7 +364,6 @@
 	.upcoming-sales {
 		@extend %flex-parent-row;
 		flex-wrap: wrap;
-		justify-content: space-between;
 	}
 
 	@media (min-width: $bp-small) {
@@ -370,20 +375,24 @@
 		}
 
 		.upcoming-sales {
-			justify-content: center;
+			justify-content: space-around;
 		}
 
 		.address {
-			width: auto;
-			padding: 0 2em;
-			text-align: center;
+			width: calc(33.33% - 1em);
+			margin: 0;
+			padding: 2em;
+
+			&:nth-of-type(odd) {
+				margin-right: 0;
+			}
 		}
 	}
 
 
-	@media (min-width: $bp-nav) {
-		.address {
-			padding: 0 3.5em;
-		}
-	}
+	// @media (min-width: $bp-nav) {
+	// 	.address {
+	// 		padding: 0 3.5em;
+	// 	}
+	// }
 }
