@@ -30,7 +30,7 @@ get_header();
 	<section id="next-sale" class="sale major-section sticky-parent">
 		<header class="sale-header">
 			<?php // if there is an active sale ?>
-				<h2 class="heading-1 underline center">Next Sale</h2>
+				<h2 class="heading-1">Next Sale</h2>
 
 			<?php //else : ?>
 				<!-- <h2 class="heading-2">Upcoming Sale</h2> -->
@@ -81,7 +81,7 @@ get_header();
 
 			<div class="sale-list sticky-parent">
 				<header class="list-header sticky">
-					<h3 class="heading-4 underline thin">Accessories & Collectibles</h3>
+					<h3 class="heading-4">Accessories & Collectibles</h3>
 				</header>
 				<ul class="list">
 					<li>Vintage Mac Classic, computer, printer, keyboard & mouse</li>
@@ -103,14 +103,11 @@ get_header();
 					<li>Carved horn Buddha</li>
 					<li>Vintage Japanese folding screen</li>
 				</ul>
-				<footer class="list-footer">
-					<p class="cta" data-more="See More" data-less="See Less">See more</p>
-				</footer>
 			</div>
 
 			<div class="sale-list">
 				<header class="list-header">
-					<h3 class="heading-4 underline thin">Furniture</h3>
+					<h3 class="heading-4">Furniture</h3>
 				</header>
 				<ul class="list">
 					<li>Kittinger Williamsburg Sofa</li>
@@ -139,14 +136,11 @@ get_header();
 					<li>Faux leather loveseat</li>
 					<li>Painted wrought iron twin beds</li>
 				</ul>
-				<footer class="list-footer">
-					<p class="cta" data-more="See More" data-less="See Less">See more</p>
-				</footer>
 			</div>
 
 			<div class="sale-list">
 				<header class="list-header">
-					<h3 class="heading-4 underline thin">Furniture</h3>
+					<h3 class="heading-4">Furniture</h3>
 				</header>
 				<ul class="list">
 					<li>Kittinger Williamsburg Sofa</li>
@@ -175,14 +169,11 @@ get_header();
 					<li>Faux leather loveseat</li>
 					<li>Painted wrought iron twin beds</li>
 				</ul>
-				<footer class="list-footer">
-					<p class="cta" data-more="See More" data-less="See Less">See more</p>
-				</footer>
 			</div>
 
 			<div class="sale-list">
 				<header class="list-header">
-					<h3 class="heading-4 underline thin">Accessories & Collectibles</h3>
+					<h3 class="heading-4">Accessories & Collectibles</h3>
 				</header>
 				<ul class="list">
 					<li>Vintage Mac Classic, computer, printer, keyboard & mouse</li>
@@ -204,14 +195,9 @@ get_header();
 					<li>Carved horn Buddha</li>
 					<li>Vintage Japanese folding screen</li>
 				</ul>
-				<footer class="list-footer">
-					<p class="cta" data-more="See More" data-less="See Less">See more</p>
-				</footer>
 			</div>
 
 		</div>
-
-		<button id="view-more" class="button view-more" type="button" name="button" data-less="Close" data-more="View More">View More</button>
 
 		<div class="sale-close container-small">
 			<p class="copy-1">So much more! Please, cash or check only, or credit card with fees (2.75%). Follow the <span class="pink">pink signs</span> & <i>please</i> obey signage. As always, <i>please</i> respect the home owner's and neighbors' properties and park thoughtfully. Thanks!</p>
@@ -281,11 +267,13 @@ get_header();
 		</ul>
 	</section>
 
-	<section id="about-us" class="about container-mid major-section">
-		<h5 class="heading-1">About Us</h5>
-		<img src="https://www.fillmurray.com/400/500" alt=""  />
-		<p>Founded by Kay Reilly in 1977, we continue to be family owned and operated with a combined 70+ years of tag sales and appraisal experience. Word of mouth and customer referrals are the backbone of our thriving business and sterling reputation.</p>
-		<p>We are very proud of our friendly, knowledgeable, professional staff, many who have been with us from the start! We also maintain a vast number of experts who contribute valuable information and opinions on art, antiques, jewelry, etc.</p>
+	<section id="about-us" class="about major-section">
+		<div class="container-mid">
+			<h5 class="heading-1">About Us</h5>
+			<img src="https://www.fillmurray.com/400/500" alt=""  />
+			<p>Founded by Kay Reilly in 1977, we continue to be family owned and operated with a combined 70+ years of tag sales and appraisal experience. Word of mouth and customer referrals are the backbone of our thriving business and sterling reputation.</p>
+			<p>We are very proud of our friendly, knowledgeable, professional staff, many who have been with us from the start! We also maintain a vast number of experts who contribute valuable information and opinions on art, antiques, jewelry, etc.</p>
+		</div>
 	</section>
 
 	<section id="contact" class="contact container-mid major-section">

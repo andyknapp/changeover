@@ -13,6 +13,7 @@ var more = document.querySelector('.view-more');
 var links = document.querySelectorAll('.menu-item a');
 var header = document.querySelector('#masthead');
 var headerHeight = header.getBoundingClientRect().height;
+var bp = 640; // $bp-small
 
 
 // navigation
@@ -25,20 +26,22 @@ toggle.addEventListener('click', function (event) {
 
 
 //toggle sale list
-function singleListToggle() {
+function listToggle() {
+
 	lists.forEach(function(list) {
-		var footer = list.children[2];
-		var cta = footer.children[0];
+		list.addEventListener('click', function(e) {
+			console.log(listsContainer.classList.contains('full-list'));
+			if(vw >= bp) {
+				if(listsContainer.classList.contains('full-list')) {
+					listsContainer.classList.remove('full-list');
+				} else {
+					listsContainer.classList.add('full-list');
+				}
 
-		list.addEventListener('click', function() {
-			this.classList.toggle('active');
+			} else {
+				list.classList.toggle('active');
+			}
 
-			if (cta.getAttribute("data-less") == cta.innerHTML) {
-		      cta.innerHTML = cta.getAttribute("data-more");
-		    } else {
-		      cta.setAttribute("data-more", cta.innerHTML);
-		      cta.innerHTML = cta.getAttribute("data-less");
-		    }
 		});
 	});
 }
@@ -58,30 +61,6 @@ function closeNav() {
 }
 
 closeNav();
-
-
-function fullListToggle() {
-	more.addEventListener('click', function() {
-		var bodyRect = body.getBoundingClientRect();
-		var moreRect = this.getBoundingClientRect();
-		var morePos = moreRect.top - bodyRect.top;
-		listsContainer.classList.toggle('full-list');
-
-		console.log(bodyRect);
-
-		if (more.getAttribute("data-less") == more.innerHTML) {
-		  more.innerHTML = more.getAttribute("data-more");
-		  console.log('blah');
-		  saleMain.scrollIntoView({
-			  behavior: 'smooth',
-			  block: 'start'
-		  });
-		} else {
-		  more.setAttribute("data-more", more.innerHTML);
-		  more.innerHTML = more.getAttribute("data-less");
-		}
-	});
-}
 
 
 // smooth scroll, update url with current section
@@ -150,22 +129,9 @@ jQuery(document).ready(function($){
 
 
 
-function whichToggle() {
-	var bp = 640;
+listToggle();
 
-	if(vw >= bp) {
-
-		console.log('big');
-	} else {
-
-		console.log('small');
-	}
-}
-
-
-
-singleListToggle();
-fullListToggle();
+//window.addEventListener('resize', listToggle());
 
 
 //stickybits('.sticky', {useStickyClasses: true, noStyles: true});

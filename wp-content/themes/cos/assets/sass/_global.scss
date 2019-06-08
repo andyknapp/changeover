@@ -24,7 +24,7 @@
 	padding: 2.5em 1em;
 
 	@media (min-width: $bp-nav) {
-		padding: 5em 1em;
+		padding: 7em 1em;
 	}
 
 }
@@ -33,7 +33,7 @@
 	padding: 2.5em 1em;
 
 	@media (min-width: $bp-nav) {
-		padding: 7em 1em;
+		padding: 10em 1em;
 	}
 
 }
@@ -48,7 +48,7 @@
 .intro {
 	padding: 2.5em 1em;
 	//background-color: $color-gray-4;
-	border-bottom: 1px solid $color-gray-3;
+	border-bottom: 1px solid rgba($color-brown, 0.25);
 
 	> .container-mid {
 		@extend %flex-parent-row;
@@ -78,7 +78,7 @@
 // how it works
 .how-it-works {
 	@extend %pad-big;
-	background-color: $color-gray-4;
+	background-color: $color-beige;
 
 	> div {
 		columns: 18em 2;
@@ -109,8 +109,9 @@
 	@extend %pad-big;
 	clear: both;
 	overflow: auto;
+	background-color: $color-beige;
 
-	&.container-mid {
+	.container-mid {
 		max-width: (924 / 16) * 1em;
 	}
 
@@ -235,7 +236,7 @@
 
 	span {
 		font-family: "Georgia", serif;
-		color: $color-black-2;
+		color: $color-red;
 
 		&.open {
 			position: absolute;

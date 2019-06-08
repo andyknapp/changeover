@@ -20,7 +20,7 @@
 	}
 
     .sale-header {
-        @extend %pad-h;
+        //@extend %pad-h;
 		z-index: 3;
     }
 
@@ -72,6 +72,7 @@
                     display: inline-block;
                     margin: 0 2em;
                     opacity: 0.5;
+					color: $color-brown;
                 }
 
                 &:last-of-type {
@@ -111,7 +112,7 @@
 }
 
 .sale-meta {
-	padding: 0.5em 1em 4em;
+	padding: 0.5em 0 4em;
 
     a {
         margin: 0 2em 0 0;
@@ -132,8 +133,12 @@
 }
 
 .sale-description {
-    @extend %pad-h;
-    margin: 2em auto;
+    //@extend %pad-h;
+    margin: 0 auto 1em;
+
+	@media (min-width: $bp-small) {
+		margin-left: 2em auto;
+	}
 }
 
 
@@ -142,7 +147,6 @@
 	flex-wrap: wrap;
 	justify-content: space-between;
     align-items: flex-start;
-    padding-left: 1em;
 
     @media (min-width: $bp-small) {
         justify-content: flex-start;
@@ -153,6 +157,10 @@
 			.list-header {
 				position: sticky;
 				top: (6.5 * 0.7) * 1em;
+
+				&::after {
+					content: '\002d';
+				}
 			}
 
 			.list,
@@ -170,19 +178,20 @@
 
 
 .sale-list {
-	width: calc(100% - 1em);
+	width: 100%;
 	margin-bottom: 2em;
+	border: 1px solid $color-gray-3;
+	border-radius: 6px;
     cursor: pointer;
 
 	@media (min-width: $bp-small) {
-        width: calc(50% - 4em);
-        margin-right: 2em;
-        margin: 0 2em 2em;
-		cursor: initial;
+        width: calc(50% - 2em);
+        margin: 0 1em 2em;
+		border-width: 0;
 	}
 
 
-    @media (min-width: 90em) {
+    @media (min-width: $bp-nav) {
         width: calc(33.33% - 4em);
         margin: 0 2em 2em;
 	}
@@ -192,22 +201,13 @@
     @extend %flex-parent-row;
     align-items: center;
     position: relative;
-    margin-bottom: 1em;
-    padding: 1em 0.5em 0.5em;
-    //border-bottom: 1px solid $color-gray;
-    cursor: pointer;
+    padding: 1em 0.5em;
     overflow: hidden;
 
 	.heading-4 {
 		width: 100%;
-		padding-left: 4px;
-
-		&::after {
-			width: 100%;
-			//margin-left: -4px;
-			transform-origin: left center;
-			transform: scaleX(0.2) translateX(-18px);
-		}
+		padding-left: 0.25em;
+		cursor: pointer;
 	}
 
     &::after {
@@ -216,10 +216,10 @@
         position: absolute;
         top: 50%;
         right: 1.5em;
-        width: 0.75em;
-        height: 0.75em;
         color: $color-red;
+		font-size: 1.125em;
         transform: translateY(-50%);
+		cursor: pointer;
     }
 
     .active & {
@@ -234,15 +234,16 @@
 
 
     @media (min-width: $bp-small) {
-        margin-bottom: 1.5em;
-        padding: 1em 1em 0;
+        margin-bottom: 0;
+        padding: 1em 1em 1em 0.25em;
 		background-color: rgba($color-white, 0.925);
 		z-index: 1;
 		cursor: initial;
 
-        &::after {
-			display: none;
-        }
+		.heading-4 {
+			padding: 0 1em 0.25em 0;
+			border-bottom: 1px solid rgba($color-brown, 0.5);
+		}
 
 		.active & {
 			.heading-4 {
@@ -255,24 +256,30 @@
 .list {
     position: relative;
     width: 100%;
-    height: $list-height;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
+    height: 0;
+	padding: 0 1em;
     overflow: hidden;
 
     li {
         margin-bottom: 0.875em;
         line-height: 1.25;
+		opacity: 0;
+		transition: opacity 0.4s ease-out 0.1s;
     }
 
     .active & {
         height: auto;
-        opacity: 1;
+		padding-bottom: 1em;
+
+		li {
+			opacity: 1;
+		}
     }
 
 
     @media (min-width: $bp-small) {
-        padding-left: 1em;
+		height: $list-height;
+        padding-left: 0.25em;
         padding-right: 1em;
 
         &::after {
@@ -287,6 +294,7 @@
         }
 
         li {
+			opacity: 1;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -299,30 +307,8 @@
 }
 
 
-.list-footer {
-    padding: 0.25em 0.5em 0.75em;
-
-    p {
-        margin: 0;
-    }
-
-    span {
-        margin-left: 0.25em;
-    }
-
-    @media (min-width: $bp-small) {
-        display: none;
-    }
-}
-
-
 .sale-close {
-	@extend %pad;
-	border-bottom: 1px solid $color-gray-3;
-
-	@media (min-width: $bp-nav) {
-		padding-bottom: 2.5em;
-	}
+	padding: 2.5em 0;
 }
 
 
@@ -347,7 +333,8 @@
 		max-width: (500 / 16) * 1em;
 		margin: 0 0 1em 0;
 		padding: 1.5em 0.5em;
-		background-color: $color-gray-4;
+		border: 1px solid rgba($color-brown, 0.75);
+		border-radius: 6px;
 		text-align: center;
 
 		&:nth-of-type(odd) {
@@ -358,6 +345,11 @@
 			display: block;
 			line-height: 1.5;
 			font-weight: 400;
+
+			&:first-of-type {
+				@extend %cta;
+				font-weight: 800;
+			}
 		}
 	}
 

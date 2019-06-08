@@ -14,7 +14,7 @@ $counter-scale: 1 / $scale;
     padding-right: 1em;
     z-index: 2;
     background-color: rgba($color-white, 0.925);
-    border-bottom: 1px solid rgba($color-gray, 0.9);
+    border-bottom: 1px solid rgba($color-brown, 0.5);
 
     .container-site {
         @extend %flex-parent-row;
