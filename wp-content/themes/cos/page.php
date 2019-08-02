@@ -200,7 +200,7 @@ get_header();
 		</div>
 
 		<div class="sale-close container-small">
-			<p class="copy-1">So much more! Please, cash or check only, or credit card with fees (2.75%). Follow the <span class="pink">pink signs</span> & <i>please</i> obey signage. As always, <i>please</i> respect the home owner's and neighbors' properties and park thoughtfully. Thanks!</p>
+			<p class="copy-1" >So much more! Please, cash or check only, or credit card with fees (2.75%). Follow the <span class="pink">pink signs</span> & <i>please</i> obey signage. As always, <i>please</i> respect the home owner's and neighbors' properties and park thoughtfully. Thanks!</p>
 				<!-- <div class="list-close">
       <p>So much more!</p>
       <p></p>
@@ -209,7 +209,7 @@ get_header();
 
 		<aside class="upcoming container-small">
 			<header class="upcoming-header flex">
-				<h4 class="heading-3">Upcoming Sales</h4>
+				<h4 class="heading-3 underline animation-element line-in" data-trigger="0.85">Upcoming Sales</h4>
 				<p>Check back soon for more information!</p>
 			</header>
 			<div class="upcoming-sales">

@@ -5,7 +5,6 @@ var url = window.location;
 var path = url.pathname;
 var toggle = document.querySelector('.menu-toggle');
 var menu = document.querySelector('#site-navigation');
-var sections = document.querySelectorAll('.major-section');
 var saleMain = document.querySelector('#next-sale');
 var listsContainer = document.querySelector('.sale-lists');
 var lists = document.querySelectorAll('.sale-list');
@@ -63,6 +62,23 @@ function closeNav() {
 closeNav();
 
 
+function debounce(func, wait, immediate) {
+	var timeout;
+	return function() {
+		var context = this, args = arguments;
+		var later = function() {
+			timeout = null;
+			if (!immediate) func.apply(context, args);
+		};
+		var callNow = immediate && !timeout;
+		clearTimeout(timeout);
+		timeout = setTimeout(later, wait);
+		if (callNow) func.apply(context, args);
+	};
+};
+
+
+
 // smooth scroll, update url with current section
 document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
   anchor.addEventListener('click', function (e) {
@@ -76,44 +92,29 @@ document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
 });
 
 
-// do stuff on scroll
-window.onscroll = function() {
-	var fromTop = window.scrollY;
 
-	// highlight nav item for current section
-	for(var i = 0; i < sections.length; i++) {
-		if (sections[i].getBoundingClientRect().top <= window.innerHeight / 3) {
+function scaleHeader() {
+	var sections = document.querySelectorAll('.major-section');
+	var lastScroll = 0;
 
-			var currentSection = sections[i].getAttribute('id');
+	function scrollStuff() {
+		var fromTop = window.scrollY;
 
-			sections[i].classList.add('current');
-			console.log(currentSection);
-			links.forEach(function(link) {
-				var hash = link.getAttribute('href');
-				var active = hash.replace('#', '');
-
-				if (active == currentSection) {
-					link.classList.add('active');
-				} else if (currentSection == 'intro') {
-					link.classList.remove('active');
-				} else {
-					link.classList.remove('active');
-				}
-			});
-
+		// scale header
+		if(headerHeight < fromTop) {
+			header.classList.add('scrolled');
 		} else {
-		    sections[i].classList.remove('current');
+			header.classList.remove('scrolled');
 		}
+
+		lastScroll = fromTop;
+
+		console.log(headerHeight);
+		console.log(fromTop);
 	}
 
-
-	// scale header
-	if(headerHeight < fromTop) {
-		header.classList.add('scrolled');
-	} else {
-		header.classList.remove('scrolled');
-	}
-};
+	scrollStuff();
+}
 
 
 
@@ -128,10 +129,11 @@ jQuery(document).ready(function($){
 });
 
 
-
 listToggle();
 
-//window.addEventListener('resize', listToggle());
+window.addEventListener('scroll', function() {
+	scaleHeader();
+});
 
 
 //stickybits('.sticky', {useStickyClasses: true, noStyles: true});

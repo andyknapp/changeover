@@ -21,19 +21,19 @@
 }
 
 %pad {
-	padding: 2.5em 1em;
+	padding: 4.5em 1em;
 
 	@media (min-width: $bp-nav) {
-		padding: 7em 1em;
+		padding: 8em 1em;
 	}
 
 }
 
 %pad-big {
-	padding: 2.5em 1em;
+	padding: 5em 1em;
 
 	@media (min-width: $bp-nav) {
-		padding: 10em 1em;
+		padding: 12em 1em;
 	}
 
 }
@@ -46,7 +46,7 @@
 
 // intro
 .intro {
-	padding: 2.5em 1em;
+	padding: 3.5em 1em;
 	//background-color: $color-gray-4;
 	border-bottom: 1px solid rgba($color-brown, 0.25);
 
@@ -70,7 +70,7 @@
 
 
 	@media (min-width: $bp-nav) {
-		padding: 12em 1em 7em;
+		padding: 10em 1em 12em;
 	}
 }
 
@@ -240,10 +240,15 @@
 
 		&.open {
 			position: absolute;
-			top: 0;
-			left: -0.35em;
+			top: -6px;
+			left: -16px;
 			font-size: 5em;
 			line-height: 0.2;
+
+			@media (min-width: $bp-nav) {
+				top: 0;
+				left: -0.35em;
+			}
 		}
 	}
 
@@ -322,5 +327,34 @@ img {
 		width: 0.65em;
 		height: 0.65em;
 		fill: $color-red;
+	}
+}
+
+
+
+// animations
+
+.fade-up {
+	opacity: 0;
+	transform: translateY(2em);
+	transition: 0.4s transform $ease-out-quad, 0.4s opacity $ease-out-quad;
+
+	&.animate {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.line-in {
+	&::after {
+		transform: scaleX(0);
+		transform-origin: left center;
+		transition: 0.4s transform $ease-out-quad;
+	}
+
+	&.animate {
+		&::after {
+			transform: scaleX(1);
+		}
 	}
 }

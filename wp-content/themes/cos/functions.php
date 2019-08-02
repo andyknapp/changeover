@@ -127,8 +127,14 @@ function cos_scripts() {
 
 	wp_register_script('bxslider-js', get_stylesheet_directory_uri() . '/assets/js/jquery.bxslider.min.js', array('jquery'), THEME_VERSION, true);
 
+	wp_register_script('animation-driver-js', get_stylesheet_directory_uri() . '/assets/js/animation-driver.js', array(), THEME_VERSION, true);
+
+	wp_register_script('scrollspy-js', get_stylesheet_directory_uri() . '/assets/js/scrollspy.js', array('global-js'), THEME_VERSION, true);
+
 	wp_enqueue_script('bxslider-js');
 	wp_enqueue_script('stickybits-js');
+	wp_enqueue_script('animation-driver-js');
+	wp_enqueue_script('scrollspy-js');
 	wp_enqueue_script('global-js');
 
 }
