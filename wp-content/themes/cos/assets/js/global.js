@@ -28,9 +28,12 @@ toggle.addEventListener('click', function (event) {
 function listToggle() {
 
 	lists.forEach(function(list) {
+		var listRect = list.getBoundingClientRect(),
+			listHeight = listRect.height;
+			console.log(listHeight);
 		list.addEventListener('click', function(e) {
-			console.log(listsContainer.classList.contains('full-list'));
 			if(vw >= bp) {
+				console.log('yeaaaah');
 				if(listsContainer.classList.contains('full-list')) {
 					listsContainer.classList.remove('full-list');
 				} else {
@@ -38,7 +41,7 @@ function listToggle() {
 				}
 
 			} else {
-				list.classList.toggle('active');
+				list.classList.toggle('list-active');
 			}
 
 		});

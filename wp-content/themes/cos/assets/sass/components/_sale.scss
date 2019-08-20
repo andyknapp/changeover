@@ -1,6 +1,6 @@
 // Upcoming/next sale
 .sale {
-	@extend %pad-big;
+	padding: 5em 0;
 
 	.address,
 	.date-time {
@@ -20,7 +20,7 @@
 	}
 
     .sale-header {
-        //@extend %pad-h;
+        @extend %pad-h;
 		z-index: 3;
     }
 
@@ -84,26 +84,6 @@
 
 		}
 
-		// .sale-header {
-		// 	position: sticky;
-		// 	top: (6.5 * 0.7) * 1em;
-		//
-		// 	&.js-is-sticky {
-		// 		background-color: $color-red;
-		// 		text-align: left;
-		//
-		// 		* {
-		// 			display: inline-block;
-		// 			margin-bottom: 0;
-		// 		}
-		//
-		// 		.heading-1 {
-		// 			transform-origin: left top;
-		// 			transform: scale(0.75);
-		// 		}
-		// 	}
-		// }
-
         .view-more {
 			display: block;
 			margin: 0 auto;
@@ -112,7 +92,7 @@
 }
 
 .sale-meta {
-	padding: 0.5em 0 4em;
+	padding: 0.5em 1em 4em;
 
     a {
         margin: 0 2em 0 0;
@@ -133,11 +113,11 @@
 }
 
 .sale-description {
-    //@extend %pad-h;
+    @extend %pad-h;
     margin: 0 auto 1em;
 
 	@media (min-width: $bp-small) {
-		margin-left: 2em auto;
+		margin: 2em auto;
 	}
 }
 
@@ -147,24 +127,16 @@
 	flex-wrap: wrap;
 	justify-content: space-between;
     align-items: flex-start;
+	padding: 0 1em;
 
     @media (min-width: $bp-small) {
-        justify-content: flex-start;
-        padding-left: 0;
+		justify-content: flex-start;
+        padding-left: 1.5em;
 
 		// full list on widescreens
 		&.full-list {
-			.list-header {
-				position: sticky;
-				top: (6.5 * 0.7) * 1em;
-
-				&::after {
-					content: '\002d';
-				}
-			}
-
 			.list,
-			.list.active {
+			.list.list-active {
 				height: auto;
 				opacity: 1;
 
@@ -174,26 +146,44 @@
 			}
 		}
     }
+
+	@media (min-width: $bp-big) {
+        padding-left: 2em;
+	}
 }
 
+
+.sale-col {
+	width: 100%;
+
+	@media (min-width: $bp-small) {
+        width: calc(50% - 1.5em);
+		margin-right: 1.5em;
+	}
+
+	@media (min-width: $bp-nav) {
+        width: calc(33.33% - 1.5em);
+	}
+
+	@media (min-width: $bp-big) {
+        width: calc(33.33% - 2em);
+		margin-right: 2em;
+	}
+}
 
 .sale-list {
 	width: 100%;
 	margin-bottom: 2em;
-	border: 1px solid $color-gray-3;
-	border-radius: 6px;
+	border-radius: 30px;
+	box-shadow: 0 4px 18px 0 rgba($color-gray-2, 0.3);
     cursor: pointer;
 
 	@media (min-width: $bp-small) {
-        width: calc(50% - 2em);
-        margin: 0 1em 2em;
-		border-width: 0;
+		padding: 1em;
 	}
 
-
     @media (min-width: $bp-nav) {
-        width: calc(33.33% - 4em);
-        margin: 0 2em 2em;
+		padding: 2em
 	}
 }
 
@@ -201,7 +191,7 @@
     @extend %flex-parent-row;
     align-items: center;
     position: relative;
-    padding: 1em 0.5em;
+    padding: 1em 1.5em;
     overflow: hidden;
 
 	.heading-4 {
@@ -220,9 +210,14 @@
 		font-size: 1.125em;
         transform: translateY(-50%);
 		cursor: pointer;
+
+		@media (min-width: $bp-nav) {
+			right: 0.875em;
+			font-size: 1.5em;
+		}
     }
 
-    .active & {
+    .list-active & {
         &::after {
             content: '\002d';
         }
@@ -245,7 +240,7 @@
 			border-bottom: 1px solid rgba($color-brown, 0.5);
 		}
 
-		.active & {
+		.list-active & {
 			.heading-4 {
 				color: $color-black-2;
 			}
@@ -257,22 +252,38 @@
     position: relative;
     width: 100%;
     height: 0;
-	padding: 0 1em;
+	padding: 0 1.5em;
     overflow: hidden;
 
     li {
         margin-bottom: 0.875em;
         line-height: 1.25;
 		opacity: 0;
-		transition: opacity 0.4s ease-out 0.1s;
+		transition: opacity 0.2s ease-in;
+
+		@media (min-width: $bp-nav) {
+			&:nth-of-type(n + 5) {
+				opacity: 0;
+
+				.full-list & {
+					opacity: 1;
+				}
+			}
+		}
     }
 
-    .active & {
+    .list-active & {
         height: auto;
 		padding-bottom: 1em;
 
 		li {
 			opacity: 1;
+
+			@media (min-width: $bp-nav) {
+				&:nth-of-type(n + 5) {
+					opacity: 1;
+				}
+			}
 		}
     }
 
@@ -300,7 +311,7 @@
             text-overflow: ellipsis;
         }
 
-		.active & {
+		.list-active & {
 			height: $list-height;
 		}
 	}
@@ -308,14 +319,13 @@
 
 
 .sale-close {
-	padding: 2.5em 0;
+	padding: 2.5em 1em;
 }
 
 
 
-
 .upcoming {
-	padding: 2em 0;
+	padding: 2em 1em;
 
     .upcoming-header {
 		@extend %flex-parent-row;
