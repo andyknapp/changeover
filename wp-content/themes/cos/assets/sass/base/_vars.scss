@@ -11,7 +11,7 @@ $color-beige: rgb(224, 215, 210);
 $color-brown: #d5cfc3;
 
 $header-height-1: 5em;
-$header-height-2: 6.5em;
+$header-height-2: (90 / 16) * 1em;
 $list-height: 8em;
 
 $bp-small: 40em;

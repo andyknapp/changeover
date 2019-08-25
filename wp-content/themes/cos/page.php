@@ -27,6 +27,8 @@ get_header();
 		</div>
 	</section>
 
+	<hr class="spacer">
+
 	<section id="next-sale" class="sale major-section sticky-parent">
 		<header class="sale-header">
 			<?php // if there is an active sale ?>
@@ -82,7 +84,7 @@ get_header();
 			<div class="sale-col">
 				<div class="sale-list  sale-list-a">
 					<header class="list-header sticky">
-						<h3 class="heading-4">(A) Accessories & Collectibles</h3>
+						<h3 class="heading-4">Accessories & Collectibles</h3>
 					</header>
 					<ul class="list">
 						<li>Vintage Mac Classic, computer, printer, keyboard & mouse</li>
@@ -108,7 +110,7 @@ get_header();
 
 				<div class="sale-list sale-list-d">
 					<header class="list-header">
-						<h3 class="heading-4">(D) Stuff & Collectibles</h3>
+						<h3 class="heading-4">Stuff & Collectibles</h3>
 					</header>
 					<ul class="list">
 						<li>Vintage Mac Classic, computer, printer, keyboard & mouse</li>
@@ -136,7 +138,7 @@ get_header();
 			<div class="sale-col">
 				<div class="sale-list sale-list-b">
 					<header class="list-header">
-						<h3 class="heading-4">(B) Furniture</h3>
+						<h3 class="heading-4">Furniture</h3>
 					</header>
 					<ul class="list">
 						<li>Oak bookcase</li>
@@ -148,7 +150,7 @@ get_header();
 
 				<div class="sale-list sale-list-e">
 					<header class="list-header">
-						<h3 class="heading-4">(E) Outdoor Furniture</h3>
+						<h3 class="heading-4">Outdoor Furniture</h3>
 					</header>
 					<ul class="list">
 						<li>Kittinger Williamsburg Sofa</li>
@@ -183,7 +185,7 @@ get_header();
 			<div class="sale-col">
 				<div class="sale-list sale-list-c">
 					<header class="list-header">
-						<h3 class="heading-4">(C) Outdoor Furniture</h3>
+						<h3 class="heading-4">Outdoor Furniture</h3>
 					</header>
 					<ul class="list">
 						<li>Kittinger Williamsburg Sofa</li>
@@ -231,19 +233,14 @@ get_header();
 			</header>
 			<div class="upcoming-sales">
 				<ul class="address">
-					<li>March</li>
-					<li>Sharpley</li>
-					<li>Wilmington, DE</li>
+					<li>Sept. 18 - 21</li>
+					<li>Selborne Dr.</li>
+					<li>Centreville, DE</li>
 				</ul>
 				<ul class="address">
-					<li>April</li>
-					<li>Neighborhood</li>
-					<li>Wilmington, DE</li>
-				</ul>
-				<ul class="address">
-					<li>May</li>
-					<li>Neighborhood</li>
-					<li>Wilmington, DE</li>
+					<li>TBA</li>
+					<li>Centreville Reserve</li>
+					<li>Centreville, DE</li>
 				</ul>
 			</div>
 		</aside>
@@ -284,6 +281,8 @@ get_header();
 		</ul>
 	</section>
 
+	<hr class="spacer">
+
 	<section id="about-us" class="about major-section">
 		<div class="container-mid">
 			<h5 class="heading-1">About Us</h5>
@@ -293,19 +292,20 @@ get_header();
 		</div>
 	</section>
 
-	<section id="contact" class="contact container-mid major-section">
-		<h5 class="heading-1">Contact</h5>
-		<div class="contact-container">
-			<aside class="contact-info">
-				<span>Kay Reilly</span>
-				<span>Patty Souffie</span>
-				<a href="mailto:changeoversales@aol.com" target="_blank">changeoversales@aol.com</a>
-				<a href="tel:1-302-562-5385">302-562-5385</a>
-			</aside>
+	<section id="contact" class="contact major-section">
+		<div class="container-mid">
+			<h5 class="heading-1">Contact</h5>
+			<div class="contact-container">
+				<aside class="contact-info">
+					<span>Kay Reilly</span>
+					<span>Patty Souffie</span>
+					<a href="mailto:changeoversales@aol.com" target="_blank">changeoversales@aol.com</a>
+					<a href="tel:1-302-562-5385">302-562-5385</a>
+				</aside>
 
-			<?php gravity_form( 1, false, false, false, '', false ); ?>
+				<?php gravity_form( 1, false, false, false, '', false ); ?>
+			</div>
 		</div>
-
 	</section>
 
 <?php

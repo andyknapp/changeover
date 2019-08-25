@@ -89,6 +89,11 @@
 			margin: 0 auto;
         }
 	}
+
+
+	@media (min-width: $bp-nav) {
+		padding: 8em 0;
+	}
 }
 
 .sale-meta {

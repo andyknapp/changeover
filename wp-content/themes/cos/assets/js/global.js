@@ -30,10 +30,9 @@ function listToggle() {
 	lists.forEach(function(list) {
 		var listRect = list.getBoundingClientRect(),
 			listHeight = listRect.height;
-			console.log(listHeight);
+
 		list.addEventListener('click', function(e) {
 			if(vw >= bp) {
-				console.log('yeaaaah');
 				if(listsContainer.classList.contains('full-list')) {
 					listsContainer.classList.remove('full-list');
 				} else {
@@ -111,9 +110,6 @@ function scaleHeader() {
 		}
 
 		lastScroll = fromTop;
-
-		console.log(headerHeight);
-		console.log(fromTop);
 	}
 
 	scrollStuff();
@@ -137,6 +133,3 @@ listToggle();
 window.addEventListener('scroll', function() {
 	scaleHeader();
 });
-
-
-//stickybits('.sticky', {useStickyClasses: true, noStyles: true});

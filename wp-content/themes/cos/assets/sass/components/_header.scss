@@ -1,6 +1,6 @@
 // sass-lint:disable force-pseudo-nesting
 
-$scale: 0.7;
+$scale: 0.8;
 $counter-scale: 1 / $scale;
 
 .site-header {
@@ -14,8 +14,6 @@ $counter-scale: 1 / $scale;
     padding-right: 1em;
     z-index: 2;
     background-color: rgba($color-white, 0.925);
-    //border-bottom: 1px solid rgba($color-brown, 0.5);
-    //box-shadow: 0 2px 18px 0 rgba($color-gray-2, 0.25);
     box-shadow: 0 1px 7px 0 rgba(170, 170, 170, 0.25);
 
     .container-site {
@@ -98,20 +96,41 @@ $counter-scale: 1 / $scale;
 }
 
 .menu-item {
+    position: relative;
 	margin-bottom: 1.5em;
 	list-style: none;
 
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 100%;
+        height: 2px;
+        background-color: $color-red;
+        transform-origin: center bottom;
+        transform: scaleX(0);
+        transition: transform 0.3s ease-out;
+    }
+
+
 	a {
-		padding: 0.5em 0;
+		padding: 0.5em 0.25em;
         color: $color-black;
         border-bottom: 2px solid transparent;
-        transition: border-color 0.3s ease;
+        transition: color 0.3s ease;
 	}
 
     &:hover,
     &.active {
+        &::after {
+            transform: scaleX(1);
+        }
+
         a {
-            color: $color-red;
+            //color: $color-red;
+            color: $color-black;
         }
     }
 }
@@ -133,7 +152,7 @@ $counter-scale: 1 / $scale;
             transform: scaleY($scale);
 
             .site-nav {
-                transform: scaleY($counter-scale);
+                transform: scaleY($counter-scale) translateY(-8px);
             }
 
             .logo {
@@ -143,7 +162,7 @@ $counter-scale: 1 / $scale;
 	}
 
     .logo {
-        font-size: 100%;
+        font-size: 88%;
     }
 
 	.menu-toggle {
@@ -152,6 +171,7 @@ $counter-scale: 1 / $scale;
 
 	.site-nav,
 	.site-nav.show {
+        align-self: flex-end;
         position: relative;
         top: 0;
     	width: calc(100% - ((178 / 16) * 1em) - 3em);
@@ -175,7 +195,7 @@ $counter-scale: 1 / $scale;
 
 	.menu-item {
 		margin: 0;
-		padding: (11.5 / 16) * 1em 0;
+		padding: (11.5 / 16) * 1em 0 (8 / 16) * 1em;
 
 		a {
 			display: block;
