@@ -83,8 +83,11 @@ get_header();
 
 			<div class="sale-col">
 				<div class="sale-list  sale-list-a">
-					<header class="list-header sticky">
+					<header class="list-header">
 						<h3 class="heading-4">Accessories & Collectibles</h3>
+						<svg>
+							<use xlink:href="#icon-down"></use>
+						</svg>
 					</header>
 					<ul class="list">
 						<li>Vintage Mac Classic, computer, printer, keyboard & mouse</li>
@@ -111,6 +114,9 @@ get_header();
 				<div class="sale-list sale-list-d">
 					<header class="list-header">
 						<h3 class="heading-4">Stuff & Collectibles</h3>
+						<svg>
+							<use xlink:href="#icon-down"></use>
+						</svg>
 					</header>
 					<ul class="list">
 						<li>Vintage Mac Classic, computer, printer, keyboard & mouse</li>
@@ -139,6 +145,9 @@ get_header();
 				<div class="sale-list sale-list-b">
 					<header class="list-header">
 						<h3 class="heading-4">Furniture</h3>
+						<svg>
+							<use xlink:href="#icon-down"></use>
+						</svg>
 					</header>
 					<ul class="list">
 						<li>Oak bookcase</li>
@@ -151,6 +160,9 @@ get_header();
 				<div class="sale-list sale-list-e">
 					<header class="list-header">
 						<h3 class="heading-4">Outdoor Furniture</h3>
+						<svg>
+							<use xlink:href="#icon-down"></use>
+						</svg>
 					</header>
 					<ul class="list">
 						<li>Kittinger Williamsburg Sofa</li>
@@ -186,6 +198,9 @@ get_header();
 				<div class="sale-list sale-list-c">
 					<header class="list-header">
 						<h3 class="heading-4">Outdoor Furniture</h3>
+						<svg>
+							<use xlink:href="#icon-down"></use>
+						</svg>
 					</header>
 					<ul class="list">
 						<li>Kittinger Williamsburg Sofa</li>

@@ -410,7 +410,8 @@ img {
 
 
 .spacer {
-	width: calc(100% - 4em);
+	width: 50%;
+	max-width: 45em;
 	height: 0.125em;
 	margin: 1em auto;
 	border: 0;

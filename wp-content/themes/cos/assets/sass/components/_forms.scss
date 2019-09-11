@@ -2,13 +2,13 @@
 
 %input {
 	width: 100%;
-	padding: 1.5em 1em;
+	padding: 0.875em 1em;
 	border: 1px solid rgba($color-brown, 0.4);
 	background-color: $color-white;
-	border-radius: 30px;
-	font-size: 1em;
+	border-radius: 14px;
+	font-size: 1.25em;
 	font-weight: 400;
-	line-height: 1;
+	line-height: 1.2;
 	color: $color-black;
 	outline: none;
 	-webkit-appearance: none;//sass-lint:disable-line no-vendor-prefixes

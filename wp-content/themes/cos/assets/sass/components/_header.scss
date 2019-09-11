@@ -14,7 +14,10 @@ $counter-scale: 1 / $scale;
     padding-right: 1em;
     z-index: 2;
     background-color: rgba($color-white, 0.925);
-    box-shadow: 0 1px 7px 0 rgba(170, 170, 170, 0.25);
+
+    &.scrolled {
+        box-shadow: 0 1px 7px 0 rgba(170, 170, 170, 0.25);
+    }
 
     .container-site {
         @extend %flex-parent-row;
