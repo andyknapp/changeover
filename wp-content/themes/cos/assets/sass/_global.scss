@@ -135,7 +135,6 @@
 // contact
 .contact {
 	@extend %pad-big;
-	background-color: rgba($color-brown, 0.25);
 
 	@media (min-width: $bp-nav) {
 		padding-bottom: 14em;
@@ -277,12 +276,14 @@
 
 // footer
 .site-footer {
-	padding: 0 1em 1em;
+	padding: 3em 1em 1em;
 	text-align: center;
-	background-color: rgba($color-brown, 0.25);
+	background-color: $color-red;
+	color: $color-white;
 
 	a {
 		display: block;
+		color: $color-white;
 	}
 
 	.spacer {

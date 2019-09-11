@@ -13,7 +13,7 @@
 </main><!-- #content -->
 
 <footer id="colophon" class="site-footer">
-	<hr class="spacer alt">
+	<!-- <hr class="spacer alt"> -->
 	<ul>
 		<li>Changeover Sales <span>Est. 1977</span></li>
 		<li>

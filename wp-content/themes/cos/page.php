@@ -307,6 +307,8 @@ get_header();
 		</div>
 	</section>
 
+	<hr class="spacer">
+
 	<section id="contact" class="contact major-section">
 		<div class="container-mid">
 			<h5 class="heading-1">Contact</h5>
