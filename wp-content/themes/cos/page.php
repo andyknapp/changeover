@@ -43,7 +43,7 @@ get_header();
 						<a href="#" class="external-link">Directions
 							<span>
 								<svg>
-									<use xlink:href="#icon-external-link"></use>
+									<use xlink:href="#icon-location"></use>
 								</svg>
 							</span>
 						</a>
@@ -65,7 +65,7 @@ get_header();
 			<a href="#" class="external-link">View Pictures
 				<span>
 					<svg>
-						<use xlink:href="#icon-external-link"></use>
+						<use xlink:href="#icon-photos"></use>
 					</svg>
 				</span>
 			</a>
@@ -73,7 +73,7 @@ get_header();
 			<a href="#" class="external-link">Facebook
 				<span>
 					<svg>
-						<use xlink:href="#icon-external-link"></use>
+						<use xlink:href="#icon-facebook"></use>
 					</svg>
 				</span>
 			</a>
