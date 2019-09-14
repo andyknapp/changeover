@@ -39,15 +39,6 @@ get_header();
 				<ul class="address">
 					<li>123 Main St.</li>
 					<li>Wilmington, DE 19803</li>
-					<li class="cta">
-						<a href="#" class="external-link">Directions
-							<span>
-								<svg>
-									<use xlink:href="#icon-location"></use>
-								</svg>
-							</span>
-						</a>
-					</li>
 				</ul>
 
 				<ul class="date-time">
@@ -61,23 +52,7 @@ get_header();
 			<p class="copy-1">A Decorator's Home. Big (6000 sq ft), beautiful house FULL! Fine Furniture & Accessories many new & unused, all in excellent condition! Maitland Smith, John Richard, Robert Allen, Knoll, Highland House, Old Biscayne, Castilian, French Heritage, Sligh, Hooker, Ethan Allen, Thomasville, Hermes, Waterford, Chelsea House, NDI, more! Antiques, Oriental Rugs, Original Art, Fine Jewelry, Sterling Silver, Horse Drawn Sleigh, Horse Riding Items etc. So much more!</p>
 		</div>
 
-		<div class="sale-meta">
-			<a href="#" class="external-link">View Pictures
-				<span>
-					<svg>
-						<use xlink:href="#icon-photos"></use>
-					</svg>
-				</span>
-			</a>
 
-			<a href="#" class="external-link">Facebook
-				<span>
-					<svg>
-						<use xlink:href="#icon-facebook"></use>
-					</svg>
-				</span>
-			</a>
-		</div>
 
 		<div class="sale-lists sale-cols container-site">
 
@@ -235,10 +210,29 @@ get_header();
 
 		<div class="sale-close container-small">
 			<p class="copy-1" >So much more! Please, cash or check only, or credit card with fees (2.75%). Follow the <span class="pink">pink signs</span> & <i>please</i> obey signage. As always, <i>please</i> respect the home owner's and neighbors' properties and park thoughtfully. Thanks!</p>
-				<!-- <div class="list-close">
-      <p>So much more!</p>
-      <p></p>
-    </div> --></p>
+		</div>
+
+		<div class="sale-meta">
+			<a href="#" class="external-link">
+				<svg class="direction">
+					<use xlink:href="#icon-location"></use>
+				</svg>
+				<span>Get Directions</span>
+			</a>
+
+			<a href="#" class="external-link">
+				<svg class="photos">
+					<use xlink:href="#icon-photos"></use>
+				</svg>
+				<span>View Pictures</span>
+			</a>
+
+			<a href="#" class="external-link">
+				<svg class="fb">
+					<use xlink:href="#icon-facebook"></use>
+				</svg>
+				<span>Visit us on Facebook</span>
+			</a>
 		</div>
 
 		<aside class="upcoming container-small">
@@ -296,8 +290,6 @@ get_header();
 		</ul>
 	</section>
 
-	<hr class="spacer">
-
 	<section id="about-us" class="about major-section">
 		<div class="container-mid">
 			<h5 class="heading-1">About Us</h5>
@@ -306,8 +298,6 @@ get_header();
 			<p>We are very proud of our friendly, knowledgeable, professional staff, many who have been with us from the start! We also maintain a vast number of experts who contribute valuable information and opinions on art, antiques, jewelry, etc.</p>
 		</div>
 	</section>
-
-	<hr class="spacer">
 
 	<section id="contact" class="contact major-section">
 		<div class="container-mid">
