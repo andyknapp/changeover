@@ -34,7 +34,7 @@
 	padding: 5em 1em;
 
 	@media (min-width: $bp-nav) {
-		padding: 10em 1em;
+		padding: 12em 1em;
 	}
 }
 
@@ -78,9 +78,9 @@
 	@extend %pad-big;
 	// background-color: $color-gray-4;
 	// background-color: rgba($color-brown, 0.25);
-	background-color: $color-red;
-	background: radial-gradient(circle, rgba(181,24,20,1) 0%, rgba(177,58,55,1) 44%);
-	color: $color-white;
+	// background-color: $color-red;
+	// background: radial-gradient(circle, rgba(181,24,20,1) 0%, rgba(177,58,55,1) 44%);
+	// color: $color-white;
 
 	> div {
 		columns: 18em 2;
@@ -90,7 +90,7 @@
 	.heading-1 {
 		column-span: all;
 		margin-bottom: 0.5em;
-		color: $color-white;
+		//color: $color-white;
 	}
 
 	span {
@@ -112,9 +112,9 @@
 	@extend %pad-big;
 	clear: both;
 	overflow: auto;
-	background: rgb(181,24,20);
-	background: radial-gradient(circle, rgba(181,24,20,1) 0%, rgba(177,58,55,1) 44%);
-	color: $color-white;
+	// background: rgb(181,24,20);
+	// background: radial-gradient(circle, rgba(181,24,20,1) 0%, rgba(177,58,55,1) 44%);
+	// color: $color-white;
 
 	.container-mid {
 		max-width: (924 / 16) * 1em;
@@ -127,9 +127,9 @@
 		margin: 0 1.5em 1.5em 0;
 	}
 
-	.heading-1 {
-		color: $color-white;
-	}
+	// .heading-1 {
+	// 	color: $color-white;
+	// }
 
 	p {
 		@extend %copy-2;
@@ -237,6 +237,9 @@
 // testimonials
 .testimonials {
 	@extend %pad-big;
+	background: rgb(181,24,20);
+	background: radial-gradient(circle, rgba(181,24,20,1) 0%, rgba(177,58,55,1) 44%);
+	color: $color-white;
 
 	.slide {
 		width: calc(100% - 2em);
@@ -250,7 +253,7 @@
 
 	span {
 		font-family: "Georgia", serif;
-		color: $color-red;
+		color: $color-white;
 
 		&.open {
 			position: absolute;
@@ -289,7 +292,10 @@
 .site-footer {
 	padding: 1em;
 	text-align: center;
-	background-color: $color-black-2;
+	// background-color: $color-black-2;
+	// color: $color-white;
+	background-color: $color-red;
+	background: radial-gradient(circle, rgba(181,24,20,1) 0%, rgba(177,58,55,1) 44%);
 	color: $color-white;
 
 	a {
@@ -405,7 +411,11 @@ img {
 	background: rgba($color-gray-2, 0.5);
 	//background: rgba($color-red, 0.25);
 
-	&.alt {
+	&.alt-white {
 		background-color: $color-white;
+	}
+
+	&.alt-red {
+		background-color: $color-red;
 	}
 }

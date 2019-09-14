@@ -27,7 +27,7 @@ get_header();
 		</div>
 	</section>
 
-	<hr class="spacer">
+	<hr class="spacer alt-red">
 
 	<section id="next-sale" class="sale major-section sticky-parent">
 		<header class="sale-header">
@@ -255,6 +255,8 @@ get_header();
 		</aside>
 	</section>
 
+	<hr class="spacer alt-red">
+
 	<section id="how-it-works" class="how-it-works major-section">
 		<div class="container-mid">
 			<h5 class="heading-1">How it Works</h5>
@@ -267,8 +269,9 @@ get_header();
 		</div>
 	</section>
 
-	<section id="testimonials" class="testimonials major-section container-mid">
-		<ul class="slider">
+	<section id="testimonials" class="testimonials major-section">
+		<div class="container-mid">
+			<ul class="slider">
 			<li class="slide">
 				<div class="container-slide">
 					<blockquote>
@@ -288,6 +291,7 @@ get_header();
 			</li>
 			<li class="slide">Testimonial 3</li>
 		</ul>
+		</div>
 	</section>
 
 	<section id="about-us" class="about major-section">

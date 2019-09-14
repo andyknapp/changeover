@@ -50,14 +50,14 @@ ul.bxslider {
       margin: 0 0.5em;
       outline: 0;
       border-radius: 50%;
-      background-color: rgba($color-brown, 0.2);
+      background-color: rgba($color-white, 0.2);
       text-indent: -9999em;
       transition: background-color 0.2s ease-out;
 
       &:hover,
       &:focus,
       &.active {
-        background-color: rgba($color-brown, 0.5);
+        background-color: rgba($color-white, 0.5);
       }
   }
 }
