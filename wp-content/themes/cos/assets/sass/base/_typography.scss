@@ -52,10 +52,10 @@
 
 body {
 	@extend %font-body;
-  font-size: 16px;
+    font-size: 16px;
 	font-weight: 400;
 	font-style: normal;
-	color: $color-black;
+	color: $color-black-2;
 }
 
 
@@ -130,6 +130,7 @@ a {
   font-weight: 600;
 }
 
+%heading-4,
 .heading-4 {
   @extend %fs-24;
   font-weight: 600;
@@ -146,7 +147,7 @@ a {
 
 %copy-2,
 .copy-2 {
-  @extend %fs-18;
+  @extend %fs-20;
   margin-bottom: 1em;
   line-height: 1.5;
 }

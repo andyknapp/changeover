@@ -3,19 +3,19 @@
 %input {
 	width: 100%;
 	padding: 0.875em 1em;
-	border: 1px solid rgba($color-brown, 0.4);
+	border: 1px solid $color-black-2;
 	background-color: $color-white;
-	border-radius: 14px;
+	border-radius: 6px;
 	font-size: 1.25em;
 	font-weight: 400;
 	line-height: 1.2;
-	color: $color-black;
+	color: $color-black-2;
 	outline: none;
 	-webkit-appearance: none;//sass-lint:disable-line no-vendor-prefixes
 	transition: border-color 0.2s ease-out;
 
 	&:focus {
-		border-color: $color-black-2;
+		border-color: $color-gray-2;
 	}
 }
 
@@ -25,7 +25,7 @@ input {
 	@include placeholder {
 		font-size: 1em;
 		font-style: italic;
-		color: rgba($color-black, 0.7);
+		color: $color-gray-2;
 	}
 }
 
@@ -46,7 +46,7 @@ textarea {
 	@include placeholder {
 		font-size: 1em;
 		font-style: italic;
-		color: rgba($color-black, 0.7);
+		color: $color-gray-2;
 	}
 }
 

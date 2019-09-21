@@ -27,7 +27,7 @@ get_header();
 		</div>
 	</section>
 
-	<hr class="spacer alt-red">
+	<hr class="spacer">
 
 	<section id="next-sale" class="sale major-section sticky-parent">
 		<header class="sale-header">
@@ -255,7 +255,7 @@ get_header();
 		</aside>
 	</section>
 
-	<hr class="spacer alt-red">
+	<hr class="spacer">
 
 	<section id="how-it-works" class="how-it-works major-section">
 		<div class="container-mid">
@@ -303,13 +303,15 @@ get_header();
 		</div>
 	</section>
 
+	<hr class="spacer">
+
 	<section id="contact" class="contact major-section">
 		<div class="container-mid">
 			<h5 class="heading-1">Contact</h5>
 			<div class="contact-container">
 				<aside class="contact-info">
-					<span>Kay Reilly</span>
-					<span>Patty Souffie</span>
+					<span class="copy-1">Kay Reilly</span>
+					<span class="copy-1">Patty Souffie</span>
 					<a href="mailto:changeoversales@aol.com" target="_blank">changeoversales@aol.com</a>
 					<a href="tel:1-302-562-5385">302-562-5385</a>
 				</aside>

@@ -1,6 +1,11 @@
 .site-content {
 	@extend %clear-header;
+	margin-bottom: $footer-height;
 	background-color: $color-white;
+
+	@media (min-width: $bp-nav) {
+		margin-bottom: $footer-height-2;
+	}
 }
 
 [class*='container-'] {
@@ -76,11 +81,6 @@
 // how it works
 .how-it-works {
 	@extend %pad-big;
-	// background-color: $color-gray-4;
-	// background-color: rgba($color-brown, 0.25);
-	// background-color: $color-red;
-	// background: radial-gradient(circle, rgba(181,24,20,1) 0%, rgba(177,58,55,1) 44%);
-	// color: $color-white;
 
 	> div {
 		columns: 18em 2;
@@ -94,7 +94,7 @@
 	}
 
 	span {
-		@extend %fs-24;
+		@extend %fs-28;
 		display: block;
 		margin-bottom: 0.25em;
 		font-style: italic;
@@ -112,9 +112,6 @@
 	@extend %pad-big;
 	clear: both;
 	overflow: auto;
-	// background: rgb(181,24,20);
-	// background: radial-gradient(circle, rgba(181,24,20,1) 0%, rgba(177,58,55,1) 44%);
-	// color: $color-white;
 
 	.container-mid {
 		max-width: (924 / 16) * 1em;
@@ -126,10 +123,6 @@
 		max-width: (284 / 16) * 1em;
 		margin: 0 1.5em 1.5em 0;
 	}
-
-	// .heading-1 {
-	// 	color: $color-white;
-	// }
 
 	p {
 		@extend %copy-2;
@@ -153,32 +146,64 @@
 }
 
 .contact-info {
+	width: 80%;
+	margin: 0 auto 1em;
+	padding: 2em;
+	text-align: center;
+	box-shadow: 0 2px 6px 0 rgba(170, 170, 170, 0.5);
+	border-radius: 30px;
+
 	span,
 	a {
 		display: block;
-		margin-bottom: 1em;
+		color: $color-black-2;
+	}
+
+	span {
+		@extend %fs-28;
+		margin-bottom: 0.5em;
+		line-height: 1;
+		color: rgba($color-red, 0.9);
+		font-style: italic;
+
+		&:last-of-type {
+			margin-bottom: 1em;
+		}
+	}
+
+	a {
+		margin-bottom: 0.5em;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+
+		&:hover {
+			color: $color-red;
+		}
 	}
 }
 
 .contact-container {
-	@media (min-width: $bp-small) {
+	@media (min-width: 48em) {
 		display: flex;
-		flex-flow: row wrap;
+		flex-flow: row nowrap;
+		justify-content: space-between;
 
 		.gform_wrapper {
 			order: 0;
-			width: calc(100% - 16em);
 			max-width: (700 / 16) * 1em;
 		}
 
 		.contact-info {
 			order: 1;
-			height: calc(100% - 78px);
-			padding-left: 3em;
-
-			@media (min-width: 68em) {
-				padding-left: 6em;
-			}
+			align-self: center;
+			width: auto;
+			height: 352px;
+			margin: 0 0 0 2em;
+			padding: 4em;
+			text-align: left;
+			transform: translateY(-40px);
 		}
 	}
 }
@@ -224,14 +249,6 @@
 	margin-bottom: 1em;
 }
 
-.contact-info {
-	margin-bottom: 2em;
-	span,
-	a {
-		display: block;
-		color: $color-black;
-	}
-}
 
 
 // testimonials
@@ -290,10 +307,17 @@
 
 // footer
 .site-footer {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-end;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: $footer-height;
 	padding: 1em;
+	z-index: -1;
 	text-align: center;
-	// background-color: $color-black-2;
-	// color: $color-white;
 	background-color: $color-red;
 	background: radial-gradient(circle, rgba(181,24,20,1) 0%, rgba(177,58,55,1) 44%);
 	color: $color-white;
@@ -301,6 +325,15 @@
 	a {
 		display: block;
 		color: $color-white;
+
+		&:hover {
+			color: $color-gray-3;
+		}
+	}
+
+	li {
+		font-size: 0.875em;
+		line-height: 2;
 	}
 
 	.spacer {
@@ -308,7 +341,7 @@
 	}
 
 	@media (min-width: $bp-nav) {
-		//padding: 0 1em 8em;
+		height: $footer-height-2;
 
 		.spacer {
 			margin: 0 auto 8em;
@@ -324,10 +357,11 @@
 		li {
 
 			&::after {
-				content: '\00b7';
+				content: ' | ';
 				display: inline;
-				margin: 0 1em;
-				color: $color-black;
+				margin: 0 3em;
+				opacity: 0.5;
+				color: $color-white;
 			}
 
 			&:last-of-type {

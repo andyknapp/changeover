@@ -277,18 +277,35 @@ body {
 }
 
 /* line 4, ../sass/base/_mixins.scss */
-.heading-4, .how-it-works span {
+.how-it-works span, .contact-info span {
   font-size: 1.125em;
 }
 @media screen and (min-width: 20em) {
   /* line 4, ../sass/base/_mixins.scss */
-  .heading-4, .how-it-works span {
+  .how-it-works span, .contact-info span {
+    font-size: calc(1.125em + 0.625 * (100vw - 20em) / 60);
+  }
+}
+@media screen and (min-width: 80em) {
+  /* line 4, ../sass/base/_mixins.scss */
+  .how-it-works span, .contact-info span {
+    font-size: 1.75em;
+  }
+}
+
+/* line 4, ../sass/base/_mixins.scss */
+.heading-4 {
+  font-size: 1.125em;
+}
+@media screen and (min-width: 20em) {
+  /* line 4, ../sass/base/_mixins.scss */
+  .heading-4 {
     font-size: calc(1.125em + 0.375 * (100vw - 20em) / 60);
   }
 }
 @media screen and (min-width: 80em) {
   /* line 4, ../sass/base/_mixins.scss */
-  .heading-4, .how-it-works span {
+  .heading-4 {
     font-size: 1.5em;
   }
 }
@@ -314,42 +331,25 @@ body {
 }
 
 /* line 4, ../sass/base/_mixins.scss */
-.upcoming .address li:first-of-type,
+.how-it-works p, .about p,
+.copy-2, .upcoming .address li:first-of-type,
 .cta, .testimonials p {
   font-size: 1em;
 }
 @media screen and (min-width: 20em) {
   /* line 4, ../sass/base/_mixins.scss */
-  .upcoming .address li:first-of-type,
+  .how-it-works p, .about p,
+  .copy-2, .upcoming .address li:first-of-type,
   .cta, .testimonials p {
     font-size: calc(1em + 0.25 * (100vw - 20em) / 60);
   }
 }
 @media screen and (min-width: 80em) {
   /* line 4, ../sass/base/_mixins.scss */
-  .upcoming .address li:first-of-type,
+  .how-it-works p, .about p,
+  .copy-2, .upcoming .address li:first-of-type,
   .cta, .testimonials p {
     font-size: 1.25em;
-  }
-}
-
-/* line 4, ../sass/base/_mixins.scss */
-.how-it-works p, .about p,
-.copy-2 {
-  font-size: 0.875em;
-}
-@media screen and (min-width: 20em) {
-  /* line 4, ../sass/base/_mixins.scss */
-  .how-it-works p, .about p,
-  .copy-2 {
-    font-size: calc(0.875em + 0.25 * (100vw - 20em) / 60);
-  }
-}
-@media screen and (min-width: 80em) {
-  /* line 4, ../sass/base/_mixins.scss */
-  .how-it-works p, .about p,
-  .copy-2 {
-    font-size: 1.125em;
   }
 }
 
@@ -375,7 +375,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   font-style: normal;
-  color: #111;
+  color: #4a4a4a;
 }
 
 /* line 63, ../sass/base/_typography.scss */
@@ -444,21 +444,21 @@ a:hover {
   font-weight: 600;
 }
 
-/* line 140, ../sass/base/_typography.scss */
+/* line 141, ../sass/base/_typography.scss */
 .intro p, .gform_confirmation_message,
 .copy-1 {
   margin-bottom: 1em;
   line-height: 1.5;
 }
 
-/* line 147, ../sass/base/_typography.scss */
+/* line 148, ../sass/base/_typography.scss */
 .how-it-works p, .about p,
 .copy-2 {
   margin-bottom: 1em;
   line-height: 1.5;
 }
 
-/* line 154, ../sass/base/_typography.scss */
+/* line 155, ../sass/base/_typography.scss */
 .upcoming .address li:first-of-type,
 .cta {
   font-style: italic;
@@ -467,67 +467,74 @@ a:hover {
 
 /* line 1, ../sass/_global.scss */
 .site-content {
+  margin-bottom: 10em;
   background-color: #ffffff;
 }
+@media (min-width: 57em) {
+  /* line 1, ../sass/_global.scss */
+  .site-content {
+    margin-bottom: 6em;
+  }
+}
 
-/* line 6, ../sass/_global.scss */
+/* line 11, ../sass/_global.scss */
 [class*='container-'] {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 12, ../sass/_global.scss */
+/* line 17, ../sass/_global.scss */
 .container-site {
   max-width: 87.5em;
 }
 
-/* line 16, ../sass/_global.scss */
+/* line 21, ../sass/_global.scss */
 .container-mid {
   max-width: 67.75em;
 }
 
-/* line 20, ../sass/_global.scss */
+/* line 25, ../sass/_global.scss */
 .container-small {
   max-width: 62em;
 }
 
-/* line 33, ../sass/_global.scss */
+/* line 38, ../sass/_global.scss */
 .how-it-works, .about, .contact, .testimonials {
   padding: 5em 1em;
 }
 @media (min-width: 57em) {
-  /* line 33, ../sass/_global.scss */
+  /* line 38, ../sass/_global.scss */
   .how-it-works, .about, .contact, .testimonials {
     padding: 12em 1em;
   }
 }
 
-/* line 41, ../sass/_global.scss */
+/* line 46, ../sass/_global.scss */
 .sale .sale-header, .sale-description {
   padding-left: 1em;
   padding-right: 1em;
 }
 
-/* line 48, ../sass/_global.scss */
+/* line 53, ../sass/_global.scss */
 .intro {
   padding: 3.5em 1em;
 }
-/* line 51, ../sass/_global.scss */
+/* line 56, ../sass/_global.scss */
 .intro > .container-mid {
   flex-wrap: wrap;
 }
-/* line 56, ../sass/_global.scss */
+/* line 61, ../sass/_global.scss */
 .intro header {
   padding-right: 4em;
 }
-/* line 60, ../sass/_global.scss */
+/* line 65, ../sass/_global.scss */
 .intro .intro-content {
   flex: 1 24em;
   max-width: 32.75em;
 }
 @media (min-width: 57em) {
-  /* line 48, ../sass/_global.scss */
+  /* line 53, ../sass/_global.scss */
   .intro {
     padding: 10em 1em;
   }
@@ -559,11 +566,11 @@ a:hover {
   clear: both;
   overflow: auto;
 }
-/* line 119, ../sass/_global.scss */
+/* line 116, ../sass/_global.scss */
 .about .container-mid {
   max-width: 57.75em;
 }
-/* line 123, ../sass/_global.scss */
+/* line 120, ../sass/_global.scss */
 .about img {
   float: left;
   width: 40%;
@@ -571,69 +578,100 @@ a:hover {
   margin: 0 1.5em 1.5em 0;
 }
 @media (min-width: 57em) {
-  /* line 139, ../sass/_global.scss */
+  /* line 132, ../sass/_global.scss */
   .about img {
     margin-right: 3.5em;
   }
 }
 
 @media (min-width: 57em) {
-  /* line 147, ../sass/_global.scss */
+  /* line 140, ../sass/_global.scss */
   .contact {
     padding-bottom: 14em;
   }
 }
 
+/* line 148, ../sass/_global.scss */
+.contact-info {
+  width: 80%;
+  margin: 0 auto 1em;
+  padding: 2em;
+  text-align: center;
+  box-shadow: 0 2px 6px 0 rgba(170, 170, 170, 0.5);
+  border-radius: 30px;
+}
 /* line 156, ../sass/_global.scss */
 .contact-info span,
 .contact-info a {
   display: block;
+  color: #4a4a4a;
+}
+/* line 162, ../sass/_global.scss */
+.contact-info span {
+  margin-bottom: 0.5em;
+  line-height: 1;
+  color: rgba(181, 24, 20, 0.9);
+  font-style: italic;
+}
+/* line 169, ../sass/_global.scss */
+.contact-info span:last-of-type {
   margin-bottom: 1em;
 }
+/* line 174, ../sass/_global.scss */
+.contact-info a {
+  margin-bottom: 0.5em;
+}
+/* line 177, ../sass/_global.scss */
+.contact-info a:last-of-type {
+  margin-bottom: 0;
+}
+/* line 181, ../sass/_global.scss */
+.contact-info a:hover {
+  color: #b51814;
+}
 
-@media (min-width: 40em) {
-  /* line 163, ../sass/_global.scss */
+@media (min-width: 48em) {
+  /* line 187, ../sass/_global.scss */
   .contact-container {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
+    justify-content: space-between;
   }
-  /* line 168, ../sass/_global.scss */
+  /* line 193, ../sass/_global.scss */
   .contact-container .gform_wrapper {
     order: 0;
-    width: calc(100% - 16em);
     max-width: 43.75em;
   }
-  /* line 174, ../sass/_global.scss */
+  /* line 198, ../sass/_global.scss */
   .contact-container .contact-info {
     order: 1;
-    height: calc(100% - 78px);
-    padding-left: 3em;
-  }
-}
-@media (min-width: 40em) and (min-width: 68em) {
-  /* line 174, ../sass/_global.scss */
-  .contact-container .contact-info {
-    padding-left: 6em;
+    align-self: center;
+    width: auto;
+    height: 352px;
+    margin: 0 0 0 2em;
+    padding: 4em;
+    text-align: left;
+    transform: translateY(-40px);
   }
 }
 
-/* line 187, ../sass/_global.scss */
+/* line 212, ../sass/_global.scss */
 .gform_fields {
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-/* line 193, ../sass/_global.scss */
+/* line 218, ../sass/_global.scss */
 .gfield:not(.flex-field) {
   width: 100%;
 }
 
-/* line 197, ../sass/_global.scss */
+/* line 222, ../sass/_global.scss */
 .flex-field {
   width: calc(50% - 1em);
 }
 
-/* line 201, ../sass/_global.scss */
+/* line 226, ../sass/_global.scss */
 .gfield_description,
 .validation_message {
   padding: 0.25em 0 0.75em;
@@ -642,60 +680,49 @@ a:hover {
   line-height: 1;
 }
 
-/* line 209, ../sass/_global.scss */
+/* line 234, ../sass/_global.scss */
 .validation_error {
   padding: 0.75em 0;
   color: #b51814;
 }
 
-/* line 214, ../sass/_global.scss */
+/* line 239, ../sass/_global.scss */
 .gform_confirmation_message {
   color: #b51814;
 }
 
-/* line 219, ../sass/_global.scss */
+/* line 244, ../sass/_global.scss */
 .gform_confirmation_message {
   padding-top: 3em;
 }
 
-/* line 223, ../sass/_global.scss */
+/* line 248, ../sass/_global.scss */
 .gfield {
   margin-bottom: 1em;
 }
 
-/* line 227, ../sass/_global.scss */
-.contact-info {
-  margin-bottom: 2em;
-}
-/* line 229, ../sass/_global.scss */
-.contact-info span,
-.contact-info a {
-  display: block;
-  color: #111;
-}
-
-/* line 238, ../sass/_global.scss */
+/* line 255, ../sass/_global.scss */
 .testimonials {
   background: #b51814;
   background: radial-gradient(circle, #b51814 0%, #b13a37 44%);
   color: #ffffff;
 }
-/* line 244, ../sass/_global.scss */
+/* line 261, ../sass/_global.scss */
 .testimonials .slide {
   width: calc(100% - 2em);
   padding-top: 2em;
 }
-/* line 249, ../sass/_global.scss */
+/* line 266, ../sass/_global.scss */
 .testimonials blockquote {
   position: relative;
   margin-bottom: 1.5em;
 }
-/* line 254, ../sass/_global.scss */
+/* line 271, ../sass/_global.scss */
 .testimonials span {
   font-family: "Georgia", serif;
   color: #ffffff;
 }
-/* line 258, ../sass/_global.scss */
+/* line 275, ../sass/_global.scss */
 .testimonials span.open {
   position: absolute;
   top: -6px;
@@ -704,127 +731,150 @@ a:hover {
   line-height: 0.2;
 }
 @media (min-width: 57em) {
-  /* line 258, ../sass/_global.scss */
+  /* line 275, ../sass/_global.scss */
   .testimonials span.open {
     top: 0;
     left: -0.35em;
   }
 }
-/* line 276, ../sass/_global.scss */
+/* line 293, ../sass/_global.scss */
 .testimonials .bx-controls-direction {
   display: none;
 }
 @media (min-width: 57em) {
-  /* line 276, ../sass/_global.scss */
+  /* line 293, ../sass/_global.scss */
   .testimonials .bx-controls-direction {
     display: block;
   }
 }
 
-/* line 285, ../sass/_global.scss */
+/* line 302, ../sass/_global.scss */
 .container-slide {
   width: calc(100% - 2em);
   max-width: 50em;
 }
 
-/* line 292, ../sass/_global.scss */
+/* line 309, ../sass/_global.scss */
 .site-footer {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10em;
   padding: 1em;
+  z-index: -1;
   text-align: center;
   background-color: #b51814;
   background: radial-gradient(circle, #b51814 0%, #b13a37 44%);
   color: #ffffff;
 }
-/* line 301, ../sass/_global.scss */
+/* line 325, ../sass/_global.scss */
 .site-footer a {
   display: block;
   color: #ffffff;
 }
-/* line 306, ../sass/_global.scss */
+/* line 329, ../sass/_global.scss */
+.site-footer a:hover {
+  color: #e2e4e7;
+}
+/* line 334, ../sass/_global.scss */
+.site-footer li {
+  font-size: 0.875em;
+  line-height: 2;
+}
+/* line 339, ../sass/_global.scss */
 .site-footer .spacer {
   margin: 0 auto 5em;
 }
 @media (min-width: 57em) {
-  /* line 313, ../sass/_global.scss */
+  /* line 309, ../sass/_global.scss */
+  .site-footer {
+    height: 6em;
+  }
+  /* line 346, ../sass/_global.scss */
   .site-footer .spacer {
     margin: 0 auto 8em;
   }
-  /* line 317, ../sass/_global.scss */
+  /* line 350, ../sass/_global.scss */
   .site-footer ul {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
   }
-  /* line 326, ../sass/_global.scss */
+  /* line 359, ../sass/_global.scss */
   .site-footer li::after {
-    content: '\00b7';
+    content: ' | ';
     display: inline;
-    margin: 0 1em;
-    color: #111;
+    margin: 0 3em;
+    opacity: 0.5;
+    color: #ffffff;
   }
-  /* line 334, ../sass/_global.scss */
+  /* line 368, ../sass/_global.scss */
   .site-footer li:last-of-type::after {
     display: none;
   }
-  /* line 339, ../sass/_global.scss */
+  /* line 373, ../sass/_global.scss */
   .site-footer li span {
     display: inline;
     margin-left: 1em;
   }
-  /* line 345, ../sass/_global.scss */
+  /* line 379, ../sass/_global.scss */
   .site-footer a {
     display: inline-block;
   }
 }
 
-/* line 352, ../sass/_global.scss */
+/* line 386, ../sass/_global.scss */
 img {
   max-width: 100%;
   height: auto;
   border-width: 0;
   border-color: transparent;
 }
-/* line 358, ../sass/_global.scss */
+/* line 392, ../sass/_global.scss */
 img.alignleft {
   float: left;
   margin: 0 2em 2em 0;
 }
-/* line 363, ../sass/_global.scss */
+/* line 397, ../sass/_global.scss */
 img.alignright {
   float: right;
   margin: 0 0 2em 2em;
 }
-/* line 368, ../sass/_global.scss */
+/* line 402, ../sass/_global.scss */
 img.aligncenter {
   float: none;
   margin: 2em auto;
 }
 
-/* line 378, ../sass/_global.scss */
+/* line 412, ../sass/_global.scss */
 .fade-up {
   opacity: 0;
   transform: translateY(2em);
   transition: 0.4s transform cubic-bezier(0.25, 0.46, 0.45, 0.94), 0.4s opacity cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
-/* line 383, ../sass/_global.scss */
+/* line 417, ../sass/_global.scss */
 .fade-up.animate {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* line 390, ../sass/_global.scss */
+/* line 424, ../sass/_global.scss */
 .line-in::after {
   transform: scaleX(0);
   transform-origin: left center;
   transition: 0.4s transform cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
-/* line 397, ../sass/_global.scss */
+/* line 431, ../sass/_global.scss */
 .line-in.animate::after {
   transform: scaleX(1);
 }
 
-/* line 405, ../sass/_global.scss */
+/* line 439, ../sass/_global.scss */
 .spacer {
   width: 50%;
   max-width: 45em;
@@ -833,11 +883,11 @@ img.aligncenter {
   border: 0;
   background: rgba(170, 170, 170, 0.5);
 }
-/* line 414, ../sass/_global.scss */
+/* line 448, ../sass/_global.scss */
 .spacer.alt-white {
   background-color: #ffffff;
 }
-/* line 418, ../sass/_global.scss */
+/* line 452, ../sass/_global.scss */
 .spacer.alt-red {
   background-color: #b51814;
 }
@@ -1045,70 +1095,70 @@ img.aligncenter {
 input, textarea {
   width: 100%;
   padding: 0.875em 1em;
-  border: 1px solid rgba(213, 207, 195, 0.4);
+  border: 1px solid #4a4a4a;
   background-color: #ffffff;
-  border-radius: 14px;
+  border-radius: 6px;
   font-size: 1.25em;
   font-weight: 400;
   line-height: 1.2;
-  color: #111;
+  color: #4a4a4a;
   outline: none;
   -webkit-appearance: none;
   transition: border-color 0.2s ease-out;
 }
 /* line 17, ../sass/components/_forms.scss */
 input:focus, textarea:focus {
-  border-color: #4a4a4a;
+  border-color: #aaa;
 }
 
 /* line 33, ../sass/base/_mixins.scss */
 input:-moz-placeholder {
   font-size: 1em;
   font-style: italic;
-  color: rgba(17, 17, 17, 0.7);
+  color: #aaa;
 }
 /* line 34, ../sass/base/_mixins.scss */
 input::-moz-placeholder {
   font-size: 1em;
   font-style: italic;
-  color: rgba(17, 17, 17, 0.7);
+  color: #aaa;
 }
 /* line 35, ../sass/base/_mixins.scss */
 input:-ms-input-placeholder {
   font-size: 1em;
   font-style: italic;
-  color: rgba(17, 17, 17, 0.7);
+  color: #aaa;
 }
 /* line 36, ../sass/base/_mixins.scss */
 input::-webkit-input-placeholder {
   font-size: 1em;
   font-style: italic;
-  color: rgba(17, 17, 17, 0.7);
+  color: #aaa;
 }
 
 /* line 33, ../sass/base/_mixins.scss */
 textarea:-moz-placeholder {
   font-size: 1em;
   font-style: italic;
-  color: rgba(17, 17, 17, 0.7);
+  color: #aaa;
 }
 /* line 34, ../sass/base/_mixins.scss */
 textarea::-moz-placeholder {
   font-size: 1em;
   font-style: italic;
-  color: rgba(17, 17, 17, 0.7);
+  color: #aaa;
 }
 /* line 35, ../sass/base/_mixins.scss */
 textarea:-ms-input-placeholder {
   font-size: 1em;
   font-style: italic;
-  color: rgba(17, 17, 17, 0.7);
+  color: #aaa;
 }
 /* line 36, ../sass/base/_mixins.scss */
 textarea::-webkit-input-placeholder {
   font-size: 1em;
   font-style: italic;
-  color: rgba(17, 17, 17, 0.7);
+  color: #aaa;
 }
 
 /* line 67, ../sass/components/_forms.scss */
@@ -1255,15 +1305,15 @@ button:not(.no-button-style) {
   display: inline-block;
   width: auto;
   padding: 0.75em 3em;
-  border: 1px solid #b51814;
-  border-radius: 12px;
+  border: 1px solid rgba(181, 24, 20, 0.9);
+  border-radius: 6px;
   font-size: 1.25em;
   font-weight: 400;
   line-height: 1.2;
-  color: #b51814;
+  color: #ffffff;
   letter-spacing: 1px;
   text-align: center;
-  background-color: #ffffff;
+  background-color: rgba(181, 24, 20, 0.9);
   cursor: pointer;
   text-decoration: none;
   transition: background-color 0.3s ease-out, color 0.2s ease-out, border-color 0.2s ease-out;
@@ -1271,9 +1321,9 @@ button:not(.no-button-style) {
 /* line 18, ../sass/components/_buttons.scss */
 .button:hover,
 button:hover:not(.no-button-style) {
-  color: #ffffff;
-  border-color: rgba(181, 24, 20, 0.9);
-  background-color: rgba(181, 24, 20, 0.9);
+  color: #b51814;
+  border-color: #b51814;
+  background-color: #ffffff;
 }
 /* line 24, ../sass/components/_buttons.scss */
 .button:focus,
