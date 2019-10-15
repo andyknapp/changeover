@@ -236,11 +236,11 @@ get_header();
 		</div>
 
 		<aside class="upcoming container-small">
-			<header class="upcoming-header flex">
-				<h4 class="heading-3 underline animation-element line-in" data-trigger="0.85">Upcoming Sales</h4>
+			<header class="upcoming-header flex animation-element fade-up" data-trigger="0.925">
+				<h4 class="heading-3 underline">Upcoming Sales</h4>
 				<p>Check back soon for more information!</p>
 			</header>
-			<div class="upcoming-sales">
+			<div class="upcoming-sales animation-element fade" data-trigger="0.91">
 				<ul class="address">
 					<li>Sept. 18 - 21</li>
 					<li>Selborne Dr.</li>
@@ -258,7 +258,7 @@ get_header();
 	<hr class="spacer">
 
 	<section id="how-it-works" class="how-it-works major-section">
-		<div class="container-mid">
+		<div class="container-mid animation-element fade-up" data-trigger="0.9">
 			<h5 class="heading-1">How it Works</h5>
 			<span>We take care of everything</span>
 			<p>All our client needs to do is take what they want and leave the rest to us. We will sort saleable from non-saleable, arrange, price, tag, advertise and sell everything in 2 or 3 days leaving your home “broom clean” ready for the cleaning crew (we can arrange for that, too!).</p>
@@ -270,7 +270,7 @@ get_header();
 	</section>
 
 	<section id="testimonials" class="testimonials major-section">
-		<div class="container-mid">
+		<div class="container-mid animation-element fade-up" data-trigger="0.9">
 			<ul class="slider">
 			<li class="slide">
 				<div class="container-slide">
@@ -295,7 +295,7 @@ get_header();
 	</section>
 
 	<section id="about-us" class="about major-section">
-		<div class="container-mid">
+		<div class="container-mid animation-element fade-up" data-trigger="0.9">
 			<h5 class="heading-1">About Us</h5>
 			<img src="https://www.fillmurray.com/400/500" alt=""  />
 			<p>Founded by Kay Reilly in 1977, we continue to be family owned and operated with a combined 70+ years of tag sales and appraisal experience. Word of mouth and customer referrals are the backbone of our thriving business and sterling reputation.</p>
@@ -306,7 +306,7 @@ get_header();
 	<hr class="spacer">
 
 	<section id="contact" class="contact major-section">
-		<div class="container-mid">
+		<div class="container-mid animation-element fade-up" data-trigger="0.9">
 			<h5 class="heading-1">Contact</h5>
 			<div class="contact-container">
 				<aside class="contact-info">

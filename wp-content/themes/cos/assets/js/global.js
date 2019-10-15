@@ -122,7 +122,7 @@ jQuery(document).ready(function($){
 	$('.slider').bxSlider({
 		mode: 'fade',
 		auto: false,
-		adaptiveHeight: true,
+		adaptiveHeight: false,
 		autoHover: true,
 	});
 });

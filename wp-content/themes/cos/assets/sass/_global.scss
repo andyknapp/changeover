@@ -411,12 +411,23 @@ img {
 
 .fade-up {
 	opacity: 0;
-	transform: translateY(2em);
-	transition: 0.4s transform $ease-out-quad, 0.4s opacity $ease-out-quad;
+	transform: translateY(24px);
+	//transition: 0.3s transform $ease-out-quad, 0.4s opacity $ease-out-quad;
+	transition: 0.6s transform ease, 0.6s opacity ease;
 
 	&.animate {
 		opacity: 1;
 		transform: translateY(0);
+	}
+}
+
+
+.fade {
+	opacity: 0;
+	transition: 0.6s transform ease, 0.6s opacity ease;
+
+	&.animate {
+		opacity: 1;
 	}
 }
 
