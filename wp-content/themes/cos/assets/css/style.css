@@ -143,7 +143,7 @@ q:before {
 }
 
 /* line 1, ../sass/base/_utils.scss */
-.logo span, .skip-link, .gfield:not(.file-upload) label, .gform_hidden {
+.logo span, .skip-link, .gfield:not(.file-upload):not(.checkbox) label, .gform_hidden, .gfield.checkbox .gfield_label {
   position: absolute !important;
   clip: rect(1px, 1px, 1px, 1px);
   padding: 0 !important;
@@ -651,7 +651,7 @@ a:hover {
     margin: 0 0 0 2em;
     padding: 4em;
     text-align: left;
-    transform: translateY(-40px);
+    transform: translateY(-67px);
   }
 }
 
@@ -1171,11 +1171,20 @@ textarea::-webkit-input-placeholder {
   color: #aaa;
 }
 
-/* line 67, ../sass/components/_forms.scss */
+/* line 65, ../sass/components/_forms.scss */
+.gfield.checkbox {
+  margin-bottom: 2.5em;
+}
+/* line 72, ../sass/components/_forms.scss */
+.gfield.checkbox label:not(.gfield_label) {
+  position: relative;
+}
+
+/* line 79, ../sass/components/_forms.scss */
 .field-wrapper-floating {
   position: relative;
 }
-/* line 70, ../sass/components/_forms.scss */
+/* line 82, ../sass/components/_forms.scss */
 .field-wrapper-floating .floating-label {
   position: absolute;
   bottom: 0.5em;
@@ -1187,14 +1196,14 @@ textarea::-webkit-input-placeholder {
   will-change: transform;
   transition: transform 0.15s ease-out;
 }
-/* line 82, ../sass/components/_forms.scss */
+/* line 94, ../sass/components/_forms.scss */
 .field-wrapper-floating input:focus + .floating-label,
 .field-wrapper-floating input.filled + .floating-label,
 .field-wrapper-floating select:focus + .floating-label,
 .field-wrapper-floating select.filled + .floating-label {
   transform: translateY(-3em) scale(0.75);
 }
-/* line 89, ../sass/components/_forms.scss */
+/* line 101, ../sass/components/_forms.scss */
 .field-wrapper-floating select + .floating-label {
   width: 100%;
   background-color: #ffffff;
@@ -1202,7 +1211,7 @@ textarea::-webkit-input-placeholder {
   pointer-events: none;
 }
 
-/* line 98, ../sass/components/_forms.scss */
+/* line 110, ../sass/components/_forms.scss */
 [type='checkbox']:not(:checked),
 [type='checkbox']:checked,
 [type='radio']:not(:checked),
@@ -1210,14 +1219,14 @@ textarea::-webkit-input-placeholder {
   position: absolute;
   left: -9999px;
 }
-/* line 105, ../sass/components/_forms.scss */
+/* line 117, ../sass/components/_forms.scss */
 [type='checkbox']:not(:checked) + label,
 [type='checkbox']:checked + label,
 [type='radio']:not(:checked) + label,
 [type='radio']:checked + label {
   padding: 0.25em 0.25em 0.25em 2.5em;
 }
-/* line 109, ../sass/components/_forms.scss */
+/* line 121, ../sass/components/_forms.scss */
 [type='checkbox']:not(:checked) + label::before, [type='checkbox']:not(:checked) + label::after,
 [type='checkbox']:checked + label::before,
 [type='checkbox']:checked + label::after,
@@ -1228,20 +1237,19 @@ textarea::-webkit-input-placeholder {
   content: '';
   position: absolute;
 }
-/* line 115, ../sass/components/_forms.scss */
+/* line 127, ../sass/components/_forms.scss */
 [type='checkbox']:not(:checked) + label::before,
 [type='checkbox']:checked + label::before,
 [type='radio']:not(:checked) + label::before,
 [type='radio']:checked + label::before {
   left: 0;
   top: 0.25em;
-  width: 16px;
-  height: 16px;
+  width: 1.5em;
+  height: 1.5em;
   border: 1px solid #111;
-  box-shadow: 0 1px 0 0 rgba(22, 29, 37, 0.05);
   transition: border-color 0.2s ease-out;
 }
-/* line 125, ../sass/components/_forms.scss */
+/* line 136, ../sass/components/_forms.scss */
 [type='checkbox']:not(:checked) + label::after,
 [type='checkbox']:checked + label::after,
 [type='radio']:not(:checked) + label::after,
@@ -1249,29 +1257,28 @@ textarea::-webkit-input-placeholder {
   transition: transform 0.2s ease-out, opacity 0.2s ease-out;
 }
 
-/* line 135, ../sass/components/_forms.scss */
+/* line 146, ../sass/components/_forms.scss */
 [type='checkbox']:not(:checked) + label::before,
 [type='checkbox']:checked + label::before {
   border-radius: 3px;
 }
-/* line 139, ../sass/components/_forms.scss */
+/* line 150, ../sass/components/_forms.scss */
 [type='checkbox']:not(:checked) + label::after,
 [type='checkbox']:checked + label::after {
   left: 0;
   top: 0.25em;
   width: 1.5em;
   height: 1.5em;
-  background: transparent url("../icons/check.svg") no-repeat center/cover;
-  background-size: 10px;
-  background-position: 3px 4px;
+  border-radius: 3px;
+  background-color: #b51814;
 }
 
-/* line 155, ../sass/components/_forms.scss */
+/* line 168, ../sass/components/_forms.scss */
 [type='radio']:not(:checked) + label::before,
 [type='radio']:checked + label::before {
   border-radius: 50%;
 }
-/* line 159, ../sass/components/_forms.scss */
+/* line 172, ../sass/components/_forms.scss */
 [type='radio']:not(:checked) + label::after,
 [type='radio']:checked + label::after {
   top: 0.35em;
@@ -1282,28 +1289,28 @@ textarea::-webkit-input-placeholder {
   border-radius: 50%;
 }
 
-/* line 174, ../sass/components/_forms.scss */
+/* line 187, ../sass/components/_forms.scss */
 [type='checkbox']:not(:checked):focus + label::before,
 [type='radio']:not(:checked):focus + label::before {
   border-width: 1px;
   border-color: #111;
 }
 
-/* line 182, ../sass/components/_forms.scss */
+/* line 195, ../sass/components/_forms.scss */
 [type='checkbox']:not(:checked) + label::after,
 [type='radio']:not(:checked) + label::after {
   transform: scale(0);
   opacity: 0;
 }
 
-/* line 188, ../sass/components/_forms.scss */
+/* line 201, ../sass/components/_forms.scss */
 [type='checkbox']:checked + label::after,
 [type='radio']:checked + label::after {
   opacity: 1;
   transform: scale(1);
 }
 
-/* line 194, ../sass/components/_forms.scss */
+/* line 207, ../sass/components/_forms.scss */
 [type='checkbox']:checked + label::before,
 [type='radio']:checked + label::before {
   border-color: #111;
