@@ -52,10 +52,10 @@ if ($_SERVER['HTTP_HOST'] == 'changeoversales.com') {
 	define('WP_SITEURL','http://changeoversales.com');
 
 } else if ($_SERVER['HTTP_HOST'] == 'changeover.test' || $_SERVER['HTTP_HOST'] == 'staging.changeoversales.com') {
-	define('DB_NAME', 'changeover');
-	define('DB_USER', 'root');
-	define('DB_PASSWORD', 'root');
-	define('DB_HOST', 'localhost');
+	define('DB_NAME', 'db173289_changeover');
+	define('DB_USER', 'db173289_user');
+	define('DB_PASSWORD', '8J^#5t]aZgo');
+	define('DB_HOST', 'internal-db.s173289.gridserver.com');
 	define('DB_CHARSET', 'utf8');
 	define('DB_COLLATE', '');
 }
