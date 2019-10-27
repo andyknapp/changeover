@@ -53,10 +53,10 @@ if ($_SERVER['HTTP_HOST'] == 'changeoversales.com') {
 
 } else if ($_SERVER['HTTP_HOST'] == 'changeover.test' || $_SERVER['HTTP_HOST'] == 'staging.changeoversales.com') {
 	define('DB_NAME', 'db173289_changeover');
-	define('DB_USER', 'db173289');
-	define('DB_PASSWORD', '8J^#5t]aZgo');
-	define('DB_HOST', 'internal-db.s173289.gridserver.com');
-	//define('DB_HOST', 'localhost');
+	define('DB_USER', 'db173289_user');
+	define('DB_PASSWORD', '4?exf?1GnK_');
+	//define('DB_HOST', 'internal-db.s173289.gridserver.com');
+	define('DB_HOST', 'localhost:3306');
 	define('DB_CHARSET', 'utf8');
 	define('DB_COLLATE', '');
 }
