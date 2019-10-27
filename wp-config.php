@@ -39,14 +39,36 @@ define('DB_COLLATE', '');
 
 
 
-if ($_SERVER['HTTP_HOST'] == 'changeover.test') {
-	define('DOMAIN_CURRENT_SITE', 'changeover.test');
-	define('WP_HOME','http://changeover.test');
-	define('WP_SITEURL','http://changeover.test');
-} else if ($_SERVER['HTTP_HOST'] == 'changeoversales.com') {
+if ($_SERVER['HTTP_HOST'] == 'changeoversales.com') {
+	define('DB_NAME', 'changeover');
+	define('DB_USER', 'root');
+	define('DB_PASSWORD', 'root');
+	define('DB_HOST', 'localhost');
+	define('DB_CHARSET', 'utf8');
+	define('DB_COLLATE', '');
+
 	define('DOMAIN_CURRENT_SITE', 'changeoversales.com');
 	define('WP_HOME','http://changeoversales.com');
 	define('WP_SITEURL','http://changeoversales.com');
+
+} else if ($_SERVER['HTTP_HOST'] == 'changeover.test' || $_SERVER['HTTP_HOST'] == 'staging.changeoversales.com') {
+	define('DB_NAME', 'changeover');
+	define('DB_USER', 'root');
+	define('DB_PASSWORD', 'root');
+	define('DB_HOST', 'localhost');
+	define('DB_CHARSET', 'utf8');
+	define('DB_COLLATE', '');
+}
+
+if ($_SERVER['HTTP_HOST'] == 'changeover.test' {
+	define('DOMAIN_CURRENT_SITE', 'changeover.test');
+	define('WP_HOME','http://changeover.test');
+	define('WP_SITEURL','http://changeover.test');
+
+} else if ($_SERVER['HTTP_HOST'] == 'staging.changeoversales.com') {
+	define('DOMAIN_CURRENT_SITE', 'staging.changeoversales.com');
+	define('WP_HOME','http://staging.changeoversales.com');
+	define('WP_SITEURL','http://staging.changeoversales.com');
 }
 
 
