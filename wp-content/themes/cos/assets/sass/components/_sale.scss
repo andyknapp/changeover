@@ -344,8 +344,9 @@
             left: 0;
             bottom: 0;
             width: 100%;
+			//width:;
             height: 7em;
-            background: linear-gradient(to top, $color-white, transparent);
+            background-image: linear-gradient(to top, $color-white, rgba($color-white, 0));
         }
 
         li {

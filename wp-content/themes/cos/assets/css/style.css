@@ -1699,41 +1699,41 @@ button:focus:not(.no-button-style) {
     bottom: 0;
     width: 100%;
     height: 7em;
-    background: linear-gradient(to top, #ffffff, transparent);
+    background-image: linear-gradient(to top, #ffffff, rgba(255, 255, 255, 0));
   }
-  /* line 351, ../sass/components/_sale.scss */
+  /* line 352, ../sass/components/_sale.scss */
   .list li {
     opacity: 1;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  /* line 358, ../sass/components/_sale.scss */
+  /* line 359, ../sass/components/_sale.scss */
   .list-active .list {
     height: 8em;
   }
 }
 
-/* line 365, ../sass/components/_sale.scss */
+/* line 366, ../sass/components/_sale.scss */
 .sale-close {
   padding: 2.5em 1em 0;
 }
 
-/* line 371, ../sass/components/_sale.scss */
+/* line 372, ../sass/components/_sale.scss */
 .upcoming {
   padding: 4em 1em 0;
 }
-/* line 374, ../sass/components/_sale.scss */
+/* line 375, ../sass/components/_sale.scss */
 .upcoming .upcoming-header {
   flex-wrap: wrap;
   align-items: center;
   padding: 0 0 1.5em;
 }
-/* line 381, ../sass/components/_sale.scss */
+/* line 382, ../sass/components/_sale.scss */
 .upcoming .heading-3 {
   margin: 0 2em 0.25em 0;
 }
-/* line 385, ../sass/components/_sale.scss */
+/* line 386, ../sass/components/_sale.scss */
 .upcoming .address {
   width: calc(50% - 1em);
   max-width: 31.25em;
@@ -1743,45 +1743,45 @@ button:focus:not(.no-button-style) {
   border-radius: 18px;
   text-align: center;
 }
-/* line 395, ../sass/components/_sale.scss */
+/* line 396, ../sass/components/_sale.scss */
 .upcoming .address:nth-of-type(odd) {
   margin-right: 1em;
 }
-/* line 399, ../sass/components/_sale.scss */
+/* line 400, ../sass/components/_sale.scss */
 .upcoming .address li {
   display: block;
   line-height: 1.5;
   font-weight: 400;
 }
-/* line 404, ../sass/components/_sale.scss */
+/* line 405, ../sass/components/_sale.scss */
 .upcoming .address li:first-of-type {
   font-weight: 800;
 }
-/* line 411, ../sass/components/_sale.scss */
+/* line 412, ../sass/components/_sale.scss */
 .upcoming .upcoming-sales {
   flex-wrap: wrap;
 }
 @media (min-width: 40em) {
-  /* line 371, ../sass/components/_sale.scss */
+  /* line 372, ../sass/components/_sale.scss */
   .upcoming {
     padding-top: 6em;
   }
-  /* line 419, ../sass/components/_sale.scss */
+  /* line 420, ../sass/components/_sale.scss */
   .upcoming .upcoming-header {
     justify-content: center;
     padding: 0 0 2em;
   }
-  /* line 424, ../sass/components/_sale.scss */
+  /* line 425, ../sass/components/_sale.scss */
   .upcoming .upcoming-sales {
     justify-content: space-around;
   }
-  /* line 428, ../sass/components/_sale.scss */
+  /* line 429, ../sass/components/_sale.scss */
   .upcoming .address {
     width: calc(33.33% - 1em);
     margin: 0;
     padding: 2em;
   }
-  /* line 433, ../sass/components/_sale.scss */
+  /* line 434, ../sass/components/_sale.scss */
   .upcoming .address:nth-of-type(odd) {
     margin-right: 0;
   }
