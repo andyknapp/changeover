@@ -18,11 +18,11 @@ get_header();
 	<section id="intro" class="intro major-section">
 		<div class="container-mid">
 			<header>
-				<h1 class="heading-2 underline">Estate & Tag Sales</h1>
+				<h1 class="heading-2 underline">Estate & </br>Tag Sales</h1>
 			</header>
 			<div class="intro-content">
 				<p>Since 1977, we have provided complete estate sale services and professionaly conducted in-home Tag Sales in Delaware, Pennsylvania and New Jersey.</p>
-				<p>Whether you are a private individual, executer, trust officer, real estate agent or attorney, Changeover Sales will be be happy to consult with you to best serve your needs in the disposition of one item or a houseful.</p>
+				<p>Whether you are a private individual, executor, trust officer, real estate agent or attorney, Changeover Sales will be be happy to consult with you to best serve your needs in the disposition of one item or a houseful.</p>
 			</div>
 		</div>
 	</section>
