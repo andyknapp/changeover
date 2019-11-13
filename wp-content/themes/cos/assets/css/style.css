@@ -160,7 +160,7 @@ q:before {
 @media (min-width: 57em) {
   /* line 36, ../sass/base/_utils.scss */
   .site-content {
-    padding-top: 5.625em;
+    padding-top: 6.25em;
   }
 }
 
@@ -948,12 +948,8 @@ img.aligncenter {
 /* line 33, ../sass/components/_header.scss */
 .logo {
   display: block;
-  width: 31.25em;
-  height: 11.5625em;
   width: 12.5em;
-  height: 4.625em;
   font-size: 66%;
-  background: url("../Changeover-Sales-logo.png") no-repeat center/cover;
   transform: scaleY(1);
   transform-origin: left center;
   transition: transform 0.3s ease-out;
@@ -1051,7 +1047,7 @@ img.aligncenter {
 @media (min-width: 57em) {
   /* line 147, ../sass/components/_header.scss */
   .site-header {
-    height: 5.625em;
+    height: 6.25em;
     transform: scaleY(1);
     transform-origin: left top;
     transition: transform 0.3s ease-out;
@@ -1060,31 +1056,33 @@ img.aligncenter {
   .site-header .container-site {
     flex-flow: row nowrap;
     justify-content: space-between;
+    align-items: flex-end;
   }
-  /* line 158, ../sass/components/_header.scss */
+  /* line 159, ../sass/components/_header.scss */
   .site-header.scrolled {
     transform: scaleY(0.8);
   }
-  /* line 161, ../sass/components/_header.scss */
+  /* line 162, ../sass/components/_header.scss */
   .site-header.scrolled .site-nav {
     transform: scaleY(1.25) translateY(-8px);
   }
-  /* line 165, ../sass/components/_header.scss */
+  /* line 166, ../sass/components/_header.scss */
   .site-header.scrolled .logo {
     transform: scaleX(0.8);
   }
 
-  /* line 171, ../sass/components/_header.scss */
+  /* line 172, ../sass/components/_header.scss */
   .logo {
-    font-size: 88%;
+    width: 14em;
+    font-size: 100%;
   }
 
-  /* line 175, ../sass/components/_header.scss */
+  /* line 177, ../sass/components/_header.scss */
   .menu-toggle {
     display: none;
   }
 
-  /* line 179, ../sass/components/_header.scss */
+  /* line 181, ../sass/components/_header.scss */
   .site-nav,
   .site-nav.show {
     align-self: flex-end;
@@ -1101,7 +1099,7 @@ img.aligncenter {
     border-bottom-width: 0;
   }
 
-  /* line 195, ../sass/components/_header.scss */
+  /* line 197, ../sass/components/_header.scss */
   .menu {
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -1110,12 +1108,12 @@ img.aligncenter {
     padding: 0 1.25em 0 3.75em;
   }
 
-  /* line 203, ../sass/components/_header.scss */
+  /* line 205, ../sass/components/_header.scss */
   .menu-item {
     margin: 0;
     padding: 0.71875em 0 0.5em;
   }
-  /* line 207, ../sass/components/_header.scss */
+  /* line 209, ../sass/components/_header.scss */
   .menu-item a {
     display: block;
     padding: 0.75em 0;
