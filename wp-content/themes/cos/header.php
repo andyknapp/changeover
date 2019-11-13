@@ -25,7 +25,11 @@
 
 <header id="masthead" class="site-header">
 	<div class="container-site">
-		<a href="#content" class="logo"><h1 class="skip-link"><?php bloginfo( 'name' ); ?></h1></a>
+		<a href="#content" class="logo">
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/Changeover-Sales-logo.png" alt="Changeover Sales Logo">
+			<h1 class="skip-link"><?php bloginfo( 'name' ); ?></h1>
+		</a>
+
 		<button class="menu-toggle no-button-style" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'cos' ); ?></button>
 
 		<nav id="site-navigation" class="site-nav">

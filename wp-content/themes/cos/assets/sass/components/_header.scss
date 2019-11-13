@@ -24,16 +24,20 @@ $counter-scale: 1 / $scale;
         align-items: center;
         height: 100%;
     }
+
+    .freeze & {
+        background-color: rgba($color-white, 0.985);
+    }
 }
 
 .logo {
 	display: block;
-    width: (500 / 16) * 1em;
-	height: (185 / 16) * 1em;
+    // width: (500 / 16) * 1em;
+	// height: (185 / 16) * 1em;
     width: (200 / 16) * 1em;
-	height: (74 / 16) * 1em;
+	//height: (74 / 16) * 1em;
     font-size: 66%;
-	background: url('../Changeover-Sales-logo.png') no-repeat center / cover;
+	//background: url('../Changeover-Sales-logo.png') no-repeat center / cover;
     transform: scaleY(1);
     transform-origin: left center;
     transition: transform 0.3s ease-out;
@@ -79,8 +83,8 @@ $counter-scale: 1 / $scale;
     opacity: 0;
     visibility: hidden;
     z-index: 1;
-    background-color: rgba($color-white, 0.925);
-    border-bottom: 1px solid rgba(238, 238, 238, 0.9);
+    background-color: rgba($color-white, 0.985);
+    border-bottom: 1px solid rgba(238, 238, 238, 1);
     transform-origin: right center;
     transition: opacity 0.3s ease-out, visibility 0.3s ease-out, transform, 0.3s ease-out;
 
@@ -149,6 +153,7 @@ $counter-scale: 1 / $scale;
         .container-site {
     		flex-flow: row nowrap;
     		justify-content: space-between;
+            align-items: flex-end;
         }
 
         &.scrolled {
@@ -165,7 +170,8 @@ $counter-scale: 1 / $scale;
 	}
 
     .logo {
-        font-size: 88%;
+        width: 14em;
+        font-size: 100%;
     }
 
 	.menu-toggle {

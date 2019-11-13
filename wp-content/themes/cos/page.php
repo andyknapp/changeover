@@ -18,11 +18,11 @@ get_header();
 	<section id="intro" class="intro major-section">
 		<div class="container-mid">
 			<header>
-				<h1 class="heading-2 underline">Estate & Tag Sales</h1>
+				<h1 class="heading-2 underline">Estate & </br>Tag Sales</h1>
 			</header>
 			<div class="intro-content">
 				<p>Since 1977, we have provided complete estate sale services and professionaly conducted in-home Tag Sales in Delaware, Pennsylvania and New Jersey.</p>
-				<p>Whether you are a private individual, executer, trust officer, real estate agent or attorney, Changeover Sales will be be happy to consult with you to best serve your needs in the disposition of one item or a houseful.</p>
+				<p>Whether you are a private individual, executor, trust officer, real estate agent or attorney, <i>Changeover Sales</i> will be be happy to consult with you to best serve your needs in the disposition of one item or a houseful.</p>
 			</div>
 		</div>
 	</section>
@@ -46,6 +46,29 @@ get_header();
 					<li>Friday Feb 3 9-4</li>
 					<li>Saturday Feb 4 9-4</li>
 				</ul>
+
+				<div class="sale-meta">
+					<a href="#" class="external-link">
+						<svg class="direction">
+							<use xlink:href="#icon-location"></use>
+						</svg>
+						<span>Get Directions</span>
+					</a>
+
+					<a href="#" class="external-link">
+						<svg class="photos">
+							<use xlink:href="#icon-photos"></use>
+						</svg>
+						<span>View Pictures</span>
+					</a>
+
+					<a href="#" class="external-link">
+						<svg class="fb">
+							<use xlink:href="#icon-facebook"></use>
+						</svg>
+						<span>Visit us on Facebook</span>
+					</a>
+				</div>
 		</header>
 
 		<div class="sale-description container-small">
@@ -210,29 +233,6 @@ get_header();
 
 		<div class="sale-close container-small">
 			<p class="copy-1" >So much more! Please, cash or check only, or credit card with fees (2.75%). Follow the <span class="pink">pink signs</span> & <i>please</i> obey signage. As always, <i>please</i> respect the home owner's and neighbors' properties and park thoughtfully. Thanks!</p>
-		</div>
-
-		<div class="sale-meta">
-			<a href="#" class="external-link">
-				<svg class="direction">
-					<use xlink:href="#icon-location"></use>
-				</svg>
-				<span>Get Directions</span>
-			</a>
-
-			<a href="#" class="external-link">
-				<svg class="photos">
-					<use xlink:href="#icon-photos"></use>
-				</svg>
-				<span>View Pictures</span>
-			</a>
-
-			<a href="#" class="external-link">
-				<svg class="fb">
-					<use xlink:href="#icon-facebook"></use>
-				</svg>
-				<span>Visit us on Facebook</span>
-			</a>
 		</div>
 
 		<aside class="upcoming container-small">

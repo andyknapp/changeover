@@ -1,11 +1,6 @@
 .site-content {
 	@extend %clear-header;
-	margin-bottom: $footer-height;
 	background-color: $color-white;
-
-	@media (min-width: $bp-nav) {
-		margin-bottom: $footer-height-2;
-	}
 }
 
 [class*='container-'] {
@@ -56,10 +51,34 @@
 	> .container-mid {
 		@extend %flex-parent-row;
 		flex-wrap: wrap;
+
+		@media (min-width: 51.5em) {
+			justify-content: center;
+		}
 	}
 
 	header {
 		padding-right: 4em;
+
+		@media (min-width: 51.5em) {
+			padding-right: 6em;
+		}
+	}
+
+	.heading-2 {
+		br {
+			display: none;
+		}
+
+		@media (min-width: 51.5em) {
+			br {
+				display: block;
+			}
+
+			&::after {
+				margin-top: 18px;
+			}
+		}
 	}
 
 	.intro-content {
@@ -310,9 +329,9 @@
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: flex-end;
-	position: fixed;
-	bottom: 0;
-	left: 0;
+	// position: fixed;
+	// bottom: 0;
+	// left: 0;
 	width: 100%;
 	height: $footer-height;
 	padding: 1em;

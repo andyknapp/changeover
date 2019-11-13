@@ -14,6 +14,8 @@
 	}
 
 	.address {
+		padding-bottom: 1em;
+		
 		.cta {
 			font-weight: 400;
 		}
@@ -99,16 +101,18 @@
 .sale-meta {
 	display: flex;
 	flex-flow: row nowrap;
-	justify-content: space-around;
 	align-items: center;
 	width: 100%;
 	max-width: (800 / 16) * 1em;
-	margin: 0 auto;
-	padding: 0.5em 1em 4em;
+	padding: 0.5em 0 4em;
 
     a {
-        margin: 0 0.5em;
+        margin: 0 2em 0 0;
         color: $color-black-2;
+
+		&:last-of-type {
+			margin-right: 0;
+		}
 
         &:hover {
             color: $color-red;
@@ -116,10 +120,13 @@
     }
 
     @media (min-width: $bp-small) {
+		margin: 0 auto;
+		padding: 1em 0 2em;
         text-align: center;
 
         a {
-            margin: 0 3em;
+			width: 33.33%;
+            margin: 0;
         }
     }
 }
@@ -133,14 +140,9 @@
 		display: block;
 		width: 1.75em;
 		height: 1.75em;
-		margin: 0 auto 0.125em;
+		margin: 0 auto 0.25em;
 		fill: $color-red;
 		vertical-align: bottom;
-
-		@media (min-width: $bp-nav) {
-			display: inline-block;
-			margin: 0 0.25em (-3 / 16) * 1em 0;
-		}
 	}
 
 	.fb {
