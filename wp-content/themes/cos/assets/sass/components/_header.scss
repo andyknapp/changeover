@@ -24,6 +24,10 @@ $counter-scale: 1 / $scale;
         align-items: center;
         height: 100%;
     }
+
+    .freeze & {
+        background-color: rgba($color-white, 0.985);
+    }
 }
 
 .logo {
@@ -79,8 +83,8 @@ $counter-scale: 1 / $scale;
     opacity: 0;
     visibility: hidden;
     z-index: 1;
-    background-color: rgba($color-white, 0.925);
-    border-bottom: 1px solid rgba(238, 238, 238, 0.9);
+    background-color: rgba($color-white, 0.985);
+    border-bottom: 1px solid rgba(238, 238, 238, 1);
     transform-origin: right center;
     transition: opacity 0.3s ease-out, visibility 0.3s ease-out, transform, 0.3s ease-out;
 

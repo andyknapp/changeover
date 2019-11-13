@@ -46,6 +46,29 @@ get_header();
 					<li>Friday Feb 3 9-4</li>
 					<li>Saturday Feb 4 9-4</li>
 				</ul>
+
+				<div class="sale-meta">
+					<a href="#" class="external-link">
+						<svg class="direction">
+							<use xlink:href="#icon-location"></use>
+						</svg>
+						<span>Get Directions</span>
+					</a>
+
+					<a href="#" class="external-link">
+						<svg class="photos">
+							<use xlink:href="#icon-photos"></use>
+						</svg>
+						<span>View Pictures</span>
+					</a>
+
+					<a href="#" class="external-link">
+						<svg class="fb">
+							<use xlink:href="#icon-facebook"></use>
+						</svg>
+						<span>Visit us on Facebook</span>
+					</a>
+				</div>
 		</header>
 
 		<div class="sale-description container-small">
@@ -210,29 +233,6 @@ get_header();
 
 		<div class="sale-close container-small">
 			<p class="copy-1" >So much more! Please, cash or check only, or credit card with fees (2.75%). Follow the <span class="pink">pink signs</span> & <i>please</i> obey signage. As always, <i>please</i> respect the home owner's and neighbors' properties and park thoughtfully. Thanks!</p>
-		</div>
-
-		<div class="sale-meta">
-			<a href="#" class="external-link">
-				<svg class="direction">
-					<use xlink:href="#icon-location"></use>
-				</svg>
-				<span>Get Directions</span>
-			</a>
-
-			<a href="#" class="external-link">
-				<svg class="photos">
-					<use xlink:href="#icon-photos"></use>
-				</svg>
-				<span>View Pictures</span>
-			</a>
-
-			<a href="#" class="external-link">
-				<svg class="fb">
-					<use xlink:href="#icon-facebook"></use>
-				</svg>
-				<span>Visit us on Facebook</span>
-			</a>
 		</div>
 
 		<aside class="upcoming container-small">

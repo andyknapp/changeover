@@ -1,11 +1,6 @@
 .site-content {
 	@extend %clear-header;
-	margin-bottom: $footer-height;
 	background-color: $color-white;
-
-	@media (min-width: $bp-nav) {
-		margin-bottom: $footer-height-2;
-	}
 }
 
 [class*='container-'] {
@@ -334,9 +329,9 @@
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: flex-end;
-	position: fixed;
-	bottom: 0;
-	left: 0;
+	// position: fixed;
+	// bottom: 0;
+	// left: 0;
 	width: 100%;
 	height: $footer-height;
 	padding: 1em;
