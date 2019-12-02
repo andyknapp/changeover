@@ -15,7 +15,7 @@
 
 	.address {
 		padding-bottom: 1em;
-		
+
 		.cta {
 			font-weight: 400;
 		}
@@ -94,7 +94,7 @@
 
 
 	@media (min-width: $bp-nav) {
-		padding: 10em 0;
+		padding: 10em 0 8em;
 	}
 }
 
@@ -366,7 +366,14 @@
 
 
 .sale-close {
+	max-width: 50em;
 	padding: 2.5em 1em 0;
+
+	li {
+		@extend %copy-1;
+		margin-bottom: 0.5em;
+		list-style-type: disc;
+	}
 }
 
 

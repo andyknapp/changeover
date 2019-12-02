@@ -84,6 +84,12 @@
 	.intro-content {
 		flex: 1 24em;
 		max-width: (524 / 16) * 1em;
+
+		span {
+			font-style: italic;
+			font-weight: 700;
+			color: $color-red;
+		}
 	}
 
 	p {
@@ -92,7 +98,7 @@
 
 
 	@media (min-width: $bp-nav) {
-		padding: 10em 1em;
+		padding: 10em 1em 8em;
 	}
 }
 
@@ -482,4 +488,9 @@ img {
 	&.alt-red {
 		background-color: $color-red;
 	}
+}
+
+
+.pink {
+	color: $color-pink;
 }
