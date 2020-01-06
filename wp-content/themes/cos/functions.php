@@ -123,8 +123,6 @@ function cos_scripts() {
 
 	wp_register_script('global-js', get_stylesheet_directory_uri() . '/assets/js/global.js', array(), THEME_VERSION, true);
 
-	wp_register_script('stickybits-js', get_stylesheet_directory_uri() . '/assets/js/stickybits.min.js', array(), THEME_VERSION, true);
-
 	wp_register_script('bxslider-js', get_stylesheet_directory_uri() . '/assets/js/jquery.bxslider.min.js', array('jquery'), THEME_VERSION, true);
 
 	wp_register_script('animation-driver-js', get_stylesheet_directory_uri() . '/assets/js/animation-driver.js', array(), THEME_VERSION, true);
@@ -132,7 +130,7 @@ function cos_scripts() {
 	wp_register_script('scrollspy-js', get_stylesheet_directory_uri() . '/assets/js/scrollspy.js', array('global-js'), THEME_VERSION, true);
 
 	wp_enqueue_script('bxslider-js');
-	wp_enqueue_script('stickybits-js');
+	//wp_enqueue_script('stickybits-js');
 	wp_enqueue_script('animation-driver-js');
 	wp_enqueue_script('scrollspy-js');
 	wp_enqueue_script('global-js');
@@ -209,6 +207,8 @@ add_filter("gform_init_scripts_footer", "init_scripts");
 function init_scripts() {
 	return true;
 }
+
+add_filter( 'gform_confirmation_anchor', '__return_true' );
 
 // remove customizer completely
 function kd_remove_customizer() {
