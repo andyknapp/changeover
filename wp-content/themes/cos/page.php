@@ -281,7 +281,6 @@ get_header();
 					</blockquote>
 				</div>
 			</li>
-			<li class="slide">Testimonial 3</li>
 		</ul>
 		</div>
 	</section>
