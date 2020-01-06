@@ -37,32 +37,34 @@ get_header();
 			<?php //else : ?>
 				<!-- <h2 class="heading-2">Upcoming Sale</h2> -->
 				<ul class="address">
-					<li>123 Main St.</li>
-					<li>Wilmington, DE 19803</li>
+                    <li>305 N Ashview Lane</li>
+					<li>Greenville, DE 19807</li>
+                    <li class="break">Applecross (off Montchanin Rd/Rte 100)</li>
 				</ul>
 
 				<ul class="date-time">
-					<li>Thursday Feb 2 9-4</li>
-					<li>Friday Feb 3 9-4</li>
-					<li>Saturday Feb 4 9-4</li>
+                    <li>Wednesday Jan 8 <span>6pm - 8pm*</li>
+					<li>Thursday Jan 9 <span>10am - 4pm</span></li>
+					<li>Friday Jan 10 <span>10am - 4pm</span></li>
+					<li>Saturday Jan 11 <span>9am - 1pm</span></li>
 				</ul>
 
 				<div class="sale-meta">
-					<a href="#" class="external-link">
+					<a href="https://www.google.com/maps/dir//305+N+Ashview+Ln,+Wilmington,+DE+19807/@39.7839198,-75.5942162,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x89c6fc4674c1705d:0x1eb7ae6c256a7a24!2m2!1d-75.5920275!2d39.7839198!3e0" class="external-link" target="_blank">
 						<svg class="direction">
 							<use xlink:href="#icon-location"></use>
 						</svg>
 						<span>Get Directions</span>
 					</a>
 
-					<a href="#" class="external-link">
+					<a href="https://www.estatesales.net/DE/Wilmington/19807/2444940" class="external-link" target="_blank">
 						<svg class="photos">
 							<use xlink:href="#icon-photos"></use>
 						</svg>
-						<span>View Pictures</span>
+						<span>View Photos</span>
 					</a>
 
-					<a href="#" class="external-link">
+					<a href="https://www.facebook.com/ChangeoverSales" class="external-link" target="_blank">
 						<svg class="fb">
 							<use xlink:href="#icon-facebook"></use>
 						</svg>
@@ -72,7 +74,7 @@ get_header();
 		</header>
 
 		<div class="sale-description container-small">
-			<p class="copy-1">A Decorator's Home. Big (6000 sq ft), beautiful house FULL! Fine Furniture & Accessories many new & unused, all in excellent condition! Maitland Smith, John Richard, Robert Allen, Knoll, Highland House, Old Biscayne, Castilian, French Heritage, Sligh, Hooker, Ethan Allen, Thomasville, Hermes, Waterford, Chelsea House, NDI, more! Antiques, Oriental Rugs, Original Art, Fine Jewelry, Sterling Silver, Horse Drawn Sleigh, Horse Riding Items etc. So much more!</p>
+			<p class="copy-1">High end furnishings, art, rugs, sterling, jewelry, accessories, etc. All in excellent condition! <span>*Line numbers start at 4pm on Wednesday</span></p>
 		</div>
 
 
@@ -82,158 +84,139 @@ get_header();
 			<div class="sale-col">
 				<div class="sale-list  sale-list-a">
 					<header class="list-header">
-						<h3 class="heading-4">Accessories & Collectibles</h3>
-						<svg>
-							<use xlink:href="#icon-down"></use>
-						</svg>
-					</header>
-					<ul class="list">
-						<li>Vintage Mac Classic, computer, printer, keyboard & mouse</li>
-						<li>Howard Miller mantel clock, LARGE</li>
-						<li>Waterbury mantle clock</li>
-						<li>Russian lacquered box</li>
-						<li>Cast iron doorstops</li>
-						<li>Local & Delaware books</li>
-						<li>Vintage LP's and 45's</li>
-						<li>Antique Kodak cameras</li>
-						<li>Violins, 2 (Otto E Fischer & Franz Hoffmann)</li>
-						<li>BEAUTIFUL Lamps, many</li>
-						<li>Matching cloisonné vases</li>
-						<li>Giant floor pillows made from Oriental rugs</li>
-						<li>Brass music stands</li>
-						<li>BEAUTIFUL mirrors</li>
-						<li>Mosaic garden seat</li>
-						<li>Vintage Corona typewriters</li>
-						<li>Carved horn Buddha</li>
-						<li>Vintage Japanese folding screen</li>
-					</ul>
-				</div>
-
-				<div class="sale-list sale-list-d">
-					<header class="list-header">
-						<h3 class="heading-4">Stuff & Collectibles</h3>
-						<svg>
-							<use xlink:href="#icon-down"></use>
-						</svg>
-					</header>
-					<ul class="list">
-						<li>Vintage Mac Classic, computer, printer, keyboard & mouse</li>
-						<li>Howard Miller mantel clock, LARGE</li>
-						<li>Waterbury mantle clock</li>
-						<li>Russian lacquered box</li>
-						<li>Cast iron doorstops</li>
-						<li>Local & Delaware books</li>
-						<li>Vintage LP's and 45's</li>
-						<li>Antique Kodak cameras</li>
-						<li>Violins, 2 (Otto E Fischer & Franz Hoffmann)</li>
-						<li>BEAUTIFUL Lamps, many</li>
-						<li>Matching cloisonné vases</li>
-						<li>Giant floor pillows made from Oriental rugs Giant floor pillows made from Oriental rugs</li>
-						<li>Brass music stands</li>
-						<li>BEAUTIFUL mirrors</li>
-						<li>Mosaic garden seat</li>
-						<li>Vintage Corona typewriters</li>
-						<li>Carved horn Buddha</li>
-						<li>Vintage Japanese folding screen</li>
-					</ul>
-				</div>
-			</div>
-
-			<div class="sale-col">
-				<div class="sale-list sale-list-b">
-					<header class="list-header">
 						<h3 class="heading-4">Furniture</h3>
 						<svg>
 							<use xlink:href="#icon-down"></use>
 						</svg>
 					</header>
 					<ul class="list">
-						<li>Oak bookcase</li>
-						<li>Vanity benches</li>
-						<li>Faux leather loveseat</li>
-						<li>Painted wrought iron twin beds</li>
+                        <li>Mahogany HICKORY CHAIR dining table & chairs</li>
+                        <li>Maitland Smith center table</li>
+                        <li>Sectional sofa</li>
+                        <li>Drexel Heritage matching upholstered arm chairs</li>
+                        <li>Maitland Smith writing desk</li>
+                        <li>Matching love seats by Ferguson Copeland, Ltd.</li>
+                        <li>Pair slipper chairs by Taylor King</li>
+                        <li>Coffee table by Chelsea House</li>
+                        <li>Matching upholstered chairs by Ardley Hall</li>
+                        <li>Four matching leather wing chairs by Maitland Smith</li>
+                        <li>Grand Maitland Smith rotating coffee table</li>
+                        <li>Drexel Heritage serving chest</li>
+                        <li>Cherry farmhouse table w/6 chairs</li>
+                        <li>King bed, upholstered headboard</li>
+                        <li>Queen bed w/side cabinets</li>
+                        <li>Chinoiserrie secretary desk, excellent!</li>
+                        <li>Hekman executive desk</li>
+                        <li>Painted stacking chest, Eddy West</li>
+                        <li>Leather office chair</li>
+                        <li>Counter stools, upholstered, 4 available</li>
+                        <li>Barstools, swivel seats, 5 available</li>
+                        <li>Maitland Smith Regency style settee</li>
+                        <li>Upholstered benches</li>
+                        <li>Chaise lounge</li>
+                        <li>Storage chests, bookcases</li>
+                        <li class="more">More!</li>
 					</ul>
 				</div>
 
-				<div class="sale-list sale-list-e">
-					<header class="list-header">
-						<h3 class="heading-4">Outdoor Furniture</h3>
+				<div class="sale-list sale-list-d">
+                    <header class="list-header">
+						<h3 class="heading-4">Also</h3>
 						<svg>
 							<use xlink:href="#icon-down"></use>
 						</svg>
 					</header>
 					<ul class="list">
-						<li>Kittinger Williamsburg Sofa</li>
-						<li>Kittinger Williamsburg Lolling Chairs, Pair</li>
-						<li>Henkel Harris tea table</li>
-						<li>Biggs, inlaid Pembroke tables, pair</li>
-						<li>Kittinger Asian style coffee table, antiqued mirror top</li>
-						<li>Kittinger end tables</li>
-						<li>Knabe baby grand piano</li>
-						<li>Wing chairs, needlepoint side chairs, needlepoint foot stools</li>
-						<li>Henredon dining table (extends from 40" round to 90" oval)</li>
-						<li>Henredon china cabinet</li>
-						<li>Henredon mahogany serving cabinet on wheels</li>
-						<li>Set of 6 dining chairs</li>
-						<li>Mid-Century Modern cane back chair</li>
-						<li>1960's Drexel sofa</li>
-						<li>Woodmark upholstered chairs, pair</li>
-						<li>Vintage wrought iron glass top table & chairs set</li>
-						<li>Mahogany flip top card/game table</li>
-						<li>Mahogany pair "chair back" twin beds</li>
-						<li>Mahogany dresser & mirror, nightstands</li>
-						<li>Factory painted 1960's bedroom furniture, like new!</li>
-						<li>Cherry desk w/chair</li>
-						<li>Oak bookcase</li>
-						<li>Vanity benches</li>
-						<li>Faux leather loveseat</li>
-						<li>Painted wrought iron twin beds</li>
+                        <li>EFX Eliptical</li>
+                        <li>Outdoor furniture, planters</li>
+                        <li>Large cast iron urns/planters</li>
+                        <li>Outdoor heater</li>
+                        <li>Stereo components - Kenwood, Yamaha, Sony, Harmon Karden, Energy, Rotel, Integra, Panamax, MORE!</li>
+                        <li>Model cars, 1/18, Exact Detail, Ertl, Sunstar</li>
+                        <li>Hess trucks (some new in boxes)</li>
+                        <li>TVs - Pioneer Elite, etc. big & small</li>
+                        <li>Tools, bikes, roller blades, more!</li>
+                        <li class="more">More!</li>
 					</ul>
 				</div>
 			</div>
 
 			<div class="sale-col">
-				<div class="sale-list sale-list-c">
-					<header class="list-header">
-						<h3 class="heading-4">Outdoor Furniture</h3>
+				<div class="sale-list sale-list-b">
+                    <header class="list-header">
+						<h3 class="heading-4">Art</h3>
 						<svg>
 							<use xlink:href="#icon-down"></use>
 						</svg>
 					</header>
 					<ul class="list">
-						<li>Kittinger Williamsburg Sofa</li>
-						<li>Kittinger Williamsburg Lolling Chairs, Pair</li>
-						<li>Henkel Harris tea table</li>
-						<li>Biggs, inlaid Pembroke tables, pair</li>
-						<li>Kittinger Asian style coffee table, antiqued mirror top</li>
-						<li>Kittinger end tables</li>
-						<li>Knabe baby grand piano</li>
-						<li>Wing chairs, needlepoint side chairs, needlepoint foot stools</li>
-						<li>Henredon dining table (extends from 40" round to 90" oval)</li>
-						<li>Henredon china cabinet</li>
-						<li>Henredon mahogany serving cabinet on wheels</li>
-						<li>Set of 6 dining chairs</li>
-						<li>Mid-Century Modern cane back chair</li>
-						<li>1960's Drexel sofa</li>
-						<li>Woodmark upholstered chairs, pair</li>
-						<li>Vintage wrought iron glass top table & chairs set</li>
-						<li>Mahogany flip top card/game table</li>
-						<li>Mahogany pair "chair back" twin beds</li>
-						<li>Mahogany dresser & mirror, nightstands</li>
-						<li>Factory painted 1960's bedroom furniture, like new!</li>
-						<li>Cherry desk w/chair</li>
-						<li>Oak bookcase</li>
-						<li>Vanity benches</li>
-						<li>Faux leather loveseat</li>
-						<li>Painted wrought iron twin beds</li>
+						<li>Autographed movie posters</li>
+                        <li>Many framed & unframed prints</li>
+                        <li class="more">More!</li>
 					</ul>
+				</div>
+
+				<div class="sale-list sale-list-e">
+                    <header class="list-header">
+						<h3 class="heading-4">Silver & Jewelry</h3>
+						<svg>
+							<use xlink:href="#icon-down"></use>
+						</svg>
+					</header>
+					<ul class="list">
+                        <li>Fine 14k & 18k gold necklaces, bracelets, earrings, rings</li>
+                        <li>Phillip Stein diamond watch</li>
+                        <li>18k Gold Tag Heuer watch</li>
+                        <li>Tiffany jewelry</li>
+                        <li>Lizzy Fortunato earrings</li>
+                        <li>Sterling jewelry</li>
+                        <li>Pandora bracelets</li>
+                        <li>Antique sterling & enamel Russian purse..so unique!</li>
+                        <li>"Royal Danish" Sterling tea/coffee service</li>
+                        <li>Royal Crest Sterling "Wildflower" flatware set - 190 pcs.!!</li>
+                        <li>Kirk Sterling vermeil "Repousse" flatware - various pieces </li>
+                        <li>Kirk Sterling "Repousse" bowl, dishes</li>
+                        <li>Sterling bowls, dishes, trays, etc.</li>
+                        <li>Costume jewelry</li>
+                        <li class="more">More!</li>
+					</ul>
+
+				</div>
+			</div>
+
+			<div class="sale-col">
+				<div class="sale-list sale-list-c">
+                    <header class="list-header">
+						<h3 class="heading-4">Accessories</h3>
+						<svg>
+							<use xlink:href="#icon-down"></use>
+						</svg>
+					</header>
+                    <ul class="list">
+                        <li>Oriental rugs & runners...BEAUTIFUL!! Many sizes!</li>
+                        <li>Gilded mirrored sconces</li>
+                        <li>Fabulous floral arrangements, NDI, many!</li>
+                        <li>Faux trees & topiariesv
+                        <li>Excellent lamps & floor lamps</li>
+                        <li>Large candle holders, urns, hurricanes, etc.</li>
+                        <li>Beautiful mirrors</li>
+                        <li>Excellent custom decorator pillows</li>
+                        <li>Fireplace screens</li>
+                        <li>Chelsea House urns, vases</li>
+                        <li>Portmeirion dishes/serving pieces</li>
+                        <li>Longaberger baskets...a collection!</li>
+                        <li>Henckels knives</li>
+                        <li>Cutco cookware</li>
+                        <li>Mauviel Copper stock pot</li>
+                        <li class="more">More!</li>
+                    </ul>
 				</div>
 			</div>
 		</div>
 
 		<div class="sale-close container-small">
 			<ul>
-				<li>So much more! Please, cash or check only, or credit card with fees (2.75%)</li>
+				<li>So much more...still unearthing! Please, cash or check only, or credit card with fees (2.75%)</li>
 				<li>Follow the <span class="pink">pink signs</span> & <i>please</i> obey signage.</li>
 				<li>As always, <i>please</i> respect the home owner's and neighbors' properties and park thoughtfully. Thanks!</li>
 			</ul>
@@ -246,11 +229,16 @@ get_header();
 			</header>
 			<div class="upcoming-sales animation-element fade" data-trigger="0.91">
 				<ul class="address">
-					<li>Sept. 18 - 21</li>
-					<li>Selborne Dr.</li>
-					<li>Centreville, DE</li>
+					<li>January 22 - 25</li>
+					<li>Edenridge</li>
+					<li>Wilmington, DE</li>
 				</ul>
 				<ul class="address">
+					<li>January 31 & Feb 1</li>
+					<li>Guilty Girls Warehouse Sale</li>
+					<li>DuPont CC</li>
+				</ul>
+                <ul class="address">
 					<li>TBA</li>
 					<li>Centreville Reserve</li>
 					<li>Centreville, DE</li>
@@ -301,7 +289,7 @@ get_header();
 	<section id="about-us" class="about major-section">
 		<div class="container-mid animation-element fade-up" data-trigger="0.9">
 			<h5 class="heading-1">About Us</h5>
-			<img src="https://www.fillmurray.com/400/500" alt=""  />
+			<!-- <img src="https://www.fillmurray.com/400/500" alt=""  /> -->
 			<p>Founded by Kay Reilly in 1977, we continue to be family owned and operated with a combined 70+ years of tag sales and appraisal experience. Word of mouth and customer referrals are the backbone of our thriving business and sterling reputation.</p>
 			<p>We are very proud of our friendly, knowledgeable, professional staff, many who have been with us from the start! We also maintain a vast number of experts who contribute valuable information and opinions on art, antiques, jewelry, etc.</p>
 		</div>

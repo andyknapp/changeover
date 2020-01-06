@@ -4,22 +4,37 @@
 
 	.address,
 	.date-time {
-		padding-bottom: 1.5em;
-
 		li {
 			display: block;
 			font-weight: 600;
-			line-height: 1.75;
+
+            span {
+                font-style: italic;
+            }
 		}
 	}
 
 	.address {
-		padding-bottom: 1em;
+		padding-bottom: 1.5em;
 
-		.cta {
+        li {
+            line-height: 1.5;
+        }
+
+        .break {
+            display: block;
+            font-weight: 400;
+        }
+	}
+
+    .date-time {
+        padding-bottom: 2em;
+
+        li {
+            line-height: 1.75;
 			font-weight: 400;
 		}
-	}
+    }
 
     .sale-header {
         @extend %pad-h;
@@ -156,6 +171,12 @@
 .sale-description {
     @extend %pad-h;
     margin: 0 auto 2em;
+
+    span {
+        display: block;
+        font-size: 80%;
+        margin-top: 0.5em;
+    }
 
 	@media (min-width: $bp-small) {
 		margin: 2em auto 4em;
@@ -316,6 +337,17 @@
 				}
 			}
 		}
+
+        @media (min-width: $bp-small) {
+            .full-list & {
+                white-space: initial;
+            }
+        }
+    }
+
+    .more {
+        font-style: italic;
+        color: $color-red;
     }
 
     .list-active & {
@@ -368,6 +400,10 @@
 .sale-close {
 	max-width: 50em;
 	padding: 2.5em 1em 0;
+
+    ul {
+        padding-left: 1em;
+    }
 
 	li {
 		@extend %copy-1;
