@@ -256,7 +256,7 @@ get_header();
 			<p>All our client needs to do is take what they want and leave the rest to us. We will sort saleable from non-saleable, arrange, price, tag, advertise and sell everything in 2 or 3 days leaving your home “broom clean” ready for the cleaning crew (we can arrange for that, too!).</p>
 			<p>Within a week, we will furnish you with a check for the proceeds and a report with an itemized accounting of everything that sold.</p>
 			<p>Our Tag Sales are professionally conducted with the utmost respect for your home & possessions. Attention to even the smallest detail, strong security measures and our friendly professional staff guarantees excellent results.</p>
-			<p>Our 30+ years of experience with antiques, fine art, jewelry and household items and our constant exposure to the ever-changing market ensures that your possessions will be properly priced to produce maximum revenue for our client.</p>
+			<p>Our over 4 decades of experience with antiques, fine art, jewelry and household items and our constant exposure to the ever-changing market ensures that your possessions will be properly priced to produce maximum revenue for our client.</p>
 			<p>We also offer a full & partial estate purchases. If a Tag Sale isn't possible, we can offer a buyout of complete or partial contents of a home. After a purchase price has been agreed to, we will arrange for the packing & removal of all items and pay you immediately.</p>
 		</div>
 	</section>
