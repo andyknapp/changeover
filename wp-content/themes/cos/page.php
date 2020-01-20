@@ -37,27 +37,27 @@ get_header();
 			<?php //else : ?>
 				<!-- <h2 class="heading-2">Upcoming Sale</h2> -->
 				<ul class="address">
-                    <li>305 N Ashview Lane</li>
-					<li>Greenville, DE 19807</li>
-                    <li class="break">Applecross (off Montchanin Rd/Rte 100)</li>
+                    <li>617 Berwick Rd.</li>
+					<li>Wilmington, DE 19803</li>
+                    <li class="break">Edenridge (corner of Mt. Lebanon & Berwick Rds)</li>
 				</ul>
 
 				<ul class="date-time">
-                    <li>Wednesday Jan 8 <span>6pm - 8pm*</li>
-					<li>Thursday Jan 9 <span>10am - 4pm</span></li>
-					<li>Friday Jan 10 <span>10am - 4pm</span></li>
-					<li>Saturday Jan 11 <span>9am - 1pm</span></li>
+                    <li>Wednesday Jan 22 <span>6pm - 8pm*</li>
+					<li>Thursday Jan 23 <span>10am - 4pm</span></li>
+					<li>Friday Jan 24 <span>10am - 4pm</span></li>
+					<li>Saturday Jan 25 <span>9am - 1pm</span></li>
 				</ul>
 
 				<div class="sale-meta">
-					<a href="https://www.google.com/maps/dir//305+N+Ashview+Ln,+Wilmington,+DE+19807/@39.7839198,-75.5942162,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x89c6fc4674c1705d:0x1eb7ae6c256a7a24!2m2!1d-75.5920275!2d39.7839198!3e0" class="external-link" target="_blank">
+					<a href="https://www.google.com/maps/dir//617+Berwick+Rd,+Wilmington,+DE+19803/@39.8009299,-75.5652754,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x89c6fc8531be97bb:0x34a3eb6c0e763aa5!2m2!1d-75.5630814!2d39.8009299!3e0" class="external-link" target="_blank">
 						<svg class="direction">
 							<use xlink:href="#icon-location"></use>
 						</svg>
 						<span>Get Directions</span>
 					</a>
 
-					<a href="https://www.estatesales.net/DE/Wilmington/19807/2444940" class="external-link" target="_blank">
+					<a href="https://www.estatesales.net/DE/Wilmington/19803/2459622" class="external-link" target="_blank">
 						<svg class="photos">
 							<use xlink:href="#icon-photos"></use>
 						</svg>
@@ -74,7 +74,7 @@ get_header();
 		</header>
 
 		<div class="sale-description container-small">
-			<p class="copy-1">High end furnishings, art, rugs, sterling, jewelry, accessories, etc. All in excellent condition! <span>*Line numbers start at 4pm on Wednesday</span></p>
+			<p class="copy-1">Period antiques, vintage toys, Sterling silver, fine jewelry, art, rugs, etc. All in excellent condition! <span>*Line numbers start at 4pm on Wednesday</span></p>
 		</div>
 
 
@@ -84,65 +84,56 @@ get_header();
 			<div class="sale-col">
 				<div class="sale-list  sale-list-a">
 					<header class="list-header">
-						<h3 class="heading-4">Furniture</h3>
+						<h3 class="heading-4">Antiques</h3>
 						<svg>
 							<use xlink:href="#icon-down"></use>
 						</svg>
 					</header>
 					<ul class="list">
-                        <li>Mahogany HICKORY CHAIR dining table & chairs</li>
-                        <li>Maitland Smith center table</li>
-                        <li>Sectional sofa</li>
-                        <li>Drexel Heritage matching upholstered arm chairs</li>
-                        <li>Maitland Smith writing desk</li>
-                        <li>Matching love seats by Ferguson Copeland, Ltd.</li>
-                        <li>Pair slipper chairs by Taylor King</li>
-                        <li>Coffee table by Chelsea House</li>
-                        <li>Matching upholstered chairs by Ardley Hall</li>
-                        <li>Four matching leather wing chairs by Maitland Smith</li>
-                        <li>Grand Maitland Smith rotating coffee table</li>
-                        <li>Drexel Heritage serving chest</li>
-                        <li>Cherry farmhouse table w/6 chairs</li>
-                        <li>King bed, upholstered headboard</li>
-                        <li>Queen bed w/side cabinets</li>
-                        <li>Chinoiserrie secretary desk, excellent!</li>
-                        <li>Hekman executive desk</li>
-                        <li>Painted stacking chest, Eddy West</li>
-                        <li>Leather office chair</li>
-                        <li>Counter stools, upholstered, 4 available</li>
-                        <li>Barstools, swivel seats, 5 available</li>
-                        <li>Maitland Smith Regency style settee</li>
-                        <li>Upholstered benches</li>
-                        <li>Chaise lounge</li>
-                        <li>Storage chests, bookcases</li>
+                        <li>Grandfather clock, c1760, mahogany, sgd. Emanual Burton </li>
+                        <li>c1780 Mahogany Chippendale secretary desk</li>
+                        <li>Pennsylvania pine grain box, double lids</li>
+                        <li>Walnut Penna. Dutch step back cupboard</li>
+                        <li>Walnut schoolmaster's desk</li>
+                        <li>Muffin stand</li>
+                        <li>Draalhus rolling pins</li>
+                        <li>Cut glass castor set</li>
+                        <li>Brass push-up candlesticks & chamber sticks, singles & several pairs</li>
+                        <li>Victorian mahogany round game table</li>
+                        <li>Blanket chests</li>
+                        <li>Chippendale mirror w/gilded phoenix</li>
+                        <li>Walnut Eastlake ladies desk</li>
+                        <li>Tilt top tea table</li>
+                        <li>Green demi-john</li>
+                        <li>Early copper kettle w/folding brass trivet</li>
+                        <li>Bedwarmers, brass & copper</li>
+                        <li>Large copper kitchen kettle w/wrought iron handle</li>
+                        <li>Rotating iron braziers</li>
+                        <li>Mahogany fire screen w/needlework shade</li>
+                        <li>Two wood & iron grain measures</li>
+                        <li>Mahogany dovetailed document box</li>
+                        <li>Walnut Penna. dove-tailed ballot box</li>
+                        <li>Brass & iron scales</li>
+                        <li>Brass weights</li>
+                        <li>Large brass cow bells on leather straps</li>
+                        <li>Sleigh bells on leather straps</li>
+                        <li>18c Betty lamp</li>
+                        <li>Several marble top tables</li>
+                        <li>Several marble top large washstands</li>
+                        <li>Mahogany lap desk</li>
+                        <li>Brass & mahogany coal bin</li>
+                        <li>Butter churn</li>
+                        <li>Brass helmet coal scuttle</li>
+                        <li>Antique irons with removable weights</li>
+                        <li>Folding spectacles</li>
+                        <li>Primitive butter molds & food molds</li>
+                        <li>Primitive implements</li>
+                        <li>Hanging punched tin lantern</li>
                         <li class="more">More!</li>
 					</ul>
 				</div>
 
-				<div class="sale-list sale-list-d">
-                    <header class="list-header">
-						<h3 class="heading-4">Also</h3>
-						<svg>
-							<use xlink:href="#icon-down"></use>
-						</svg>
-					</header>
-					<ul class="list">
-                        <li>EFX Eliptical</li>
-                        <li>Outdoor furniture, planters</li>
-                        <li>Large cast iron urns/planters</li>
-                        <li>Outdoor heater</li>
-                        <li>Stereo components - Kenwood, Yamaha, Sony, Harmon Karden, Energy, Rotel, Integra, Panamax, MORE!</li>
-                        <li>Model cars, 1/18, Exact Detail, Ertl, Sunstar</li>
-                        <li>Hess trucks (some new in boxes)</li>
-                        <li>TVs - Pioneer Elite, etc. big & small</li>
-                        <li>Tools, bikes, roller blades, more!</li>
-                        <li class="more">More!</li>
-					</ul>
-				</div>
-			</div>
-
-			<div class="sale-col">
-				<div class="sale-list sale-list-b">
+                <div class="sale-list sale-list-b">
                     <header class="list-header">
 						<h3 class="heading-4">Art</h3>
 						<svg>
@@ -150,69 +141,174 @@ get_header();
 						</svg>
 					</header>
 					<ul class="list">
-						<li>Autographed movie posters</li>
+                        <li>Wm. S. Dawson watercolor & oil paintings</li>
+                        <li>Various unsigned original paintings</li>
+                        <li>Framed prints by Andrew Wyeth, Robert Shaw, Phillip Wikoff (signed & numbered), Vintage TWA & PanAm posters</li>
                         <li>Many framed & unframed prints</li>
                         <li class="more">More!</li>
 					</ul>
 				</div>
+			</div>
 
-				<div class="sale-list sale-list-e">
+			<div class="sale-col">
+                <div class="sale-list sale-list-d">
+                    <header class="list-header">
+						<h3 class="heading-4">Furniture</h3>
+						<svg>
+							<use xlink:href="#icon-down"></use>
+						</svg>
+					</header>
+					<ul class="list">
+                        <li>Mahogany corner chair</li>
+                        <li>Coffee table in form of Child size kneehole partners desk, well made, so unique!</li>
+                        <li>Mahogany twin bedroom suite:  (sold separately)  dresser, chest, nightstand</li>
+                        <li>Queen cherry bedroom suite:  (sold separately) poster bed, dresser/triple mirror, chest on chest, two nightstands...EXCELLENT!</li>
+                        <li>Mahogany cheval mirror</li>
+                        <li>Hunt Country Furniture double bed</li>
+                        <li>Hunt Country Furniture Windsor style chair</li>
+                        <li>Hunt Country furniture counter stool</li>
+                        <li>Set of four stenciled plank seat chairs</li>
+                        <li>Round pine dining table</li>
+                        <li>Willet Maple bedroom suite: (sold separately) double bed, chest on chest, dresser w/mirror, nightstand </li>
+                        <li>Slant front serpentine desk</li>
+                        <li>Pine bookcases</li>
+                        <li>Kneehole desks</li>
+                        <li>Victorian sofa, settee & side chairs, beautifully upholstered, excellent condition!</li>
+                        <li>Cherry dining table & chairs, folds to 16"wide</li>
+                        <li>Statton mahogany sideboard</li>
+                        <li>Pine hanging cupboard</li>
+                        <li>"Hammary" end tables, chests</li>
+                        <li>Mission style sofa</li>
+                        <li>Wrought iron sofa, chair, lounge & tables</li>
+                        <li class="more">More!</li>
+					</ul>
+				</div>
+
+                <div class="sale-list sale-list-c">
                     <header class="list-header">
 						<h3 class="heading-4">Silver & Jewelry</h3>
 						<svg>
 							<use xlink:href="#icon-down"></use>
 						</svg>
 					</header>
-					<ul class="list">
+                    <ul class="list">
+                        <li>Gorham sterling three light candelabra, pair</li>
+                        <li>Wallace Sterling flatware set</li>
+                        <li>Gorham sterling flatware set</li>
+                        <li>Souvenir spoon rack, full, many sterling</li>
+                        <li>Antique Silver-plated & cut glass castor set, all original </li>
                         <li>Fine 14k & 18k gold necklaces, bracelets, earrings, rings</li>
-                        <li>Phillip Stein diamond watch</li>
-                        <li>18k Gold Tag Heuer watch</li>
-                        <li>Tiffany jewelry</li>
-                        <li>Lizzy Fortunato earrings</li>
-                        <li>Sterling jewelry</li>
-                        <li>Pandora bracelets</li>
-                        <li>Antique sterling & enamel Russian purse..so unique!</li>
-                        <li>"Royal Danish" Sterling tea/coffee service</li>
-                        <li>Royal Crest Sterling "Wildflower" flatware set - 190 pcs.!!</li>
-                        <li>Kirk Sterling vermeil "Repousse" flatware - various pieces </li>
-                        <li>Kirk Sterling "Repousse" bowl, dishes</li>
-                        <li>Sterling bowls, dishes, trays, etc.</li>
                         <li>Costume jewelry</li>
+                        <li>Mink stole</li>
+                        <li>Collection of vintage hats (w/hatboxes)</li>
                         <li class="more">More!</li>
-					</ul>
-
+                    </ul>
 				</div>
 			</div>
 
 			<div class="sale-col">
-				<div class="sale-list sale-list-c">
+                <div class="sale-list sale-list-e">
                     <header class="list-header">
-						<h3 class="heading-4">Accessories</h3>
+						<h3 class="heading-4">Accessories & Rugs</h3>
+						<svg>
+							<use xlink:href="#icon-down"></use>
+						</svg>
+					</header>
+					<ul class="list">
+                        <li>Brass andirons & fireplace tools</li>
+                        <li>Gone With The Wind lamp, hand painted</li>
+                        <li>Stiffel lamps, table top & floor lamps</li>
+                        <li>Vintage wire umbrella stand</li>
+                        <li>Pewter tea & coffee service</li>
+                        <li>Pewter lavabo</li>
+                        <li>Antique pewter charger</li>
+                        <li>Large copper chafing dish</li>
+                        <li>Wrought iron candle chandelier</li>
+                        <li>Waterford decanters</li>
+                        <li>Fostoria "Coin" punchbowl on pedestal w/12 cups</li>
+                        <li>Fostoria "American" cake stand, bowls, plates, etc.</li>
+                        <li>Lenox "Roselyn" china</li>
+                        <li>Johnson Bros. large antique china set</li>
+                        <li>XL primitive round cutting board</li>
+                        <li>XL long handled cutting board</li>
+                        <li>Karastan rugs & runners, Kirman 12' x 18', 11' x 12', and more...EXCELLENT CONDITION! BEAUTIFUL!! Many sizes!</li>
+                        <li class="more">More!</li>
+					</ul>
+				</div>
+
+                <div class="sale-list sale-list-c">
+                    <header class="list-header">
+						<h3 class="heading-4">Vintage Toys</h3>
 						<svg>
 							<use xlink:href="#icon-down"></use>
 						</svg>
 					</header>
                     <ul class="list">
-                        <li>Oriental rugs & runners...BEAUTIFUL!! Many sizes!</li>
-                        <li>Gilded mirrored sconces</li>
-                        <li>Fabulous floral arrangements, NDI, many!</li>
-                        <li>Faux trees & topiariesv
-                        <li>Excellent lamps & floor lamps</li>
-                        <li>Large candle holders, urns, hurricanes, etc.</li>
-                        <li>Beautiful mirrors</li>
-                        <li>Excellent custom decorator pillows</li>
-                        <li>Fireplace screens</li>
-                        <li>Chelsea House urns, vases</li>
-                        <li>Portmeirion dishes/serving pieces</li>
-                        <li>Longaberger baskets...a collection!</li>
-                        <li>Henckels knives</li>
-                        <li>Cutco cookware</li>
-                        <li>Mauviel Copper stock pot</li>
+                        <li>Antique dolls</li>
+                        <li>Airplanes by Schuco, Hubley, PanAm</li>
+                        <li>Trucks by Structo, Buddy L, Tonks, Mattel</li>
+                        <li>1930's & 40's cars by Barclay, Tootsietoy & Hubley</li>
+                        <li>G.I. Joe footlocker w/figure & accessories</li>
+                        <li>HO trains, platform and transformers</li>
+                        <li>Slot car track, mounted, (no cars)</li>
+                        <li>Vintage Hot Wheels tracks, speedometer</li>
+                        <li>Vintage games, space ships, etc.</li>
                         <li class="more">More!</li>
                     </ul>
 				</div>
 			</div>
+
+            <div class="sale-col">
+				<div class="sale-list sale-list-c">
+                    <header class="list-header">
+						<h3 class="heading-4">Tools</h3>
+						<svg>
+							<use xlink:href="#icon-down"></use>
+						</svg>
+					</header>
+                    <ul class="list">
+                        <li>Craftsman tool chests</li>
+                        <li>Toro snow thrower</li>
+                        <li>Hose reels</li>
+                        <li>Schumacher battery charger</li>
+                        <li>Cyclops XL flashlight</li>
+                        <li>Little Giant & Werner ladders</li>
+                        <li class="more">More!</li>
+                    </ul>
+				</div>
+			</div>
+
+            <div class="sale-col">
+                <div class="sale-list sale-list-c">
+                    <header class="list-header">
+                        <h3 class="heading-4">Also</h3>
+                        <svg>
+                            <use xlink:href="#icon-down"></use>
+                        </svg>
+                    </header>
+                    <ul class="list">
+                        <li>Vintage bikes: Connondale & Merlin Agilis</li>
+                        <li>Singer sewing machine w/cabinet</li>
+                        <li>Toro snow thrower</li>
+                        <li>Char Broil Patio Bistro gas grill</li>
+                        <li>Car ramp</li>
+                        <li>Schwinn exercise bike</li>
+                        <li>Oreck vacuums</li>
+                        <li>Two new-in-box Instant Pots</li>
+                        <li>New-in-box Keurig K-Cafe</li>
+                        <li>Sentry locking safe boxes, several</li>
+                        <li>Cameras & projectors, Nikons, Polaroids, Kodak, etc.</li>
+                        <li>HP printer</li>
+                        <li>Bose Acoustamass speakers, set</li>
+                        <li>Vintage turntables, receivers, etc.</li>
+                        <li>LPs, vintage</li>
+                        <li class="more">More!</li>
+                    </ul>
+                </div>
+            </div>
+
 		</div>
+    </div>
 
 		<div class="sale-close container-small">
 			<ul>
