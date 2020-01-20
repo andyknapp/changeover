@@ -314,11 +314,6 @@ get_header();
 			</header>
 			<div class="upcoming-sales animation-element fade" data-trigger="0.91">
 				<ul class="address">
-					<li>January 22 - 25</li>
-					<li>Edenridge</li>
-					<li>Wilmington, DE</li>
-				</ul>
-				<ul class="address">
 					<li>January 31 & Feb 1</li>
 					<li>Guilty Girls Warehouse Sale</li>
 					<li>DuPont CC</li>
