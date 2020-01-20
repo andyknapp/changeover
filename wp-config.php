@@ -41,8 +41,8 @@ if ($_SERVER['HTTP_HOST'] == 'changeoversales.com') {
 
 if ($_SERVER['HTTP_HOST'] == 'changeoversales.com') {
 	define('DOMAIN_CURRENT_SITE', 'changeoversales.com');
-	define('WP_HOME','http://changeoversales.com');
-	define('WP_SITEURL','http://changeoversales.com');
+	define('WP_HOME','https://changeoversales.com');
+	define('WP_SITEURL','https://changeoversales.com');
 
 } else if ($_SERVER['HTTP_HOST'] == 'staging.changeoversales.com') {
 	define('DOMAIN_CURRENT_SITE', 'staging.changeoversales.com');
@@ -98,7 +98,10 @@ $table_prefix  = 'co_';
  *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
-define('WP_DEBUG', false);
+define('WP_DEBUG', true);
+define('WP_DEBUG_LOG', true);
+define('WP_DEBUG_DISPLAY', false);
+
 define( 'WP_POST_REVISIONS', 3 );
 
 /* That's all, stop editing! Happy blogging. */
