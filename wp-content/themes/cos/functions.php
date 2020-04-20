@@ -129,12 +129,14 @@ function cos_scripts() {
 
 	wp_register_script('scrollspy-js', get_stylesheet_directory_uri() . '/assets/js/scrollspy.js', array('global-js'), THEME_VERSION, true);
 
-	wp_enqueue_script('bxslider-js');
-	//wp_enqueue_script('stickybits-js');
-	wp_enqueue_script('animation-driver-js');
-	wp_enqueue_script('scrollspy-js');
-	wp_enqueue_script('global-js');
+    wp_enqueue_script('global-js');
 
+    if ( is_page_template('page-home.php') ) {
+        wp_enqueue_script('bxslider-js');
+    	//wp_enqueue_script('stickybits-js');
+    	wp_enqueue_script('animation-driver-js');
+    	wp_enqueue_script('scrollspy-js');
+    }
 }
 add_action( 'wp_enqueue_scripts', 'cos_scripts' );
 
