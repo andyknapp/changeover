@@ -33,7 +33,7 @@ if ( $_SERVER['HTTP_HOST'] == 'changeoversales.com' ) {
 	define('WP_SITEURL','https://changeoversales.com');
 
 } else if ( $_SERVER['HTTP_HOST'] == 'staging.changeoversales.com' ) {
-	define('DB_NAME', 'db173289_changeover');
+	define('DB_NAME', 'db173289_staging_changeover');
 	define('DB_USER', 'db173289_user');
 	define('DB_PASSWORD', '4?exf?1GnK_');
 	define('DB_HOST', 'internal-db.s173289.gridserver.com');
