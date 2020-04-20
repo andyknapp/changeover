@@ -20,25 +20,29 @@ get_header();
 
 	<section id="next-sale" class="sale major-section sticky-parent">
 		<header class="sale-header">
-			<?php // if there is an active sale ?>
 				<h2 class="heading-1">Next Sale</h2>
-
-			<?php //else : ?>
 				<!-- <h2 class="heading-2">Upcoming Sale</h2> -->
-				<ul class="address">
-                    <li>617 Berwick Rd.</li>
-					<li>Wilmington, DE 19803</li>
-                    <li class="break">Edenridge (corner of Mt. Lebanon & Berwick Rds)</li>
-				</ul>
+				<!-- <ul class="address">
+                    <li>Way Ridge</li>
+                    <li>Greenville, DE</li>
+                    <li class="break">(off Way Rd.)</li>
+				</ul> -->
 
-				<ul class="date-time">
-                    <li>Wednesday Jan 22 <span>6pm - 8pm*</li>
+				<!-- <ul class="date-time">
+                    <li>Wednesday Jan 22 <span>6pm - 8pm*</span></li>
 					<li>Thursday Jan 23 <span>10am - 4pm</span></li>
 					<li>Friday Jan 24 <span>10am - 4pm</span></li>
 					<li>Saturday Jan 25 <span>9am - 1pm</span></li>
-				</ul>
+				</ul> -->
 
-				<div class="sale-meta">
+                <!-- <ul class="date-time">
+                    <li>Wednesday April 8</li>
+					<li>Thursday April 9</li>
+					<li>Friday April 10</li>
+					<li>Saturday April 11</li>
+				</ul> -->
+
+				<!-- <div class="sale-meta">
 					<a href="https://www.google.com/maps/dir//617+Berwick+Rd,+Wilmington,+DE+19803/@39.8009299,-75.5652754,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x89c6fc8531be97bb:0x34a3eb6c0e763aa5!2m2!1d-75.5630814!2d39.8009299!3e0" class="external-link" target="_blank">
 						<svg class="direction">
 							<use xlink:href="#icon-location"></use>
@@ -59,16 +63,17 @@ get_header();
 						</svg>
 						<span>Visit us on Facebook</span>
 					</a>
-				</div>
+				</div> -->
 		</header>
 
 		<div class="sale-description container-small">
-			<p class="copy-1">Period antiques, vintage toys, Sterling silver, fine jewelry, art, rugs, etc. All in excellent condition! <span>*Line numbers start at 4pm on Wednesday</span></p>
+            <!-- <p class="copy-1">Period antiques, vintage toys, Sterling silver, fine jewelry, art, rugs, etc. All in excellent condition! <span>*Line numbers start at 4pm on Wednesday</span></p> -->
+			<p class="copy-1" style="text-align:center;">Check back soon for more information.</p>
 		</div>
 
 
 
-		<div class="sale-lists sale-cols container-site">
+		<!-- <div class="sale-lists sale-cols container-site">
 
 			<div class="sale-col">
 				<div class="sale-list  sale-list-a">
@@ -296,34 +301,29 @@ get_header();
                 </div>
             </div>
 
-		</div>
+		</div> -->
     </div>
 
-		<div class="sale-close container-small">
+		<!-- <div class="sale-close container-small">
 			<ul>
 				<li>So much more...still unearthing! Please, cash or check only, or credit card with fees (2.75%)</li>
 				<li>Follow the <span class="pink">pink signs</span> & <i>please</i> obey signage.</li>
 				<li>As always, <i>please</i> respect the home owner's and neighbors' properties and park thoughtfully. Thanks!</li>
 			</ul>
-		</div>
+		</div> -->
 
 		<aside class="upcoming container-small">
-			<header class="upcoming-header flex animation-element fade-up" data-trigger="0.925">
+			<!-- <header class="upcoming-header flex animation-element fade-up" data-trigger="0.925">
 				<h4 class="heading-3 underline">Upcoming Sales</h4>
 				<p>Check back soon for more information!</p>
 			</header>
 			<div class="upcoming-sales animation-element fade" data-trigger="0.91">
 				<ul class="address">
-					<li>January 31 & Feb 1</li>
-					<li>Guilty Girls Warehouse Sale</li>
-					<li>DuPont CC</li>
+                    <li>April 22-25</li>
+                    <li>Historic Mansion</li>
+                    <li>Wilmington, DE</li></li>
 				</ul>
-                <ul class="address">
-					<li>TBA</li>
-					<li>Centreville Reserve</li>
-					<li>Centreville, DE</li>
-				</ul>
-			</div>
+			</div> -->
 		</aside>
 	</section>
 
