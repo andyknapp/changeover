@@ -24,14 +24,16 @@ get_header();
             </header>
 
             <div class="shop-grid">
-                <article class="product-thumb">
-                    <h3>Product </h3>
-                </article>
-            </div>
-            <!-- <div class="list-header">
-                <h2 class="heading-4">Category Name</h2>
-            </div> -->
 
+                <?php
+                    // while ( have_posts() ) : the_post();
+                    //
+                    //     the_content();
+                    //
+            		// endwhile; // End of the loop.
+        		?>
+
+            </div>
 		</div>
 	</section>
 
