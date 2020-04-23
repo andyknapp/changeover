@@ -48,6 +48,10 @@
 	@include fluid-scale(font-size, 20em, 80em, 0.875em, 1em);
 }
 
+%fs-14 {
+	@include fluid-scale(font-size, 20em, 80em, 0.75em, 0.875em);
+}
+
 
 
 body {
@@ -133,6 +137,19 @@ a {
 %heading-4,
 .heading-4 {
   @extend %fs-24;
+  font-weight: 600;
+  //text-transform: uppercase;
+}
+
+%heading-5,
+.heading-5 {
+    @extend %font-body;
+    @extend %fs-14;
+}
+
+%heading-product-preview,
+.heading-product-preview {
+  @extend %fs-22;
   font-weight: 600;
   //text-transform: uppercase;
 }

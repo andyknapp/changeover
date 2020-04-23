@@ -21,6 +21,34 @@
 	max-width: 62em;
 }
 
+.content-area {
+    .site-main {
+        padding-bottom: 4em;
+    }
+}
+
+// sticky footer
+.site-content {
+	min-height: 100%;
+	margin-bottom: - $footer-height;
+
+	&::after {
+		content: '';
+		display: block;
+		height: $footer-height;
+	}
+
+    @media (min-width: $bp-nav) {
+        margin-bottom: - $footer-height-2;
+
+        &::after {
+            height: $footer-height-2;
+        }
+    }
+}
+
+
+
 %pad {
 	padding: 4.5em 1em;
 

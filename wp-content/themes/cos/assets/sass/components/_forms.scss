@@ -29,16 +29,23 @@ input {
 	}
 }
 
-// select {
-// 	@extend %input;
-// 	color: $color-gray-less-dark;
-// 	background: $color-white url('../icons/down-select.svg') no-repeat calc(100% - 1.2em) center / 10px 5px;
-// 	-moz-appearance: none; //sass-lint:disable-line no-vendor-prefixes
-//
-// 	&::-ms-expand { // hide ua menu icon in IE
-// 		display: none;
-// 	}
-// }
+select {
+	@extend %input;
+    padding: 0.5em 2em 0.5em 1em;
+	color: $color-black-2;
+    border-color: $color-gray-2;
+    border-radius: 4px;
+	background: $color-white url('../icons/sort.svg') no-repeat calc(100% - 0.5em) center / 9px 16px;
+	-moz-appearance: none; //sass-lint:disable-line no-vendor-prefixes
+
+	&::-ms-expand { // hide ua menu icon in IE
+		display: none;
+	}
+
+    &.orderby {
+        @extend %fs-14;
+    }
+}
 
 textarea {
 	@extend %input;

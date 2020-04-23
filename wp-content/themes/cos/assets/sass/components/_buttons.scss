@@ -40,6 +40,7 @@ button:not(.no-button-style) { //sass-lint:disable-line force-pseudo-nesting
 	@extend %button;
 }
 
+
 .no-button-style {
 	border-width: 0;
 	padding: 0;

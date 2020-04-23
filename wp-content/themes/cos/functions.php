@@ -109,8 +109,8 @@ add_action( 'after_setup_theme', 'cos_custom_image_setup' );
 
 function cos_add_woocommerce_support() {
 	add_theme_support( 'woocommerce', array(
-		'thumbnail_image_width' => 150,
-		'single_image_width'    => 300,
+		'thumbnail_image_width' => 500,
+		'single_image_width'    => 1000,
 
         'product_grid'          => array(
             'default_rows'    => 3,
@@ -193,3 +193,68 @@ function init_scripts() {
 }
 
 add_filter( 'gform_confirmation_anchor', '__return_true' );
+
+
+// woocommerce
+// add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
+
+function cos_dequeue_styles( $enqueue_styles ) {
+    //unset( $enqueue_styles['woocommerce-general'] );	// Remove the gloss
+    unset( $enqueue_styles['woocommerce-layout'] );		// Remove the layout
+    unset( $enqueue_styles['woocommerce-smallscreen'] );	// Remove the smallscreen optimisation
+    return $enqueue_styles;
+}
+add_filter( 'woocommerce_enqueue_styles', 'cos_dequeue_styles' );
+
+
+add_action( 'wp_print_styles', 'wps_deregister_styles', 100 );
+function wps_deregister_styles() {
+    wp_dequeue_style( 'wp-block-library' );
+}
+
+/**
+ * Change number of products that are displayed per page (shop page)
+ */
+
+function cos_loop_shop_per_page( $cols ) {
+    // $cols contains the current number of products per page based on the value stored on Options -> Reading
+    // Return the number of products you wanna show per page.
+    $cols = 5;
+    return $cols;
+}
+add_filter( 'loop_shop_per_page', 'cos_loop_shop_per_page', 20 );
+
+
+// Modify the default WooCommerce orderby dropdown
+//
+// Options: menu_order, popularity, rating, date, price, price-desc
+// In this example I'm removing price & price-desc but you can remove any of the options
+function cos_woocommerce_catalog_orderby( $orderby ) {
+    unset($orderby['popularity']);
+    unset($orderby['menu_order']);
+    return $orderby;
+}
+add_filter( 'woocommerce_catalog_orderby', 'cos_woocommerce_catalog_orderby', 20 );
+
+
+// custom markup in product thumbnails
+remove_action( 'woocommerce_shop_loop_item_title','woocommerce_template_loop_product_title', 10 );
+
+function cos_woocommerce_template_loop_product_title() {
+    echo '<div class="product-detail-wrap"><h2 class="heading-product-preview">' . get_the_title() . '</h2>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+}
+add_filter( 'woocommerce_shop_loop_item_title', 'cos_woocommerce_template_loop_product_title' );
+
+
+
+// Add the opening div to the img
+function add_img_wrapper_start() {
+    echo '<div class="archive-img-wrap">';
+}
+add_action( 'woocommerce_before_shop_loop_item_title', 'add_img_wrapper_start', 5, 2 );
+
+// Close the div that we just added
+function add_img_wrapper_close() {
+    echo '</div>';
+}
+add_action( 'woocommerce_before_shop_loop_item_title', 'add_img_wrapper_close', 12, 2 );
