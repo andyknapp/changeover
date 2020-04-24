@@ -20,6 +20,10 @@
 	@include fluid-scale(font-size, 20em, 80em, 2.625em, 3.875em);
 }
 
+%fs-40 {
+	@include fluid-scale(font-size, 20em, 80em, 1.5em, 2.5em);
+}
+
 %fs-32 {
 	@include fluid-scale(font-size, 20em, 80em, 1.6875em, 2em);
 }
@@ -129,9 +133,11 @@ a {
   font-weight: 300;
 }
 
+%heading-3,
 .heading-3 {
-  @extend %fs-32;
-  font-weight: 600;
+    @extend %font-heading;
+    @extend %fs-32;
+    font-weight: 600;
 }
 
 %heading-4,
@@ -154,6 +160,13 @@ a {
   //text-transform: uppercase;
 }
 
+%heading-product-single,
+.heading-product-single {
+    @extend %font-heading;
+    @extend %fs-40;
+    font-weight: 600;
+}
+
 
 %copy-1,
 .copy-1 {
@@ -165,6 +178,13 @@ a {
 %copy-2,
 .copy-2 {
   @extend %fs-20;
+  margin-bottom: 1em;
+  line-height: 1.5;
+}
+
+%copy-3,
+.copy-3 {
+  @extend %fs-18;
   margin-bottom: 1em;
   line-height: 1.5;
 }
