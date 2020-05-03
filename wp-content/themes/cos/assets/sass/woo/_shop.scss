@@ -136,6 +136,7 @@
             .button.alt {
                 &.single_add_to_cart_button {
                     @extend %button;
+                    padding: 0.75em 6em;
                 }
             }
 
@@ -200,8 +201,19 @@
     .woocommerce-breadcrumb {
         @extend .container-site;
         margin: 4em auto 2em;
-        font-size: 16px;
+        font-size: 14px;
         text-align: center;
+        word-spacing: 8px;
+
+        a {
+            &:hover {
+                color: $color-red;
+            }
+        }
+
+        @media (min-width: $bp-nav) {
+            margin: 6em auto 3em;
+        }
     }
 
 

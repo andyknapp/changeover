@@ -263,3 +263,61 @@ function add_img_wrapper_close() {
 add_action( 'woocommerce_before_shop_loop_item_title', 'add_img_wrapper_close', 12, 2 );
 
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
+
+
+
+/**
+ * Replace the home link URL
+ */
+// function cos_breadrumb_home_url() {
+//     return get_permalink( wc_get_page_id( 'shop' ) );
+// }
+// add_filter( 'woocommerce_breadcrumb_home_url', 'cos_breadrumb_home_url' );
+//
+//
+// /**
+//  * Rename "home" in breadcrumb
+//  */
+// function cos_breadcrumb_home_text( $defaults ) {
+//     // Change the breadcrumb home text from 'Home' to 'Apartment'
+//     $defaults['home'] = 'Shop Home';
+//     return $defaults;
+// }
+// //add_filter( 'woocommerce_breadcrumb_defaults', 'cos_breadcrumb_home_text' );
+function cos_wc_remove_tax_from_breadcrumb( $crumbs ) {
+	//$tax 	= get_terms( 'product_cat' );
+    $terms = get_terms( array(
+        'taxonomy' => 'product_cat',
+        'hide_empty' => false,
+    ) );
+
+    var_dump($terms);
+	$caregory_link 	= get_category_link( $category );
+
+	foreach ( $crumbs as $key => $crumb ) {
+		if ( in_array( $terms, $crumb ) ) {
+			unset( $crumbs[ $key ] );
+		}
+	}
+
+	return array_values( $crumbs );
+}
+
+//add_filter( 'woocommerce_get_breadcrumb', 'cos_wc_remove_tax_from_breadcrumb', 20, 2 );
+
+add_filter( 'woocommerce_get_breadcrumb', 'custom_product_tag_crumb', 20, 2 );
+function custom_product_tag_crumb( $crumbs, $breadcrumb ){
+    // Targetting product tags
+    $current_taxonomy  = 'product_tag';
+    $current_term      = $GLOBALS['wp_query']->get_queried_object();
+    $current_key_index = sizeof($crumbs) - 1;
+
+    // Only product tags
+    if( is_a($current_term, 'WP_Term') && term_exists( $current_term->term_id, $current_taxonomy ) ) {
+        // The label term name
+        $crumbs[$current_key_index][0] = sprintf( __( 'My Edit: %s', 'woocommerce' ), $current_term->name );
+        // The term link (not really necessary as we are already on the page)
+        $crumbs[$current_key_index][1] = '';
+    }
+    return $crumbs;
+}
