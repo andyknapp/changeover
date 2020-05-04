@@ -42,13 +42,27 @@
 		<button class="menu-toggle no-button-style" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'cos' ); ?></button>
 
 		<nav id="site-navigation" class="site-nav">
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-				'container'	=> '',
-			) );
-			?>
+            <ul id="primary-menu" class="menu">
+
+    			<?php
+        			wp_nav_menu( array(
+        				'theme_location' => 'menu-1',
+        				'menu_id'        => 'primary-menu',
+        				'container'	=> '',
+                        'items_wrap' => '%3$s'
+        			) );
+    			?>
+
+                <li class="site-cart-container menu-item">
+                    <a class="site-cart" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>">
+                        <span class="cart-count"><?php echo is_object( WC()->cart ) ? WC()->cart->get_cart_contents_count() : ''; ?></span>
+
+                        <svg>
+                            <use xlink:href="#icon-shopping-bag"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
 		</nav><!-- #site-navigation -->
 	</div>
 </header><!-- #masthead -->

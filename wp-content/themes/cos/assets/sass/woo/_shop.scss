@@ -203,11 +203,26 @@
         margin: 4em auto 2em;
         font-size: 14px;
         text-align: center;
-        word-spacing: 8px;
 
         a {
+            position: relative;
+            margin: 0 1.5em 0 0;
+            color: $color-gray-5;
+
+            &::after {
+                content: '/';
+                display: block;
+                position: absolute;
+                top: 0;
+                right: -0.875em;
+            }
+
             &:hover {
                 color: $color-red;
+
+                &:after {
+                    color: $color-gray-5;
+                }
             }
         }
 
@@ -288,5 +303,56 @@
             }
         }
     }
+
+
+    // cart
+    .menu-item {
+        &.site-cart-container {
+            margin-left: auto;
+            margin-right: auto;
+
+            &::after {
+                display: none;
+            }
+
+            &:hover {
+                .cart-count {
+                    color: $color-red;
+                }
+
+                svg {
+                    fill: $color-red;
+                }
+            }
+
+            @media (min-width: $bp-nav) {
+                margin: 0;
+            }
+        }
+
+        .site-cart {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: flex-end;
+            padding-top: 0;
+
+            .cart-count {
+                display: block;
+                margin-right: 0.75em;
+                font-size: 0.75em;
+                transition: color 0.2s ease-out;
+            }
+
+            svg {
+                order: 0;
+                display: block;
+                width: (24 / 16) * 1em;
+                height: (24 / 16) * 1em;
+                fill: $color-black-2;
+                transition: fill 0.2s ease-out;
+            }
+        }
+    }
+
 
 }

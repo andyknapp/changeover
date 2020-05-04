@@ -267,35 +267,17 @@ remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_p
 
 
 /**
- * Replace the home link URL
+ * Remove uncategorized from the WooCommerce breadcrumb.
+ *
+ * @param  Array $crumbs    Breadcrumb crumbs for WooCommerce breadcrumb.
+ * @return Array   WooCommerce Breadcrumb crumbs with default category removed.
  */
-// function cos_breadrumb_home_url() {
-//     return get_permalink( wc_get_page_id( 'shop' ) );
-// }
-// add_filter( 'woocommerce_breadcrumb_home_url', 'cos_breadrumb_home_url' );
-//
-//
-// /**
-//  * Rename "home" in breadcrumb
-//  */
-// function cos_breadcrumb_home_text( $defaults ) {
-//     // Change the breadcrumb home text from 'Home' to 'Apartment'
-//     $defaults['home'] = 'Shop Home';
-//     return $defaults;
-// }
-// //add_filter( 'woocommerce_breadcrumb_defaults', 'cos_breadcrumb_home_text' );
-function cos_wc_remove_tax_from_breadcrumb( $crumbs ) {
-	//$tax 	= get_terms( 'product_cat' );
-    $terms = get_terms( array(
-        'taxonomy' => 'product_cat',
-        'hide_empty' => false,
-    ) );
-
-    var_dump($terms);
+function cos_wc_remove_uncategorized_from_breadcrumb( $crumbs ) {
+	$category 	= get_option( 'default_product_cat' );
 	$caregory_link 	= get_category_link( $category );
 
 	foreach ( $crumbs as $key => $crumb ) {
-		if ( in_array( $terms, $crumb ) ) {
+		if ( in_array( $caregory_link, $crumb ) ) {
 			unset( $crumbs[ $key ] );
 		}
 	}
@@ -303,21 +285,29 @@ function cos_wc_remove_tax_from_breadcrumb( $crumbs ) {
 	return array_values( $crumbs );
 }
 
-//add_filter( 'woocommerce_get_breadcrumb', 'cos_wc_remove_tax_from_breadcrumb', 20, 2 );
+add_filter( 'woocommerce_get_breadcrumb', 'cos_wc_remove_uncategorized_from_breadcrumb' );
 
-add_filter( 'woocommerce_get_breadcrumb', 'custom_product_tag_crumb', 20, 2 );
-function custom_product_tag_crumb( $crumbs, $breadcrumb ){
-    // Targetting product tags
-    $current_taxonomy  = 'product_tag';
-    $current_term      = $GLOBALS['wp_query']->get_queried_object();
-    $current_key_index = sizeof($crumbs) - 1;
 
-    // Only product tags
-    if( is_a($current_term, 'WP_Term') && term_exists( $current_term->term_id, $current_taxonomy ) ) {
-        // The label term name
-        $crumbs[$current_key_index][0] = sprintf( __( 'My Edit: %s', 'woocommerce' ), $current_term->name );
-        // The term link (not really necessary as we are already on the page)
-        $crumbs[$current_key_index][1] = '';
+
+
+/**
+ * Show cart contents / total Ajax
+ */
+//add_filter( 'woocommerce_add_to_cart_fragments', 'woocommerce_header_add_to_cart_fragment' );
+
+function woocommerce_header_add_to_cart_fragment( $fragments ) {
+    global $woocommerce;
+
+    ob_start();
+
+    ?>
+    <a class="site-cart" href="<?php echo esc_url(wc_get_cart_url()); ?>" title="<?php _e('View your shopping cart', 'woothemes'); ?>">
+        <?php //echo sprintf(_n('%d item', '%d items', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count);?> <?php //echo $woocommerce->cart->get_cart_total(); ?>
+    </a>
+    <span class="cart-count">
+        <?php echo is_object( WC()->cart ) ? WC()->cart->get_cart_contents_count() : ''; ?>
+    </span>
+    <?php
+        $fragments['.cart-count'] = ob_get_clean();
+        return $fragments;
     }
-    return $crumbs;
-}
