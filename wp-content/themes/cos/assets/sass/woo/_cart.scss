@@ -1,23 +1,152 @@
 .woocommerce-cart {
     .site-content {
-        @extend .container-small;
+        @extend .container-site;
         margin-left: auto;
         margin-right: auto;
     }
 
     .entry-header {
         @extend .shop-intro;
+        padding-bottom: 1em;
+        margin-bottom: 1em;
     }
 
     .entry-title {
         @extend %heading-product-single;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 72px;
+            height: 3px;
+            margin-top: 8px;
+            border-radius: 2px;
+            background-color: $color-red;
+        }
     }
 
     .woocommerce {
         display: grid;
         grid-template-columns: 100%;
         width: 100%;
-        max-width: (1400 / 16) * 1em;
+
+        .cart {
+            .button {
+                @extend %button;
+                padding: 0.75em 3em!important;
+                color: $color-red!important;
+                font-size: 13px;
+                background-color: $color-white;
+                border-color: $color-red;
+                border-radius: 4px;
+
+                &:disabled {
+                    color: $color-gray-2!important;
+                    border-color: $color-gray-2;
+
+                    &:hover {
+                        color: $color-gray-2!important;
+                        border-color: $color-gray-2;
+                        background-color: $color-white;
+                    }
+                }
+
+                &:hover {
+                    color: $color-white!important;
+                    background-color: $color-red;
+                    border-color: $color-red;
+                }
+            }
+        }
+
+        table {
+            &.shop_table,
+            &.cart {
+                border-width: 0;
+                border-radius: 2px;
+
+                th {
+                    @extend %heading-5;
+                    padding: 0 0.5em 0.25em 0;
+                    font-weight: 600;
+
+                    &.product-name {
+                        padding-left: (24 / 14) * 1em;
+                    }
+                }
+
+                td {
+                    padding: 1.5em 0 0;
+                    vertical-align: top;
+
+                    &.product-name {
+                        padding-left: 1.5em;
+                        a {
+                            @extend %heading-product-preview;
+                        }
+                    }
+                }
+
+                .product-subtotal,
+                .product-quantity,
+                .product-price {
+                    width: 80px;
+                    padding-right: 0;
+                    text-align: right;
+                }
+
+                .product-thumbnail {
+                    width: 180px;
+
+                    @media (min-width: $bp-big) {
+                        width: 280px;
+                    }
+                }
+
+                .remove-row {
+                    transform: translateY(-100%);
+
+                    span {
+                        font-size: 0.875em;
+                        vertical-align: top;
+                        color: #757575;
+                    }
+
+                    .product-remove {
+                        padding: 0 0.5em 0;
+                        border-width: 0;
+                        text-align: right;
+
+                        a {
+                            display: inline-block;
+                            text-align: center;
+                            color: $color-red!important;
+                        }
+                    }
+                }
+
+                .action-row {
+                    padding-top: 0;
+
+                    .actions {
+                        border-width: 0;
+                    }
+                }
+
+                img {
+                    display: block;
+                    width: 100%;
+                }
+            }
+
+            &.cart {
+
+            }
+        }
+
+        .cart_totals {
+            border: 1px solid rgba(0,0,0,.1);
+        }
 
 
         @media (min-width: $bp-nav) {
