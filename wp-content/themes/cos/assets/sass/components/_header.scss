@@ -144,7 +144,63 @@ $counter-scale: 1 / $scale;
             }
         }
     }
+
+    &.site-cart-container {
+        margin-left: auto;
+        margin-right: auto;
+
+        &::after {
+            display: none;
+        }
+
+        &:hover {
+            .cart-count {
+                color: $color-red;
+            }
+
+            svg {
+                fill: $color-red;
+            }
+        }
+
+        @media (min-width: $bp-nav) {
+            margin: 0;
+        }
+    }
+
+    .site-cart {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: flex-end;
+        padding-top: 0;
+
+        .cart-count {
+            display: block;
+            margin-right: 0.75em;
+            font-size: 0.75em;
+            transition: color 0.2s ease-out;
+        }
+
+        svg {
+            order: 0;
+            display: block;
+            width: (24 / 16) * 1em;
+            height: (24 / 16) * 1em;
+            fill: $color-black-2;
+            transition: fill 0.2s ease-out;
+        }
+    }
 }
+
+
+// cart
+.menu-item {
+
+}
+
+
+
+
 
 
 @media (min-width: $bp-nav) {

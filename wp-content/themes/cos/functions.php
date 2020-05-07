@@ -295,19 +295,16 @@ add_filter( 'woocommerce_get_breadcrumb', 'cos_wc_remove_uncategorized_from_brea
  */
 //add_filter( 'woocommerce_add_to_cart_fragments', 'woocommerce_header_add_to_cart_fragment' );
 
-function woocommerce_header_add_to_cart_fragment( $fragments ) {
-    global $woocommerce;
 
-    ob_start();
 
-    ?>
-    <a class="site-cart" href="<?php echo esc_url(wc_get_cart_url()); ?>" title="<?php _e('View your shopping cart', 'woothemes'); ?>">
-        <?php //echo sprintf(_n('%d item', '%d items', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count);?> <?php //echo $woocommerce->cart->get_cart_total(); ?>
-    </a>
-    <span class="cart-count">
-        <?php echo is_object( WC()->cart ) ? WC()->cart->get_cart_contents_count() : ''; ?>
-    </span>
-    <?php
-        $fragments['.cart-count'] = ob_get_clean();
-        return $fragments;
-    }
+
+// remove add to cart button from loop and add view product button
+function cos_view_product_button() {
+    global $product;
+    $link = $product->get_permalink();
+
+    echo '<span class="button">View Product</span>';
+}
+
+remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
+add_action( 'woocommerce_after_shop_loop_item_title', 'cos_view_product_button', 10 );

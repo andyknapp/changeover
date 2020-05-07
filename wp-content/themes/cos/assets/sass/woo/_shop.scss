@@ -13,7 +13,6 @@
 
 // woo overrides
 .woocommerce {
-
     // main shop page
     ul.products {
         display: flex;
@@ -37,15 +36,14 @@
         }
 
         // product preview
-        .product {
-            display: flex;
-            flex-flow: column nowrap;
-            align-items: center;
+        li.product {
+            position: relative;
+            display: block;
             width: calc(50% - 1em);
             margin: 0 1em 2em 0;
-            padding: 0 0 1em;
+            padding: 0 0 3em;
             border: 1px solid $color-gray-3;
-            border-radius: 0.25em;
+            border-radius: 0.125em;
             overflow: hidden;
 
             @media (min-width: $bp-nav) {
@@ -65,9 +63,16 @@
                 transition: color 0.2s ease-out;
             }
 
-            .button.product_type_simple.add_to_cart_button {
+            .button.product_type_simple.add_to_cart_button,
+            .button {
                 @extend %button;
+                display: block;
+                position: absolute;
+                bottom: 1em;
+                left: 0;
+                right: 0;
                 width: calc(100% - 2em);
+                margin: 0 auto;
                 font-size: 13px;
                 color: $color-red;
                 border-color: $color-red;
@@ -75,20 +80,31 @@
                 background-color: $color-white;
 
                 &:hover {
-            		color: $color-white;
-            		background-color: $color-red;
+                    color: $color-black-2;
+            		border-color: $color-black-2;
+            		background-color: $color-white;
             	}
             }
 
             .woocommerce-loop-product__link {
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: center;
+                height: 100%;
+
                 &:hover {
                     .heading-product-preview {
                         color: $color-red;
                     }
-                }
-            }
 
-            .woocommerce-loop-product__link {
+                    .button.product_type_simple.add_to_cart_button,
+                    .button {
+                        color: $color-black-2;
+                		border-color: $color-black-2;
+                		background-color: $color-white;
+                    }
+                }
+
                 .archive-img-wrap {
                     overflow: hidden;
                     margin-bottom: 1em;
@@ -99,29 +115,34 @@
                         transform: scale(1);
                         transition: transform 0.25s ease-out;
                     }
+                }
 
-                    &:hover {
-                        img {
-                            transform: scale(1.05);
-                        }
+                &:hover {
+                    img {
+                        transform: scale(1.05);
                     }
                 }
             }
         }
 
         .product-detail-wrap {
-            padding: 0 1em;
+            width: calc(100% - 2em);
+            margin: 0 auto;
+            padding-bottom: 1.5em;
         }
     }
 
 
 
     // single product page
-    .product-single {
+    .type-product {
         display: grid;
         grid-template-columns: 100%;
 
         &.product {
+            width: 100%;
+            max-width: (1400 / 16) * 1em;
+            margin: 0 auto;
             padding: 0 1em;
 
             .product_title {
@@ -300,56 +321,6 @@
                     border-color: darken($color-gray, 25);
                     color: $color-red;
                 }
-            }
-        }
-    }
-
-
-    // cart
-    .menu-item {
-        &.site-cart-container {
-            margin-left: auto;
-            margin-right: auto;
-
-            &::after {
-                display: none;
-            }
-
-            &:hover {
-                .cart-count {
-                    color: $color-red;
-                }
-
-                svg {
-                    fill: $color-red;
-                }
-            }
-
-            @media (min-width: $bp-nav) {
-                margin: 0;
-            }
-        }
-
-        .site-cart {
-            display: flex;
-            flex-flow: row nowrap;
-            align-items: flex-end;
-            padding-top: 0;
-
-            .cart-count {
-                display: block;
-                margin-right: 0.75em;
-                font-size: 0.75em;
-                transition: color 0.2s ease-out;
-            }
-
-            svg {
-                order: 0;
-                display: block;
-                width: (24 / 16) * 1em;
-                height: (24 / 16) * 1em;
-                fill: $color-black-2;
-                transition: fill 0.2s ease-out;
             }
         }
     }
