@@ -1,0 +1,46 @@
+// checkout page
+.woocommerce-checkout {
+    article {
+        @extend .container-small;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 1em;
+    }
+
+    .entry-header {
+        @extend .shop-intro;
+        padding-bottom: 1em;
+        padding-left: 0;
+        margin-bottom: 1em;
+    }
+
+    .entry-title {
+        @extend %heading-product-single;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 72px;
+            height: 3px;
+            margin-top: 8px;
+            border-radius: 2px;
+            background-color: $color-red;
+        }
+    }
+
+
+    .woocommerce-billing-fields__field-wrapper {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+
+        .form-row {
+            width: calc(50% - 0.5em);
+            margin-bottom: 0.5em;
+
+            input {
+                padding: 0.5em 1em;
+            }
+        }
+    }
+}

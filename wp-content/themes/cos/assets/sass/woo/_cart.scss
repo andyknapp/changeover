@@ -10,6 +10,7 @@
     .entry-header {
         @extend .shop-intro;
         padding-bottom: 1em;
+        padding-left: 0;
         margin-bottom: 1em;
     }
 
@@ -32,6 +33,36 @@
         grid-template-columns: 100%;
         width: 100%;
 
+        @media (min-width: $bp-nav) {
+            grid-template-columns: 50%;
+            grid-template-areas:
+                "notices notices"
+                "cart collaterals";
+
+            .cart-collaterals {
+                grid-area: collaterals;
+                padding: 0 0 0 2.5em;
+            }
+
+            .woocommerce-notices-wrapper {
+                grid-area: notices;
+            }
+
+            .woocommerce-cart-form {
+                grid-area: cart;
+            }
+        }
+
+        @media (min-width: $bp-big) {
+            grid-template-columns: 60% 40%;
+
+            .cart-collaterals {
+                padding-left: 5em;
+            }
+        }
+
+
+        // cart page
         .cart {
             .button {
                 @extend %button;
@@ -192,35 +223,6 @@
 
             .wc-proceed-to-checkout {
                 padding: 0;
-            }
-        }
-
-
-        @media (min-width: $bp-nav) {
-            grid-template-columns: 50%;
-            grid-template-areas:
-                "notices notices"
-                "cart collaterals";
-
-            .cart-collaterals {
-                grid-area: collaterals;
-                padding: 0 0 0 2.5em;
-            }
-
-            .woocommerce-notices-wrapper {
-                grid-area: notices;
-            }
-
-            .woocommerce-cart-form {
-                grid-area: cart;
-            }
-        }
-
-        @media (min-width: $bp-big) {
-            grid-template-columns: 60% 40%;
-
-            .cart-collaterals {
-                padding-left: 5em;
             }
         }
     }
