@@ -226,4 +226,11 @@
             }
         }
     }
+
+    .woocommerce table.shop_table .remove-row .product-remove a,
+    .woocommerce table.cart .remove-row .product-remove a {
+        &:hover {
+            color: $color-white!important;
+        }
+    }
 }

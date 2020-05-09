@@ -326,4 +326,29 @@
     }
 
 
+
+
+    // alerts
+    .woocommerce-error,
+    .woocommerce-info,
+    .woocommerce-message {
+        padding: 1em 2em 1em 3.5em;
+        margin: 0 0 2em;
+        position: relative;
+        background-color: #f7f6f7;
+        color: #515151;
+        border: 1px solid $color-blue;
+
+        &:before {
+            color: $color-blue;
+        }
+    }
+
+    .woocommerce-error {
+        border: 2px solid $color-red;
+
+        &:before {
+            color: $color-red;
+        }
+    }
 }

@@ -29,6 +29,40 @@
     }
 
 
+    .woocommerce-billing-fields {
+        h3 {
+            @extend %heading-4;
+            margin: 2em 0 1em;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    #order_review_heading {
+        @extend %heading-4;
+        margin: 2em 0 1em;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .woocommerce-additional-fields {
+        padding-top: 3em;
+    }
+
+    .woocommerce-shipping-fields {
+        padding-top: 2em;
+        margin-bottom: 1em;
+
+        h3 {
+            @extend %heading-5;
+            padding: 0 0.5em 0.25em 0;
+            font-weight: 600;
+        }
+
+        label {
+            position: relative;
+        }
+    }
+
+
     .woocommerce-billing-fields__field-wrapper {
         display: flex;
         flex-flow: row wrap;
@@ -43,4 +77,11 @@
             }
         }
     }
+
+    .woocommerce form .form-row label {
+        @extend %heading-5;
+        padding: 0 0.5em 0.25em 0;
+        font-weight: 600;
+    }
+
 }
