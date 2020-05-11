@@ -55,7 +55,13 @@
 
                 <li class="site-cart-container menu-item">
                     <a class="site-cart" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>">
-                        <span class="cart-count"><?php echo is_object( WC()->cart ) ? WC()->cart->get_cart_contents_count() : ''; ?></span>
+                        <span class="cart-count">
+                            <?php
+                                if( WC()->cart->get_cart_contents_count() > 0 ) {
+                                    echo is_object( WC()->cart ) ? WC()->cart->get_cart_contents_count() : '';
+                                }
+                            ?>
+                        </span>
 
                         <svg>
                             <use xlink:href="#icon-shopping-bag"></use>

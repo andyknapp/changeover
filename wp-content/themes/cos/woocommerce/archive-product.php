@@ -31,13 +31,42 @@ do_action( 'woocommerce_before_main_content' );
 ?>
 
 <section class="shop-intro intro woocommerce-products-header">
-    <div class="container-mid">
-        <header>
-            <h1 class="heading-2 underline">Online </br>Shop</h1>
-        </header>
-        <div class="intro-content">
-            <p><span>Changeover Sales</span> online shop blah blah blah shipping inventory something or other.</p>
-        </div>
+    
+    <?php if( is_product_category() ) : ?>
+        <div class="container-mid centered">
+
+            <?php
+                $queried_object = get_queried_object();
+                $term_name = $queried_object->name;
+                $term_description = $queried_object->description;
+                $description = '';
+                $center = 'center';
+                if ( $term_description ) {
+                    $description = 'has-description';
+                    $center = '';
+                }
+            ?>
+
+            <header class="tax-header <?php echo $description; ?>">
+                <h1 class="heading-2 underline <?php echo $center; ?>"><?php echo $term_name; ?></h1>
+            </header>
+
+            <?php if( $term_description ) : ?>
+                <div class="intro-content">
+                    <p><?php echo $term_description; ?></p>
+                </div>
+            <?php endif; ?>
+
+        <?php else : ?>
+            <div class="container-mid centered">
+                <header>
+                    <h1 class="heading-2 underline">Online </br>Shop</h1>
+                </header>
+                <div class="intro-content">
+                    <p><span>Changeover Sales</span> online shop blah blah blah shipping inventory something or other.</p>
+                </div>
+
+        <?php endif; ?>
     </div>
 </section>
 
