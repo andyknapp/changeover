@@ -34,7 +34,7 @@
 
 <header id="masthead" class="site-header">
 	<div class="container-site">
-		<a href="#content" class="logo">
+		<a href="<?php echo home_url(); ?>" class="logo">
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/Changeover-Sales-logo.png" alt="Changeover Sales Logo">
 			<h1 class="skip-link"><?php bloginfo( 'name' ); ?></h1>
 		</a>

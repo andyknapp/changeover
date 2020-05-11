@@ -31,7 +31,7 @@ do_action( 'woocommerce_before_main_content' );
 ?>
 
 <section class="shop-intro intro woocommerce-products-header">
-    
+
     <?php if( is_product_category() ) : ?>
         <div class="container-mid centered">
 
@@ -58,7 +58,7 @@ do_action( 'woocommerce_before_main_content' );
             <?php endif; ?>
 
         <?php else : ?>
-            <div class="container-mid centered">
+            <div class="container-mid centered shop-home">
                 <header>
                     <h1 class="heading-2 underline">Online </br>Shop</h1>
                 </header>

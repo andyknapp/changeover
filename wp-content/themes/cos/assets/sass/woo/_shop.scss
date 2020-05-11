@@ -5,6 +5,20 @@
 }
 
 .shop-intro {
+    .shop-home {
+        @media (min-width: 51.5em) {
+            align-items: center;
+
+            .heading-2 {
+                margin-bottom: 0;
+            }
+
+            .intro-content p {
+                margin-bottom: 0;
+            }
+        }
+    }
+
     @media (min-width: $bp-nav) {
         padding: 6em 1em;
     }
@@ -141,7 +155,7 @@
 
         &.product {
             width: 100%;
-            max-width: (1400 / 16) * 1em;
+            max-width: (1416 / 16) * 1em;
             margin: 0 auto;
             padding: 0 1em;
 
@@ -278,9 +292,10 @@
     //breadcrumbs
     .woocommerce-breadcrumb {
         @extend .container-site;
-        margin: 4em auto 2em;
+        margin: 4em auto 1em;
         font-size: 14px;
-        text-align: center;
+        max-width: (1416 / 14) * 1em;
+        padding-left: (16 / 14) * 1em;
 
         a {
             position: relative;
@@ -305,7 +320,7 @@
         }
 
         @media (min-width: $bp-nav) {
-            margin: 6em auto 3em;
+            margin: 6em auto 1em;
         }
     }
 
@@ -435,17 +450,17 @@
     // tax archive pages
     &.tax-product_cat {
         .woocommerce-breadcrumb {
-            max-width: (1496 / 14) * 1em;
-            padding-left: (16 / 14) * 1em;
-            text-align: left;
-
-            @media (min-width: $bp-nav) {
-                padding-left: (32 / 14) * 1em;
-            }
-
-            @media (min-width: $bp-big) {
-                padding-left: (48 / 14) * 1em;
-            }
+            max-width: (1416 / 14) * 1em;
+            // padding-left: (16 / 14) * 1em;
+            // text-align: left;
+            //
+            // @media (min-width: $bp-nav) {
+            //     padding-left: (32 / 14) * 1em;
+            // }
+            //
+            // @media (min-width: $bp-big) {
+            //     padding-left: (48 / 14) * 1em;
+            // }
         }
 
         .woocommerce-products-header {
@@ -454,6 +469,7 @@
             .container-mid {
                 flex-flow: column nowrap;
                 justify-content: center;
+                align-items: center;
                 text-align: center;
             }
 

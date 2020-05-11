@@ -3,14 +3,13 @@
         @extend .container-site;
         margin-left: auto;
         margin-right: auto;
-        padding-left: 1em;
-        padding-right: 1em;
     }
 
     .entry-header {
         @extend .shop-intro;
         padding-bottom: 1em;
-        padding-left: 0;
+        padding-left: 1em;
+        padding-right: 1em;
         margin-bottom: 1em;
     }
 
@@ -25,6 +24,14 @@
             margin-top: 8px;
             border-radius: 2px;
             background-color: $color-red;
+        }
+    }
+
+    .return-to-shop {
+        margin-left: 1em;
+
+        .button {
+            @extend %button;
         }
     }
 
