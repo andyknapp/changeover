@@ -106,7 +106,7 @@ function cos_custom_image_setup () {
 }
 add_action( 'after_setup_theme', 'cos_custom_image_setup' );
 
-
+// woo stuff
 function cos_add_woocommerce_support() {
 	add_theme_support( 'woocommerce', array(
 		'thumbnail_image_width' => 500,
@@ -121,8 +121,29 @@ function cos_add_woocommerce_support() {
             'max_columns'     => 5,
         ),
 	) );
+
+    add_theme_support( 'wc-product-gallery-zoom' );
+    //add_theme_support( 'wc-product-gallery-lightbox' );
+    add_theme_support( 'wc-product-gallery-slider' );
 }
 add_action( 'after_setup_theme', 'cos_add_woocommerce_support' );
+
+
+add_filter( 'woocommerce_get_image_size_single', function( $size ) {
+	return array(
+		'width'  => 1000,
+		'height' => 750,
+		'crop'   => 1,
+	);
+} );
+
+add_filter( 'woocommerce_get_image_size_gallery_thumbnail', function( $size ) {
+	return array(
+		'width'  => 200,
+		'height' => 150,
+		'crop'   => 1,
+	);
+} );
 
 
 /**
