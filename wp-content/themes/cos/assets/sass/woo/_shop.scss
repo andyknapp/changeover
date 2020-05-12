@@ -171,7 +171,11 @@
             .button.alt {
                 &.single_add_to_cart_button {
                     @extend %button;
-                    padding: 0.75em 6em;
+                    padding: 0.75em 3em;
+
+                    @media (min-width: 980px) {
+                        padding: 0.75em 6em;
+                    }
                 }
             }
 
@@ -186,6 +190,20 @@
 
             .woocommerce-product-gallery__wrapper {
                 width: 100%;
+            }
+
+            .cart {
+                display: flex;
+                flex-flow: row wrap;
+                align-items: center;
+
+                .quantity {
+                    margin-right: 0.4em;
+
+                    input {
+                        padding: (17.5 / 16) * 1em;
+                    }
+                }
             }
         }
 
@@ -288,6 +306,16 @@
                     }
                 }
             }
+        }
+
+        span.onsale {
+            display: none!important;
+        }
+
+        div.product p.price ins,
+        div.product span.price ins {
+            font-weight: 400;
+            text-decoration: none;
         }
     }
 
