@@ -1,4 +1,8 @@
 .woocommerce-cart {
+    .entry-content {
+        padding: 0 1em 4em;
+    }
+
     .site-content {
         @extend .container-site;
         margin-left: auto;
