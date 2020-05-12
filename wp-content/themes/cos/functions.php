@@ -329,3 +329,11 @@ function cos_view_product_button() {
 
 remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
 add_action( 'woocommerce_after_shop_loop_item_title', 'cos_view_product_button', 10 );
+
+
+// remove wysiwyg from woo products 
+function init_remove_support(){
+    $post_type = 'product';
+    remove_post_type_support( $post_type, 'editor');
+}
+add_action('init', 'init_remove_support',100);
