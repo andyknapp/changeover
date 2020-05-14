@@ -216,9 +216,12 @@ q:before {
 }
 
 /* line 1, ../sass/base/_typography.scss */
-body, .woocommerce .woocommerce-result-count span, .woocommerce-cart .woocommerce table.shop_table th, .woocommerce-cart .woocommerce table.cart th, .woocommerce-checkout .woocommerce-shipping-fields h3, .woocommerce-checkout .woocommerce form .form-row label, .woocommerce-checkout #add_payment_method #payment .form-row label,
-.woocommerce-checkout .woocommerce-cart #payment .form-row label,
-.woocommerce-checkout .woocommerce-checkout #payment .form-row label,
+body, .woocommerce .woocommerce-result-count span, .woocommerce-cart .woocommerce table.shop_table th, .woocommerce-cart .woocommerce table.cart th, .woocommerce-checkout .woocommerce-shipping-fields h3, .woocommerce-checkout .woocommerce form .form-row label, .woocommerce-checkout #add_payment_method #payment .form-row input label,
+.woocommerce-checkout #add_payment_method #payment .form-row .wc-square-credit-card-hosted-field label,
+.woocommerce-checkout .woocommerce-cart #payment .form-row input label,
+.woocommerce-checkout .woocommerce-cart #payment .form-row .wc-square-credit-card-hosted-field label,
+.woocommerce-checkout .woocommerce-checkout #payment .form-row input label,
+.woocommerce-checkout .woocommerce-checkout #payment .form-row .wc-square-credit-card-hosted-field label,
 .heading-5 {
   font-family: 'Open Sans', sans-serif;
 }
@@ -422,26 +425,35 @@ body, .woocommerce .woocommerce-result-count span, .woocommerce-cart .woocommerc
 }
 
 /* line 4, ../sass/base/_mixins.scss */
-.woocommerce .woocommerce-result-count span, .woocommerce-cart .woocommerce table.shop_table th, .woocommerce-cart .woocommerce table.cart th, .woocommerce-checkout .woocommerce-shipping-fields h3, .woocommerce-checkout .woocommerce form .form-row label, .woocommerce-checkout #add_payment_method #payment .form-row label,
-.woocommerce-checkout .woocommerce-cart #payment .form-row label,
-.woocommerce-checkout .woocommerce-checkout #payment .form-row label,
+.woocommerce .woocommerce-result-count span, .woocommerce-cart .woocommerce table.shop_table th, .woocommerce-cart .woocommerce table.cart th, .woocommerce-checkout .woocommerce-shipping-fields h3, .woocommerce-checkout .woocommerce form .form-row label, .woocommerce-checkout #add_payment_method #payment .form-row input label,
+.woocommerce-checkout #add_payment_method #payment .form-row .wc-square-credit-card-hosted-field label,
+.woocommerce-checkout .woocommerce-cart #payment .form-row input label,
+.woocommerce-checkout .woocommerce-cart #payment .form-row .wc-square-credit-card-hosted-field label,
+.woocommerce-checkout .woocommerce-checkout #payment .form-row input label,
+.woocommerce-checkout .woocommerce-checkout #payment .form-row .wc-square-credit-card-hosted-field label,
 .heading-5, select.orderby {
   font-size: 0.75em;
 }
 @media screen and (min-width: 20em) {
   /* line 4, ../sass/base/_mixins.scss */
-  .woocommerce .woocommerce-result-count span, .woocommerce-cart .woocommerce table.shop_table th, .woocommerce-cart .woocommerce table.cart th, .woocommerce-checkout .woocommerce-shipping-fields h3, .woocommerce-checkout .woocommerce form .form-row label, .woocommerce-checkout #add_payment_method #payment .form-row label,
-  .woocommerce-checkout .woocommerce-cart #payment .form-row label,
-  .woocommerce-checkout .woocommerce-checkout #payment .form-row label,
+  .woocommerce .woocommerce-result-count span, .woocommerce-cart .woocommerce table.shop_table th, .woocommerce-cart .woocommerce table.cart th, .woocommerce-checkout .woocommerce-shipping-fields h3, .woocommerce-checkout .woocommerce form .form-row label, .woocommerce-checkout #add_payment_method #payment .form-row input label,
+  .woocommerce-checkout #add_payment_method #payment .form-row .wc-square-credit-card-hosted-field label,
+  .woocommerce-checkout .woocommerce-cart #payment .form-row input label,
+  .woocommerce-checkout .woocommerce-cart #payment .form-row .wc-square-credit-card-hosted-field label,
+  .woocommerce-checkout .woocommerce-checkout #payment .form-row input label,
+  .woocommerce-checkout .woocommerce-checkout #payment .form-row .wc-square-credit-card-hosted-field label,
   .heading-5, select.orderby {
     font-size: calc(0.75em + 0.125 * (100vw - 20em) / 60);
   }
 }
 @media screen and (min-width: 80em) {
   /* line 4, ../sass/base/_mixins.scss */
-  .woocommerce .woocommerce-result-count span, .woocommerce-cart .woocommerce table.shop_table th, .woocommerce-cart .woocommerce table.cart th, .woocommerce-checkout .woocommerce-shipping-fields h3, .woocommerce-checkout .woocommerce form .form-row label, .woocommerce-checkout #add_payment_method #payment .form-row label,
-  .woocommerce-checkout .woocommerce-cart #payment .form-row label,
-  .woocommerce-checkout .woocommerce-checkout #payment .form-row label,
+  .woocommerce .woocommerce-result-count span, .woocommerce-cart .woocommerce table.shop_table th, .woocommerce-cart .woocommerce table.cart th, .woocommerce-checkout .woocommerce-shipping-fields h3, .woocommerce-checkout .woocommerce form .form-row label, .woocommerce-checkout #add_payment_method #payment .form-row input label,
+  .woocommerce-checkout #add_payment_method #payment .form-row .wc-square-credit-card-hosted-field label,
+  .woocommerce-checkout .woocommerce-cart #payment .form-row input label,
+  .woocommerce-checkout .woocommerce-cart #payment .form-row .wc-square-credit-card-hosted-field label,
+  .woocommerce-checkout .woocommerce-checkout #payment .form-row input label,
+  .woocommerce-checkout .woocommerce-checkout #payment .form-row .wc-square-credit-card-hosted-field label,
   .heading-5, select.orderby {
     font-size: 0.875em;
   }
@@ -3021,18 +3033,41 @@ ul.bxslider {
 .woocommerce-checkout .woocommerce-checkout #payment .form-row {
   width: calc(50% - 0.5em);
   margin-bottom: 0.5em;
+  font-size: 16px;
 }
-/* line 123, ../sass/woo/_checkout.scss */
+/* line 124, ../sass/woo/_checkout.scss */
 .woocommerce-checkout #add_payment_method #payment .form-row input,
+.woocommerce-checkout #add_payment_method #payment .form-row .wc-square-credit-card-hosted-field,
 .woocommerce-checkout .woocommerce-cart #payment .form-row input,
-.woocommerce-checkout .woocommerce-checkout #payment .form-row input {
+.woocommerce-checkout .woocommerce-cart #payment .form-row .wc-square-credit-card-hosted-field,
+.woocommerce-checkout .woocommerce-checkout #payment .form-row input,
+.woocommerce-checkout .woocommerce-checkout #payment .form-row .wc-square-credit-card-hosted-field {
+  height: 36px;
   padding: 0.5em 1em;
   border: 1px solid #4a4a4a;
+  padding: 0.5em 1em;
+  border-radius: 6px;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #4a4a4a;
 }
-/* line 128, ../sass/woo/_checkout.scss */
-.woocommerce-checkout #add_payment_method #payment .form-row label,
-.woocommerce-checkout .woocommerce-cart #payment .form-row label,
-.woocommerce-checkout .woocommerce-checkout #payment .form-row label {
+/* line 136, ../sass/woo/_checkout.scss */
+.woocommerce-checkout #add_payment_method #payment .form-row input label,
+.woocommerce-checkout #add_payment_method #payment .form-row .wc-square-credit-card-hosted-field label,
+.woocommerce-checkout .woocommerce-cart #payment .form-row input label,
+.woocommerce-checkout .woocommerce-cart #payment .form-row .wc-square-credit-card-hosted-field label,
+.woocommerce-checkout .woocommerce-checkout #payment .form-row input label,
+.woocommerce-checkout .woocommerce-checkout #payment .form-row .wc-square-credit-card-hosted-field label {
   padding: 0 0.5em 0.25em 0;
   font-weight: 600;
+}
+@media (min-width: 780px) {
+  /* line 145, ../sass/woo/_checkout.scss */
+  .woocommerce-checkout .wc-square-credit-card-new-payment-method-form,
+  .woocommerce-checkout .js-wc-square-credit-card-new-payment-method-form {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
 }

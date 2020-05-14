@@ -119,17 +119,35 @@
         .form-row {
             width: calc(50% - 0.5em);
             margin-bottom: 0.5em;
+            font-size: 16px;
 
-            input {
+            input,
+            .wc-square-credit-card-hosted-field {
+                height: 36px;
                 padding: 0.5em 1em;
                 border: 1px solid $color-black-2;
-            }
+                padding: 0.5em 1em;
+                border-radius: 6px;
+                font-size: 1em;
+                font-weight: 400;
+                line-height: 1.2;
+                color: #4a4a4a;
 
-            label {
-                @extend %heading-5;
-                padding: 0 0.5em 0.25em 0;
-                font-weight: 600;
+                label {
+                    @extend %heading-5;
+                    padding: 0 0.5em 0.25em 0;
+                    font-weight: 600;
+                }
             }
+        }
+    }
+
+    .wc-square-credit-card-new-payment-method-form,
+    .js-wc-square-credit-card-new-payment-method-form {
+        @media (min-width: 780px) {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
         }
     }
 }
