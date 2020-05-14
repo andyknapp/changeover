@@ -94,7 +94,7 @@
         .payment_methods {
             margin-bottom: 2em;
             border-bottom-width: 0;
-            
+
             li {
                 line-height: 1.35;
             }
@@ -102,6 +102,34 @@
 
         .button {
             @extend %button;
+        }
+
+        .payment_box {
+            background-color: $color-gray-4;
+            border: 1px solid $color-gray;
+
+            &::before {
+                border: 1em solid $color-gray-4;
+                border-right-color: transparent;
+                border-left-color: transparent;
+                border-top-color: transparent;
+            }
+        }
+
+        .form-row {
+            width: calc(50% - 0.5em);
+            margin-bottom: 0.5em;
+
+            input {
+                padding: 0.5em 1em;
+                border: 1px solid $color-black-2;
+            }
+
+            label {
+                @extend %heading-5;
+                padding: 0 0.5em 0.25em 0;
+                font-weight: 600;
+            }
         }
     }
 }

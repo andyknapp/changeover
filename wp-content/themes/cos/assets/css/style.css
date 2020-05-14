@@ -216,7 +216,9 @@ q:before {
 }
 
 /* line 1, ../sass/base/_typography.scss */
-body, .woocommerce .woocommerce-result-count span, .woocommerce-cart .woocommerce table.shop_table th, .woocommerce-cart .woocommerce table.cart th, .woocommerce-checkout .woocommerce-shipping-fields h3, .woocommerce-checkout .woocommerce form .form-row label,
+body, .woocommerce .woocommerce-result-count span, .woocommerce-cart .woocommerce table.shop_table th, .woocommerce-cart .woocommerce table.cart th, .woocommerce-checkout .woocommerce-shipping-fields h3, .woocommerce-checkout .woocommerce form .form-row label, .woocommerce-checkout #add_payment_method #payment .form-row label,
+.woocommerce-checkout .woocommerce-cart #payment .form-row label,
+.woocommerce-checkout .woocommerce-checkout #payment .form-row label,
 .heading-5 {
   font-family: 'Open Sans', sans-serif;
 }
@@ -420,20 +422,26 @@ body, .woocommerce .woocommerce-result-count span, .woocommerce-cart .woocommerc
 }
 
 /* line 4, ../sass/base/_mixins.scss */
-.woocommerce .woocommerce-result-count span, .woocommerce-cart .woocommerce table.shop_table th, .woocommerce-cart .woocommerce table.cart th, .woocommerce-checkout .woocommerce-shipping-fields h3, .woocommerce-checkout .woocommerce form .form-row label,
+.woocommerce .woocommerce-result-count span, .woocommerce-cart .woocommerce table.shop_table th, .woocommerce-cart .woocommerce table.cart th, .woocommerce-checkout .woocommerce-shipping-fields h3, .woocommerce-checkout .woocommerce form .form-row label, .woocommerce-checkout #add_payment_method #payment .form-row label,
+.woocommerce-checkout .woocommerce-cart #payment .form-row label,
+.woocommerce-checkout .woocommerce-checkout #payment .form-row label,
 .heading-5, select.orderby {
   font-size: 0.75em;
 }
 @media screen and (min-width: 20em) {
   /* line 4, ../sass/base/_mixins.scss */
-  .woocommerce .woocommerce-result-count span, .woocommerce-cart .woocommerce table.shop_table th, .woocommerce-cart .woocommerce table.cart th, .woocommerce-checkout .woocommerce-shipping-fields h3, .woocommerce-checkout .woocommerce form .form-row label,
+  .woocommerce .woocommerce-result-count span, .woocommerce-cart .woocommerce table.shop_table th, .woocommerce-cart .woocommerce table.cart th, .woocommerce-checkout .woocommerce-shipping-fields h3, .woocommerce-checkout .woocommerce form .form-row label, .woocommerce-checkout #add_payment_method #payment .form-row label,
+  .woocommerce-checkout .woocommerce-cart #payment .form-row label,
+  .woocommerce-checkout .woocommerce-checkout #payment .form-row label,
   .heading-5, select.orderby {
     font-size: calc(0.75em + 0.125 * (100vw - 20em) / 60);
   }
 }
 @media screen and (min-width: 80em) {
   /* line 4, ../sass/base/_mixins.scss */
-  .woocommerce .woocommerce-result-count span, .woocommerce-cart .woocommerce table.shop_table th, .woocommerce-cart .woocommerce table.cart th, .woocommerce-checkout .woocommerce-shipping-fields h3, .woocommerce-checkout .woocommerce form .form-row label,
+  .woocommerce .woocommerce-result-count span, .woocommerce-cart .woocommerce table.shop_table th, .woocommerce-cart .woocommerce table.cart th, .woocommerce-checkout .woocommerce-shipping-fields h3, .woocommerce-checkout .woocommerce form .form-row label, .woocommerce-checkout #add_payment_method #payment .form-row label,
+  .woocommerce-checkout .woocommerce-cart #payment .form-row label,
+  .woocommerce-checkout .woocommerce-checkout #payment .form-row label,
   .heading-5, select.orderby {
     font-size: 0.875em;
   }
@@ -2990,4 +2998,41 @@ ul.bxslider {
 .woocommerce-checkout .woocommerce-cart #payment .payment_methods li,
 .woocommerce-checkout .woocommerce-checkout #payment .payment_methods li {
   line-height: 1.35;
+}
+/* line 107, ../sass/woo/_checkout.scss */
+.woocommerce-checkout #add_payment_method #payment .payment_box,
+.woocommerce-checkout .woocommerce-cart #payment .payment_box,
+.woocommerce-checkout .woocommerce-checkout #payment .payment_box {
+  background-color: #f7f7f7;
+  border: 1px solid #eee;
+}
+/* line 111, ../sass/woo/_checkout.scss */
+.woocommerce-checkout #add_payment_method #payment .payment_box::before,
+.woocommerce-checkout .woocommerce-cart #payment .payment_box::before,
+.woocommerce-checkout .woocommerce-checkout #payment .payment_box::before {
+  border: 1em solid #f7f7f7;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-top-color: transparent;
+}
+/* line 119, ../sass/woo/_checkout.scss */
+.woocommerce-checkout #add_payment_method #payment .form-row,
+.woocommerce-checkout .woocommerce-cart #payment .form-row,
+.woocommerce-checkout .woocommerce-checkout #payment .form-row {
+  width: calc(50% - 0.5em);
+  margin-bottom: 0.5em;
+}
+/* line 123, ../sass/woo/_checkout.scss */
+.woocommerce-checkout #add_payment_method #payment .form-row input,
+.woocommerce-checkout .woocommerce-cart #payment .form-row input,
+.woocommerce-checkout .woocommerce-checkout #payment .form-row input {
+  padding: 0.5em 1em;
+  border: 1px solid #4a4a4a;
+}
+/* line 128, ../sass/woo/_checkout.scss */
+.woocommerce-checkout #add_payment_method #payment .form-row label,
+.woocommerce-checkout .woocommerce-cart #payment .form-row label,
+.woocommerce-checkout .woocommerce-checkout #payment .form-row label {
+  padding: 0 0.5em 0.25em 0;
+  font-weight: 600;
 }
