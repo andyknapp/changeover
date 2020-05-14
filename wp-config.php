@@ -42,8 +42,8 @@ if ( $_SERVER['HTTP_HOST'] == 'changeoversales.com' ) {
 	define('DB_COLLATE', '');
 
     define('DOMAIN_CURRENT_SITE', 'staging.changeoversales.com');
-	define('WP_HOME','http://staging.changeoversales.com');
-	define('WP_SITEURL','http://staging.changeoversales.com');
+	define('WP_HOME','https://staging.changeoversales.com');
+	define('WP_SITEURL','https://staging.changeoversales.com');
 
 } else if ( $_SERVER['HTTP_HOST'] == 'changeover.test' ) {
 	define('DB_NAME', 'db173289_staging_changeover');
