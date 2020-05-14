@@ -3002,7 +3002,7 @@ ul.bxslider {
 .woocommerce-checkout #add_payment_method #payment .payment_methods,
 .woocommerce-checkout .woocommerce-cart #payment .payment_methods,
 .woocommerce-checkout .woocommerce-checkout #payment .payment_methods {
-  margin-bottom: 2em;
+  padding-bottom: 0;
   border-bottom-width: 0;
 }
 /* line 98, ../sass/woo/_checkout.scss */
@@ -3027,7 +3027,14 @@ ul.bxslider {
   border-left-color: transparent;
   border-top-color: transparent;
 }
-/* line 119, ../sass/woo/_checkout.scss */
+/* line 118, ../sass/woo/_checkout.scss */
+.woocommerce-checkout #add_payment_method #payment .payment_box > p,
+.woocommerce-checkout .woocommerce-cart #payment .payment_box > p,
+.woocommerce-checkout .woocommerce-checkout #payment .payment_box > p {
+  margin-bottom: 0.5em;
+  padding-left: 0.125em;
+}
+/* line 124, ../sass/woo/_checkout.scss */
 .woocommerce-checkout #add_payment_method #payment .form-row,
 .woocommerce-checkout .woocommerce-cart #payment .form-row,
 .woocommerce-checkout .woocommerce-checkout #payment .form-row {
@@ -3035,7 +3042,7 @@ ul.bxslider {
   margin-bottom: 0.5em;
   font-size: 16px;
 }
-/* line 124, ../sass/woo/_checkout.scss */
+/* line 129, ../sass/woo/_checkout.scss */
 .woocommerce-checkout #add_payment_method #payment .form-row input,
 .woocommerce-checkout #add_payment_method #payment .form-row .wc-square-credit-card-hosted-field,
 .woocommerce-checkout .woocommerce-cart #payment .form-row input,
@@ -3052,7 +3059,7 @@ ul.bxslider {
   line-height: 1.2;
   color: #4a4a4a;
 }
-/* line 136, ../sass/woo/_checkout.scss */
+/* line 141, ../sass/woo/_checkout.scss */
 .woocommerce-checkout #add_payment_method #payment .form-row input label,
 .woocommerce-checkout #add_payment_method #payment .form-row .wc-square-credit-card-hosted-field label,
 .woocommerce-checkout .woocommerce-cart #payment .form-row input label,
@@ -3063,11 +3070,16 @@ ul.bxslider {
   font-weight: 600;
 }
 @media (min-width: 780px) {
-  /* line 145, ../sass/woo/_checkout.scss */
+  /* line 150, ../sass/woo/_checkout.scss */
   .woocommerce-checkout .wc-square-credit-card-new-payment-method-form,
   .woocommerce-checkout .js-wc-square-credit-card-new-payment-method-form {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
   }
+}
+/* line 161, ../sass/woo/_checkout.scss */
+.woocommerce-checkout #payment_method_square_credit_card label {
+  padding-left: 0.5em;
+  font-weight: 700;
 }

@@ -92,7 +92,7 @@
         border: 1px solid rgba(0,0,0,.1);
 
         .payment_methods {
-            margin-bottom: 2em;
+            padding-bottom: 0;
             border-bottom-width: 0;
 
             li {
@@ -113,6 +113,11 @@
                 border-right-color: transparent;
                 border-left-color: transparent;
                 border-top-color: transparent;
+            }
+
+            > p {
+                margin-bottom: 0.5em;
+                padding-left: 0.125em;
             }
         }
 
@@ -148,6 +153,14 @@
             display: flex;
             flex-flow: row wrap;
             justify-content: space-between;
+        }
+    }
+
+
+    #payment_method_square_credit_card {
+        label {
+            padding-left: 0.5em;
+            font-weight: 700;
         }
     }
 }
