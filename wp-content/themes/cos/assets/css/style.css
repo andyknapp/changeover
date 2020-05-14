@@ -1562,7 +1562,9 @@ textarea::-webkit-input-placeholder {
 button:not(.no-button-style), .woocommerce ul.products li.product .button.product_type_simple.add_to_cart_button,
 .woocommerce ul.products li.product .button, .woocommerce .type-product.product .button.alt.single_add_to_cart_button, .woocommerce .woocommerce-error .button,
 .woocommerce .woocommerce-info .button,
-.woocommerce .woocommerce-message .button, .woocommerce-cart .return-to-shop .button, .woocommerce-cart .woocommerce .cart .button {
+.woocommerce .woocommerce-message .button, .woocommerce-cart .return-to-shop .button, .woocommerce-cart .woocommerce .cart .button, .woocommerce-checkout #add_payment_method #payment .button,
+.woocommerce-checkout .woocommerce-cart #payment .button,
+.woocommerce-checkout .woocommerce-checkout #payment .button {
   display: inline-block;
   width: auto;
   padding: 0.75em 3em;
@@ -1584,7 +1586,9 @@ button:not(.no-button-style), .woocommerce ul.products li.product .button.produc
 button:hover:not(.no-button-style), .woocommerce ul.products li.product .button.product_type_simple.add_to_cart_button:hover,
 .woocommerce ul.products li.product .button:hover, .woocommerce .type-product.product .button.alt.single_add_to_cart_button:hover, .woocommerce .woocommerce-error .button:hover,
 .woocommerce .woocommerce-info .button:hover,
-.woocommerce .woocommerce-message .button:hover, .woocommerce-cart .return-to-shop .button:hover, .woocommerce-cart .woocommerce .cart .button:hover {
+.woocommerce .woocommerce-message .button:hover, .woocommerce-cart .return-to-shop .button:hover, .woocommerce-cart .woocommerce .cart .button:hover, .woocommerce-checkout #add_payment_method #payment .button:hover,
+.woocommerce-checkout .woocommerce-cart #payment .button:hover,
+.woocommerce-checkout .woocommerce-checkout #payment .button:hover {
   color: #b51814;
   border-color: #b51814;
   background-color: #ffffff;
@@ -1594,7 +1598,9 @@ button:hover:not(.no-button-style), .woocommerce ul.products li.product .button.
 button:focus:not(.no-button-style), .woocommerce ul.products li.product .button.product_type_simple.add_to_cart_button:focus,
 .woocommerce ul.products li.product .button:focus, .woocommerce .type-product.product .button.alt.single_add_to_cart_button:focus, .woocommerce .woocommerce-error .button:focus,
 .woocommerce .woocommerce-info .button:focus,
-.woocommerce .woocommerce-message .button:focus, .woocommerce-cart .return-to-shop .button:focus, .woocommerce-cart .woocommerce .cart .button:focus {
+.woocommerce .woocommerce-message .button:focus, .woocommerce-cart .return-to-shop .button:focus, .woocommerce-cart .woocommerce .cart .button:focus, .woocommerce-checkout #add_payment_method #payment .button:focus,
+.woocommerce-checkout .woocommerce-cart #payment .button:focus,
+.woocommerce-checkout .woocommerce-checkout #payment .button:focus {
   outline: 0;
 }
 
@@ -2346,7 +2352,7 @@ ul.bxslider {
 .woocommerce .type-product.product .button.alt.single_add_to_cart_button {
   padding: 0.75em 3em;
 }
-@media (min-width: 980px) {
+@media (min-width: 1294px) {
   /* line 172, ../sass/woo/_shop.scss */
   .woocommerce .type-product.product .button.alt.single_add_to_cart_button {
     padding: 0.75em 6em;
@@ -2598,7 +2604,7 @@ ul.bxslider {
 .woocommerce .woocommerce-error,
 .woocommerce .woocommerce-info,
 .woocommerce .woocommerce-message {
-  width: calc(100% - 2em);
+  width: 100%;
   padding: 1em 2em 1em 3.5em;
   margin: 0 auto 2em;
   position: relative;
@@ -2898,17 +2904,16 @@ ul.bxslider {
 
 /* line 3, ../sass/woo/_checkout.scss */
 .woocommerce-checkout article {
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 4em;
   padding: 0 1em;
 }
-/* line 10, ../sass/woo/_checkout.scss */
+/* line 9, ../sass/woo/_checkout.scss */
 .woocommerce-checkout .entry-header {
   padding-bottom: 1em;
   padding-left: 0;
   margin-bottom: 1em;
 }
-/* line 20, ../sass/woo/_checkout.scss */
+/* line 19, ../sass/woo/_checkout.scss */
 .woocommerce-checkout .entry-title::after {
   content: '';
   display: block;
@@ -2918,51 +2923,71 @@ ul.bxslider {
   border-radius: 2px;
   background-color: #b51814;
 }
-/* line 33, ../sass/woo/_checkout.scss */
+/* line 32, ../sass/woo/_checkout.scss */
 .woocommerce-checkout .woocommerce-billing-fields h3 {
   margin: 2em 0 1em;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-/* line 40, ../sass/woo/_checkout.scss */
+/* line 39, ../sass/woo/_checkout.scss */
 .woocommerce-checkout #order_review_heading {
   margin: 2em 0 1em;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-/* line 46, ../sass/woo/_checkout.scss */
+/* line 45, ../sass/woo/_checkout.scss */
 .woocommerce-checkout .woocommerce-additional-fields {
   padding-top: 3em;
 }
-/* line 50, ../sass/woo/_checkout.scss */
+/* line 49, ../sass/woo/_checkout.scss */
 .woocommerce-checkout .woocommerce-shipping-fields {
   padding-top: 2em;
   margin-bottom: 1em;
 }
-/* line 54, ../sass/woo/_checkout.scss */
+/* line 53, ../sass/woo/_checkout.scss */
 .woocommerce-checkout .woocommerce-shipping-fields h3 {
   padding: 0 0.5em 0.25em 0;
   font-weight: 600;
 }
-/* line 60, ../sass/woo/_checkout.scss */
+/* line 59, ../sass/woo/_checkout.scss */
 .woocommerce-checkout .woocommerce-shipping-fields label {
   position: relative;
 }
-/* line 66, ../sass/woo/_checkout.scss */
+/* line 65, ../sass/woo/_checkout.scss */
 .woocommerce-checkout .woocommerce-billing-fields__field-wrapper {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
 }
-/* line 71, ../sass/woo/_checkout.scss */
+/* line 70, ../sass/woo/_checkout.scss */
 .woocommerce-checkout .woocommerce-billing-fields__field-wrapper .form-row {
   width: calc(50% - 0.5em);
   margin-bottom: 0.5em;
 }
-/* line 75, ../sass/woo/_checkout.scss */
+/* line 74, ../sass/woo/_checkout.scss */
 .woocommerce-checkout .woocommerce-billing-fields__field-wrapper .form-row input {
   padding: 0.5em 1em;
 }
-/* line 81, ../sass/woo/_checkout.scss */
+/* line 80, ../sass/woo/_checkout.scss */
 .woocommerce-checkout .woocommerce form .form-row label {
   padding: 0 0.5em 0.25em 0;
   font-weight: 600;
+}
+/* line 88, ../sass/woo/_checkout.scss */
+.woocommerce-checkout #add_payment_method #payment,
+.woocommerce-checkout .woocommerce-cart #payment,
+.woocommerce-checkout .woocommerce-checkout #payment {
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+/* line 94, ../sass/woo/_checkout.scss */
+.woocommerce-checkout #add_payment_method #payment .payment_methods,
+.woocommerce-checkout .woocommerce-cart #payment .payment_methods,
+.woocommerce-checkout .woocommerce-checkout #payment .payment_methods {
+  margin-bottom: 2em;
+  border-bottom-width: 0;
+}
+/* line 98, ../sass/woo/_checkout.scss */
+.woocommerce-checkout #add_payment_method #payment .payment_methods li,
+.woocommerce-checkout .woocommerce-cart #payment .payment_methods li,
+.woocommerce-checkout .woocommerce-checkout #payment .payment_methods li {
+  line-height: 1.35;
 }

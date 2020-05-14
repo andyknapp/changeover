@@ -2,8 +2,7 @@
 .woocommerce-checkout {
     article {
         @extend .container-small;
-        margin-left: auto;
-        margin-right: auto;
+        margin: 0 auto 4em;
         padding: 0 1em;
     }
 
@@ -84,4 +83,25 @@
         font-weight: 600;
     }
 
+
+    // payment
+    #add_payment_method #payment,
+    .woocommerce-cart #payment,
+    .woocommerce-checkout #payment {
+        background-color: $color-white;
+        border: 1px solid rgba(0,0,0,.1);
+
+        .payment_methods {
+            margin-bottom: 2em;
+            border-bottom-width: 0;
+            
+            li {
+                line-height: 1.35;
+            }
+        }
+
+        .button {
+            @extend %button;
+        }
+    }
 }
