@@ -3079,7 +3079,7 @@ ul.bxslider {
   }
 }
 /* line 161, ../sass/woo/_checkout.scss */
-.woocommerce-checkout #payment_method_square_credit_card label {
+.woocommerce-checkout #payment_method_square_credit_card + label {
   padding-left: 0.5em;
   font-weight: 700;
 }
