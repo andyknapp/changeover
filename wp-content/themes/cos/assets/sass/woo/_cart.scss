@@ -209,6 +209,48 @@
                 }
             }
 
+            .woocommerce-shipping-methods {
+                padding: 0.75em 0 0.5em;
+
+                li {
+                    position: relative;
+                    font-size: (16 / 15) * 1em;
+                }
+
+                label {
+                    &::before {
+                        width: 1em;
+                        height: 1em;
+                        top: 50%;
+                    }
+                }
+
+                [type='checkbox']:checked + label::after,
+                [type='radio']:checked + label::after,
+                [type='checkbox']:checked + label::before,
+                [type='radio']:checked + label::before {
+                    width: 1em;
+                    height: 1em;
+                }
+
+                [type='checkbox']:checked + label::after,
+                [type='radio']:checked + label::after {
+                    top: 50%;
+                    left: 0;
+                    transform: scale(1) translateY(-50%);
+                }
+
+                [type='checkbox']:checked + label,
+                [type='radio']:checked + label {
+                    padding: 0.25em 0.25em 0.25em 2em;
+                }
+            }
+
+            .woocommerce-shipping-destination,
+            .shipping-calculator-button {
+                font-size: (16 / 15) * 1em;
+            }
+
             .button {
                 &.checkout-button {
                     margin-bottom: 0;
