@@ -2894,20 +2894,21 @@ ul.bxslider {
 }
 /* line 212, ../sass/woo/_cart.scss */
 .woocommerce-cart .woocommerce .cart_totals .woocommerce-shipping-methods {
+  margin-bottom: 1.5em !important;
   padding: 0.75em 0 0.5em;
 }
-/* line 215, ../sass/woo/_cart.scss */
+/* line 216, ../sass/woo/_cart.scss */
 .woocommerce-cart .woocommerce .cart_totals .woocommerce-shipping-methods li {
   position: relative;
-  font-size: 1.0666666667em;
+  font-size: 0.9375em;
 }
-/* line 221, ../sass/woo/_cart.scss */
+/* line 222, ../sass/woo/_cart.scss */
 .woocommerce-cart .woocommerce .cart_totals .woocommerce-shipping-methods label::before {
   width: 1em;
   height: 1em;
   top: 50%;
 }
-/* line 228, ../sass/woo/_cart.scss */
+/* line 229, ../sass/woo/_cart.scss */
 .woocommerce-cart .woocommerce .cart_totals .woocommerce-shipping-methods [type='checkbox']:checked + label::after,
 .woocommerce-cart .woocommerce .cart_totals .woocommerce-shipping-methods [type='radio']:checked + label::after,
 .woocommerce-cart .woocommerce .cart_totals .woocommerce-shipping-methods [type='checkbox']:checked + label::before,
@@ -2915,24 +2916,35 @@ ul.bxslider {
   width: 1em;
   height: 1em;
 }
-/* line 236, ../sass/woo/_cart.scss */
+/* line 237, ../sass/woo/_cart.scss */
+.woocommerce-cart .woocommerce .cart_totals .woocommerce-shipping-methods [type='checkbox'] + label::before,
+.woocommerce-cart .woocommerce .cart_totals .woocommerce-shipping-methods [type='radio'] + label::before {
+  transform: translateY(-50%);
+}
+/* line 242, ../sass/woo/_cart.scss */
 .woocommerce-cart .woocommerce .cart_totals .woocommerce-shipping-methods [type='checkbox']:checked + label::after,
 .woocommerce-cart .woocommerce .cart_totals .woocommerce-shipping-methods [type='radio']:checked + label::after {
   top: 50%;
   left: 0;
   transform: scale(1) translateY(-50%);
 }
-/* line 243, ../sass/woo/_cart.scss */
-.woocommerce-cart .woocommerce .cart_totals .woocommerce-shipping-methods [type='checkbox']:checked + label,
-.woocommerce-cart .woocommerce .cart_totals .woocommerce-shipping-methods [type='radio']:checked + label {
+/* line 249, ../sass/woo/_cart.scss */
+.woocommerce-cart .woocommerce .cart_totals .woocommerce-shipping-methods [type='checkbox'] + label,
+.woocommerce-cart .woocommerce .cart_totals .woocommerce-shipping-methods [type='radio'] + label {
   padding: 0.25em 0.25em 0.25em 2em;
 }
-/* line 249, ../sass/woo/_cart.scss */
+/* line 255, ../sass/woo/_cart.scss */
 .woocommerce-cart .woocommerce .cart_totals .woocommerce-shipping-destination,
 .woocommerce-cart .woocommerce .cart_totals .shipping-calculator-button {
-  font-size: 1.0666666667em;
+  font-size: 0.9375em;
 }
-/* line 255, ../sass/woo/_cart.scss */
+/* line 260, ../sass/woo/_cart.scss */
+.woocommerce-cart .woocommerce .cart_totals .woocommerce-shipping-destination {
+  line-height: 1.2;
+  color: #767676;
+  font-style: italic;
+}
+/* line 267, ../sass/woo/_cart.scss */
 .woocommerce-cart .woocommerce .cart_totals .button.checkout-button {
   margin-bottom: 0;
   margin-top: 1.75em;
@@ -2947,16 +2959,16 @@ ul.bxslider {
   text-align: center;
   background-color: rgba(181, 24, 20, 0.9);
 }
-/* line 269, ../sass/woo/_cart.scss */
+/* line 281, ../sass/woo/_cart.scss */
 .woocommerce-cart .woocommerce .cart_totals .button.checkout-button:hover {
   color: #b51814;
   background-color: #ffffff;
 }
-/* line 277, ../sass/woo/_cart.scss */
+/* line 289, ../sass/woo/_cart.scss */
 .woocommerce-cart .woocommerce .cart_totals .wc-proceed-to-checkout {
   padding: 0;
 }
-/* line 285, ../sass/woo/_cart.scss */
+/* line 297, ../sass/woo/_cart.scss */
 .woocommerce-cart .woocommerce table.shop_table .remove-row .product-remove a:hover,
 .woocommerce-cart .woocommerce table.cart .remove-row .product-remove a:hover {
   color: #ffffff !important;

@@ -210,11 +210,12 @@
             }
 
             .woocommerce-shipping-methods {
+                margin-bottom: 1.5em!important;
                 padding: 0.75em 0 0.5em;
 
                 li {
                     position: relative;
-                    font-size: (16 / 15) * 1em;
+                    font-size: (15 / 16) * 1em;
                 }
 
                 label {
@@ -233,6 +234,11 @@
                     height: 1em;
                 }
 
+                [type='checkbox'] + label::before,
+                [type='radio'] + label::before {
+                    transform: translateY(-50%);
+                }
+
                 [type='checkbox']:checked + label::after,
                 [type='radio']:checked + label::after {
                     top: 50%;
@@ -240,15 +246,21 @@
                     transform: scale(1) translateY(-50%);
                 }
 
-                [type='checkbox']:checked + label,
-                [type='radio']:checked + label {
+                [type='checkbox']+ label,
+                [type='radio'] + label {
                     padding: 0.25em 0.25em 0.25em 2em;
                 }
             }
 
             .woocommerce-shipping-destination,
             .shipping-calculator-button {
-                font-size: (16 / 15) * 1em;
+                font-size: (15 / 16) * 1em;
+            }
+
+            .woocommerce-shipping-destination {
+                line-height: 1.2;
+                color: $color-gray-5;
+                font-style: italic;
             }
 
             .button {
