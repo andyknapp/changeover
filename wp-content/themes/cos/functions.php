@@ -110,7 +110,8 @@ add_action( 'after_setup_theme', 'cos_custom_image_setup' );
 function cos_add_woocommerce_support() {
 	add_theme_support( 'woocommerce', array(
 		'thumbnail_image_width' => 500,
-		'single_image_width'    => 1000,
+        'single_image_width'    => 1000,
+        'single_image_height'    => 800,
 
         'product_grid'          => array(
             'default_rows'    => 3,
@@ -122,7 +123,7 @@ function cos_add_woocommerce_support() {
         ),
 	) );
 
-    add_theme_support( 'wc-product-gallery-zoom' );
+    //add_theme_support( 'wc-product-gallery-zoom' );
     //add_theme_support( 'wc-product-gallery-lightbox' );
     add_theme_support( 'wc-product-gallery-slider' );
 }
@@ -287,6 +288,26 @@ remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_p
 
 
 
+function cos_local_delivery() {
+    global $product;
+
+    $ship_class_id = $product->get_shipping_class_id();
+    $ship_obj = get_term_by('term_taxonomy_id', $ship_class_id, 'product_shipping_class');
+    $ship_slug = $ship_obj->slug;
+
+    $shipping_zone = WC_Shipping_Zones::get_zone_matching_package( $package );
+
+    $zone_name = $shipping_zone->get_zone_name();
+    $zone_id = $shipping_zone->get_id();
+
+    if( $ship_slug != 'free-shipping' ) {
+        return;
+    } else {
+        echo '<p class="free-shipping-alert">Complimentary shipping available for local customers</p>';
+    }
+}
+add_action('woocommerce_single_product_summary', 'cos_local_delivery');
+
 /**
  * Remove uncategorized from the WooCommerce breadcrumb.
  *
@@ -331,7 +352,7 @@ remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_ad
 add_action( 'woocommerce_after_shop_loop_item_title', 'cos_view_product_button', 10 );
 
 
-// remove wysiwyg from woo products 
+// remove wysiwyg from woo products
 function init_remove_support(){
     $post_type = 'product';
     remove_post_type_support( $post_type, 'editor');

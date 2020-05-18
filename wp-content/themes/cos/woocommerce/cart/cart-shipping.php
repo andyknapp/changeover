@@ -44,12 +44,26 @@ $calculator_text          = '';
 				<?php endforeach; ?>
 			</ul>
 			<?php if ( is_cart() ) : ?>
-                <p class="woocommerce-shipping-destination">Complimentary shipping available for local customers</p>
-                <?php if ( $formatted_destination ) : $calculator_text = esc_html__( 'Change address', 'woocommerce' ); ?>
-                <?php else : ?>
-                    <?php $calculator_text = esc_html__( 'Check address', 'woocommerce' ); ?>
+                <?php if( $method->method_id === 'free_shipping_per_product' ) : ?>
+                    <p class="woocommerce-shipping-destination">Complimentary shipping available for local customers</p>
 
+                    <?php
+                        if ( $formatted_destination ) {
+                            $calculator_text = esc_html__( 'Change address', 'woocommerce' );
+                        } else {
+                            $calculator_text = esc_html__( 'Check address', 'woocommerce' );
+                        }
+                    ?>
+
+                <?php else : ?>
+
+                    <?php
+                        $calculator_text = '';
+                        $show_shipping_calculator = false;
+                    ?>
                 <?php endif; ?>
+
+
 			<?php endif; ?>
 			<?php
 		elseif ( ! $has_calculated_shipping || ! $formatted_destination ) :
