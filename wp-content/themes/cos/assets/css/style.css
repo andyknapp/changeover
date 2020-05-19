@@ -3178,6 +3178,7 @@ ul.bxslider {
   padding: 0.5em 1em !important;
   border: 1px solid #4a4a4a !important;
   border-radius: 6px !important;
-  color: #4a4a4a;
+  color: #4a4a4a !important;
+  font-size: 1em !important;
   transition: border-color 0.2s ease-out !important;
 }
