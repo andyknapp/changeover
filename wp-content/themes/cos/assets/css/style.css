@@ -3053,52 +3053,58 @@ ul.bxslider {
 }
 /* line 70, ../sass/woo/_checkout.scss */
 .woocommerce-checkout .woocommerce-billing-fields__field-wrapper .form-row {
-  width: calc(50% - 0.5em);
+  width: 100%;
   margin-bottom: 0.5em;
 }
-/* line 74, ../sass/woo/_checkout.scss */
+@media (min-width: 57em) {
+  /* line 70, ../sass/woo/_checkout.scss */
+  .woocommerce-checkout .woocommerce-billing-fields__field-wrapper .form-row {
+    width: calc(50% - 0.5em);
+  }
+}
+/* line 78, ../sass/woo/_checkout.scss */
 .woocommerce-checkout .woocommerce-billing-fields__field-wrapper .form-row input {
   padding: 0.5em 1em;
 }
-/* line 80, ../sass/woo/_checkout.scss */
+/* line 84, ../sass/woo/_checkout.scss */
 .woocommerce-checkout .woocommerce form .form-row label {
   padding: 0 0.5em 0.25em 0;
   font-weight: 600;
 }
-/* line 88, ../sass/woo/_checkout.scss */
+/* line 92, ../sass/woo/_checkout.scss */
 .woocommerce-checkout #add_payment_method #payment,
 .woocommerce-checkout .woocommerce-cart #payment,
 .woocommerce-checkout .woocommerce-checkout #payment {
   background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
-/* line 94, ../sass/woo/_checkout.scss */
+/* line 98, ../sass/woo/_checkout.scss */
 .woocommerce-checkout #add_payment_method #payment .payment_methods,
 .woocommerce-checkout .woocommerce-cart #payment .payment_methods,
 .woocommerce-checkout .woocommerce-checkout #payment .payment_methods {
   padding-bottom: 0;
   border-bottom-width: 0;
 }
-/* line 98, ../sass/woo/_checkout.scss */
+/* line 102, ../sass/woo/_checkout.scss */
 .woocommerce-checkout #add_payment_method #payment .payment_methods li,
 .woocommerce-checkout .woocommerce-cart #payment .payment_methods li,
 .woocommerce-checkout .woocommerce-checkout #payment .payment_methods li {
   line-height: 1.35;
 }
-/* line 101, ../sass/woo/_checkout.scss */
+/* line 105, ../sass/woo/_checkout.scss */
 .woocommerce-checkout #add_payment_method #payment .payment_methods li input,
 .woocommerce-checkout .woocommerce-cart #payment .payment_methods li input,
 .woocommerce-checkout .woocommerce-checkout #payment .payment_methods li input {
   font-size: 0.75em;
 }
-/* line 111, ../sass/woo/_checkout.scss */
+/* line 115, ../sass/woo/_checkout.scss */
 .woocommerce-checkout #add_payment_method #payment .payment_box,
 .woocommerce-checkout .woocommerce-cart #payment .payment_box,
 .woocommerce-checkout .woocommerce-checkout #payment .payment_box {
   background-color: #f7f7f7;
   border: 1px solid #eee;
 }
-/* line 115, ../sass/woo/_checkout.scss */
+/* line 119, ../sass/woo/_checkout.scss */
 .woocommerce-checkout #add_payment_method #payment .payment_box::before,
 .woocommerce-checkout .woocommerce-cart #payment .payment_box::before,
 .woocommerce-checkout .woocommerce-checkout #payment .payment_box::before {
@@ -3107,22 +3113,30 @@ ul.bxslider {
   border-left-color: transparent;
   border-top-color: transparent;
 }
-/* line 122, ../sass/woo/_checkout.scss */
+/* line 126, ../sass/woo/_checkout.scss */
 .woocommerce-checkout #add_payment_method #payment .payment_box > p,
 .woocommerce-checkout .woocommerce-cart #payment .payment_box > p,
 .woocommerce-checkout .woocommerce-checkout #payment .payment_box > p {
   margin-bottom: 0.5em;
   padding-left: 0.125em;
 }
-/* line 128, ../sass/woo/_checkout.scss */
+/* line 132, ../sass/woo/_checkout.scss */
 .woocommerce-checkout #add_payment_method #payment .form-row,
 .woocommerce-checkout .woocommerce-cart #payment .form-row,
 .woocommerce-checkout .woocommerce-checkout #payment .form-row {
-  width: calc(50% - 0.5em);
+  width: 100%;
   margin-bottom: 0.5em;
   font-size: 16px;
 }
-/* line 133, ../sass/woo/_checkout.scss */
+@media (min-width: 57em) {
+  /* line 132, ../sass/woo/_checkout.scss */
+  .woocommerce-checkout #add_payment_method #payment .form-row,
+  .woocommerce-checkout .woocommerce-cart #payment .form-row,
+  .woocommerce-checkout .woocommerce-checkout #payment .form-row {
+    width: calc(50% - 0.5em);
+  }
+}
+/* line 141, ../sass/woo/_checkout.scss */
 .woocommerce-checkout #add_payment_method #payment .form-row input,
 .woocommerce-checkout #add_payment_method #payment .form-row .wc-square-credit-card-hosted-field,
 .woocommerce-checkout .woocommerce-cart #payment .form-row input,
@@ -3132,13 +3146,12 @@ ul.bxslider {
   height: 36px;
   padding: 0.5em 1em;
   border: 1px solid #4a4a4a;
-  padding: 0.5em 1em;
   border-radius: 6px;
   font-weight: 400;
   line-height: 1.2;
   color: #4a4a4a;
 }
-/* line 145, ../sass/woo/_checkout.scss */
+/* line 151, ../sass/woo/_checkout.scss */
 .woocommerce-checkout #add_payment_method #payment .form-row input label,
 .woocommerce-checkout #add_payment_method #payment .form-row .wc-square-credit-card-hosted-field label,
 .woocommerce-checkout .woocommerce-cart #payment .form-row input label,
@@ -3148,7 +3161,7 @@ ul.bxslider {
   padding: 0 0.5em 0.25em 0;
   font-weight: 600;
 }
-/* line 151, ../sass/woo/_checkout.scss */
+/* line 157, ../sass/woo/_checkout.scss */
 .woocommerce-checkout #add_payment_method #payment .form-row input input,
 .woocommerce-checkout #add_payment_method #payment .form-row .wc-square-credit-card-hosted-field input,
 .woocommerce-checkout .woocommerce-cart #payment .form-row input input,
@@ -3158,7 +3171,7 @@ ul.bxslider {
   font-size: 0.875em;
 }
 @media (min-width: 780px) {
-  /* line 158, ../sass/woo/_checkout.scss */
+  /* line 164, ../sass/woo/_checkout.scss */
   .woocommerce-checkout .wc-square-credit-card-new-payment-method-form,
   .woocommerce-checkout .js-wc-square-credit-card-new-payment-method-form {
     display: flex;
@@ -3166,19 +3179,24 @@ ul.bxslider {
     justify-content: space-between;
   }
 }
-/* line 169, ../sass/woo/_checkout.scss */
+/* line 175, ../sass/woo/_checkout.scss */
 .woocommerce-checkout #payment_method_square_credit_card + label {
   padding-left: 0.5em;
   font-weight: 700;
 }
 
-/* line 176, ../sass/woo/_checkout.scss */
-.wc-square-credit-card-hosted-field {
-  height: 36px !important;
-  padding: 0.5em 1em !important;
-  border: 1px solid #4a4a4a !important;
-  border-radius: 6px !important;
-  color: #4a4a4a !important;
-  font-size: 1em !important;
-  transition: border-color 0.2s ease-out !important;
+/* line 185, ../sass/woo/_checkout.scss */
+.woocommerce #payment div.payment_method_square_credit_card iframe {
+  font-size: 12px !important;
+}
+/* line 189, ../sass/woo/_checkout.scss */
+.woocommerce #payment div.payment_method_square_credit_card .wc-square-credit-card-hosted-field {
+  padding: 0.25em 1em !important;
+  font-size: 14px !important;
+}
+/* line 194, ../sass/woo/_checkout.scss */
+.woocommerce #payment div.payment_method_square_credit_card .wc-square-credit-card-hosted-field-card-number {
+  padding: 0.25em 1em !important;
+  background-size: 44px 28px;
+  font-size: 14px !important;
 }
