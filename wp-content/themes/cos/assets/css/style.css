@@ -3174,9 +3174,10 @@ ul.bxslider {
 
 /* line 176, ../sass/woo/_checkout.scss */
 .wc-square-credit-card-hosted-field {
-  height: 3em !important;
-  padding: 5px !important;
-  border: 1px solid #000 !important;
-  border-radius: 3px !important;
-  transition: border-color 160ms !important;
+  height: 36px !important;
+  padding: 0.5em 1em !important;
+  border: 1px solid #4a4a4a !important;
+  border-radius: 6px !important;
+  color: #4a4a4a;
+  transition: border-color 0.2s ease-out !important;
 }

@@ -174,9 +174,10 @@
 }
 
 .wc-square-credit-card-hosted-field {
-    height: 3em !important;
-    padding: 5px !important;
-    border: 1px solid #000 !important;
-    border-radius:3px !important;
-    transition:border-color 160ms !important;
+    height: 36px!important;
+    padding: 0.5em 1em!important;
+    border: 1px solid $color-black-2!important;
+    border-radius: 6px!important;
+    color: $color-black-2;
+    transition: border-color 0.2s ease-out!important;
 }
