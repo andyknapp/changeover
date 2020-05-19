@@ -92,6 +92,7 @@
     #add_payment_method #payment,
     .woocommerce-cart #payment,
     .woocommerce-checkout #payment {
+        margin-bottom: 0;
         background-color: $color-white;
         border: 1px solid rgba(0,0,0,.1);
 
@@ -100,10 +101,38 @@
             border-bottom-width: 0;
 
             li {
+                position: relative;
+                margin-bottom: 2em;
                 line-height: 1.35;
 
                 input {
                     font-size: 0.75em;
+
+                    &:not(:checked) {
+                        + label {
+                            opacity: 0.7;
+                            transition: opacity 0.1s ease-out;
+
+                            &:hover {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+
+                label {
+                    padding-left: 1.75em;
+                    font-weight: 700;
+                }
+
+                img {
+                    margin: -4px 0 0 0.5em;
+                }
+
+                &.payment_method_paypal {
+                    img {
+                        margin-left: 1.5em;
+                    }
                 }
             }
         }
@@ -132,6 +161,7 @@
         .form-row {
             width: 100%;
             margin-bottom: 0.5em;
+            padding-top: 0;
             font-size: 16px;
 
             @media (min-width: $bp-nav) {
@@ -175,6 +205,14 @@
         + label {
             padding-left: 0.5em;
             font-weight: 700;
+
+            &::before {
+                top: 0;
+            }
+
+            &::after {
+                top: 0.125em;
+            }
         }
     }
 }
@@ -196,4 +234,11 @@
 		background-size: 44px 28px;
         font-size: 14px!important;
 	}
+}
+
+
+.woocommerce form .form-row.woocommerce-validated .select2-container,
+.woocommerce form .form-row.woocommerce-validated input.input-text,
+.woocommerce form .form-row.woocommerce-validated select {
+    border-color: $color-red;
 }

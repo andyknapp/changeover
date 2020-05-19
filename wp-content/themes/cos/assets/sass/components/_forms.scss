@@ -210,15 +210,19 @@ textarea {
 [type='radio']:checked {
 	+ label {
 		&::before {
+            top: 0.75em;
+            width: 1.25em;
+            height: 1.25em;
 			border-radius: 50%;
+            background-color: $color-white;
 		}
 
 		&::after {
-			top: 0.35em;
-			left: 0.25em;
+			top: 0.875em;
+			left: 0.125em;
 			width: 1em;
 			height: 1em;
-			background-color: $color-black;
+			background-color: $color-red;
 			border-radius: 50%;
 		}
 	}
