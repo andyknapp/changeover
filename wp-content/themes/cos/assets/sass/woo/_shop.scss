@@ -51,9 +51,11 @@
 
         // product preview
         li.product {
+            flex: 1 0 auto;
             position: relative;
             display: block;
-            width: calc(50% - 1em);
+            width: calc(50% - 1em - 2px);
+            max-width: calc(50% - 1em);
             margin: 0 1em 2em 0;
             padding: 0 0 3em;
             border: 1px solid $color-gray-3;
