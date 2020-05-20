@@ -352,6 +352,13 @@ remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_ad
 add_action( 'woocommerce_after_shop_loop_item_title', 'cos_view_product_button', 10 );
 
 
+// remove cross sell in cart
+remove_action('woocommerce_cart_collaterals', 'woocommerce_cross_sell_display');
+
+// remove related products
+remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20);
+
+
 // remove wysiwyg from woo products
 function init_remove_support(){
     $post_type = 'product';
