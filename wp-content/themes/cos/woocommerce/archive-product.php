@@ -63,7 +63,10 @@ do_action( 'woocommerce_before_main_content' );
                     <h1 class="heading-2 underline">Online </br>Shop</h1>
                 </header>
                 <div class="intro-content">
-                    <p><span>Changeover Sales</span> online shop blah blah blah shipping inventory something or other.</p>
+                    <p><span>Changeover Sales</span> has expanded to offer online shopping!
+                    </br>Tag Sale items will also be listed for &ldquo;virtual tag sale&rdquo; </br>shopping.
+                    </p>
+                    <p>Please feel free to reach out to changeoversales@aol.com </br>or (302) 562-5385 with any specific inquiries. </br>Thanks and happy shopping!</p>
                 </div>
 
         <?php endif; ?>

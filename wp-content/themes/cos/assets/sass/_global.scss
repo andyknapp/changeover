@@ -89,6 +89,10 @@
 		padding-right: 4em;
 
 		@media (min-width: 51.5em) {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-end;
+            width: 40%;
 			padding-right: 6em;
 		}
 	}
@@ -110,14 +114,19 @@
 	}
 
 	.intro-content {
-		flex: 1 24em;
-		max-width: (524 / 16) * 1em;
+		//flex: 1 24em;
+        width: 100%;
+		//max-width: (524 / 16) * 1em;
 
 		span {
 			font-style: italic;
 			font-weight: 700;
 			color: $color-red;
 		}
+
+        @media (min-width: 51.5em) {
+            width: 60%;
+        }
 	}
 
 	p {
