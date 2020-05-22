@@ -365,3 +365,7 @@ function init_remove_support(){
     remove_post_type_support( $post_type, 'editor');
 }
 add_action('init', 'init_remove_support',100);
+
+
+// add filter to shop page
+// /add_action('woocommerce_before_shop_loop', 'wc_product_dropdown_categories');

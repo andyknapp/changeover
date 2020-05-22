@@ -68,6 +68,19 @@
     </script>
 <?php endif; ?>
 
+<?php if( is_product_category() || is_archive() ) : ?>
+    <script type='text/javascript'>
+        jQuery(function($) {
+            $('.dropdown_product_cat, .orderby').change(function() {
+                if( $(this).val() !=='' ) {
+                    location.href = '<?php echo home_url(); ?>/?product_cat='+$(this).val();
+
+                    $('.site-main').addClass('loading');
+                }
+            });
+        });
+    </script>
+<?php endif; ?>
 
 </body>
 </html>

@@ -42,7 +42,8 @@ select {
 		display: none;
 	}
 
-    &.orderby {
+    &.orderby,
+    &.dropdown_product_cat {
         @extend %fs-14;
     }
 }
