@@ -5,6 +5,15 @@
 }
 
 .shop-intro {
+    p {
+        br {
+            display: none;
+
+            @media (min-width: $bp-nav) {
+                display: block;
+            }
+        }
+    }
     @media (min-width: $bp-nav) {
         padding: 6em 1em;
     }
