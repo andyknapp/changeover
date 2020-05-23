@@ -123,7 +123,7 @@ function cos_add_woocommerce_support() {
         ),
 	) );
 
-    //add_theme_support( 'wc-product-gallery-zoom' );
+    add_theme_support( 'wc-product-gallery-zoom' );
     //add_theme_support( 'wc-product-gallery-lightbox' );
     add_theme_support( 'wc-product-gallery-slider' );
 }
@@ -367,5 +367,11 @@ function init_remove_support(){
 add_action('init', 'init_remove_support',100);
 
 
-// add filter to shop page
-// /add_action('woocommerce_before_shop_loop', 'wc_product_dropdown_categories');
+// adjust image zoom settings
+function custom_single_product_zoom_options( $zoom_options ) {
+    // Changing the magnification level:
+    $zoom_options['magnify'] = 0.7;
+
+    return $zoom_options;
+}
+add_filter('woocommerce_single_product_zoom_options', 'custom_single_product_zoom_options', 10, 3);
