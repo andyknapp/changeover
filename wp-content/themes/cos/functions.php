@@ -366,6 +366,33 @@ function init_remove_support(){
 }
 add_action('init', 'init_remove_support',100);
 
+// remove unused woo tabs
+function cos_remove_tabs($tabs){
+    unset($tabs['advanced']);
+    unset($tabs['attribute']);
+    unset($tabs['marketplace']);
+
+    return($tabs);
+
+}
+add_filter('woocommerce_product_data_tabs', 'cos_remove_tabs', 10, 1);
+
+add_filter( 'woocommerce_allow_marketplace_suggestions', '__return_false' );
+
+
+function cos_woo_css() {
+  echo '<style>
+        #woocommerce-product-data .hndle span span {
+            display:none;
+        }
+        #linked_product_data.woocommerce_options_panel p.form-field.hide_if_grouped {
+            display: none!important;
+        }
+  </style>';
+}
+add_action('admin_head', 'cos_woo_css');
+
+
 
 // adjust image zoom settings
 function custom_single_product_zoom_options( $zoom_options ) {
