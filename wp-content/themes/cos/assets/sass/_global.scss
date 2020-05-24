@@ -166,6 +166,17 @@
 			color: $color-red;
 		}
 
+        a {
+            font-style: italic;
+            text-decoration: underline;
+            color: $color-black-2;
+            transition: color 0.2s ease-out;
+
+            &:hover {
+                color: $color-red;
+            }
+        }
+
         @media (min-width: 51.5em) {
             width: 60%;
         }
