@@ -43,8 +43,11 @@ $calculator_text          = '';
 					</li>
 				<?php endforeach; ?>
 			</ul>
+
 			<?php if ( is_cart() ) : ?>
-                <?php if( $method->method_id === 'free_shipping_per_product' ) : ?>
+
+                <?php if ( $method->method_id === 'free_shipping_per_product' ) : ?>
+
                     <p class="woocommerce-shipping-destination">Complimentary shipping available for local customers</p>
 
                     <?php
@@ -58,13 +61,32 @@ $calculator_text          = '';
                 <?php else : ?>
 
                     <?php
-                        $calculator_text = '';
-                        $show_shipping_calculator = false;
+                        global $woocommerce;
+                        $items = $woocommerce->cart->get_cart();
+
+                        foreach($items as $item => $values) {
+                            $_product =  wc_get_product( $values['data']->get_id() );
+                            $getProductDetail = wc_get_product( $values['product_id'] );
+                            $ship_options = $getProductDetail->get_shipping_class();
+                        }
+
+                        if ( $ship_options === 'free-shipping' ) {
+                            $calculator_text = 'Check Address';
+
+                            echo '<p class="woocommerce-shipping-destination">Complimentary shipping available for local customers</p>';
+
+                        } else {
+
+                            $calculator_text = '';
+                            $show_shipping_calculator = false;
+                        }
+
                     ?>
                 <?php endif; ?>
 
 
 			<?php endif; ?>
+
 			<?php
 		elseif ( ! $has_calculated_shipping || ! $formatted_destination ) :
 			if ( is_cart() && 'no' === get_option( 'woocommerce_enable_shipping_calc' ) ) {
