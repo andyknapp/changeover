@@ -17,3 +17,55 @@ RewriteRule . /index.php [L]
 </IfModule>
 
 # END WordPress
+
+
+# Disable directory browsing
+Options All -Indexes
+
+# Block wp-includes folder and files
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^wp-admin/includes/ - [F,L]
+RewriteRule !^wp-includes/ - [S=3]
+RewriteRule ^wp-includes/[^/]+\.php$ - [F,L]
+RewriteRule ^wp-includes/js/tinymce/langs/.+\.php - [F,L]
+RewriteRule ^wp-includes/theme-compat/ - [F,L]
+</IfModule>
+
+# Limit logins and admin by IP
+#<Limit GET POST PUT>
+#order deny,allow
+#deny from all
+#allow from 302.143.54.102
+#allow from IP_ADDRESS_2
+#</Limit>
+
+# Deny access to wp-config.php file
+<files wp-config.php>
+order allow,deny
+deny from all
+</files>
+
+# Deny access to all .htaccess files
+<files ~ "^.*\.([Hh][Tt][Aa])">
+order allow,deny
+deny from all
+satisfy all
+</files>
+
+# Block one or more IP address.
+# Replace IP_ADDRESS_* with the IP you want to block
+#<Limit GET POST>
+#order allow,deny
+#deny from IP_ADDRESS_1
+#deny from IP_ADDRESS_2
+#allow from all
+#</Limit>
+
+# Prevent image hotlinking script. Replace last URL with any image link you want.
+RewriteEngine on
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?yourwebsite.com [NC]
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?yourotherwebsite.com [NC]
+RewriteRule \.(jpg|jpeg|png|gif)$ http://i.imgur.com/MlQAH71.jpg [NC,R,L]
