@@ -1,12 +1,6 @@
-#RewriteEngine On
-#RewriteCond %{HTTPS} !=on
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
 #RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
-
-RewriteEngine on
-RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
-RewriteRule ^(.*)$ http://%1%{REQUEST_URI} [R=301,QSA,NC,L]
-
-
 
 
 # BEGIN WordPress

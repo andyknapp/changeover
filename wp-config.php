@@ -20,35 +20,40 @@
 
 
 
-if ($_SERVER['HTTP_HOST'] == 'changeoversales.com') {
+if ( $_SERVER['HTTP_HOST'] == 'changeoversales.com' ) {
     define('DB_NAME', 'db173289_changeover');
 	define('DB_USER', 'db173289_user');
 	define('DB_PASSWORD', '4?exf?1GnK_');
 	define('DB_HOST', 'internal-db.s173289.gridserver.com');
-	//define('DB_HOST', 'localhost:3306');
 	define('DB_CHARSET', 'utf8');
 	define('DB_COLLATE', '');
-} else {
-    define('DB_NAME', 'changeover');
-	define('DB_USER', 'root');
-	define('DB_PASSWORD', 'root');
-	define('DB_HOST', 'localhost');
-	define('DB_CHARSET', 'utf8');
-	define('DB_COLLATE', '');
-}
 
-if ($_SERVER['HTTP_HOST'] == 'changeoversales.com') {
-	define('DOMAIN_CURRENT_SITE', 'changeoversales.com');
+    define('DOMAIN_CURRENT_SITE', 'changeoversales.com');
 	define('WP_HOME','https://changeoversales.com');
 	define('WP_SITEURL','https://changeoversales.com');
 
-} else if ($_SERVER['HTTP_HOST'] == 'staging.changeoversales.com') {
-	define('DOMAIN_CURRENT_SITE', 'staging.changeoversales.com');
+} else if ( $_SERVER['HTTP_HOST'] == 'staging.changeoversales.com' ) {
+	define('DB_NAME', 'db173289_staging_changeover');
+	define('DB_USER', 'db173289_user');
+	define('DB_PASSWORD', '4?exf?1GnK_');
+	define('DB_HOST', 'internal-db.s173289.gridserver.com');
+	//define('DB_HOST', 'localhost');
+	define('DB_CHARSET', 'utf8');
+	define('DB_COLLATE', '');
+
+    define('DOMAIN_CURRENT_SITE', 'staging.changeoversales.com');
 	define('WP_HOME','http://staging.changeoversales.com');
 	define('WP_SITEURL','http://staging.changeoversales.com');
 
-} else if ($_SERVER['HTTP_HOST'] == 'changeover.test') {
-	define('DOMAIN_CURRENT_SITE', 'changeover.test');
+} else if ( $_SERVER['HTTP_HOST'] == 'changeover.test' ) {
+	define('DB_NAME', 'db173289_staging_changeover');
+	define('DB_USER', 'db173289_user');
+	define('DB_PASSWORD', '4?exf?1GnK_');
+	define('DB_HOST', 'internal-db.s173289.gridserver.com');
+	define('DB_CHARSET', 'utf8');
+	define('DB_COLLATE', '');
+
+    define('DOMAIN_CURRENT_SITE', 'changeover.test');
 	define('WP_HOME','http://changeover.test');
 	define('WP_SITEURL','http://changeover.test');
 }
@@ -96,9 +101,13 @@ $table_prefix  = 'co_';
  *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
-define('WP_DEBUG', true);
-define('WP_DEBUG_LOG', true);
-define('WP_DEBUG_DISPLAY', false);
+
+ if ( $_SERVER['HTTP_HOST'] == 'changeover.test' ) {
+     define('WP_DEBUG', true);
+     define('WP_DEBUG_LOG', false);
+     define('WP_DEBUG_DISPLAY', false);
+ }
+define('WP_DEBUG', false);
 
 define( 'WP_POST_REVISIONS', 3 );
 
