@@ -171,3 +171,10 @@ function init_scripts() {
 }
 
 add_filter( 'gform_confirmation_anchor', '__return_true' );
+
+
+function co_google_maps_api() {
+    $api['key'] = 'AIzaSyC0zorcnz0cnm0HOApwjG-XMQ20ZZ3yGEA';
+    return $api;
+}
+add_filter('acf/fields/google_map/api', 'co_google_maps_api');
