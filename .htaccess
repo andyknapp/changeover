@@ -1,6 +1,12 @@
-RewriteEngine On
-RewriteCond %{HTTPS} !=on
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
+#RewriteEngine On
+#RewriteCond %{HTTPS} !=on
+#RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1%{REQUEST_URI} [R=301,QSA,NC,L]
+
+
 
 
 # BEGIN WordPress
@@ -17,3 +23,49 @@ RewriteRule . /index.php [L]
 </IfModule>
 
 # END WordPress
+
+
+
+# Disable directory browsing
+Options All -Indexes
+
+# Block wp-includes folder and files
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^wp-admin/includes/ - [F,L]
+RewriteRule !^wp-includes/ - [S=3]
+RewriteRule ^wp-includes/[^/]+\.php$ - [F,L]
+RewriteRule ^wp-includes/js/tinymce/langs/.+\.php - [F,L]
+RewriteRule ^wp-includes/theme-compat/ - [F,L]
+</IfModule>
+
+# Limit logins and admin by IP
+#<Limit GET POST PUT>
+#order deny,allow
+#deny from all
+#allow from 302.143.54.102
+#allow from IP_ADDRESS_2
+#</Limit>
+
+# Deny access to wp-config.php file
+<files wp-config.php>
+order allow,deny
+deny from all
+</files>
+
+# Deny access to all .htaccess files
+<files ~ "^.*\.([Hh][Tt][Aa])">
+order allow,deny
+deny from all
+satisfy all
+</files>
+
+# Block one or more IP address.
+# Replace IP_ADDRESS_* with the IP you want to block
+#<Limit GET POST>
+#order allow,deny
+#deny from IP_ADDRESS_1
+#deny from IP_ADDRESS_2
+#allow from all
+#</Limit>
