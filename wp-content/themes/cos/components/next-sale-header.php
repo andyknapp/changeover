@@ -7,14 +7,18 @@
 
             <?php while( have_rows( 'address' ) ) : the_row(); ?>
                 <?php
-                    $street_number = get_sub_field( 'street_number' );
+                    $street_number = str_replace(' ', '', get_sub_field( 'street_number' ));
                     $street_name = get_sub_field( 'street_name' );
+                    $street_name_encode = str_replace(' ', '+', $street_name);
                     $city = get_sub_field( 'city' );
                     $state = get_sub_field( 'state' );
                     $zip = get_sub_field( 'zip_code' );
                     $neighborhood = get_sub_field( 'neighborhood' );
-                    // $maps_link = 'https://www.google.com/maps/dir/304+Spalding+Rd,+Wilmington,+DE+1980';
-                    // https://www.google.com/maps/dir/304+Spalding+Rd,+Wilmington,+DE+1980
+                    $maps_url = '';
+
+                    if( $street_name && $street_name_encode && $city && $state && $zip ) {
+                        $maps_url = 'https://www.google.com/maps/place/' . $street_number . '+' . $street_name_encode . '+' . $city . '+' . $state . '+' . $zip;
+                    }
                 ?>
 
                 <?php if( $street_number || $street_name) : ?>
@@ -34,27 +38,52 @@
 
     <?php endif; ?>
 
-    <ul class="date-time">
-        <li>Wednesday July 8 <span>6pm - 8pm</span></li>
-        <li>Thursday July 9 <span>10am - 4pm</span></li>
-        <li>Friday July 10 <span>10am - 4pm</span></li>
-        <li>Saturday July 11 <span>9am - 1pm</span></li>
-    </ul>
+    <?php if( have_rows( 'sale_dates' ) ) : ?>
+
+        <ul class="date-time">
+
+            <?php while( have_rows( 'sale_dates' ) ) : the_row(); ?>
+                <?php
+                    $date_field = get_sub_field( 'date' );
+                    $date_obj = DateTime::createFromFormat('d/m/Y', $date_field );
+                    $time = '';
+
+                    if( get_sub_field( 'time' ) ) {
+                        $time = '<span>' . get_sub_field( 'time' ) . '</span>';
+                    }
+                ?>
+
+                <li><?php echo $date_obj->format( 'l F j') ?> <?php echo $time; ?></li>
+
+            <?php endwhile; ?>
+
+        </ul>
+
+    <?php endif; ?>
 
     <div class="sale-meta">
-        <a href="https://www.google.com/maps/dir/304+Spalding+Rd,+Wilmington,+DE+19803" class="external-link" target="_blank">
-            <svg class="direction">
-                <use xlink:href="#icon-location"></use>
-            </svg>
-            <span>Get Directions</span>
-        </a>
 
-        <a href="https://www.estatesales.net/DE/Wilmington/19806/2565471" class="external-link" target="_blank">
-            <svg class="photos">
-                <use xlink:href="#icon-photos"></use>
-            </svg>
-            <span>View Photos</span>
-        </a>
+        <?php if( $maps_url ) : ?>
+
+            <a href="<?php echo $maps_url; ?>" class="external-link" target="_blank">
+                <svg class="direction">
+                    <use xlink:href="#icon-location"></use>
+                </svg>
+                <span>Get Directions</span>
+            </a>
+
+        <?php endif; ?>
+
+        <?php if( get_field( 'photos_link' ) ) : ?>
+
+            <a href="<?php echo get_field( 'photos_link' ); ?>" class="external-link" target="_blank">
+                <svg class="photos">
+                    <use xlink:href="#icon-photos"></use>
+                </svg>
+                <span>View Photos</span>
+            </a>
+
+        <?php endif; ?>
 
         <a href="https://www.facebook.com/ChangeoverSales" class="external-link" target="_blank">
             <svg class="fb">

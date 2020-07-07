@@ -109,7 +109,7 @@
 
 
 	@media (min-width: $bp-nav) {
-		padding: 10em 0 8em;
+		padding: 10em 0 6em;
 	}
 }
 
@@ -120,10 +120,13 @@
 	width: 100%;
 	max-width: (800 / 16) * 1em;
 	padding: 0.5em 0 4em;
+    border-width: 0 0 1px;
+    border-style: solid;
+    border-color: $color-gray-3;
 
     a {
         margin: 0 2em 0 0;
-        color: $color-black-2;
+        color: lighten($color-black-2, 10);
 
 		&:last-of-type {
 			margin-right: 0;
@@ -148,7 +151,7 @@
 
 
 .external-link {
-	@extend %fs-16;
+	@extend %fs-14;
 	text-align: center;
 
 	svg {
@@ -174,18 +177,22 @@
 
     p {
         @extend .copy-1;
+        text-align: center;
+
+        &:not(:last-of-type) {
+            margin-bottom: 0.5em;
+        }
     }
 
     ul {
-        padding-left: 1em;
-        font-size: 1.125em;
-        line-height: 1.6;
+        padding-left: 1.5em;
         list-style-type: disc;
-        list-style-position: inside;
     }
 
     li {
-        margin-bottom: 0.125em;
+        @extend %fs-18;
+        margin-bottom: 0.5em;
+        line-height: 1.35;
     }
 
     span {
@@ -197,6 +204,57 @@
 	@media (min-width: $bp-small) {
 		margin: 2em auto 4em;
 	}
+
+    @media (min-width: $bp-nav) {
+        margin-top: 3em;
+    }
+}
+
+.announcement {
+    width: calc(100% - 2em);
+    //max-width: 90%;
+    margin: 0 auto;
+    padding: 1em;
+    font-size: 90%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: $color-gray-3;
+    border-radius: 2px;
+    background-color: $color-gray-4;
+
+    p {
+        text-align: left;
+
+        &:first-of-type {
+            @extend .heading-4;
+            @extend %copy-2;
+        }
+    }
+
+
+    @media (min-width: $bp-small) {
+        margin-top: 2em;
+
+        p {
+            text-align: center;
+        }
+
+        ul {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+        }
+
+        li {
+            width: calc(50% - 1em);
+        }
+    }
+
+    @media (min-width: $bp-nav) {
+        width: calc(100% - 8em);
+        padding: 1em 2em 0.5em;
+    }
+
 }
 
 
@@ -431,7 +489,7 @@
 
 
 .upcoming {
-	padding: 4em 1em 0;
+	padding: 0 1em 0;
 
     .upcoming-header {
 		@extend %flex-parent-row;
@@ -473,11 +531,10 @@
 	.upcoming-sales {
 		@extend %flex-parent-row;
 		flex-wrap: wrap;
+        margin-bottom: 5em;
 	}
 
 	@media (min-width: $bp-small) {
-        padding-top: 6em;
-
 		.upcoming-header {
 			justify-content: center;
 			padding: 0 0 2em;
@@ -499,9 +556,7 @@
 	}
 
 
-	// @media (min-width: $bp-nav) {
-	// 	.address {
-	// 		padding: 0 3.5em;
-	// 	}
-	// }
+	@media (min-width: $bp-nav) {
+		margin-bottom: 8em;
+	}
 }

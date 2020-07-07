@@ -22,7 +22,7 @@ get_header();
         $next_sale = get_field( 'next_sale' );
         $upcoming_sales = get_field( 'upcoming_sales' );
 
-        if ( $next_sale ) {
+        if( $next_sale ) {
             foreach ( $next_sale as $post ) {
 
                 setup_postdata( $post );
@@ -31,12 +31,17 @@ get_header();
 
             wp_reset_postdata();
         }
+
+        if( $upcoming_sales ) {
+            include( 'components/upcoming-sales.php' );
+        }
+
     ?>
 
 	<hr class="spacer">
 
 	<section id="how-it-works" class="how-it-works major-section">
-		<div class="container-mid animation-element fade-up" data-trigger="0.95">
+		<div class="container-mid animation-element fade-up" data-trigger="0.85">
 			<h5 class="heading-1">How it Works</h5>
 			<span>We take care of everything</span>
 			<p>All our client needs to do is take what they want and leave the rest to us. We will sort saleable from non-saleable, arrange, price, tag, advertise and sell everything in 2 or 3 days leaving your home “broom clean” ready for the cleaning crew (we can arrange for that, too!).</p>
@@ -48,7 +53,7 @@ get_header();
 	</section>
 
 	<section id="testimonials" class="testimonials major-section">
-		<div class="container-mid animation-element fade-up" data-trigger="0.95">
+		<div class="container-mid animation-element fade-up" data-trigger="0.85">
 			<ul class="slider">
 			<li class="slide">
 				<div class="container-slide">
@@ -72,7 +77,7 @@ get_header();
 	</section>
 
 	<section id="about-us" class="about major-section">
-		<div class="container-mid animation-element fade-up" data-trigger="0.95">
+		<div class="container-mid animation-element fade-up" data-trigger="0.85">
 			<h5 class="heading-1">About Us</h5>
 			<p>Founded by Kay Reilly in 1977, we continue to be family owned and operated with a combined 70+ years of tag sales and appraisal experience. Word of mouth and customer referrals are the backbone of our thriving business and sterling reputation.</p>
 			<p>We are very proud of our friendly, knowledgeable, professional staff, many who have been with us from the start! We also maintain a vast number of experts who contribute valuable information and opinions on art, antiques, jewelry, etc.</p>
@@ -82,7 +87,7 @@ get_header();
 	<hr class="spacer">
 
 	<section id="contact" class="contact major-section">
-		<div class="container-mid animation-element fade-up" data-trigger="0.95">
+		<div class="container-mid animation-element fade-up" data-trigger="0.85">
 			<h5 class="heading-1">Contact</h5>
 			<div class="contact-container">
 				<aside class="contact-info">
