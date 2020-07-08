@@ -91,10 +91,24 @@ get_header();
 			<h5 class="heading-1">Contact</h5>
 			<div class="contact-container">
 				<aside class="contact-info">
-					<span class="copy-1">Kay Reilly</span>
-					<span class="copy-1">Patty Souffie</span>
-					<a href="mailto:changeoversales@aol.com" target="_blank">changeoversales@aol.com</a>
-					<a href="tel:1-302-562-5385">302-562-5385</a>
+                    <div class="flex-container">
+                        <h4 class="copy-1">Kay Reilly</h4>
+    					<h4 class="copy-1">Patty Souffie</h4>
+    					<a href="mailto:changeoversales@aol.com" target="_blank">
+                            <svg class="email">
+                                <use xlink:href="#icon-mail"></use>
+                            </svg>
+                            <span>changeoversales@aol.com</span>
+
+                        </a>
+    					<a href="tel:1-302-562-5385">
+                            <svg class="phone">
+                                <use xlink:href="#icon-phone"></use>
+                            </svg>
+                            <span>302-562-5385</span>
+                        </a>
+                    </div>
+
 				</aside>
 
 				<?php gravity_form( 1, false, false, false, '', false ); ?>
