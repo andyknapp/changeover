@@ -16,27 +16,24 @@ get_header();
 		</div>
 	</section>
 
-	<hr class="spacer">
-
     <?php
         $next_sale = get_field( 'next_sale' );
         $upcoming_sales = get_field( 'upcoming_sales' );
-
-        if( $next_sale ) {
-            foreach ( $next_sale as $post ) {
-
-                setup_postdata( $post );
-                include( 'components/next-sale.php' );
-            }
-
-            wp_reset_postdata();
-        }
-
-        if( $upcoming_sales ) {
-            include( 'components/upcoming-sales.php' );
-        }
-
     ?>
+
+    <?php if( $next_sale ) : ?>
+
+        <hr class="spacer">
+        
+        <?php foreach( $next_sale as $post) : setup_postdata( $post ); ?>
+
+            <?php include( 'components/next-sale.php' ); ?>
+
+        <?php endforeach; wp_reset_postdata(); ?>
+
+    <?php endif; ?>
+
+    <?php include( 'components/upcoming-sales.php' ); ?>
 
 	<hr class="spacer">
 

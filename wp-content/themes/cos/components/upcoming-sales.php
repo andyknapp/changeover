@@ -4,22 +4,26 @@
         <p>Check back soon for more information!</p>
     </header>
 
-    <div class="upcoming-sales animation-element fade" data-trigger="0.93">
+    <?php if( $upcoming_sales ) : ?>
 
-        <?php foreach( $upcoming_sales as $post ) : ?>
-            <?php setup_postdata( $post ); ?>
+        <div class="upcoming-sales animation-element fade" data-trigger="0.93">
 
-            <ul class="address">
-                <?php if( have_rows( 'address_short' ) ) : ?>
-                    <?php while( have_rows( 'address_short' ) ) : the_row(); ?>
+            <?php foreach( $upcoming_sales as $post ) : ?>
+                <?php setup_postdata( $post ); ?>
 
-                        <li><?php echo get_sub_field( 'address_preview' ); ?></li>
+                <ul class="address">
+                    <?php if( have_rows( 'address_short' ) ) : ?>
+                        <?php while( have_rows( 'address_short' ) ) : the_row(); ?>
 
-                    <?php endwhile; ?>
-                <?php endif; ?>
-            </ul>
+                            <li><?php echo get_sub_field( 'address_preview' ); ?></li>
 
-        <?php endforeach; wp_reset_postdata(); ?>
+                        <?php endwhile; ?>
+                    <?php endif; ?>
+                </ul>
 
-    </div>
+            <?php endforeach; wp_reset_postdata(); ?>
+
+        </div>
+
+    <?php endif; ?>
 </section>
