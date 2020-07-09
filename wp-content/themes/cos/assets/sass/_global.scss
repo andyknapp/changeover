@@ -34,7 +34,7 @@
 	padding: 5em 1em;
 
 	@media (min-width: $bp-nav) {
-		padding: 12em 1em;
+		padding: 10em 1em;
 	}
 }
 
@@ -171,6 +171,7 @@
 }
 
 .contact-info {
+    display: flex;
 	width: 80%;
 	margin: 0 auto 1em;
 	padding: 2em;
@@ -178,13 +179,17 @@
 	box-shadow: 0 2px 6px 0 rgba(170, 170, 170, 0.5);
 	border-radius: 30px;
 
-	span,
-	a {
-		display: block;
+    .flex-container {
+        margin: auto;
+    }
+
+	a,
+    .copy-1 {
+        display: block;
 		color: $color-black-2;
 	}
 
-	span {
+	.copy-1 {
 		@extend %fs-28;
 		margin-bottom: 0.5em;
 		line-height: 1;
@@ -205,6 +210,10 @@
 
 		&:hover {
 			color: $color-red;
+
+            svg {
+                fill: $color-red;
+            }
 		}
 	}
 }
@@ -224,13 +233,32 @@
 			order: 1;
 			align-self: center;
 			width: auto;
-			height: 352px;
+			//height: 352px;
 			margin: 0 0 0 2em;
-			padding: 4em;
+			padding: 4em 3em;
 			text-align: left;
 			transform: translateY(-67px);
 		}
 	}
+
+    a {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        margin-bottom: 1em;
+    }
+
+    svg {
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        margin-right: 0.5em;
+        fill: $color-black-2;
+
+        &.phone {
+            height: (21 / 16) * 1em;
+        }
+    }
 }
 
 

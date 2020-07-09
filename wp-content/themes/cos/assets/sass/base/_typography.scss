@@ -49,6 +49,11 @@
 }
 
 
+%fs-14 {
+	@include fluid-scale(font-size, 20em, 80em, 0.75em, 0.875em);
+}
+
+
 
 body {
 	@extend %font-body;
