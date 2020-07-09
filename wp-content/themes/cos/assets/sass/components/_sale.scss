@@ -120,9 +120,6 @@
 	width: 100%;
 	max-width: 34em;
 	padding: 0.5em 0 4em;
-    border-width: 0 0 1px;
-    border-style: solid;
-    border-color: $color-gray-3;
 
     a {
         margin: 0 2em 0 0;
@@ -141,6 +138,9 @@
 		margin: 0 auto;
 		padding: 1em 0 2em;
         text-align: center;
+        border-width: 0 0 1px;
+        border-style: solid;
+        border-color: $color-gray-3;
 
         a {
 			width: 33.33%;

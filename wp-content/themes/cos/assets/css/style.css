@@ -1546,20 +1546,17 @@ button:focus:not(.no-button-style) {
   width: 100%;
   max-width: 34em;
   padding: 0.5em 0 4em;
-  border-width: 0 0 1px;
-  border-style: solid;
-  border-color: #e2e4e7;
 }
-/* line 127, ../sass/components/_sale.scss */
+/* line 124, ../sass/components/_sale.scss */
 .sale-meta a {
   margin: 0 2em 0 0;
   color: #646464;
 }
-/* line 131, ../sass/components/_sale.scss */
+/* line 128, ../sass/components/_sale.scss */
 .sale-meta a:last-of-type {
   margin-right: 0;
 }
-/* line 135, ../sass/components/_sale.scss */
+/* line 132, ../sass/components/_sale.scss */
 .sale-meta a:hover {
   color: #b51814;
 }
@@ -1569,6 +1566,9 @@ button:focus:not(.no-button-style) {
     margin: 0 auto;
     padding: 1em 0 2em;
     text-align: center;
+    border-width: 0 0 1px;
+    border-style: solid;
+    border-color: #e2e4e7;
   }
   /* line 145, ../sass/components/_sale.scss */
   .sale-meta a {
