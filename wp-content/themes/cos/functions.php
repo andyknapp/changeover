@@ -241,7 +241,7 @@ function wps_deregister_styles() {
 function cos_loop_shop_per_page( $cols ) {
     // $cols contains the current number of products per page based on the value stored on Options -> Reading
     // Return the number of products you wanna show per page.
-    $cols = 12;
+    $cols = 24;
     return $cols;
 }
 add_filter( 'loop_shop_per_page', 'cos_loop_shop_per_page', 20 );
