@@ -402,3 +402,11 @@ function custom_single_product_zoom_options( $zoom_options ) {
     return $zoom_options;
 }
 add_filter('woocommerce_single_product_zoom_options', 'custom_single_product_zoom_options', 10, 3);
+
+
+
+function co_google_maps_api() {
+    $api['key'] = 'AIzaSyC0zorcnz0cnm0HOApwjG-XMQ20ZZ3yGEA';
+    return $api;
+}
+add_filter('acf/fields/google_map/api', 'co_google_maps_api');
