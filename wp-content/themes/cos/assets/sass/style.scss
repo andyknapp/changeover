@@ -14,3 +14,8 @@
 @import 'components/buttons';
 @import 'components/sale';
 @import 'components/slider';
+
+// woocommerce
+@import 'woo/shop.scss';
+@import 'woo/cart.scss';
+@import 'woo/checkout.scss';

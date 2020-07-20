@@ -1,0 +1,301 @@
+.woocommerce-cart {
+    .entry-content {
+        padding: 0 1em 4em;
+    }
+
+    .site-content {
+        @extend .container-site;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .entry-header {
+        @extend .shop-intro;
+        padding-bottom: 1em;
+        padding-left: 1em;
+        padding-right: 1em;
+        margin-bottom: 1em;
+    }
+
+    .entry-title {
+        @extend %heading-product-single;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 72px;
+            height: 3px;
+            margin-top: 8px;
+            border-radius: 2px;
+            background-color: $color-red;
+        }
+    }
+
+    .return-to-shop {
+        margin-left: 1em;
+
+        .button {
+            @extend %button;
+        }
+    }
+
+    .woocommerce {
+        display: grid;
+        grid-template-columns: 100%;
+        width: 100%;
+
+        @media (min-width: $bp-nav) {
+            grid-template-columns: 50%;
+            grid-template-areas:
+                "notices notices"
+                "cart collaterals";
+
+            .cart-collaterals {
+                grid-area: collaterals;
+                padding: 0 0 0 2.5em;
+            }
+
+            .woocommerce-notices-wrapper {
+                grid-area: notices;
+            }
+
+            .woocommerce-cart-form {
+                grid-area: cart;
+            }
+        }
+
+        @media (min-width: $bp-big) {
+            grid-template-columns: 60% 40%;
+
+            .cart-collaterals {
+                padding-left: 5em;
+            }
+        }
+
+
+        // cart page
+        .cart {
+            .button {
+                @extend %button;
+                padding: 0.75em 3em!important;
+                color: $color-red!important;
+                font-size: 13px;
+                background-color: $color-white;
+                border-color: $color-red;
+                border-radius: 4px;
+
+                &:disabled {
+                    color: $color-gray-2!important;
+                    border-color: $color-gray-2;
+
+                    &:hover {
+                        color: $color-gray-2!important;
+                        border-color: $color-gray-2;
+                        background-color: $color-white;
+                    }
+                }
+
+                &:hover {
+                    color: $color-white!important;
+                    background-color: $color-red;
+                    border-color: $color-red;
+                }
+            }
+        }
+
+        table {
+            &.shop_table,
+            &.cart {
+                border-width: 0;
+                border-radius: 2px;
+
+                th {
+                    @extend %heading-5;
+                    padding: 0 0.5em 0.25em 0;
+                    font-weight: 600;
+
+                    &.product-name {
+                        padding-left: (24 / 14) * 1em;
+                    }
+                }
+
+                td {
+                    padding: 1.5em 0 0;
+                    vertical-align: top;
+
+                    &.product-name {
+                        padding-left: 1.5em;
+                        a {
+                            @extend %heading-product-preview;
+                        }
+                    }
+                }
+
+                .product-subtotal,
+                .product-quantity,
+                .product-price {
+                    width: 80px;
+                    padding-right: 0;
+                    text-align: right;
+                }
+
+                .product-thumbnail {
+                    width: 180px;
+
+                    @media (min-width: $bp-big) {
+                        width: 280px;
+                    }
+                }
+
+                .remove-row {
+                    transform: translateY(-100%);
+
+                    span {
+                        font-size: 0.875em;
+                        vertical-align: top;
+                        color: #757575;
+                    }
+
+                    .product-remove {
+                        padding: 0 0.5em 0;
+                        border-width: 0;
+                        text-align: right;
+
+                        a {
+                            display: inline-block;
+                            text-align: center;
+                            color: $color-red!important;
+                        }
+                    }
+                }
+
+                .action-row {
+                    padding-top: 0;
+
+                    .actions {
+                        border-width: 0;
+                    }
+                }
+
+                img {
+                    display: block;
+                    width: 100%;
+                }
+            }
+
+            &.cart {
+
+            }
+        }
+
+        .cart_totals {
+            padding: 1em;
+            border: 1px solid rgba(0,0,0,.1);
+
+            > h2 {
+                @extend %heading-4;
+                margin-bottom: 0.5em;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            }
+
+            table {
+                th {
+                    padding: (8 / 14) * 1em 0;
+                    vertical-align: bottom;
+                }
+
+                td {
+                    padding: 0.5em 0 (6 / 16) * 1em;
+                }
+            }
+
+            .woocommerce-shipping-methods {
+                margin-bottom: 1.5em!important;
+                padding: 0.75em 0 0.5em;
+
+                li {
+                    position: relative;
+                    font-size: (15 / 16) * 1em;
+                }
+
+                label {
+                    &::before {
+                        width: 1em;
+                        height: 1em;
+                        top: 50%;
+                    }
+                }
+
+                [type='checkbox']:checked + label::after,
+                [type='radio']:checked + label::after,
+                [type='checkbox']:checked + label::before,
+                [type='radio']:checked + label::before {
+                    width: 1em;
+                    height: 1em;
+                }
+
+                [type='checkbox'] + label::before,
+                [type='radio'] + label::before {
+                    transform: translateY(-50%);
+                }
+
+                [type='checkbox']:checked + label::after,
+                [type='radio']:checked + label::after {
+                    top: 50%;
+                    left: 0;
+                    transform: scale(1) translateY(-50%);
+                }
+
+                [type='checkbox']+ label,
+                [type='radio'] + label {
+                    padding: 0.25em 0.25em 0.25em 2em;
+                }
+            }
+
+            .woocommerce-shipping-destination,
+            .shipping-calculator-button {
+                font-size: (15 / 16) * 1em;
+            }
+
+            .woocommerce-shipping-destination {
+                line-height: 1.2;
+                color: $color-gray-5;
+                font-style: italic;
+            }
+
+            .button {
+                &.checkout-button {
+                    margin-bottom: 0;
+                    margin-top: 1.75em;
+                    padding: 0.75em 2em;
+                    border: 1px solid rgba($color-red, 0.9);
+                    border-radius: 6px;
+                    font-size: 1.25em;
+                    font-weight: 400;
+                    line-height: 1.2;
+                    color: #ffffff;
+                    letter-spacing: 1px;
+                    text-align: center;
+                    background-color: rgba($color-red, 0.9);
+
+                    &:hover {
+                        color: $color-red;
+                        background-color: $color-white;
+                    }
+
+                }
+            }
+
+            .wc-proceed-to-checkout {
+                padding: 0;
+            }
+        }
+    }
+
+    .woocommerce table.shop_table .remove-row .product-remove a,
+    .woocommerce table.cart .remove-row .product-remove a {
+        &:hover {
+            color: $color-white!important;
+        }
+    }
+}

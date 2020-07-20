@@ -20,6 +20,10 @@
 	@include fluid-scale(font-size, 20em, 80em, 2.625em, 3.875em);
 }
 
+%fs-40 {
+	@include fluid-scale(font-size, 20em, 80em, 1.5em, 2.5em);
+}
+
 %fs-32 {
 	@include fluid-scale(font-size, 20em, 80em, 1.6875em, 2em);
 }
@@ -46,6 +50,10 @@
 
 %fs-16 {
 	@include fluid-scale(font-size, 20em, 80em, 0.875em, 1em);
+}
+
+%fs-14 {
+	@include fluid-scale(font-size, 20em, 80em, 0.75em, 0.875em);
 }
 
 
@@ -130,9 +138,11 @@ a {
   font-weight: 300;
 }
 
+%heading-3,
 .heading-3 {
-  @extend %fs-32;
-  font-weight: 600;
+    @extend %font-heading;
+    @extend %fs-32;
+    font-weight: 600;
 }
 
 %heading-4,
@@ -140,6 +150,26 @@ a {
   @extend %fs-24;
   font-weight: 600;
   //text-transform: uppercase;
+}
+
+%heading-5,
+.heading-5 {
+    @extend %font-body;
+    @extend %fs-14;
+}
+
+%heading-product-preview,
+.heading-product-preview {
+  @extend %fs-22;
+  font-weight: 600;
+  //text-transform: uppercase;
+}
+
+%heading-product-single,
+.heading-product-single {
+    @extend %font-heading;
+    @extend %fs-40;
+    font-weight: 600;
 }
 
 
@@ -153,6 +183,13 @@ a {
 %copy-2,
 .copy-2 {
   @extend %fs-20;
+  margin-bottom: 1em;
+  line-height: 1.5;
+}
+
+%copy-3,
+.copy-3 {
+  @extend %fs-18;
   margin-bottom: 1em;
   line-height: 1.5;
 }
