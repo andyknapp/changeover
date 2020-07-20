@@ -217,6 +217,194 @@ function init_scripts() {
 add_filter( 'gform_confirmation_anchor', '__return_true' );
 
 
+// woocommerce
+// add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
+
+function cos_dequeue_styles( $enqueue_styles ) {
+    //unset( $enqueue_styles['woocommerce-general'] );	// Remove the gloss
+    unset( $enqueue_styles['woocommerce-layout'] );		// Remove the layout
+    unset( $enqueue_styles['woocommerce-smallscreen'] );	// Remove the smallscreen optimisation
+    return $enqueue_styles;
+}
+add_filter( 'woocommerce_enqueue_styles', 'cos_dequeue_styles' );
+
+
+add_action( 'wp_print_styles', 'wps_deregister_styles', 100 );
+function wps_deregister_styles() {
+    wp_dequeue_style( 'wp-block-library' );
+}
+
+/**
+ * Change number of products that are displayed per page (shop page)
+ */
+
+function cos_loop_shop_per_page( $cols ) {
+    // $cols contains the current number of products per page based on the value stored on Options -> Reading
+    // Return the number of products you wanna show per page.
+    $cols = 24;
+    return $cols;
+}
+add_filter( 'loop_shop_per_page', 'cos_loop_shop_per_page', 20 );
+
+
+// Modify the default WooCommerce orderby dropdown
+//
+// Options: menu_order, popularity, rating, date, price, price-desc
+// In this example I'm removing price & price-desc but you can remove any of the options
+function cos_woocommerce_catalog_orderby( $orderby ) {
+    unset($orderby['popularity']);
+    unset($orderby['menu_order']);
+    return $orderby;
+}
+add_filter( 'woocommerce_catalog_orderby', 'cos_woocommerce_catalog_orderby', 20 );
+
+
+// custom markup in product thumbnails
+remove_action( 'woocommerce_shop_loop_item_title','woocommerce_template_loop_product_title', 10 );
+
+function cos_woocommerce_template_loop_product_title() {
+    echo '<div class="product-detail-wrap"><h2 class="heading-product-preview">' . get_the_title() . '</h2>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+}
+add_filter( 'woocommerce_shop_loop_item_title', 'cos_woocommerce_template_loop_product_title' );
+
+
+// make category conditional on single prod page
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
+
+
+// Add the opening div to the img
+function add_img_wrapper_start() {
+    echo '<div class="archive-img-wrap">';
+}
+add_action( 'woocommerce_before_shop_loop_item_title', 'add_img_wrapper_start', 5, 2 );
+
+// Close the div that we just added
+function add_img_wrapper_close() {
+    echo '</div>';
+}
+add_action( 'woocommerce_before_shop_loop_item_title', 'add_img_wrapper_close', 12, 2 );
+
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
+
+
+
+function cos_local_delivery() {
+    global $product;
+
+    $ship_class_id = $product->get_shipping_class_id();
+    $ship_obj = get_term_by('term_taxonomy_id', $ship_class_id, 'product_shipping_class');
+    $ship_slug = $ship_obj->slug;
+
+    $shipping_zone = WC_Shipping_Zones::get_zone_matching_package( $package );
+
+    $zone_name = $shipping_zone->get_zone_name();
+    $zone_id = $shipping_zone->get_id();
+
+    if( $ship_slug != 'free-shipping' ) {
+        return;
+    } else {
+        echo '<p class="free-shipping-alert">Complimentary shipping available for local customers</p>';
+    }
+}
+add_action('woocommerce_single_product_summary', 'cos_local_delivery');
+
+/**
+ * Remove uncategorized from the WooCommerce breadcrumb.
+ *
+ * @param  Array $crumbs    Breadcrumb crumbs for WooCommerce breadcrumb.
+ * @return Array   WooCommerce Breadcrumb crumbs with default category removed.
+ */
+function cos_wc_remove_uncategorized_from_breadcrumb( $crumbs ) {
+	$category 	= get_option( 'default_product_cat' );
+	$caregory_link 	= get_category_link( $category );
+
+	foreach ( $crumbs as $key => $crumb ) {
+		if ( in_array( $caregory_link, $crumb ) ) {
+			unset( $crumbs[ $key ] );
+		}
+	}
+
+	return array_values( $crumbs );
+}
+
+add_filter( 'woocommerce_get_breadcrumb', 'cos_wc_remove_uncategorized_from_breadcrumb' );
+
+
+
+
+/**
+ * Show cart contents / total Ajax
+ */
+//add_filter( 'woocommerce_add_to_cart_fragments', 'woocommerce_header_add_to_cart_fragment' );
+
+
+
+
+// remove add to cart button from loop and add view product button
+function cos_view_product_button() {
+    global $product;
+    $link = $product->get_permalink();
+
+    echo '<span class="button">View Product</span>';
+}
+
+remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
+add_action( 'woocommerce_after_shop_loop_item_title', 'cos_view_product_button', 10 );
+
+
+// remove cross sell in cart
+remove_action('woocommerce_cart_collaterals', 'woocommerce_cross_sell_display');
+
+// remove related products
+remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20);
+
+
+// remove wysiwyg from woo products
+function init_remove_support(){
+    $post_type = 'product';
+    remove_post_type_support( $post_type, 'editor');
+}
+add_action('init', 'init_remove_support',100);
+
+// remove unused woo tabs
+function cos_remove_tabs($tabs){
+    unset($tabs['advanced']);
+    unset($tabs['attribute']);
+    unset($tabs['marketplace']);
+
+    return($tabs);
+
+}
+add_filter('woocommerce_product_data_tabs', 'cos_remove_tabs', 10, 1);
+
+add_filter( 'woocommerce_allow_marketplace_suggestions', '__return_false' );
+
+
+function cos_woo_css() {
+  echo '<style>
+        #woocommerce-product-data .hndle span span {
+            display:none;
+        }
+        #linked_product_data.woocommerce_options_panel p.form-field.hide_if_grouped {
+            display: none!important;
+        }
+  </style>';
+}
+add_action('admin_head', 'cos_woo_css');
+
+
+
+// adjust image zoom settings
+function custom_single_product_zoom_options( $zoom_options ) {
+    // Changing the magnification level:
+    $zoom_options['magnify'] = 0.7;
+
+    return $zoom_options;
+}
+add_filter('woocommerce_single_product_zoom_options', 'custom_single_product_zoom_options', 10, 3);
+
+
+
 function co_google_maps_api() {
     $api['key'] = 'AIzaSyC0zorcnz0cnm0HOApwjG-XMQ20ZZ3yGEA';
     return $api;

@@ -465,42 +465,7 @@ body, .woocommerce .woocommerce-result-count span, .woocommerce-cart .woocommerc
   }
 }
 
-/* line 4, ../sass/base/_mixins.scss */
-.woocommerce .woocommerce-result-count span, .woocommerce-cart .woocommerce table.shop_table th, .woocommerce-cart .woocommerce table.cart th, .woocommerce-checkout .woocommerce-shipping-fields h3, .woocommerce-checkout .woocommerce form .form-row label, .woocommerce-checkout #add_payment_method #payment .form-row input label,
-.woocommerce-checkout #add_payment_method #payment .form-row .wc-square-credit-card-hosted-field label,
-.woocommerce-checkout .woocommerce-cart #payment .form-row input label,
-.woocommerce-checkout .woocommerce-cart #payment .form-row .wc-square-credit-card-hosted-field label,
-.woocommerce-checkout .woocommerce-checkout #payment .form-row input label,
-.woocommerce-checkout .woocommerce-checkout #payment .form-row .wc-square-credit-card-hosted-field label,
-.heading-5, select.orderby, select.dropdown_product_cat, .external-link, .woocommerce .type-product .free-shipping-alert {
-  font-size: 0.75em;
-}
-@media screen and (min-width: 20em) {
-  /* line 4, ../sass/base/_mixins.scss */
-  .woocommerce .woocommerce-result-count span, .woocommerce-cart .woocommerce table.shop_table th, .woocommerce-cart .woocommerce table.cart th, .woocommerce-checkout .woocommerce-shipping-fields h3, .woocommerce-checkout .woocommerce form .form-row label, .woocommerce-checkout #add_payment_method #payment .form-row input label,
-  .woocommerce-checkout #add_payment_method #payment .form-row .wc-square-credit-card-hosted-field label,
-  .woocommerce-checkout .woocommerce-cart #payment .form-row input label,
-  .woocommerce-checkout .woocommerce-cart #payment .form-row .wc-square-credit-card-hosted-field label,
-  .woocommerce-checkout .woocommerce-checkout #payment .form-row input label,
-  .woocommerce-checkout .woocommerce-checkout #payment .form-row .wc-square-credit-card-hosted-field label,
-  .heading-5, select.orderby, select.dropdown_product_cat, .external-link, .woocommerce .type-product .free-shipping-alert {
-    font-size: calc(0.75em + 0.125 * (100vw - 20em) / 60);
-  }
-}
-@media screen and (min-width: 80em) {
-  /* line 4, ../sass/base/_mixins.scss */
-  .woocommerce .woocommerce-result-count span, .woocommerce-cart .woocommerce table.shop_table th, .woocommerce-cart .woocommerce table.cart th, .woocommerce-checkout .woocommerce-shipping-fields h3, .woocommerce-checkout .woocommerce form .form-row label, .woocommerce-checkout #add_payment_method #payment .form-row input label,
-  .woocommerce-checkout #add_payment_method #payment .form-row .wc-square-credit-card-hosted-field label,
-  .woocommerce-checkout .woocommerce-cart #payment .form-row input label,
-  .woocommerce-checkout .woocommerce-cart #payment .form-row .wc-square-credit-card-hosted-field label,
-  .woocommerce-checkout .woocommerce-checkout #payment .form-row input label,
-  .woocommerce-checkout .woocommerce-checkout #payment .form-row .wc-square-credit-card-hosted-field label,
-  .heading-5, select.orderby, select.dropdown_product_cat, .external-link, .woocommerce .type-product .free-shipping-alert {
-    font-size: 0.875em;
-  }
-}
-
-/* line 66, ../sass/base/_typography.scss */
+/* line 60, ../sass/base/_typography.scss */
 body {
   font-size: 16px;
   font-weight: 400;
@@ -508,28 +473,28 @@ body {
   color: #4a4a4a;
 }
 
-/* line 76, ../sass/base/_typography.scss */
+/* line 70, ../sass/base/_typography.scss */
 a {
   color: #b51814;
   text-decoration: none;
   transition: color 0.2s ease-out;
 }
-/* line 81, ../sass/base/_typography.scss */
+/* line 75, ../sass/base/_typography.scss */
 a:hover, a:visited, a:active, a:focus {
   outline: 0;
 }
-/* line 88, ../sass/base/_typography.scss */
+/* line 82, ../sass/base/_typography.scss */
 a:hover {
   color: #b51814;
 }
 
-/* line 94, ../sass/base/_typography.scss */
+/* line 88, ../sass/base/_typography.scss */
 [class*='heading-'] {
   font-weight: 700;
   line-height: 1;
   color: #111;
 }
-/* line 101, ../sass/base/_typography.scss */
+/* line 95, ../sass/base/_typography.scss */
 [class*='heading-'].underline::after {
   content: '';
   display: block;
@@ -539,56 +504,56 @@ a:hover {
   border-radius: 2px;
   background-color: #b51814;
 }
-/* line 112, ../sass/base/_typography.scss */
+/* line 106, ../sass/base/_typography.scss */
 [class*='heading-'].underline.thin::after {
   width: 62px;
   height: 1px;
   transform: scaleX(1) translateX(0);
 }
-/* line 120, ../sass/base/_typography.scss */
+/* line 114, ../sass/base/_typography.scss */
 [class*='heading-'].underline.center::after {
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 128, ../sass/base/_typography.scss */
+/* line 122, ../sass/base/_typography.scss */
 .heading-1 {
   margin-bottom: 0.5em;
   letter-spacing: -0.015em;
   color: #4a4a4a;
 }
 
-/* line 135, ../sass/base/_typography.scss */
+/* line 129, ../sass/base/_typography.scss */
 .heading-2 {
   margin-bottom: 0.5em;
   font-weight: 300;
 }
 
-/* line 141, ../sass/base/_typography.scss */
+/* line 135, ../sass/base/_typography.scss */
 .heading-3 {
   font-weight: 600;
 }
 
-/* line 148, ../sass/base/_typography.scss */
+/* line 142, ../sass/base/_typography.scss */
 .woocommerce-cart .woocommerce .cart_totals > h2, .woocommerce-checkout .woocommerce-billing-fields h3, .woocommerce-checkout #order_review_heading,
 .heading-4,
 .announcement p:first-of-type {
   font-weight: 600;
 }
 
-/* line 161, ../sass/base/_typography.scss */
+/* line 155, ../sass/base/_typography.scss */
 .woocommerce-cart .woocommerce table.shop_table td.product-name a, .woocommerce-cart .woocommerce table.cart td.product-name a,
 .heading-product-preview {
   font-weight: 600;
 }
 
-/* line 168, ../sass/base/_typography.scss */
+/* line 162, ../sass/base/_typography.scss */
 .woocommerce .type-product.product .product_title, .woocommerce-cart .entry-title, .woocommerce-checkout .entry-title,
 .heading-product-single {
   font-weight: 600;
 }
 
-/* line 176, ../sass/base/_typography.scss */
+/* line 170, ../sass/base/_typography.scss */
 .intro p, .gform_confirmation_message, .sale-close li,
 .copy-1,
 .sale-description p {
@@ -596,21 +561,21 @@ a:hover {
   line-height: 1.5;
 }
 
-/* line 183, ../sass/base/_typography.scss */
+/* line 177, ../sass/base/_typography.scss */
 .how-it-works p, .about p, .announcement p:first-of-type,
 .copy-2 {
   margin-bottom: 1em;
   line-height: 1.5;
 }
 
-/* line 190, ../sass/base/_typography.scss */
+/* line 184, ../sass/base/_typography.scss */
 .woocommerce .type-product.product .woocommerce-product-details__short-description,
 .copy-3 {
   margin-bottom: 1em;
   line-height: 1.5;
 }
 
-/* line 197, ../sass/base/_typography.scss */
+/* line 191, ../sass/base/_typography.scss */
 .upcoming .address li:first-of-type,
 .cta {
   font-style: italic;
