@@ -38,7 +38,7 @@ get_header();
 	<hr class="spacer">
 
 	<section id="how-it-works" class="how-it-works major-section">
-		<div class="container-mid animation-element fade-up" data-trigger="0.85">
+		<div class="container-mid animation-element fade-up" data-trigger="0.95">
 			<h5 class="heading-1">How it Works</h5>
 			<span>We take care of everything</span>
 			<p>All our client needs to do is take what they want and leave the rest to us. We will sort saleable from non-saleable, arrange, price, tag, advertise and sell everything in 2 or 3 days leaving your home “broom clean” ready for the cleaning crew (we can arrange for that, too!).</p>
@@ -50,7 +50,7 @@ get_header();
 	</section>
 
 	<section id="testimonials" class="testimonials major-section">
-		<div class="container-mid animation-element fade-up" data-trigger="0.85">
+		<div class="container-mid animation-element fade-up" data-trigger="0.95">
 			<ul class="slider">
 			<li class="slide">
 				<div class="container-slide">
