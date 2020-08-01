@@ -4,7 +4,7 @@
 get_header();
 ?>
 
-	<section id="intro" class="intro major-section">
+	<!-- <section id="intro" class="intro major-section">
 		<div class="container-mid">
 			<header>
 				<h1 class="heading-2 underline">Estate & </br>Tag Sales</h1>
@@ -14,7 +14,7 @@ get_header();
 				<p>Whether you are a private individual, executor, trust officer, real estate agent or attorney, <span>Changeover Sales</span> will be be happy to consult with you to best serve your needs in the disposition of one item or a houseful.</p>
 			</div>
 		</div>
-	</section>
+	</section> -->
 
     <?php
         $next_sale = get_field( 'next_sale' );
@@ -23,8 +23,8 @@ get_header();
 
     <?php if( $next_sale ) : ?>
 
-        <hr class="spacer">
-        
+        <!-- <hr class="spacer"> -->
+
         <?php foreach( $next_sale as $post) : setup_postdata( $post ); ?>
 
             <?php include( 'components/next-sale.php' ); ?>

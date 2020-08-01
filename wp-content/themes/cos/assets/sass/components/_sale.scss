@@ -118,7 +118,7 @@
 	flex-flow: row nowrap;
 	align-items: center;
 	width: 100%;
-	max-width: 34em;
+	max-width: 40em;
 	padding: 0.5em 0 4em;
 
     a {
@@ -135,6 +135,7 @@
     }
 
     @media (min-width: $bp-small) {
+        justify-content: center;
 		margin: 0 auto;
 		padding: 1em 0 2em;
         text-align: center;
@@ -145,6 +146,12 @@
         a {
 			width: 33.33%;
             margin: 0;
+        }
+    }
+
+    @media (min-width: $bp-nav) {
+        a {
+			width: 25%;
         }
     }
 }
@@ -181,6 +188,10 @@
 
         &:not(:last-of-type) {
             margin-bottom: 0.5em;
+        }
+
+        a {
+            color: $color-red;
         }
     }
 
