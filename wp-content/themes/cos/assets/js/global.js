@@ -1,14 +1,9 @@
 var body = document.body;
 var html = document.documentElement;
-var vw = window.innerWidth;
 var url = window.location;
 var path = url.pathname;
 var toggle = document.querySelector('.menu-toggle');
 var menu = document.querySelector('#site-navigation');
-var saleMain = document.querySelector('#next-sale');
-var listsContainer = document.querySelector('.sale-lists');
-var lists = document.querySelectorAll('.sale-list');
-var more = document.querySelector('.view-more');
 var links = document.querySelectorAll('.menu-item a');
 var header = document.querySelector('#masthead');
 var headerHeight = header.getBoundingClientRect().height;
@@ -22,30 +17,6 @@ toggle.addEventListener('click', function (event) {
 	body.classList.toggle('freeze');
 	html.classList.toggle('freeze');
 });
-
-
-//toggle sale list
-function listToggle() {
-
-	lists.forEach(function(list) {
-		var listRect = list.getBoundingClientRect(),
-			listHeight = listRect.height;
-
-		list.addEventListener('click', function(e) {
-			if(vw >= bp) {
-				if(listsContainer.classList.contains('full-list')) {
-					listsContainer.classList.remove('full-list');
-				} else {
-					listsContainer.classList.add('full-list');
-				}
-
-			} else {
-				list.classList.toggle('list-active');
-			}
-
-		});
-	});
-}
 
 
 // close mobile nav
@@ -62,37 +33,6 @@ function closeNav() {
 }
 
 closeNav();
-
-
-function debounce(func, wait, immediate) {
-	var timeout;
-	return function() {
-		var context = this, args = arguments;
-		var later = function() {
-			timeout = null;
-			if (!immediate) func.apply(context, args);
-		};
-		var callNow = immediate && !timeout;
-		clearTimeout(timeout);
-		timeout = setTimeout(later, wait);
-		if (callNow) func.apply(context, args);
-	};
-};
-
-
-
-// smooth scroll, update url with current section
-document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    });
-  });
-});
-
 
 
 function scaleHeader() {
@@ -115,20 +55,6 @@ function scaleHeader() {
 	scrollStuff();
 }
 
-
-
-// initiate slider
-jQuery(document).ready(function($){
-	$('.slider').bxSlider({
-		mode: 'fade',
-		auto: false,
-		adaptiveHeight: false,
-		autoHover: true,
-	});
-});
-
-
-listToggle();
 
 window.addEventListener('scroll', function() {
 	scaleHeader();

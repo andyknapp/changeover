@@ -42,8 +42,8 @@ if ( $_SERVER['HTTP_HOST'] == 'changeoversales.com' ) {
 	define('DB_COLLATE', '');
 
     define('DOMAIN_CURRENT_SITE', 'staging.changeoversales.com');
-	define('WP_HOME','http://staging.changeoversales.com');
-	define('WP_SITEURL','http://staging.changeoversales.com');
+	define('WP_HOME','https://staging.changeoversales.com');
+	define('WP_SITEURL','https://staging.changeoversales.com');
 
 } else if ( $_SERVER['HTTP_HOST'] == 'changeover.test' ) {
 	define('DB_NAME', 'db173289_staging_changeover');
@@ -52,6 +52,13 @@ if ( $_SERVER['HTTP_HOST'] == 'changeoversales.com' ) {
 	define('DB_HOST', 'internal-db.s173289.gridserver.com');
 	define('DB_CHARSET', 'utf8');
 	define('DB_COLLATE', '');
+
+    // define('DB_NAME', 'changeover');
+	// define('DB_USER', 'root');
+	// define('DB_PASSWORD', 'root');
+	// define('DB_HOST', 'localhost');
+	// define('DB_CHARSET', 'utf8');
+	// define('DB_COLLATE', '');
 
     define('DOMAIN_CURRENT_SITE', 'changeover.test');
 	define('WP_HOME','http://changeover.test');

@@ -38,7 +38,7 @@
 
 <header id="masthead" class="site-header">
 	<div class="container-site">
-		<a href="#content" class="logo">
+		<a href="<?php echo home_url(); ?>" class="logo">
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/Changeover-Sales-logo.png" alt="Changeover Sales Logo">
 			<h1 class="skip-link"><?php bloginfo( 'name' ); ?></h1>
 		</a>
@@ -46,13 +46,33 @@
 		<button class="menu-toggle no-button-style" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'cos' ); ?></button>
 
 		<nav id="site-navigation" class="site-nav">
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-				'container'	=> '',
-			) );
-			?>
+            <ul id="primary-menu" class="menu">
+
+    			<?php
+        			wp_nav_menu( array(
+        				'theme_location' => 'menu-1',
+        				'menu_id'        => 'primary-menu',
+        				'container'	=> '',
+                        'items_wrap' => '%3$s'
+        			) );
+    			?>
+
+                <li class="site-cart-container menu-item">
+                    <a class="site-cart" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>">
+                        <span class="cart-count">
+                            <?php
+                                if( WC()->cart->get_cart_contents_count() > 0 ) {
+                                    echo is_object( WC()->cart ) ? WC()->cart->get_cart_contents_count() : '';
+                                }
+                            ?>
+                        </span>
+
+                        <svg>
+                            <use xlink:href="#icon-shopping-bag"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
 		</nav><!-- #site-navigation -->
 	</div>
 </header><!-- #masthead -->

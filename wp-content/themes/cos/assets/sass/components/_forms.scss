@@ -7,6 +7,7 @@
 	border: 1px solid $color-black-2;
 	background-color: $color-white;
 	border-radius: 6px;
+	font-size: 1em;
 	font-weight: 400;
 	line-height: 1.2;
 	color: $color-black-2;
@@ -23,22 +24,30 @@ input {
 	@extend %input;
 
 	@include placeholder {
-		font-size: 1em;
+		font-size: 0.875em;
 		font-style: italic;
 		color: $color-gray-2;
 	}
 }
 
-// select {
-// 	@extend %input;
-// 	color: $color-gray-less-dark;
-// 	background: $color-white url('../icons/down-select.svg') no-repeat calc(100% - 1.2em) center / 10px 5px;
-// 	-moz-appearance: none; //sass-lint:disable-line no-vendor-prefixes
-//
-// 	&::-ms-expand { // hide ua menu icon in IE
-// 		display: none;
-// 	}
-// }
+select {
+	@extend %input;
+    padding: 0.5em 2em 0.5em 1em;
+	color: $color-black-2;
+    border-color: $color-gray-2;
+    border-radius: 4px;
+	background: $color-white url('../icons/sort.svg') no-repeat calc(100% - 0.5em) center / 9px 16px;
+	-moz-appearance: none; //sass-lint:disable-line no-vendor-prefixes
+
+	&::-ms-expand { // hide ua menu icon in IE
+		display: none;
+	}
+
+    &.orderby,
+    &.dropdown_product_cat {
+        @extend %fs-14;
+    }
+}
 
 textarea {
 	@extend %input;
@@ -49,6 +58,43 @@ textarea {
 		font-style: italic;
 		color: $color-gray-2;
 	}
+}
+
+
+// woo fields
+.woocommerce {
+    // select styling
+    .select2-dropdown {
+        border-color: $color-black-2;
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__rendered {
+        line-height: 18px;
+        padding: 0.5em 1em;
+    }
+
+    .select2-container--default .select2-selection--single {
+        height: (36 / 16) * 1em;
+        border-color: $color-black-2;
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__arrow {
+        top: 50%;
+        transform: translateY(-50%);
+
+        b {
+            left: 0;
+            border-color: transparent transparent $color-gray-2 transparent;
+            border-width: 0 6px 8px 6px;
+        }
+    }
+
+    // need additional padding for offscreen labels
+    .woocommerce-billing-fields__field-wrapper {
+        #billing_address_2_field {
+            padding-top: 34px;
+        }
+    }
 }
 
 
@@ -155,8 +201,8 @@ textarea {
 			height: 1.5em;
 			border-radius: 3px;
 			// background: transparent url('../icons/check.svg') no-repeat center / cover;
-			// background-size: 10px;
-			// background-position: 3px 4px;
+			background-size: 10px;
+			background-position: 3px 4px;
 			background-color: $color-red;
 		}
 	}
@@ -167,15 +213,19 @@ textarea {
 [type='radio']:checked {
 	+ label {
 		&::before {
+            top: 0.75em;
+            width: 1.25em;
+            height: 1.25em;
 			border-radius: 50%;
+            background-color: $color-white;
 		}
 
 		&::after {
-			top: 0.35em;
-			left: 0.25em;
+			top: 0.875em;
+			left: 0.125em;
 			width: 1em;
 			height: 1em;
-			background-color: $color-black;
+			background-color: $color-red;
 			border-radius: 50%;
 		}
 	}

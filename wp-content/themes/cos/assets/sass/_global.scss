@@ -1,3 +1,9 @@
+// .grid {
+//   display: grid;
+//   gap: 1rem;
+//   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+// }
+
 .site-content {
 	@extend %clear-header;
 	background-color: $color-white;
@@ -10,7 +16,7 @@
 }
 
 .container-site {
-	max-width: (1400 / 16) * 1em
+	max-width: (1400 / 16) * 1em;
 }
 
 .container-mid {
@@ -20,6 +26,76 @@
 .container-small {
 	max-width: 62em;
 }
+
+.content-area {
+    .site-main {
+        padding-bottom: 4em;
+
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            z-index: -10000;
+            opacity: 0;
+            transition: opacity 0.1s ease-out;
+        }
+
+        &::before {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color-white, 0.7);
+        }
+
+        &::after {
+            top: 50%;
+            left: 50%;
+            width: 2em;
+            height: 2em;
+            transform: translate(-50%, -50%) rotate;
+            background: transparent url('../icons/loader.svg') no-repeat center / cover;
+        }
+
+        &.loading {
+            &::after,
+            &::before {
+                z-index: 1;
+                opacity: 1;
+            }
+
+            &::after {
+                animation-name: spin;
+                animation-duration: 800ms;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+            }
+        }
+    }
+}
+
+// sticky footer
+.site-content {
+	min-height: 100%;
+	margin-bottom: - $footer-height;
+
+	&::after {
+		content: '';
+		display: block;
+		height: $footer-height;
+	}
+
+    @media (min-width: $bp-nav) {
+        margin-bottom: - $footer-height-2;
+
+        &::after {
+            height: $footer-height-2;
+        }
+    }
+}
+
+
 
 %pad {
 	padding: 4.5em 1em;
@@ -61,6 +137,10 @@
 		padding-right: 4em;
 
 		@media (min-width: 51.5em) {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-end;
+            width: 40%;
 			padding-right: 6em;
 		}
 	}
@@ -82,14 +162,30 @@
 	}
 
 	.intro-content {
-		flex: 1 24em;
-		max-width: (524 / 16) * 1em;
+		//flex: 1 24em;
+        width: 100%;
+		//max-width: (524 / 16) * 1em;
 
 		span {
 			font-style: italic;
 			font-weight: 700;
 			color: $color-red;
 		}
+
+        a {
+            font-style: italic;
+            text-decoration: underline;
+            color: $color-black-2;
+            transition: color 0.2s ease-out;
+
+            &:hover {
+                color: $color-red;
+            }
+        }
+
+        @media (min-width: 51.5em) {
+            width: 60%;
+        }
 	}
 
 	p {
@@ -118,7 +214,7 @@
 		//color: $color-white;
 	}
 
-	span {
+	em {
 		@extend %fs-28;
 		display: block;
 		margin-bottom: 0.25em;
@@ -128,6 +224,10 @@
 	p {
 		@extend %copy-2;
 		break-inside: avoid;
+
+        span {
+            color: $color-red;
+        }
 	}
 }
 
@@ -464,9 +564,9 @@ img {
 
 .fade-up {
 	opacity: 0;
-	transform: translateY(24px);
+	transform: translateY(12px);
 	//transition: 0.3s transform $ease-out-quad, 0.4s opacity $ease-out-quad;
-	transition: 0.6s transform ease, 0.6s opacity ease;
+	transition: 0.4s transform ease, 0.4s opacity ease;
 
 	&.animate {
 		opacity: 1;
@@ -477,7 +577,7 @@ img {
 
 .fade {
 	opacity: 0;
-	transition: 0.6s transform ease, 0.6s opacity ease;
+	transition: 0.4s transform ease, 0.4s opacity ease;
 
 	&.animate {
 		opacity: 1;
