@@ -48,7 +48,8 @@
             grid-template-columns: 50%;
             grid-template-areas:
                 "notices notices"
-                "cart collaterals";
+                "cart collaterals"
+                "delivery delivery";
 
             .cart-collaterals {
                 grid-area: collaterals;
@@ -61,6 +62,10 @@
 
             .woocommerce-cart-form {
                 grid-area: cart;
+            }
+
+            .delivery-notes {
+                grid-area: delivery;
             }
         }
 
@@ -219,6 +224,11 @@
                 }
 
                 label {
+                    font-size: 1em;
+                    line-height: 1.2;
+                    color: $color-gray-5;
+                    font-style: italic;
+
                     &::before {
                         width: 1em;
                         height: 1em;
@@ -306,6 +316,22 @@
     .woocommerce table.cart .remove-row .product-remove a {
         &:hover {
             color: $color-white!important;
+        }
+    }
+
+    .delivery-notes {
+        max-width: 54em;
+        padding: 4em 0 0;
+
+        p {
+            @extend %heading-5;
+            line-height: 1.4;
+            color: $color-gray-5;
+            font-style: italic;
+
+            &:first-of-type {
+                margin-bottom: 0.5em;
+            }
         }
     }
 }

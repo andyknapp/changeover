@@ -242,3 +242,11 @@
 .woocommerce form .form-row.woocommerce-validated select {
     border-color: $color-red;
 }
+
+
+
+.woocommerce {
+    table.shop_table tfoot td {
+        font-weight: 400;
+    }
+}

@@ -287,6 +287,28 @@ add_action( 'woocommerce_before_shop_loop_item_title', 'add_img_wrapper_close', 
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
 
 
+function delivery_notes() {
+    echo '<div class="delivery-notes"><p class="delivery-fine-print">* Complimentary delivery zone includes: 19014, 19017 ,19060, 19061, 19311, 19317, 19319, 19342, 19348, 19373, 19374, 19375, 19380, 19382, 19383, 19703, 19707, 19710, 19732, 19735, 19736, 19801, 19802, 19803, 19804, 19805, 19806, 19807, 19808, 19809, 19810.</p> <p>Call <a href="tel:1-302-562-5385" target="_blank">302-562-5385</a> for options/quote outside of delivery zone.</p></div>';
+}
+add_action( 'woocommerce_after_cart', 'delivery_notes' );
+
+
+function change_shipping_label( $full_label, $method ) {
+    if( is_checkout() ) {
+        $full_label = str_replace( 'Complimentary delivery available for local customers*', 'Call <a href="tel:1-302-562-5385" target="_blank">302-562-5385</a> for options/quote outside of our delivery zone.', $full_label );
+    }
+
+    return $full_label;
+}
+add_filter( 'woocommerce_cart_shipping_method_full_label', 'change_shipping_label', 10, 2 );
+
+function custom_shipping_package_name( $name ) {
+    return 'Delivery';
+}
+add_filter( 'woocommerce_shipping_package_name', 'custom_shipping_package_name' );
+
+
+
 
 function cos_local_delivery() {
     global $product;
@@ -303,7 +325,7 @@ function cos_local_delivery() {
     if( $ship_slug != 'free-shipping' ) {
         return;
     } else {
-        echo '<p class="free-shipping-alert">Complimentary shipping available for local customers</p>';
+        echo '<p class="free-shipping-alert">Complimentary delivery available for local customers</p>';
     }
 }
 add_action('woocommerce_single_product_summary', 'cos_local_delivery');

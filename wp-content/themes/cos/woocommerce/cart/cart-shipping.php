@@ -27,6 +27,7 @@ $calculator_text          = '';
 <tr class="woocommerce-shipping-totals shipping">
 	<th><?php echo wp_kses_post( $package_name ); ?></th>
 	<td data-title="<?php echo esc_attr( $package_name ); ?>">
+
 		<?php if ( $available_methods ) : ?>
 			<ul id="shipping_method" class="woocommerce-shipping-methods">
 				<?php foreach ( $available_methods as $method ) : ?>
@@ -46,9 +47,17 @@ $calculator_text          = '';
 
 			<?php if ( is_cart() ) : ?>
 
-                <?php if ( $method->method_id === 'free_shipping_per_product' ) : ?>
+                <?php if ( $method->method_id === 'flat_rate' ) : ?>
 
-                    <p class="woocommerce-shipping-destination">Complimentary shipping available for local customers</p>
+                    <?php
+                        if ( $formatted_destination ) {
+                            $calculator_text = esc_html__( 'Check address', 'woocommerce' );
+                        } else {
+                            $calculator_text = esc_html__( 'Check address', 'woocommerce' );
+                        }
+                    ?>
+
+                <?php elseif ( $method->method_id === 'free_shipping' ) : ?>
 
                     <?php
                         if ( $formatted_destination ) {
@@ -77,8 +86,8 @@ $calculator_text          = '';
 
                         } else {
 
-                            $calculator_text = '';
-                            $show_shipping_calculator = false;
+                            $calculator_text = 'Check address';
+                            $show_shipping_calculator = true;
                         }
 
                     ?>
@@ -87,20 +96,24 @@ $calculator_text          = '';
 
 			<?php endif; ?>
 
-			<?php
-		elseif ( ! $has_calculated_shipping || ! $formatted_destination ) :
-			if ( is_cart() && 'no' === get_option( 'woocommerce_enable_shipping_calc' ) ) {
-				echo wp_kses_post( apply_filters( 'woocommerce_shipping_not_enabled_on_cart_html', __( 'Shipping costs are calculated during checkout.', 'woocommerce' ) ) );
-			} else {
-				echo wp_kses_post( apply_filters( 'woocommerce_shipping_may_be_available_html', __( 'Enter your address to view shipping options.', 'woocommerce' ) ) );
-			}
-		elseif ( ! is_cart() ) :
-			echo wp_kses_post( apply_filters( 'woocommerce_no_shipping_available_html', __( 'There are no shipping options available. Please ensure that your address has been entered correctly, or contact us if you need any help.', 'woocommerce' ) ) );
-		else :
-			// Translators: $s shipping destination.
-			echo wp_kses_post( apply_filters( 'woocommerce_cart_no_shipping_available_html', sprintf( esc_html__( 'No shipping options were found for %s.', 'woocommerce' ) . ' ', '<strong>' . esc_html( $formatted_destination ) . '</strong>' ) ) );
-			$calculator_text = esc_html__( 'Enter a different address', 'woocommerce' );
-		endif;
+		<?php
+    		elseif ( ! $has_calculated_shipping || ! $formatted_destination ) :
+
+    			if ( is_cart() && 'no' === get_option( 'woocommerce_enable_shipping_calc' ) ) {
+    				echo wp_kses_post( apply_filters( 'woocommerce_shipping_not_enabled_on_cart_html', __( 'Shipping costs are calculated during checkout.', 'woocommerce' ) ) );
+
+    			} else {
+    				echo wp_kses_post( apply_filters( 'woocommerce_shipping_may_be_available_html', __( 'Enter address for delivery options', 'woocommerce' ) ) );
+    			}
+
+    		elseif ( ! is_cart() ) :
+    			echo wp_kses_post( apply_filters( 'woocommerce_no_shipping_available_html', __( 'There are no shipping options available. Please ensure that your address has been entered correctly, or contact us if you need any help.', 'woocommerce' ) ) );
+
+    		else :
+    			// Translators: $s shipping destination.
+    			echo wp_kses_post( apply_filters( 'woocommerce_cart_no_shipping_available_html', sprintf( esc_html__( 'No shipping options were found for %s.', 'woocommerce' ) . ' ', '<strong>' . esc_html( $formatted_destination ) . '</strong>' ) ) );
+    			$calculator_text = esc_html__( 'Enter a different address', 'woocommerce' );
+    		endif;
 		?>
 
 		<?php if ( $show_package_details ) : ?>
