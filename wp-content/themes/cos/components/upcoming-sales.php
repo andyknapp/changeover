@@ -1,5 +1,5 @@
 <section class="upcoming container-small">
-    <header class="upcoming-header flex animation-element fade-up" data-trigger="1">
+    <header class="upcoming-header flex">
         <h4 class="heading-3 underline">Upcoming Sales</h4>
         <p>Check back soon for more information!</p>
     </header>

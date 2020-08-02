@@ -38,9 +38,10 @@ get_header();
 	<hr class="spacer">
 
 	<section id="how-it-works" class="how-it-works major-section">
-		<div class="container-mid animation-element fade-up" data-trigger="0.95">
+		<div class="container-mid animation-element fade-up" data-trigger="1">
 			<h5 class="heading-1">How it Works</h5>
-			<span>We take care of everything</span>
+			<span><em>We take care of everything</em></span>
+            <p>Since 1977, we have provided complete estate sale services and professionaly conducted in-home Tag Sales in Delaware, Pennsylvania and New Jersey. Whether you are a private individual, executor, trust officer, real estate agent or attorney, <span>Changeover Sales</span> will be be happy to consult with you to best serve your needs in the disposition of one item or a houseful.</p>
 			<p>All our client needs to do is take what they want and leave the rest to us. We will sort saleable from non-saleable, arrange, price, tag, advertise and sell everything in 2 or 3 days leaving your home “broom clean” ready for the cleaning crew (we can arrange for that, too!).</p>
 			<p>Within a week, we will furnish you with a check for the proceeds and a report with an itemized accounting of everything that sold.</p>
 			<p>Our Tag Sales are professionally conducted with the utmost respect for your home & possessions. Attention to even the smallest detail, strong security measures and our friendly professional staff guarantees excellent results.</p>
@@ -50,7 +51,7 @@ get_header();
 	</section>
 
 	<section id="testimonials" class="testimonials major-section">
-		<div class="container-mid animation-element fade-up" data-trigger="0.95">
+		<div class="container-mid animation-element fade-up" data-trigger="1">
 			<ul class="slider">
 			<li class="slide">
 				<div class="container-slide">
@@ -74,7 +75,7 @@ get_header();
 	</section>
 
 	<section id="about-us" class="about major-section">
-		<div class="container-mid animation-element fade-up" data-trigger="0.85">
+		<div class="container-mid animation-element fade-up" data-trigger="1">
 			<h5 class="heading-1">About Us</h5>
 			<p>Founded by Kay Reilly in 1977, we continue to be family owned and operated with a combined 70+ years of tag sales and appraisal experience. Word of mouth and customer referrals are the backbone of our thriving business and sterling reputation.</p>
 			<p>We are very proud of our friendly, knowledgeable, professional staff, many who have been with us from the start! We also maintain a vast number of experts who contribute valuable information and opinions on art, antiques, jewelry, etc.</p>
@@ -84,7 +85,7 @@ get_header();
 	<hr class="spacer">
 
 	<section id="contact" class="contact major-section">
-		<div class="container-mid animation-element fade-up" data-trigger="0.85">
+		<div class="container-mid animation-element fade-up" data-trigger="1">
 			<h5 class="heading-1">Contact</h5>
 			<div class="contact-container">
 				<aside class="contact-info">
