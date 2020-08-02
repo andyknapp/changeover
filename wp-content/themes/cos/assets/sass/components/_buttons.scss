@@ -29,10 +29,17 @@
 	// 	//background-color: $color-orange-pressed;
 	// }
 
-	// &[disabled],
-	// &.disabled {
-	// 	//background-color: $color-orange-disabled;
-	// }
+	&[disabled],
+	&.disabled {
+		opacity: 0.25;
+        cursor: text;
+
+        &:hover {
+    		color: $color-white;
+    		border-color: rgba($color-red, 0.9);
+    		background-color: rgba($color-red, 0.9);
+    	}
+	}
 }
 
 .button,

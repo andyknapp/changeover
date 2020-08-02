@@ -1723,14 +1723,45 @@ button:focus:not(.no-button-style), .woocommerce ul.products li.product .button.
 .woocommerce-checkout .woocommerce-checkout #payment .button:focus {
   outline: 0;
 }
+/* line 32, ../sass/components/_buttons.scss */
+[disabled].button,
+button[disabled]:not(.no-button-style), .woocommerce ul.products li.product [disabled].button.product_type_simple.add_to_cart_button,
+.woocommerce ul.products li.product [disabled].button, .woocommerce .type-product.product [disabled].button.alt.single_add_to_cart_button, .woocommerce .woocommerce-error [disabled].button,
+.woocommerce .woocommerce-info [disabled].button,
+.woocommerce .woocommerce-message [disabled].button, .woocommerce-cart .return-to-shop [disabled].button, .woocommerce-cart .woocommerce .cart [disabled].button, .woocommerce-checkout #add_payment_method #payment [disabled].button,
+.woocommerce-checkout .woocommerce-cart #payment [disabled].button,
+.woocommerce-checkout .woocommerce-checkout #payment [disabled].button, .disabled.button,
+button.disabled:not(.no-button-style), .woocommerce ul.products li.product .disabled.button.product_type_simple.add_to_cart_button,
+.woocommerce ul.products li.product .disabled.button, .woocommerce .type-product.product .disabled.button.alt.single_add_to_cart_button, .woocommerce .woocommerce-error .disabled.button,
+.woocommerce .woocommerce-info .disabled.button,
+.woocommerce .woocommerce-message .disabled.button, .woocommerce-cart .return-to-shop .disabled.button, .woocommerce-cart .woocommerce .cart .disabled.button, .woocommerce-checkout #add_payment_method #payment .disabled.button,
+.woocommerce-checkout .woocommerce-cart #payment .disabled.button,
+.woocommerce-checkout .woocommerce-checkout #payment .disabled.button {
+  opacity: 0.25;
+  cursor: text;
+}
+/* line 37, ../sass/components/_buttons.scss */
+[disabled].button:hover,
+button[disabled]:hover:not(.no-button-style),
+.woocommerce ul.products li.product [disabled].button:hover, .woocommerce .type-product.product [disabled].button.alt.single_add_to_cart_button:hover, .woocommerce-cart .woocommerce .cart [disabled].button:hover, .woocommerce-checkout #add_payment_method #payment [disabled].button:hover,
+.woocommerce-checkout .woocommerce-cart #payment [disabled].button:hover,
+.woocommerce-checkout .woocommerce-checkout #payment [disabled].button:hover, .disabled.button:hover,
+button.disabled:hover:not(.no-button-style),
+.woocommerce ul.products li.product .disabled.button:hover, .woocommerce .type-product.product .disabled.button.alt.single_add_to_cart_button:hover, .woocommerce-cart .woocommerce .cart .disabled.button:hover, .woocommerce-checkout #add_payment_method #payment .disabled.button:hover,
+.woocommerce-checkout .woocommerce-cart #payment .disabled.button:hover,
+.woocommerce-checkout .woocommerce-checkout #payment .disabled.button:hover {
+  color: #ffffff;
+  border-color: rgba(181, 24, 20, 0.9);
+  background-color: rgba(181, 24, 20, 0.9);
+}
 
-/* line 44, ../sass/components/_buttons.scss */
+/* line 51, ../sass/components/_buttons.scss */
 .no-button-style {
   border-width: 0;
   padding: 0;
   background-color: transparent;
 }
-/* line 49, ../sass/components/_buttons.scss */
+/* line 56, ../sass/components/_buttons.scss */
 .no-button-style:focus {
   outline: 0;
 }
