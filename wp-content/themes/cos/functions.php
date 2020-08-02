@@ -134,7 +134,7 @@ add_filter( 'woocommerce_get_image_size_single', function( $size ) {
 	return array(
 		'width'  => 1000,
 		'height' => 750,
-		'crop'   => 1,
+		'crop'   => 0,
 	);
 } );
 

@@ -58,8 +58,8 @@
     		nestedClass: 'active', // applied to the parent items
 
     		// Offset & reflow
-    		offset: 0, // how far from the top of the page to activate a content area
-    		reflow: false, // if true, listen for reflows
+    		offset: 200, // how far from the top of the page to activate a content area
+    		reflow: true, // if true, listen for reflows
 
     		// Event support
     		events: true // if true, emit custom events
