@@ -250,6 +250,16 @@
                 [type='radio'] + label {
                     padding: 0.25em 0.25em 0.25em 2em;
                 }
+
+                &:last-of-type {
+                    margin-bottom: 0!important;
+
+                    li {
+                        &:last-of-type {
+                            margin-bottom: 0!important;
+                        }
+                    }
+                }
             }
 
             .woocommerce-shipping-destination,
