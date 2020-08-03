@@ -432,3 +432,18 @@ function co_google_maps_api() {
     return $api;
 }
 add_filter('acf/fields/google_map/api', 'co_google_maps_api');
+
+
+
+// woo email hook
+function co_email_delivery( $order, $sent_to_admin, $plain_text, $email ) {
+
+    // only for processing order emails sent to customer
+    if ( 'customer_processing_order' != $email->id ) return;
+
+    if( $order->has_shipping_method('flat_rate') ) {
+
+        echo "<p>Your address falls outside of our complimentary delivery zone. Please call 302-562-5385 for options/quote.</p>";
+    }
+}
+add_action( 'woocommerce_email_header', 'co_email_delivery', 10, 2 );
