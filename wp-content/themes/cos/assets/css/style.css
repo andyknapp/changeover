@@ -305,18 +305,18 @@ body, .woocommerce .woocommerce-result-count span, .woocommerce-cart .woocommerc
 }
 
 /* line 4, ../sass/base/_mixins.scss */
-.how-it-works em, .contact-info .copy-1, .contact-info .sale-description p, .sale-description .contact-info p {
+.how-it-works em, .contact-info .copy-1, .contact-info .sale-description p, .sale-description .contact-info p, .sale .address li {
   font-size: 1.125em;
 }
 @media screen and (min-width: 20em) {
   /* line 4, ../sass/base/_mixins.scss */
-  .how-it-works em, .contact-info .copy-1, .contact-info .sale-description p, .sale-description .contact-info p {
+  .how-it-works em, .contact-info .copy-1, .contact-info .sale-description p, .sale-description .contact-info p, .sale .address li {
     font-size: calc(1.125em + 0.625 * (100vw - 20em) / 60);
   }
 }
 @media screen and (min-width: 80em) {
   /* line 4, ../sass/base/_mixins.scss */
-  .how-it-works em, .contact-info .copy-1, .contact-info .sale-description p, .sale-description .contact-info p {
+  .how-it-works em, .contact-info .copy-1, .contact-info .sale-description p, .sale-description .contact-info p, .sale .address li {
     font-size: 1.75em;
   }
 }
@@ -1782,60 +1782,64 @@ button.disabled:hover:not(.no-button-style),
   font-style: italic;
 }
 /* line 17, ../sass/components/_sale.scss */
+.sale .address {
+  margin-bottom: 0.75em;
+}
+/* line 25, ../sass/components/_sale.scss */
 .sale .sale-preview {
   padding-bottom: 1.5em;
 }
-/* line 20, ../sass/components/_sale.scss */
+/* line 28, ../sass/components/_sale.scss */
 .sale .sale-preview li {
   line-height: 1.5;
 }
-/* line 24, ../sass/components/_sale.scss */
+/* line 32, ../sass/components/_sale.scss */
 .sale .sale-preview .break {
   display: block;
   font-weight: 400;
 }
-/* line 30, ../sass/components/_sale.scss */
+/* line 38, ../sass/components/_sale.scss */
 .sale .date-time {
   padding-bottom: 2em;
 }
-/* line 33, ../sass/components/_sale.scss */
+/* line 41, ../sass/components/_sale.scss */
 .sale .date-time li {
   line-height: 1.75;
   font-weight: 400;
 }
-/* line 39, ../sass/components/_sale.scss */
+/* line 47, ../sass/components/_sale.scss */
 .sale .sale-header {
   z-index: 3;
   text-align: center;
 }
-/* line 46, ../sass/components/_sale.scss */
+/* line 54, ../sass/components/_sale.scss */
 .sale .view-more {
   display: none;
 }
 @media (min-width: 40em) {
-  /* line 56, ../sass/components/_sale.scss */
+  /* line 64, ../sass/components/_sale.scss */
   .sale header.list-header {
     text-align: left;
   }
-  /* line 63, ../sass/components/_sale.scss */
+  /* line 71, ../sass/components/_sale.scss */
   .sale .address li,
   .sale .date-time li {
     display: inline-block;
   }
-  /* line 71, ../sass/components/_sale.scss */
+  /* line 79, ../sass/components/_sale.scss */
   .sale .address li:first-of-type {
     margin-right: 0.5em;
   }
-  /* line 75, ../sass/components/_sale.scss */
+  /* line 83, ../sass/components/_sale.scss */
   .sale .address li.cta {
     margin-left: 2em;
     font-size: 90%;
   }
-  /* line 84, ../sass/components/_sale.scss */
+  /* line 92, ../sass/components/_sale.scss */
   .sale .date-time li {
     margin: 0;
   }
-  /* line 87, ../sass/components/_sale.scss */
+  /* line 95, ../sass/components/_sale.scss */
   .sale .date-time li::after {
     content: '|';
     display: inline-block;
@@ -1843,11 +1847,11 @@ button.disabled:hover:not(.no-button-style),
     opacity: 0.5;
     color: #d5cfc3;
   }
-  /* line 96, ../sass/components/_sale.scss */
+  /* line 104, ../sass/components/_sale.scss */
   .sale .date-time li:last-of-type::after {
     display: none;
   }
-  /* line 104, ../sass/components/_sale.scss */
+  /* line 112, ../sass/components/_sale.scss */
   .sale .view-more {
     display: block;
     margin: 0 auto;
@@ -1856,11 +1860,11 @@ button.disabled:hover:not(.no-button-style),
 @media (min-width: 57em) {
   /* line 2, ../sass/components/_sale.scss */
   .sale {
-    padding: 10em 0 4em;
+    padding: 5em 0 4em;
   }
 }
 
-/* line 116, ../sass/components/_sale.scss */
+/* line 124, ../sass/components/_sale.scss */
 .sale-meta {
   display: flex;
   flex-flow: row nowrap;
@@ -1871,46 +1875,46 @@ button.disabled:hover:not(.no-button-style),
   margin: 1em auto 0;
   padding: 0.5em 0 0;
 }
-/* line 126, ../sass/components/_sale.scss */
+/* line 134, ../sass/components/_sale.scss */
 .sale-meta a {
   margin: 0 2em 0 0;
   color: #646464;
 }
-/* line 130, ../sass/components/_sale.scss */
+/* line 138, ../sass/components/_sale.scss */
 .sale-meta a:last-of-type {
   margin-right: 0;
 }
-/* line 134, ../sass/components/_sale.scss */
+/* line 142, ../sass/components/_sale.scss */
 .sale-meta a:hover {
   color: #b51814;
 }
 @media (min-width: 40em) {
-  /* line 116, ../sass/components/_sale.scss */
+  /* line 124, ../sass/components/_sale.scss */
   .sale-meta {
     padding: 1em 0 0;
     text-align: center;
   }
-  /* line 143, ../sass/components/_sale.scss */
+  /* line 151, ../sass/components/_sale.scss */
   .sale-meta a {
     width: 33.33%;
     margin: 0;
   }
 }
 @media (min-width: 57em) {
-  /* line 116, ../sass/components/_sale.scss */
+  /* line 124, ../sass/components/_sale.scss */
   .sale-meta {
     justify-content: space-around;
   }
-  /* line 152, ../sass/components/_sale.scss */
+  /* line 160, ../sass/components/_sale.scss */
   .sale-meta a {
     width: auto;
   }
 }
-/* line 158, ../sass/components/_sale.scss */
+/* line 166, ../sass/components/_sale.scss */
 .sale-meta .external-link {
   text-align: center;
 }
-/* line 162, ../sass/components/_sale.scss */
+/* line 170, ../sass/components/_sale.scss */
 .sale-meta .external-link svg {
   display: block;
   width: 1.75em;
@@ -1918,93 +1922,98 @@ button.disabled:hover:not(.no-button-style),
   margin-bottom: 0.25em;
   fill: #b51814;
 }
-/* line 170, ../sass/components/_sale.scss */
+/* line 178, ../sass/components/_sale.scss */
 .sale-meta .external-link .fb {
   width: 1.5em;
   height: 1.75em;
   fill: #3b5998;
 }
 @media (min-width: 57em) {
-  /* line 177, ../sass/components/_sale.scss */
+  /* line 185, ../sass/components/_sale.scss */
   .sale-meta .external-link svg,
   .sale-meta .external-link span {
     display: inline-block;
     vertical-align: middle;
   }
-  /* line 183, ../sass/components/_sale.scss */
+  /* line 191, ../sass/components/_sale.scss */
   .sale-meta .external-link svg {
     width: 1.25em;
     height: 1.25em;
   }
-  /* line 188, ../sass/components/_sale.scss */
+  /* line 196, ../sass/components/_sale.scss */
   .sale-meta .external-link .fb {
     width: 1.25em;
     height: 1.4375em;
   }
-  /* line 193, ../sass/components/_sale.scss */
+  /* line 201, ../sass/components/_sale.scss */
   .sale-meta .external-link span {
     margin-left: 0.5em;
   }
 }
 
-/* line 202, ../sass/components/_sale.scss */
+/* line 210, ../sass/components/_sale.scss */
 .sale-description {
   margin: 0 auto 2em;
 }
-/* line 206, ../sass/components/_sale.scss */
+/* line 214, ../sass/components/_sale.scss */
 .sale-description img {
   display: block;
   margin: 0 auto 1em;
 }
-/* line 211, ../sass/components/_sale.scss */
+/* line 219, ../sass/components/_sale.scss */
 .sale-description p {
   text-align: center;
 }
-/* line 215, ../sass/components/_sale.scss */
+/* line 223, ../sass/components/_sale.scss */
 .sale-description p:not(:last-of-type) {
   margin-bottom: 0.5em;
 }
-/* line 219, ../sass/components/_sale.scss */
+/* line 227, ../sass/components/_sale.scss */
 .sale-description p a {
   color: #b51814;
 }
-/* line 224, ../sass/components/_sale.scss */
+/* line 232, ../sass/components/_sale.scss */
 .sale-description ul {
   padding-left: 1.5em;
   list-style-type: disc;
 }
-/* line 229, ../sass/components/_sale.scss */
+/* line 237, ../sass/components/_sale.scss */
 .sale-description li {
   margin-bottom: 0.5em;
   line-height: 1.35;
 }
-/* line 235, ../sass/components/_sale.scss */
+/* line 243, ../sass/components/_sale.scss */
+.sale-description .button-container {
+  width: 100%;
+  margin: 4em auto 2em;
+  text-align: center;
+}
+/* line 249, ../sass/components/_sale.scss */
 .sale-description .button {
-  margin-top: 1em;
-  font-size: 80%;
+  font-size: 100%;
   color: #ffffff;
 }
-/* line 240, ../sass/components/_sale.scss */
+/* line 253, ../sass/components/_sale.scss */
 .sale-description .button:hover {
   color: #b51814;
 }
 @media (min-width: 40em) {
-  /* line 202, ../sass/components/_sale.scss */
+  /* line 210, ../sass/components/_sale.scss */
   .sale-description {
     margin: 1em auto 3em;
   }
 }
 @media (min-width: 57em) {
-  /* line 202, ../sass/components/_sale.scss */
+  /* line 210, ../sass/components/_sale.scss */
   .sale-description {
     margin-top: 1.5em;
   }
 }
 
-/* line 260, ../sass/components/_sale.scss */
+/* line 273, ../sass/components/_sale.scss */
 .announcement {
   width: calc(100% - 2em);
-  margin: 1em auto 0;
+  margin: 2em auto 4em;
   padding: 1em;
   font-size: 90%;
   border-width: 1px;
@@ -2013,40 +2022,36 @@ button.disabled:hover:not(.no-button-style),
   border-radius: 2px;
   background-color: #fefefe;
 }
-/* line 272, ../sass/components/_sale.scss */
+/* line 285, ../sass/components/_sale.scss */
 .announcement p {
   text-align: left;
 }
 @media (min-width: 40em) {
-  /* line 260, ../sass/components/_sale.scss */
-  .announcement {
-    margin-top: 2em;
-  }
-  /* line 285, ../sass/components/_sale.scss */
+  /* line 296, ../sass/components/_sale.scss */
   .announcement p {
     text-align: center;
   }
-  /* line 289, ../sass/components/_sale.scss */
+  /* line 300, ../sass/components/_sale.scss */
   .announcement ul {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
   }
-  /* line 295, ../sass/components/_sale.scss */
+  /* line 306, ../sass/components/_sale.scss */
   .announcement li {
     width: calc(50% - 1em);
   }
 }
 @media (min-width: 57em) {
-  /* line 260, ../sass/components/_sale.scss */
+  /* line 273, ../sass/components/_sale.scss */
   .announcement {
     width: calc(100% - 8em);
-    margin-top: 4em;
+    margin-bottom: 4em;
     padding: 1em 2em 0.5em;
   }
 }
 
-/* line 309, ../sass/components/_sale.scss */
+/* line 320, ../sass/components/_sale.scss */
 .sale-lists {
   flex-wrap: wrap;
   justify-content: space-between;
@@ -2054,56 +2059,56 @@ button.disabled:hover:not(.no-button-style),
   padding: 0 1em;
 }
 @media (min-width: 40em) {
-  /* line 309, ../sass/components/_sale.scss */
+  /* line 320, ../sass/components/_sale.scss */
   .sale-lists {
     justify-content: flex-start;
     padding-left: 1.5em;
   }
-  /* line 322, ../sass/components/_sale.scss */
+  /* line 333, ../sass/components/_sale.scss */
   .sale-lists.full-list .list,
   .sale-lists.full-list .list.list-active {
     height: auto;
     opacity: 1;
   }
-  /* line 327, ../sass/components/_sale.scss */
+  /* line 338, ../sass/components/_sale.scss */
   .sale-lists.full-list .list::after,
   .sale-lists.full-list .list.list-active::after {
     display: none;
   }
 }
 @media (min-width: 72em) {
-  /* line 309, ../sass/components/_sale.scss */
+  /* line 320, ../sass/components/_sale.scss */
   .sale-lists {
     padding-left: 2em;
   }
 }
 
-/* line 340, ../sass/components/_sale.scss */
+/* line 351, ../sass/components/_sale.scss */
 .sale-col {
   width: 100%;
 }
 @media (min-width: 40em) {
-  /* line 340, ../sass/components/_sale.scss */
+  /* line 351, ../sass/components/_sale.scss */
   .sale-col {
     width: calc(50% - 1.5em);
     margin-right: 1.5em;
   }
 }
 @media (min-width: 57em) {
-  /* line 340, ../sass/components/_sale.scss */
+  /* line 351, ../sass/components/_sale.scss */
   .sale-col {
     width: calc(33.33% - 1.5em);
   }
 }
 @media (min-width: 72em) {
-  /* line 340, ../sass/components/_sale.scss */
+  /* line 351, ../sass/components/_sale.scss */
   .sale-col {
     width: calc(33.33% - 2em);
     margin-right: 2em;
   }
 }
 
-/* line 358, ../sass/components/_sale.scss */
+/* line 369, ../sass/components/_sale.scss */
 .sale-list {
   width: 100%;
   margin-bottom: 2em;
@@ -2112,36 +2117,36 @@ button.disabled:hover:not(.no-button-style),
   cursor: pointer;
 }
 @media (min-width: 40em) {
-  /* line 358, ../sass/components/_sale.scss */
+  /* line 369, ../sass/components/_sale.scss */
   .sale-list {
     padding: 1em;
   }
 }
 @media (min-width: 57em) {
-  /* line 358, ../sass/components/_sale.scss */
+  /* line 369, ../sass/components/_sale.scss */
   .sale-list {
     padding: 2em;
   }
 }
-/* line 375, ../sass/components/_sale.scss */
+/* line 386, ../sass/components/_sale.scss */
 .sale-list:hover .list-header svg {
   fill: #b51814;
 }
 
-/* line 382, ../sass/components/_sale.scss */
+/* line 393, ../sass/components/_sale.scss */
 .list-header {
   align-items: center;
   position: relative;
   padding: 1em 1.5em;
   overflow: hidden;
 }
-/* line 389, ../sass/components/_sale.scss */
+/* line 400, ../sass/components/_sale.scss */
 .list-header .heading-4, .list-header .announcement p:first-of-type, .announcement .list-header p:first-of-type {
   width: 100%;
   padding-left: 0.25em;
   cursor: pointer;
 }
-/* line 395, ../sass/components/_sale.scss */
+/* line 406, ../sass/components/_sale.scss */
 .list-header svg {
   display: block;
   width: 1em;
@@ -2153,16 +2158,16 @@ button.disabled:hover:not(.no-button-style),
   fill: #aaa;
   transition: fill 0.3s ease, transform 0.3s ease;
 }
-/* line 408, ../sass/components/_sale.scss */
+/* line 419, ../sass/components/_sale.scss */
 .list-active .list-header .heading-4, .list-active .list-header .announcement p:first-of-type, .announcement .list-active .list-header p:first-of-type {
   color: #b51814;
 }
-/* line 414, ../sass/components/_sale.scss */
+/* line 425, ../sass/components/_sale.scss */
 .full-list .list-header svg {
   transform: translateY(-50%) rotateX(180deg);
 }
 @media (min-width: 40em) {
-  /* line 382, ../sass/components/_sale.scss */
+  /* line 393, ../sass/components/_sale.scss */
   .list-header {
     margin-bottom: 0;
     padding: 1em 1em 1em 0.25em;
@@ -2170,18 +2175,18 @@ button.disabled:hover:not(.no-button-style),
     z-index: 1;
     cursor: initial;
   }
-  /* line 427, ../sass/components/_sale.scss */
+  /* line 438, ../sass/components/_sale.scss */
   .list-header .heading-4, .list-header .announcement p:first-of-type, .announcement .list-header p:first-of-type {
     padding: 0 1em 0.4em 0;
     border-bottom: 1px solid #aaa;
   }
-  /* line 433, ../sass/components/_sale.scss */
+  /* line 444, ../sass/components/_sale.scss */
   .list-active .list-header .heading-4, .list-active .list-header .announcement p:first-of-type, .announcement .list-active .list-header p:first-of-type {
     color: #4a4a4a;
   }
 }
 
-/* line 440, ../sass/components/_sale.scss */
+/* line 451, ../sass/components/_sale.scss */
 .list {
   position: relative;
   width: 100%;
@@ -2189,7 +2194,7 @@ button.disabled:hover:not(.no-button-style),
   padding: 0 1.5em;
   overflow: hidden;
 }
-/* line 447, ../sass/components/_sale.scss */
+/* line 458, ../sass/components/_sale.scss */
 .list li {
   margin-bottom: 0.875em;
   line-height: 1.25;
@@ -2197,49 +2202,49 @@ button.disabled:hover:not(.no-button-style),
   transition: opacity 0.2s ease-in;
 }
 @media (min-width: 57em) {
-  /* line 454, ../sass/components/_sale.scss */
+  /* line 465, ../sass/components/_sale.scss */
   .list li:nth-of-type(n + 5) {
     opacity: 0;
   }
-  /* line 457, ../sass/components/_sale.scss */
+  /* line 468, ../sass/components/_sale.scss */
   .full-list .list li:nth-of-type(n + 5) {
     opacity: 1;
   }
 }
 @media (min-width: 40em) {
-  /* line 464, ../sass/components/_sale.scss */
+  /* line 475, ../sass/components/_sale.scss */
   .full-list .list li {
     white-space: initial;
   }
 }
-/* line 470, ../sass/components/_sale.scss */
+/* line 481, ../sass/components/_sale.scss */
 .list .more {
   font-style: italic;
   color: #b51814;
 }
-/* line 475, ../sass/components/_sale.scss */
+/* line 486, ../sass/components/_sale.scss */
 .list-active .list {
   height: auto;
   padding-bottom: 1em;
 }
-/* line 479, ../sass/components/_sale.scss */
+/* line 490, ../sass/components/_sale.scss */
 .list-active .list li {
   opacity: 1;
 }
 @media (min-width: 57em) {
-  /* line 483, ../sass/components/_sale.scss */
+  /* line 494, ../sass/components/_sale.scss */
   .list-active .list li:nth-of-type(n + 5) {
     opacity: 1;
   }
 }
 @media (min-width: 40em) {
-  /* line 440, ../sass/components/_sale.scss */
+  /* line 451, ../sass/components/_sale.scss */
   .list {
     height: 8em;
     padding-left: 0.25em;
     padding-right: 1em;
   }
-  /* line 496, ../sass/components/_sale.scss */
+  /* line 507, ../sass/components/_sale.scss */
   .list::after {
     content: '';
     display: block;
@@ -2250,49 +2255,49 @@ button.disabled:hover:not(.no-button-style),
     height: 7em;
     background-image: linear-gradient(to top, #ffffff, rgba(255, 255, 255, 0));
   }
-  /* line 508, ../sass/components/_sale.scss */
+  /* line 519, ../sass/components/_sale.scss */
   .list li {
     opacity: 1;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  /* line 515, ../sass/components/_sale.scss */
+  /* line 526, ../sass/components/_sale.scss */
   .list-active .list {
     height: 8em;
   }
 }
 
-/* line 522, ../sass/components/_sale.scss */
+/* line 533, ../sass/components/_sale.scss */
 .sale-close {
   max-width: 50em;
   padding: 2.5em 1em 0;
 }
-/* line 526, ../sass/components/_sale.scss */
+/* line 537, ../sass/components/_sale.scss */
 .sale-close ul {
   padding-left: 1em;
 }
-/* line 530, ../sass/components/_sale.scss */
+/* line 541, ../sass/components/_sale.scss */
 .sale-close li {
   margin-bottom: 0.5em;
   list-style-type: disc;
 }
 
-/* line 539, ../sass/components/_sale.scss */
+/* line 550, ../sass/components/_sale.scss */
 .upcoming {
   padding: 0 1em 0;
 }
-/* line 542, ../sass/components/_sale.scss */
+/* line 553, ../sass/components/_sale.scss */
 .upcoming .upcoming-header {
   flex-wrap: wrap;
   align-items: center;
   padding: 0 0 1.5em;
 }
-/* line 549, ../sass/components/_sale.scss */
+/* line 560, ../sass/components/_sale.scss */
 .upcoming .heading-3 {
   margin: 0 2em 0.25em 0;
 }
-/* line 553, ../sass/components/_sale.scss */
+/* line 564, ../sass/components/_sale.scss */
 .upcoming .sale-preview {
   width: calc(50% - 1em);
   max-width: 31.25em;
@@ -2302,63 +2307,63 @@ button.disabled:hover:not(.no-button-style),
   text-align: center;
   overflow: hidden;
 }
-/* line 562, ../sass/components/_sale.scss */
+/* line 573, ../sass/components/_sale.scss */
 .upcoming .sale-preview:nth-of-type(odd) {
   margin-right: 1em;
 }
-/* line 566, ../sass/components/_sale.scss */
+/* line 577, ../sass/components/_sale.scss */
 .upcoming .sale-preview .preview-copy {
   padding: 0.75em 0.5em 1.5em;
 }
-/* line 570, ../sass/components/_sale.scss */
+/* line 581, ../sass/components/_sale.scss */
 .upcoming .sale-preview ul {
   margin-bottom: 1em;
 }
-/* line 574, ../sass/components/_sale.scss */
+/* line 585, ../sass/components/_sale.scss */
 .upcoming .sale-preview li {
   display: block;
   line-height: 1.5;
   font-weight: 400;
 }
-/* line 579, ../sass/components/_sale.scss */
+/* line 590, ../sass/components/_sale.scss */
 .upcoming .sale-preview li:first-of-type {
   font-weight: 800;
 }
-/* line 585, ../sass/components/_sale.scss */
+/* line 596, ../sass/components/_sale.scss */
 .upcoming .sale-preview img {
   display: block;
   margin-bottom: 0.75em;
 }
-/* line 595, ../sass/components/_sale.scss */
+/* line 606, ../sass/components/_sale.scss */
 .upcoming .upcoming-sales {
   flex-wrap: wrap;
   margin-bottom: 5em;
 }
 @media (min-width: 40em) {
-  /* line 602, ../sass/components/_sale.scss */
+  /* line 613, ../sass/components/_sale.scss */
   .upcoming .upcoming-header {
     justify-content: center;
     padding: 0 0 2em;
   }
-  /* line 607, ../sass/components/_sale.scss */
+  /* line 618, ../sass/components/_sale.scss */
   .upcoming .upcoming-sales {
     justify-content: space-around;
   }
-  /* line 611, ../sass/components/_sale.scss */
+  /* line 622, ../sass/components/_sale.scss */
   .upcoming .sale-preview {
     margin: 0;
   }
-  /* line 615, ../sass/components/_sale.scss */
+  /* line 626, ../sass/components/_sale.scss */
   .upcoming .sale-preview .preview-copy {
     padding: 1em 1.5em 2em;
   }
-  /* line 619, ../sass/components/_sale.scss */
+  /* line 630, ../sass/components/_sale.scss */
   .upcoming .sale-preview:nth-of-type(odd) {
     margin-right: 0;
   }
 }
 @media (min-width: 57em) {
-  /* line 539, ../sass/components/_sale.scss */
+  /* line 550, ../sass/components/_sale.scss */
   .upcoming {
     margin-bottom: 8em;
   }
