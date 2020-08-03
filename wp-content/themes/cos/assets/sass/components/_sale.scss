@@ -39,8 +39,10 @@
         padding-bottom: 2em;
 
         li {
+            @extend %fs-20;
             line-height: 1.75;
-			font-weight: 400;
+			font-weight: 700;
+            color: $color-red;
 		}
     }
 
