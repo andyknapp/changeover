@@ -249,25 +249,27 @@
     table.shop_table tfoot td {
         font-weight: 400;
     }
-}
 
-.woocommerce-order {
-    .woocommerce-thankyou-order-received {
-        margin-bottom: 1em;
-    }
+    .woocommerce-order {
+        .woocommerce-thankyou-order-received {
+            margin-bottom: 1em;
+        }
 
-    h2 {
-        margin-bottom: 0.25em;
-    }
+        h2 {
+            margin-bottom: 0.25em;
+        }
 
-    address {
-        padding-bottom: 1em;
-        line-height: 1.8;
-    }
+        .woocommerce-customer-details {
+            address {
+                padding-bottom: 1em!important;
+                line-height: 1.8;
+            }
+        }
 
-    .woocommerce-column {
-        .woocommerce-column--1 {
-            margin-bottom: 3em;
+        .woocommerce-column {
+            &.woocommerce-column--1 {
+                margin-bottom: 3em;
+            }
         }
     }
 }
