@@ -605,7 +605,7 @@ a:hover {
 }
 
 /* line 26, ../sass/_global.scss */
-.container-small, .woocommerce-checkout article {
+.container-small, .page-template-default .page, .woocommerce-checkout article {
   max-width: 62em;
 }
 
@@ -1162,6 +1162,17 @@ img.aligncenter {
 /* line 622, ../sass/_global.scss */
 .pink {
   color: #cc2370;
+}
+
+/* line 629, ../sass/_global.scss */
+.page-template-default .page {
+  width: 100%;
+  margin: 0 auto;
+  padding: 4em 1em 2em;
+}
+/* line 636, ../sass/_global.scss */
+.page-template-default .entry-header {
+  margin-bottom: 1em;
 }
 
 /* line 6, ../sass/components/_header.scss */
