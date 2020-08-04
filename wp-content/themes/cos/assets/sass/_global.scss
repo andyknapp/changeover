@@ -627,7 +627,7 @@ img {
 // generic template
 .page-template-default {
 
-    &:not([class*='woocommerce-']) {
+    &:not([class*='woocommerce-cart']) {
         .page {
             width: 100%;
             margin: 0 auto;

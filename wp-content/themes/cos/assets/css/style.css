@@ -1165,13 +1165,13 @@ img.aligncenter {
 }
 
 /* line 631, ../sass/_global.scss */
-.page-template-default:not([class*='woocommerce-']) .page {
+.page-template-default:not([class*='woocommerce-cart']) .page {
   width: 100%;
   margin: 0 auto;
   padding: 4em 1em 2em;
 }
 /* line 637, ../sass/_global.scss */
-.page-template-default:not([class*='woocommerce-']) .entry-header {
+.page-template-default:not([class*='woocommerce-cart']) .entry-header {
   margin-bottom: 1em;
 }
 
