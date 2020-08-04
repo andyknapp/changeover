@@ -432,3 +432,21 @@ function co_google_maps_api() {
     return $api;
 }
 add_filter('acf/fields/google_map/api', 'co_google_maps_api');
+
+
+function co_add_shipping_method_to_emails( $order, $sent_to_admin, $plain_text, $email ) {
+    if( 'customer_processing_order' == $email->id ) {
+
+        $method_copy = 'Complimentary delivery available for local customers*';
+
+        if( $order->get_shipping_method() === $method_copy ) {
+
+            echo '<p>Your address is outside of our delivery zone. Please call <a href="tel:1-302-562-5385" target="_blank">302-562-5385</a> for options/quote.</p>';
+
+        } else {
+            echo '<p>You have complimentary delivery. ' . $order->get_shipping_method() . '</p>';
+        }
+    }
+
+}
+add_action( 'woocommerce_email_before_order_table', 'co_add_shipping_method_to_emails', 10, 4 );
