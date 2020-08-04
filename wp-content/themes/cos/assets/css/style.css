@@ -3630,3 +3630,21 @@ ul.bxslider {
 .woocommerce table.shop_table tfoot td {
   font-weight: 400;
 }
+
+/* line 255, ../sass/woo/_checkout.scss */
+.woocommerce-order .woocommerce-thankyou-order-received {
+  margin-bottom: 1em;
+}
+/* line 259, ../sass/woo/_checkout.scss */
+.woocommerce-order h2 {
+  margin-bottom: 0.25em;
+}
+/* line 263, ../sass/woo/_checkout.scss */
+.woocommerce-order address {
+  padding-bottom: 1em;
+  line-height: 1.8;
+}
+/* line 269, ../sass/woo/_checkout.scss */
+.woocommerce-order .woocommerce-column .woocommerce-column--1 {
+  margin-bottom: 3em;
+}

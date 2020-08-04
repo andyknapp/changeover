@@ -250,3 +250,24 @@
         font-weight: 400;
     }
 }
+
+.woocommerce-order {
+    .woocommerce-thankyou-order-received {
+        margin-bottom: 1em;
+    }
+
+    h2 {
+        margin-bottom: 0.25em;
+    }
+
+    address {
+        padding-bottom: 1em;
+        line-height: 1.8;
+    }
+
+    .woocommerce-column {
+        .woocommerce-column--1 {
+            margin-bottom: 3em;
+        }
+    }
+}
