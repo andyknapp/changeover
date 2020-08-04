@@ -1175,12 +1175,16 @@ img.aligncenter {
   margin-bottom: 1em;
 }
 
-/* line 644, ../sass/_global.scss */
+/* line 643, ../sass/_global.scss */
+.woocommerce-privacy-policy-text {
+  margin-bottom: 3em;
+}
+/* line 646, ../sass/_global.scss */
 .woocommerce-privacy-policy-text p {
   font-size: 12px;
   color: #767676;
 }
-/* line 648, ../sass/_global.scss */
+/* line 650, ../sass/_global.scss */
 .woocommerce-privacy-policy-text p a {
   color: #767676;
 }
@@ -3623,48 +3627,52 @@ ul.bxslider {
 .woocommerce-checkout #payment_method_square_credit_card + label::after {
   top: 0.125em;
 }
+/* line 220, ../sass/woo/_checkout.scss */
+.woocommerce-checkout .form-row.place-order {
+  width: 100% !important;
+}
 
-/* line 223, ../sass/woo/_checkout.scss */
+/* line 228, ../sass/woo/_checkout.scss */
 .woocommerce #payment div.payment_method_square_credit_card iframe {
   font-size: 12px !important;
 }
-/* line 227, ../sass/woo/_checkout.scss */
+/* line 232, ../sass/woo/_checkout.scss */
 .woocommerce #payment div.payment_method_square_credit_card .wc-square-credit-card-hosted-field {
   padding: 0.25em 1em !important;
   font-size: 14px !important;
 }
-/* line 232, ../sass/woo/_checkout.scss */
+/* line 237, ../sass/woo/_checkout.scss */
 .woocommerce #payment div.payment_method_square_credit_card .wc-square-credit-card-hosted-field-card-number {
   padding: 0.25em 1em !important;
   background-size: 44px 28px;
   font-size: 14px !important;
 }
 
-/* line 240, ../sass/woo/_checkout.scss */
+/* line 245, ../sass/woo/_checkout.scss */
 .woocommerce form .form-row.woocommerce-validated .select2-container,
 .woocommerce form .form-row.woocommerce-validated input.input-text,
 .woocommerce form .form-row.woocommerce-validated select {
   border-color: #b51814;
 }
 
-/* line 249, ../sass/woo/_checkout.scss */
+/* line 254, ../sass/woo/_checkout.scss */
 .woocommerce table.shop_table tfoot td {
   font-weight: 400;
 }
-/* line 254, ../sass/woo/_checkout.scss */
+/* line 259, ../sass/woo/_checkout.scss */
 .woocommerce .woocommerce-order .woocommerce-thankyou-order-received {
   margin-bottom: 1em;
 }
-/* line 258, ../sass/woo/_checkout.scss */
+/* line 263, ../sass/woo/_checkout.scss */
 .woocommerce .woocommerce-order h2 {
   margin-bottom: 0.25em;
 }
-/* line 263, ../sass/woo/_checkout.scss */
+/* line 268, ../sass/woo/_checkout.scss */
 .woocommerce .woocommerce-order .woocommerce-customer-details address {
   padding-bottom: 1em !important;
   line-height: 1.8;
 }
-/* line 270, ../sass/woo/_checkout.scss */
+/* line 275, ../sass/woo/_checkout.scss */
 .woocommerce .woocommerce-order .woocommerce-column.woocommerce-column--1 {
   margin-bottom: 3em;
 }
