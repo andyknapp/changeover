@@ -1175,6 +1175,16 @@ img.aligncenter {
   margin-bottom: 1em;
 }
 
+/* line 644, ../sass/_global.scss */
+.woocommerce-privacy-policy-text p {
+  font-size: 12px;
+  color: #767676;
+}
+/* line 648, ../sass/_global.scss */
+.woocommerce-privacy-policy-text p a {
+  color: #767676;
+}
+
 /* line 6, ../sass/components/_header.scss */
 .site-header {
   position: fixed;

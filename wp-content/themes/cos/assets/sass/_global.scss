@@ -639,3 +639,14 @@ img {
         }
     }
 }
+
+.woocommerce-privacy-policy-text {
+    p {
+        font-size: 12px;
+        color: $color-gray-5;
+
+        a {
+            color: $color-gray-5;
+        }
+    }
+}
