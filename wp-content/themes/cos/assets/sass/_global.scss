@@ -626,14 +626,16 @@ img {
 
 // generic template
 .page-template-default {
-    .page {
-        @extend .container-small;
-        width: 100%;
-        margin: 0 auto;
-        padding: 4em 1em 2em;
-    }
 
-    .entry-header {
-        margin-bottom: 1em;
+    &:not([class*='woocommerce-']) {
+        .page {
+            width: 100%;
+            margin: 0 auto;
+            padding: 4em 1em 2em;
+        }
+
+        .entry-header {
+            margin-bottom: 1em;
+        }
     }
 }

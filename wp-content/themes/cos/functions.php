@@ -444,7 +444,7 @@ function co_add_shipping_method_to_emails( $order, $sent_to_admin, $plain_text, 
             echo '<p>Your address is outside of our delivery zone. Please call <a href="tel:1-302-562-5385" target="_blank">302-562-5385</a> for options/quote.</p>';
 
         } else {
-            echo '<p>You have complimentary delivery. ' . $order->get_shipping_method() . '</p>';
+            echo '<p>You have complimentary delivery.</p>';
         }
     }
 
