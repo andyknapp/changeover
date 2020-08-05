@@ -9,7 +9,7 @@
         ?>
 
         <div class="button-container">
-            <a href="<?php echo home_url(); ?>/shop" class="button">Preview Sale</a>
+            <a href="<?php echo home_url(); ?>/shop" class="button">Shop Now</a>
         </div>
 
         <?php
