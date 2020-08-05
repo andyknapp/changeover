@@ -6,7 +6,7 @@
  *
  */
 
-define('THEME_VERSION', '1.0.2');
+define('THEME_VERSION', '1.1');
 
 if ( ! function_exists( 'cos_setup' ) ) :
 	/**
@@ -151,7 +151,7 @@ add_filter( 'woocommerce_get_image_size_gallery_thumbnail', function( $size ) {
  * Enqueue scripts and styles.
  */
 function cos_scripts() {
-	wp_enqueue_style( 'cos-style', get_template_directory_uri() . '/assets/css/style.css', array(), THEME_VERSION );
+	wp_enqueue_style( 'cos-style', get_template_directory_uri() . '/assets/css/style.min.css', array(), THEME_VERSION );
 
 	// de-register jquery
 	wp_deregister_script('jquery');
@@ -161,7 +161,7 @@ function cos_scripts() {
 	// wp-embeds.min.js no longer needed
 	wp_deregister_script('wp-embed');
 
-	wp_register_script('global-js', get_stylesheet_directory_uri() . '/assets/js/global.js', array(), THEME_VERSION, true);
+	wp_register_script('global-js', get_stylesheet_directory_uri() . '/assets/js/global.min.js', array(), THEME_VERSION, true);
 
     wp_register_script('home-js', get_stylesheet_directory_uri() . '/assets/js/home.js', array(), THEME_VERSION, true);
 
@@ -221,7 +221,7 @@ add_filter( 'gform_confirmation_anchor', '__return_true' );
 // add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
 
 function cos_dequeue_styles( $enqueue_styles ) {
-    //unset( $enqueue_styles['woocommerce-general'] );	// Remove the gloss
+    unset( $enqueue_styles['woocommerce-general'] );	// Remove the gloss
     unset( $enqueue_styles['woocommerce-layout'] );		// Remove the layout
     unset( $enqueue_styles['woocommerce-smallscreen'] );	// Remove the smallscreen optimisation
     return $enqueue_styles;
